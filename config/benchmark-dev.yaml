@@ -1,0 +1,38 @@
+# Development benchmark configuration
+# Fast smoke tests for basic functionality
+# Development benchmark configuration
+# Fast smoke tests for basic functionality
+
+benchmarks:
+  # Basic arithmetic circuit (only working circuit for now)
+  - name: "multiply"
+    circuit_path: "src/circuits/basic/multiply.circom"
+    iterations: 3
+    ptau_power: 8
+    seed: 42
+
+# TODO: Add these after creating the actual circuit files
+# - name: "poseidon_hash"
+#   circuit_path: "src/circuits/crypto/poseidon_hash.circom"
+#   iterations: 2
+#   ptau_power: 10
+#   seed: 456
+
+# Global settings
+settings:
+  work_dir: "data/benchmarks"
+  output_format: "jsonl"
+  save_artifacts: true
+  
+# Tool configuration
+tools:
+  circom_bin: "circom"
+  snarkjs_bin: "snarkjs"
+  node_bin: "node"
+  timeout_s: 300
+
+circuits:
+  - name: "ecdsa_verify"
+    file: "src/circuits/crypto/ecdsa_verify.circom"
+    iterations: 1
+    ptau_power: 18

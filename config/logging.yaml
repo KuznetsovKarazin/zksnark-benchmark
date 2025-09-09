@@ -1,0 +1,40 @@
+disable_existing_loggers: false
+formatters:
+  detailed:
+    datefmt: '%Y-%m-%d %H:%M:%S'
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  simple:
+    format: '%(levelname)s - %(message)s'
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: simple
+    level: INFO
+    stream: ext://sys.stdout
+  error_file:
+    backupCount: 3
+    class: logging.handlers.RotatingFileHandler
+    filename: output/logs/errors.log
+    formatter: detailed
+    level: ERROR
+    maxBytes: 10485760
+  file:
+    backupCount: 5
+    class: logging.handlers.RotatingFileHandler
+    filename: output/logs/benchmark.log
+    formatter: detailed
+    level: DEBUG
+    maxBytes: 10485760
+loggers:
+  zksnark_benchmark:
+    handlers:
+    - console
+    - file
+    - error_file
+    level: DEBUG
+    propagate: false
+root:
+  handlers:
+  - console
+  level: WARNING
+version: 1

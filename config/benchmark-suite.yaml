@@ -1,0 +1,18 @@
+benchmark:
+  iterations: 3
+  seed: 42
+
+circuits:
+  - name: "multiply"
+    file: "basic/multiply.circom"
+    ptau_power: 8             
+
+  - name: "poseidon_hash"
+    file: "crypto/poseidon_hash.circom"
+
+  - name: "merkle_poseidon"
+    file: "crypto/merkle_poseidon.circom"
+
+  - name: "ecdsa_verify"
+    file: "crypto/ecdsa_verify.circom"
+    # without ptau_power — Runner will select 21 by R1CS

@@ -1,0 +1,163 @@
+# Enhanced zkSNARK Benchmark Configuration
+# This configuration enables comprehensive performance analysis with detailed metrics
+
+benchmark:
+  # Global settings
+  iterations: 3  # Run each circuit multiple times for statistical significance
+  seed: 42
+  
+  # Enhanced profiling options
+  profile_memory: true
+  analyze_scalability: true
+  collect_detailed_metrics: true
+  save_intermediate_files: false
+  
+  # Timeout settings
+  timeout_multiplier: 2.0  # Increase timeouts for complex circuits
+  
+  # Output options
+  create_visualizations: true
+  generate_report: true
+
+# Circuit configurations
+circuits:
+  # Simple circuits for baseline
+  - name: "multiply"
+    file: "src/circuits/basic/multiply.circom"
+    iterations: 5
+    ptau_power: 8
+    
+  - name: "quadratic"
+    file: "src/circuits/basic/quadratic.circom"
+    iterations: 3
+    ptau_power: 8
+
+  - name: "hash"
+    file: "crypto/hash.circom"
+    iterations: 3
+    ptau_power: 8
+
+  - name: "range_proof"
+    file: "basic/range_proof.circom"
+    iterations: 3
+    ptau_power: 8
+
+
+  # Hash functions for crypto analysis
+  - name: "poseidon_hash"
+    file: "src/circuits/crypto/poseidon_hash.circom"
+    iterations: 3
+    ptau_power: 8
+    
+  # Medium complexity circuits
+  - name: "merkle_poseidon_4"
+    file: "src/circuits/crypto/merkle_poseidon.circom"
+    iterations: 2
+    ptau_power: 10
+    # Note: Adjust depth in circuit file or create variants
+    
+  - name: "merkle_poseidon_16"
+    file: "src/circuits/crypto/merkle_poseidon.circom"
+    iterations: 2
+    ptau_power: 12
+    
+  # Complex circuits for stress testing
+  - name: "ecdsa_verify"
+    file: "src/circuits/crypto/ecdsa_verify.circom"
+    iterations: 1
+    ptau_power: 21
+    # Note: ECDSA is very constraint-heavy, single iteration recommended
+
+# Analysis settings
+analysis:
+  # Scalability analysis
+  scalability:
+    enabled: true
+    complexity_estimation: true
+    bottleneck_analysis: true
+    
+  # Memory profiling
+  memory:
+    track_peak_usage: true
+    analyze_efficiency: true
+    
+  # Performance metrics
+  performance:
+    calculate_rates: true
+    efficiency_scoring: true
+    comparative_analysis: true
+    
+  # Visualization options
+  visualizations:
+    performance_overview: true
+    scalability_charts: true
+    memory_analysis: true
+    bottleneck_breakdown: true
+    circuit_comparison: true
+    efficiency_metrics: true
+    time_distribution: true
+    
+    # Chart styling
+    style: "darkgrid"  # seaborn style
+    save_format: "png"
+    dpi: 300
+
+# Environment settings
+environment:
+  # Node.js memory allocation for large circuits
+  node_options: "--max-old-space-size=16384"
+  
+  # Tool paths (if not in PATH)
+  tools:
+    circom: "circom"
+    snarkjs: "snarkjs" 
+    node: "node"
+    
+  # Dependencies
+  dependencies:
+    circomlib_path: "node_modules/circomlib"
+    vendor_path: "vendor"
+
+# Output configuration
+output:
+  # Directory structure
+  work_dir: "data/enhanced_benchmarks"
+  
+  subdirs:
+    circuits: "circuits"
+    builds: "builds" 
+    keys: "keys"
+    proofs: "proofs"
+    analysis: "analysis"
+    reports: "reports"
+    visualizations: "visualizations"
+    
+  # File formats
+  results_format: "json"  # json or jsonl
+  preserve_intermediate: false
+  
+  # Report options
+  report:
+    include_system_info: true
+    include_tool_versions: true
+    detailed_metrics: true
+    scalability_analysis: true
+    recommendations: true
+
+# Advanced options
+advanced:
+  # Parallel execution (if supported)
+  parallel_compilation: false
+  parallel_setup: false
+  
+  # Cache management
+  cache:
+    enable_compilation_cache: true
+    enable_setup_cache: true
+    cache_invalidation: "auto"  # auto, manual, never
+    
+  # Debugging
+  debug:
+    verbose_output: false
+    save_logs: true
+    include_traces: false

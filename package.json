@@ -1,0 +1,17 @@
+{
+  "name": "zksnark-benchmark",
+  "version": "1.0.0",
+  "description": "zkSNARK Benchmark Framework for Groth16 Performance Analysis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7",
+    "ffjavascript": "^0.3.1",
+    "secp256k1": "^5.0.1"
+  },
+  "author": "",
+  "license": "MIT"
+}

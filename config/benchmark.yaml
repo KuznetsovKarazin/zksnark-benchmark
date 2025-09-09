@@ -1,0 +1,78 @@
+analysis:
+  generate_plots: true
+  plot_dpi: 300
+  plot_formats:
+  - png
+  plots:
+  - performance_comparison
+  - time_distribution
+  reports:
+    formats:
+    - json
+    - html
+    include_raw_data: true
+benchmark:
+  iterations: 20
+  metrics:
+  - compile_time
+  - witness_generation_time
+  - proof_generation_time
+  - verification_time
+  - total_time
+  - memory_peak
+  - proof_size
+  outlier_detection: true
+  outlier_threshold: 2.0
+  profiling:
+    enabled: true
+    memory_sampling_interval: 0.1
+  statistical_confidence: 0.95
+  timeout: 300
+  warmup_iterations: 3
+circom:
+  compile_flags:
+  - --r1cs
+  - --wasm
+  - --sym
+  include_paths:
+  - src/circuits
+  - node_modules
+  optimization_level: O2
+  version: 2.1.9
+circuits:
+  basic:
+  - category: arithmetic
+    complexity: low
+    description: Simple multiplication circuit
+    expected_constraints: 1
+    file: basic/multiply.circom
+    inputs:
+      a: 6
+      b: 7
+    name: multiply
+  - category: arithmetic
+    complexity: low
+    description: "Quadratic function ax\xB2+bx+c"
+    expected_constraints: 2
+    file: basic/quadratic.circom
+    inputs:
+      a: 1
+      b: 2
+      c: 1
+      x: 3
+    name: quadratic
+environment:
+  log_level: INFO
+  max_workers: 4
+  output_dir: ./output
+  temp_dir: ./tmp
+  working_dir: ./data
+project:
+  description: Comprehensive benchmarking suite for zkSNARK proof systems
+  name: zkSNARK Benchmark Framework
+  version: 0.1.0
+snarkjs:
+  curve: bn128
+  entropy_source: secure_random
+  power_of_tau: 12
+  protocol: groth16

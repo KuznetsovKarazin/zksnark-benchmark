@@ -1,0 +1,3 @@
+[submodule "vendor/circom-ecdsa"]
+	path = vendor/circom-ecdsa
+	url = https://github.com/0xPARC/circom-ecdsa
