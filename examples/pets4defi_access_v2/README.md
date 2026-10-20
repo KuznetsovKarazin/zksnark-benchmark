@@ -27,9 +27,14 @@ npm ci
 npm run demo
 npm run prover
 python3 scripts/report.py
+python3 scripts/package_results.py
 ```
 
 `demo` compiles the circuit, obtains a hash-pinned public Powers of Tau transcript, verifies the local phase-2 setup, executes both local chain environments, exports accounting tables and runs economic tests. The default is **30 warmed repetitions** of the relevant recurring events. First-holder events are explicitly single observations. `BENCH_RUNS=2 npm run benchmark` is a diagnostic run and is labelled as such in metadata; do not publish it as the main result.
+
+Published receipt evidence comes from the complete successful Node24/npm11 CI run: see `results/ci_provenance.json` and the byte-preserved `results/raw_ci_node24.zip`. GitHub tests a temporary PR merge commit; all measured source-file hashes match the reviewed branch source. Complete CSVs are bundled in `results/economic_tables.zip`. Large derived trace/price CSVs and raw transaction receipts are retained in the archives rather than duplicated as GitHub text files.
+
+Expected witness-generation failures in negative tests may print `ERROR`. The process exit status and `results/test_results.json` distinguish these expected rejections from a failed run.
 
 `prover` separately measures 30 fresh Node processes and 30 warm proofs after an excluded warm-up. It verifies every proof. These are server timings, not laptop/phone UX. Avoid concurrent CPU-intensive jobs when collecting publication results. [The browser harness](browser/BENCHMARKING.md) provides the corresponding physical-device procedure; actual browser/mobile measurements remain pending.
 

@@ -4,3 +4,7 @@ cache/
 artifacts/
 results/local/
 __pycache__/
+results/trace_events.csv
+results/price_sensitivity.csv
+results/observed_fee_projection.csv
+results/transactions.json

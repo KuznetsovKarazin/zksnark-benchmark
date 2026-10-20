@@ -91,24 +91,28 @@ here. A current snapshot would not retroactively verify an undated claim.
 
 ### Archived observation from this run
 
-The final collection succeeded for both networks on 2026-10-20, with 7,200
-consecutive blocks and eight history requests each. The Ethereum window is
-2026-10-19 14:36:11 through 2026-10-20 14:41:23 UTC (blocks 26227259–26234458).
-The OP window is 2026-10-20 10:43:43 through 14:43:41 UTC (blocks
-158447123–158454322). These are different-duration windows, not a matched-window
+This is a fresh recovery collection started on 2026-10-20 at 17:10:31 UTC.
+The earlier local raw archive was lost before publication; this replacement is
+a new observation, not a reconstruction of that earlier window. Collection
+succeeded for both networks, with 7,200 consecutive blocks and eight history
+requests each. The Ethereum window is 2026-10-19 17:05:11 through
+2026-10-20 17:10:35 UTC (blocks 26228002–26235201).
+The OP window is 2026-10-20 13:12:53 through 17:12:51 UTC (blocks
+158451598–158458797). These are different-duration windows, not a matched-window
 chain comparison. Boundary hashes were rechecked before accepting the archive.
 
 | Metric (gwei) | p10 | p50 | p90 |
 | --- | ---: | ---: | ---: |
-| Ethereum block base fees | 0.040837022 | 0.102358646 | 0.217673787 |
-| Ethereum distribution of within-block effective p50 | 0.050009874 | 0.129986306 | 0.344443342 |
-| OP distribution of within-block execution-price p50 proxy | 0.000005274 | 0.000008151 | 0.000105748 |
+| Ethereum block base fees | 0.040837022 | 0.102421391 | 0.459951361 |
+| Ethereum distribution of within-block effective p50 | 0.050009874 | 0.130658648 | 0.716536567 |
+| OP distribution of within-block execution-price p50 proxy | 0.000003638 | 0.000006661 | 0.000201975 |
 
 Each block has equal weight in this table. OP values exclude L1 data/operator
 fees and are not a total user-cost comparison. See the full raw responses and
 decimal-wei observations in `results/fee_history_raw.json.gz`; use the exact window
-when quoting these values. Earlier attempts timed out; no fallback observations
-were substituted into the successful archive.
+when quoting these values. No fallback observations were substituted into this
+successful recovery archive. Its compressed SHA-256 is
+`3a34c0fa39e5fc1c14c72e8f1d2caa3b182e6e88b3463b8c470c41918e9d228a`.
 
 ## Ethereum fork and signature verification
 

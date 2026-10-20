@@ -1,0 +1,11 @@
+{
+  "artifact_id": 12274189769,
+  "artifact_sha256": "48077dfd9be20872ad4751359a982d84a6afb317f2f7e11fef845308503cc7ee",
+  "workflow_run": 39443693715,
+  "workflow_url": "https://github.com/KuznetsovKarazin/zksnark-benchmark/actions/runs/39443693715",
+  "head_sha": "13bd6e58e7d4f6f6c55df8ec07ee4a1c34b5024a",
+  "tested_merge_sha": "cb39a2afcc881651aee424e02d465bf3f8361303",
+  "source_files_match_head": true,
+  "primary_transaction_evidence": "raw_ci_node24.zip",
+  "note": "Primary published event/accounting evidence is the complete successful Node24/npm11 CI run. Raw files are unchanged. Separate local prover and market-fee data have their own recorded environment/time."
+}

@@ -1,0 +1,5306 @@
+{
+  "schema_version": 2,
+  "source_tree_sha256": "0f0f8f00275663b045ec83bfdd4fdde1f68e33fdfa1eae4952563d3df0b52c72",
+  "passed": 784,
+  "failed": 0,
+  "tests": [
+    {
+      "chain": "l1",
+      "name": "authenticated issuer hierarchy matches independent Poseidon fixture",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: registry-domain credential digest matches independent encoding",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: registry-domain credential digest matches independent encoding",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa12a08ee9fc32f381c16c2983ff6eee3c4a3e1049bb582e0df4bafd98134b369"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4316ed0c279aa6b24e1c295e865a33b36da31ec5c052632f81848bb8ec673899"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1d53e108587e6f320ac47a57d729a8c73ea91a3f2ec57ded88c1ed59e74466fd"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x373bc493b493d43d40aea478877401d3c93204f6005650c0d0cdecbf0780e1e3"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x58503de2d358bdf3ea7a93c7d00d5ff1ef6ce548aab3853d97310323f27a5b04"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc455f9fc92e36f8553241e45aff303e11adf87c04a2d49ae9bfe6fe3f82672f3"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x8c80b72b6c933405477f84c6ce5603c741a700871a4dafabdad729b51645d635"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xbf2eeee33abbcaec42909c5107fc15b1e4e2a577c2cdb1acf670251c879ab40b"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x21f95102acfcdd5b0128a6795812951621f463689852b8858a142b7ad4638b12"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa5445b0938c9552a9265fe1e48de4cae6dc5bac1dc575a727125f049cbe602a6"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5f0b606e9fb19a77da6fe5fe0e723f3762a831be526c79679068fc90b989be13"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3bcb63a1561317c735c06a5fccf74eef3fed986ce043f4f1643ed29903d6ece3"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7ced6ea9f2769f44288f60b3055fce4e9a7055b058980c4f311dd5c757b91289"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x0cd384b3aa0bb975a58d5692bbdccc3a7897b8461d81d572c297d6bfc6aef96b"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1a4e71ab493f6ce23f648393c50b07908c186c755a74a8fcaac3052ba7864317"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfbba3e5489bbe6adc4234aebbec13528cdce20bd0505da70d79779ae7781bb4c"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x77adf4b779ca521d10fcb771433da9fa6fa637d3b2d91ce7f828ea8786fdfd48"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf984d4c82762c46890d9546315f6a1bc1dc8e9ef24cb7b36b644675dd233cedd"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7742f1741c3c34ab27e545ff03e0cf8ab7d971abee6d5e55e9874124786df928"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcd945df3e02aefe38471dbd80a78d2a1c7ed7b51d17e4b1bdbb791852d70cbcb"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x014fba5cac4cb133c29599a79759ff5f0ce83836eb3cb31904ec5e7b1285eeb8"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xecc8540b41cbd2a38779a53c04c7abeaac0e7986b4e8629fc1f8710660402f77"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe511081311c65855fef2192d56138f8c0e19222ff7d6d0d0ef833a34801b1128"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa7fa2d9a29a0707379f0eaecb7a7fe427940849da54e3b9a2e5b6c2000d4279b"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x531fa32a3dd4d59970c4e0875dcd35f6e8b3d5dab0eb457f88417bdcb176958a"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x19a5c0fe13682bbbb5932c74c13bcc58e02d362d7ba672ab2e72e92eab5355db"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7c47ff3fd7e188d8ec28ed4ee163059f36fa9ec323ae363ec01019798d70e129"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x93c6ad49809debcb350b6698eaf3d9dae7b6fb2c7db6c9ce25065483912434ad"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa37904ce278c43f2a933c75f48a0a654fa211c7954b06bf09ffee1fc5a19b875"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x54e997e037fd593b149c92be473315cb5a64b16b261e586cde622a162ad520d9"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: access_repeat 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf8d2be480176b1781625d41c666680387c36ce98248f5c281b205121c2d4fda1"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_register_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xbc5b08b13221d276e9260ca61d14ef18408732392c8838169c4b78cdbdeecb31"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7cd6ff14749bc34ebd5efbc9311bd144d09a8e6b2f6f80c801c50662b5604f85"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xef01c5b66b4d6e9b2aa6f12941c87e31a69728dca181ec674569a4b28785fc35"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcb4cd5bad0d1a1f2b53bb6b7e28a1452c98be450d0f2b220c1828f45fc3594f5"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5f2037148c51ca8050ec8da66ca9ad5aa4e9b7d5f28a4d76f415935ec2382d83"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcb9648172b78bf98d1b8a13f37ded7e414e81886c84cb01aa3a2981a8b55ad6e"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc190e8da3c12274b01674e8bd77006a56576980c893a3b680d366fb0843125ad"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x90fc62ded9bb00e971204c89c0b3bf064b8ec4f0c9ac3c696e1c7fcfdaf08cda"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x308ee5c16bb84c4ee36d9d14c7565490ec13f7a67562b131031a6c377c4c1f34"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcd511f76ca0077bcd087f88b5a93cf2170e7a5fd86c8b06372c2b38dc36badde"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x31584146897ad6b327af1250ee9dd5146835e93fa581873339a4982074d7fe74"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x963705f7c21f3795721770aa05281810c7977737c630372e7df1e2091546107e"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2582b2702988c620cc0cf477c049e8d7f2806d32d93f05f7fcc4d93431454ce4"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5b6099098dfff6b2683476d37673a7c3f2ac346482b950a0701d1dc76ff7b163"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x720dfd4597befcf0b29d16cadc77868b780d12afa0d67a61eab94c2b20a3e9a1"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb876196529dff81e5f1275d170ee264ce222990ce733615c50c8620e3c188f79"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x67a42f9c6634284bfccc921b52949e45cfefb56c22189c0d9495cd2226dfe0ea"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4634d38373eedc774648eb5f0b53d922b86b8e2becd55c1d7a497a590bcc7856"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa27bb1d9cf8a14495467c617733eea39396fbe903e7d07905c59b32404009c72"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa9c87049fd091415078d09897577c4f1f2e83d481a090e9b5874f18384aec6fb"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x0f68c35b12dc309fabd233c25b6d8bf6d0bf78e756e727ccd650b3d9cd5884b2"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe39a76163567494b4c2f43a2b103118327f4c7a34c06619c60d87216b41fb8f8"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xefffd568e20a4481d70a3968dec6c0f8ea9bfb584a3ccb3be6be8ff98ff513b4"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xff3627ff0a0b4dcf9811d39fe4d0aca6cefd998f5c7b9b25d52ee817e88d6530"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xce424e538651d3b4c07ad893d0b216d92db9f8d5a6701e89a9fed15ab82cde0c"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x02b7d8aaff5d930c23f710c71b0e0fe66892aa114ab28c46ff0d7f46ced2b35a"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa221138d07d5e1276819873f9687edea00c7367100d2cba25fa132a2a5805e7a"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc6661a4213c870ddd408b586a3d873e9b502626017ff2272a6f797993780d7e8"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x80c4342ca86323f9dbc1b6b6f7ff6b48325c9166a809437a5d1e55194f639e99"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdaa0f56dab56994628e9adb5fc3974107a5e2fa121c6d6685064f026d59fbc45"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_hit 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xac93c55db8d4c3447140da716e66688b1f2ee8527de41ef00a7bf6986a62d12f"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x24f5346aa41e096b2f70f38100ac37cce665a8aafa6fae801422d18045fba787"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7873eb5e13dac63243514c418a77b57fe4abf62d1ad9be5423cf040a09be98e1"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x14ce713be455a2ab7ad34c5a1144bf0f622af0e6e650552453d3610694b4e230"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfe694dcb9c872967e4a20c3e74b5d6d7a13f6ecfd3b45ba46763c5352c65c35c"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x9971ba10c2dee302c74f02d7a244dc91e5e9af00d2882c8112362ead61b3ddbd"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2730d883d8b6dcdfe4c731dbaf99a0934e979fda2986cb3a373caf15ee7d6381"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xef3c18ab57f63359819ed12668a8ff3f34c87060db1e0e0248bd4c799a2009f7"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x32225d336161214fdd8da04c440562c949ceedcdcb4894848486118a85c5a93b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x6fc44eeb822d8324b1db1d5d70b6550c48525e53217c36c9dd0e3d7c086b6250"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x477643a84d8bcded58355cd919f0000ad2aae497a3579cc88bb7dc2d1327ef4c"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcf177ae78e6a1e0319a6049f3d786416833c96a0efb87fa9f8e6fc30592df14d"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd050058abe6991293bcfee89b5728598edc557d814b1f61914591c122955dacb"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xba30ab6eeba250c00c81482ab85d7f0482ab5bed7ebec9fd6f3d4a3e43559c85"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xaf49721647fd8ba8b90b9f8d61234cba82d5d78e8bd22c355da16712fd784cce"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4feb2a0347f84d7fd8042c8e0fbd4f18ae8520c3921a2149c2262be9af01859c"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe56cc6c0196818a98502c23214ca1a0058498e52ec4cfeb7842e4f79319dbc51"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x00ac31f889c053f1e58deff9e52cb80bc9981077d5f205dbb352b63e639273c9"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x51aa2e97fd7397b6b2d8e5ac7bd12e388a5c675a5c8903bca73888be697378b5"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1d52e837ae5cb8b20ee891d77c140d3de2704c9fc09b0fb58c604f9d13dd32b7"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x14862c260b6bd5c4e9f90a0e8a5087fc31200c08cfa9cf1d2ee3274c4b5b2520"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3dad5d35a0836b0dfb129e350472e1be741e564ba8c3bdb523d6763c8145200f"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x40ce1424053cce8055837d07adde5518000aa0681471acb84e012d56c8627b20"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x74bf6516b140bd75a85613d05ede2da3f653b6effd75fea36eb23ecc2f631ba2"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3da765007d0577611c670cc0c4a361fb7646b8053a6bab3864d4285280c37c56"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x018c7edb5bdb142bc8b5c8d2b54d11e9dddb4c40e5e8d0b4727647ae1dc835b5"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xbaf4e298f7f27f34408baf38be0e00456b019a17c7a2a2013e06602dde3c9297"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x8ce1f42038b9fff465534418bf43fec704ea7ec868e6dd961a5620131f0ee03f"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7cb02c3f893d4cdc5c5ddc2c18cb731525e4f21e6f2a81b927dcff022fea1eda"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x140a4e758db2e69cf735cb4c196a959323a43492ad7915294d2e73b6e954703e"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7acc52405cb2846deee945b883604bf92f56550c920182ed89ff928ac4d35c63"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: access_repeat 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa5430d14152d6d186228bf211eae34cba9eb75c2f4b4c54f87d250aea0d90966"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_register_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3149a1d6db015d3583d6f1a3d2510a67112be3847217ad3b6ad5f91e51703899"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc201001d2e4484745cc7991d6a3dbab68e5e876f70309bf389f84b2419edb53a"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x947c980aca1292f13ebbe6d5a5ded6dc8c053f1e385c17472d0d18681b0d8a75"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x448e8ecf21fcaf52d2174b857ee426e126b7a983bfd51f7526c9cfe1e3120218"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x781d7ad7d2c155fab82d4978e34833dc26e8bd5611f1f5d97170a9754debe61e"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1510f72afa48bda8a9887bd336ff67d97cca590f4a1ba9a8eb6fcf3370e76f1b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3395fa65321d5d5d6704bd44156ca7ac4f945458925d55ac9a16057d2e8b9475"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc9bce25ba8c97195dcab5e16c5a8955b6988a35c3e4bf05a90580aece98d0921"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb5fe270c790d4a2cd628745ffc2cb416985898ae5a13a49cafa74a00e12d863a"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcae2065c3d95dbb476a1bce91067a8f01dd3954f7b3ed959b97ebb5eeed32f53"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x654a52061c8ebf4fbc7484832bfce9c491813e9003919903841295ee5d9195dc"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4a3a8f36a3b4cc62741258cadbb55fd87aed6f15ab55ac903c0f5192ec376a5d"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4ccb37a4f7238e1d4cb807dc782ce6c783b38072191c63839f9db524325ef67b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdbc95a77559816c0b888f556d59320ac14ea481332d6a467349133e1ea707ee6"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x9fabd1fa7dd7aaa979bc2a5d4e4cf853754d573222dcdd8faf16f5f4a23fae7b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb79601909f60f6c5775f51d6ff9ade1cfe66d42e00c39e0a1dbd717bf1af86c7"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe1cb235cce7a705226768f11a88b0edeb21da5fdf6d25a901626adf40176b98f"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x329a824cf0b0349edebb39986740a59a8983fb51c09bafe4233cbd3dde7561bb"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x8cfb13774252f01b3cbdffa7f5d353ae15fbc1e55bbb433d53f1d317022f2e24"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x04accfa0232d7e195c305cc119ef0de2885782a001a0eb7943c70767c9e500a8"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7f2f754e11310725ee863033ae8137646fda0ac0f4f87f4d083450206ffdefa8"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x54ff2d89149ab95bea2f58722ec98d60acd3b2f81fad6ca35a126d77265f8bb8"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x05aa995c3a37d5a1726d3caf7078735fb6ca1bd608cbbdec0df28fbc3a4d096c"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3f1d1eab4714e8cc4d835a3bc2120362e2040d04753f54a1a132f94a59f830c5"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x27595cd7eb40fdbaa7dc640f9ff6b73324752e9efc1dc54498893591c228ea37"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x92ff61f76490a6819e0c88805df05e0b32749ab2a9f686337a0e53f334f25b93"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x79d3aa15e9a74e4826f9388b3ee1536992dd153e0c0093daae684ec4fbdc40bc"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfafc888f4a5a9fd00c8116875c3423ff857551ebf397f5e07f154c13766923ed"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7fe83fb64b717f9dc0c58ba53c0538174b6896361b924544a0c4fb91133856f3"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x73a14fcf8edc1c6c4d262dcd14bfbf5d79c8654bd16a894184923fd737461503"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_hit 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xce0622a03284e308007582397910d94aa16a95683ad9645d9cdf9647f4199f4f"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 1",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x28a24ecabeab2d1e174abb4656bc636115a5a8d6c6093220410cbe6dce1da1fc"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 1",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd70d2ec778fbe6343f2a7200aa6b172d77e8257173fead8d2c7478b997b94e6f"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 2",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe38d8dd9143d03343a5c54c0a6aa995be79395a1bb053491cad338e780998399"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 2",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xaf9b92e9bcc2cb482ebdf6d6d2f69218c6342f5777096032e070d324f4bad250"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 3",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x86db3b0f0ee7e34631fcff5bb7eacf2b552e0958b52fcd03e80952631d0c34ec"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 3",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1b38da0b188cbd8a9fe1360c88f24ebb27df2e34bc49bdd0ac60167c0fb4fb19"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 4",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x90de8bbd2c7be7d5089549375fd63c93d848ecc8ceba7ace788f1862e771d430"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 4",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1bc08bc801866921089d4248d463c9cc67f2aed7e0dac457bc1867184ead6ef8"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 5",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x6a1c89d73f2cf6b0a2a25a417e4e86e4b2ae783e23650e58a059a2ea7e219af8"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 5",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x9359913eb118d131448bab123926f89838af1cedae92c4bbf492e11d20163d49"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 6",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf2d2bba96a1ceb7525aa194889d11b06ced85e9d81796d86520e1c74cc92e6d9"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 6",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x9949bfc9a6d0991b7da21013d7b0299038c8c1f1595051c3d5c29ef85846e2c6"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 7",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xba3239ee07a480e3ea0bdccd08e08c4b794543920eade67a236e90f44cc48909"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 7",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x88c5463ecee6834eb4d2c1c66bf9bcdb41236413dbfca0bac34aadc7ed87f127"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 8",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7b1e2c10467ac4940ab62ac53d71e128bc653ce3f312d2f07521a008d2709282"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 8",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd89b17d65452bdcee72ec417536072395f937017dd5cfaf287eb88235c30c9c3"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 9",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcdcc4d051c36d9206ee3474d21eb5799e20ede592b89c7c47a256c6326c83548"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 9",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa134067217630a54d7a7749194558c1d28dc6e874004bff5cb4f5a97142b238a"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 10",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe06e9b626cd3300458f78590a15421ce8e27c17c9a95f55eafb7318286122b74"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 10",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdfba8660abb8a6039cdde3ffb30dd5be918b15bde3139f01682c6d6223843242"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 11",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdaae90223c70c95f6ee252dec256f03f477212d4954127ee1a51e7fdf9eeea3b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 11",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2c44046b87cae1aaca4a8538f5ede57f53a0426477da328593b4008dcbcf6d1f"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 12",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd508272f4837daff5e0b425163df776806587d6fa696e3082ca9975acfea93bc"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 12",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7ed9acb2aaa28cada06dfc2e478110f86d49919e3bfff0d7849d5903c7666c75"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 13",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd79b63798c1e39338f109ae084170f274173a0680a93654c347280b3ee9566d9"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 13",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x57049e12ba6c052bcf9ffdf59879b5b964d390ee68646752eb0ef1e800eaf848"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 14",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x0b97b4d8ffbe999b9c3c2e3bc094cb8e345c53a213c5d7893fe12810d75b06e0"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 14",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x9ea425e9728427f70b1263b426620f569ece6c96f48ec4fe230c385467cd4ea0"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 15",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xeca1ff95d72943a5e84c4e7c38dec2e3bf5335c19c1f2b1d6ef63f419417f0e7"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 15",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd91e69f2a9bacb58ac75e2de0d4c97e6833165d77ab02a156bd171c341f09b78"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 16",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7fe2a7e1d46357a0df11dda664a905530b6a88f53ee1d89eb0147e47534fe735"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 16",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xefe72205378ed32b53d7aab46bf96a737a0e36d6f830f3c567bf6813cb6eda58"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 17",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x759012c776044afa6feab0fcc1c7666f2512fe58106cee300663bf99dce227cb"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 17",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb0db6aac8fa90521085c1a3f7815a64e5b93baf2d33ffbf0bcbb1d6e5ab0a800"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 18",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe54379fad3f7b69a66c89c73a23b9092f029585e8e2882002319ddad9e512468"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 18",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa5d66ed9b117c9cb17cf2f958bcdba10dfa50da723a9c2e23c4434c583ab684f"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 19",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdd82be5db9581c5e4f1f916bc64a441c3f3fb3a24e8213429a88f8505bda291a"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 19",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb415b7f9dc3fc6ef4c4b61695225b031db7aec7d45a4cc1b2e5bf7d64141dfae"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 20",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x8b057f2c7301f979a8704d795264857c2469704513a8e91056f0605b054a2e6b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 20",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xbe5a9595593b47339561959fd4cce3b289f1917816dae344efef99f4968f9b93"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 21",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x99fd723dcc00a8d25f7fdb9274c2987345cc4b92eafa2a93d164e3387e31151d"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 21",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x97ae26c6f0459802002e1652bcb13dd3e75b9264b78a39c77ea28e2498e855e2"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 22",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x82109032360a39eaf4874163f6d89f9d6a17a8c2fd26bd42ad7df199e952b52b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 22",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x56b9655a66ab95c7f697b505b5e74a6122e5d0d64b5c14df4565a804fd768c8f"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 23",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb27f5a80b4f5143c7923dfdb2088f28b8fc54bf6ac9bd755de39c0644d173ebb"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 23",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x79c51a7a9f09cf1633924a78139ff5faebd67077c3002be3c3d3edd4a512d61d"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 24",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x42bacca65f1b92c51560e9375d018d8ba7a86acbccffda1fc214ad50555f8011"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 24",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3105486b47ea7d605d16632dbbb689e9b6f9e71a923258f0d6ab87dc11d1eff5"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 25",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4fd3dc023a6485773a9121f888da015d741f97a8b52db6077034108177c1131e"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 25",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7cf68a65fda88499131cc5a38e8cc3d57f7e6fa1813faab923ce702e38ea9e86"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 26",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd01c5025067b4bf555f2208bcd4ce583f5961dde608a15dc732583f749766284"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 26",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2b59aef939065e34cdf5715f54b907a73696b7b008102f5fc4b9c06074ff6ee2"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 27",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2b8f0914f6897bcfad60be11f61082cbfc3c9f4bae0b8979ecfd0d65d68a062a"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 27",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x8af2598eb51d0503863545883cfe74bba58ec4afab0875a31331749de0bd1ad2"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 28",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x08c8a4b0b2abba0758bd494701e52394870a036bf7a188657272b909d9c17844"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 28",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7747f65983c8a73ec7dc7b2d66b9321c8c587cae6c398e92ad6d68ba4da725b6"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 29",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x6ff35642c2a8ba817c747fe80c42ff3883d7e1061b493f1dfddf0331b19aec60"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 29",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x90b9d120529d45b41ded6b91f74e754ae331ace74916a4ca191466caed93f223"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: epoch change invalidates cache 30",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cache_reauthorize 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf21c19fd7e90734d2e93acd712f0bb42644d46c1de6cdc7b1d3a61751e2e5cc1"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: epoch change invalidates cache 30",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cache_reauthorize 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7fb2bd9351b33af9af3097a6b1aaa2a7d286b729cff1ef49bd26bf17fc8d951a"
+    },
+    {
+      "chain": "l1",
+      "name": "untrusted account cannot update issuer root",
+      "passed": true,
+      "expected_error": "NotIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "owner cannot overwrite another issuer root",
+      "passed": true,
+      "expected_error": "NotIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "root must be a canonical field element",
+      "passed": true,
+      "expected_error": "InvalidField",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "unchanged issuer root cannot churn epoch",
+      "passed": true,
+      "expected_error": "Unchanged",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "nonowner cannot change policy",
+      "passed": true,
+      "expected_error": "NotOwner",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "untrusted account cannot revoke public ID",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 31946,
+      "tx_hash": "0xe66f049f17489fbe940d3ab5716dc502e17559fe77aa4589381f4b659bbbdc45",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: wrong holder",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: wrong holder: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "gas_used": 32160,
+      "tx_hash": "0x701547a88e03fdfbd3b8bd9115d4538130fec464891dc1e08af3990b23a7a0d4",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 29684,
+      "tx_hash": "0x05b3e418005523013da96fdffe739b4466292d67f9b5d06b3512632d160b448a",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: truncated signature",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: truncated signature: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "gas_used": 38368,
+      "tx_hash": "0x6321cd0a47880241c0918c0c79c11ed5a5d41fc05c79e5db8809c8bb0ca31ebd",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: inactive signer",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: inactive signer: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46048,
+      "tx_hash": "0x7b467a5b0bc20b7b35b49a3526a9ff025818139b3193766b26588405fe14fb81",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: expired credential",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: expired credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "gas_used": 32601,
+      "tx_hash": "0x5c92d828edfcf24ab810ebc79290db0fa070c515767b71d9d7735af720a3bdc5",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: not-yet-valid credential",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: not-yet-valid credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "gas_used": 32400,
+      "tx_hash": "0xc6533f87531c37253d6400edc3bf8b649aef366e5d88c0bc2b1ad4771b74eda4",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: signed denial",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: signed denial: included revert preserves state",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "gas_used": 53791,
+      "tx_hash": "0x6deb6be398b612229053b147e8790933c92342bdb01ed08b390f2c19ee835899",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: policy version mismatch",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: policy version mismatch: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "gas_used": 37792,
+      "tx_hash": "0x526d19c352685023b016bd498a0997d385a9e649ea858d05a1ddc9a68bc7b83f",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: wrong signature domain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: wrong signature domain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46060,
+      "tx_hash": "0x497c560f3a46a5d9e9acf077906b7c62fbcaae7b09aeb99a0be9a21050c7f8cb",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: wrong signature chain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: wrong signature chain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46040,
+      "tx_hash": "0x14e3b6f5b71559a61735d668a42bb1152aa3241805774eb2c0361eb12848dfdc",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 31946,
+      "tx_hash": "0x23ac6118013b6d2496d49011f203038c8cba212f279083c27384df29027ef1f2",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: wrong holder",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: wrong holder: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "gas_used": 32160,
+      "tx_hash": "0xae4311eca267f05013139d232a44f6e6f395ac400c590ad9b97b45228fc23533",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 29684,
+      "tx_hash": "0x2283e081aa702e77dee2df8c729c8abd13804b8cd175ea96dd06b7bef3a0d06d",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: truncated signature",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: truncated signature: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "gas_used": 38368,
+      "tx_hash": "0x2af7e573969d18c199de5e0f043eb01ef788a9385b29746c7590e1b4607a2089",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: inactive signer",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: inactive signer: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46048,
+      "tx_hash": "0xa7c6dca142958af72b7348c4f4a539480660921d36cd3294a830cd806d14f105",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: expired credential",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: expired credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "gas_used": 32601,
+      "tx_hash": "0x2fd733509fad94b7fd0208de198b2d6a73d169b13caf84f6c85425ba97283a57",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: not-yet-valid credential",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: not-yet-valid credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "gas_used": 32400,
+      "tx_hash": "0x83dc7785baef39ee6cbba5df3d2ba3ccec4db7e12efe9c626b21d533d0bb7307",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: signed denial",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: signed denial: included revert preserves state",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "gas_used": 53791,
+      "tx_hash": "0x43233730e06e8621ff7b580eb77d88c579eebf5a44131c362e67c8cb6292d6ab",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: policy version mismatch",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: policy version mismatch: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "gas_used": 37792,
+      "tx_hash": "0x1b19c43174f71654a95e03957e864260242bdc8a1e4dfa1368d9bb95dda85dff",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: wrong signature domain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: wrong signature domain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46060,
+      "tx_hash": "0xc59c9c53441f511f1820b06187a3b77fc08a6e3c7955d4ed1358cfa1f6a01c88",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: wrong signature chain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: wrong signature chain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46040,
+      "tx_hash": "0x5326adead827182f49b5d73bdf94708bac0c77fb1eb8a421f8410507cedbf01c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 39820,
+      "tx_hash": "0xe849511de9822d8dcb25c7f5d3f8c86d302659bd9f3fe87c44034c360d3607b2",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: proof copied to different wallet",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: proof copied to different wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54609,
+      "tx_hash": "0xd562ec048f8f9e72fe0d788ace239106235f109c4fe618e9af2aed5721ee7647",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 39640,
+      "tx_hash": "0xedb576ae843d3fc6f109e88c6c5cd17b242bd0a71340a6c14046a0d96f513b2f",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered registry root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered registry root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 42462,
+      "tx_hash": "0x6c60076cbda9fdcd05378805dd22a2ad166aca49c55b978885c9172f5d481154",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered policy root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered policy root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 45199,
+      "tx_hash": "0x2ed8570c4322840085654d5d44b3630e760ccefcd7c9d8d010698500740af101",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered minimum tier",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered minimum tier: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 47914,
+      "tx_hash": "0x55677175950844ad6dc5bf256f7231e15c56a55d6f81cf00f99585abaa8044b7",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered scope",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered scope: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 48219,
+      "tx_hash": "0x17c4c2d35282045aa738941bec26bc5231a94ad5e139608f1d244eb4df3414c6",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered request",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: altered request: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54621,
+      "tx_hash": "0xda2268fd51fd557c609bcdbc4da78d159eae2a9989ab00a5bdda1ab780dbe143",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: changing public request cannot rebind proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: changing public request cannot rebind proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 293479,
+      "tx_hash": "0x4319a0d4c53b8714ac5de06dd4db68924e397e238750b08d3064352c57e7d995",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: corrupted proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: corrupted proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 292699,
+      "tx_hash": "0xa84efff9018ed67e5b4d4c45c7f760102c8a41984b20d6a7fda4e5b08939acdf",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: same scope pseudonym cannot migrate wallet",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: same scope pseudonym cannot migrate wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "gas_used": 295742,
+      "tx_hash": "0x2c26cc68540150607d258924ce9b0fdcfa20eb7548054d2c0e7e12b8cd323c1c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: not-yet-valid authorization window",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: not-yet-valid authorization window: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 48402,
+      "tx_hash": "0xfc5803e4e9bd18349695530a826ece0b0d0647e8e4ef5e2f5f898b919011335e",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: authorization exceeds maxTTL",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: authorization exceeds maxTTL: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 51351,
+      "tx_hash": "0xa8efe285eb982588d70597c6de929bc85ccf74cc2ae8521c78f07c645425004b",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 39850,
+      "tx_hash": "0x9ab08879c6d2314604bc551d7f2ae2f34006911ec9e57f60ac4bbe57c6580080",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: proof copied to different wallet",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: proof copied to different wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54621,
+      "tx_hash": "0x653faabe64f7cb6e320585e6195c4b609dac351df892857f154cab7cd9f59a92",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 39670,
+      "tx_hash": "0x57ae49785a2f549dab07f951c4304e33e869c6b0db6406e13eb53dcd49102162",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered registry root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered registry root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 42474,
+      "tx_hash": "0x0dacbdbe5e8bf93d3b716786cc0303c3585faeed1b4af8a0c3e16348f33dc2ef",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered policy root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered policy root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 45211,
+      "tx_hash": "0x9c575550f3ab910fc565d8c36eb13c3d5decdec182ec92c68e2b6714298931ab",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered minimum tier",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered minimum tier: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 47926,
+      "tx_hash": "0x2cfc09b3ce6815736ac449b44489fb6e1986c9e78662ded7a995c995e2e81db7",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered scope",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered scope: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 48231,
+      "tx_hash": "0x35610804706fdbb3b6cccf667958db6c0de6ef69178d7ac80091f25ffdcdee1c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered request",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: altered request: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54633,
+      "tx_hash": "0x09703e0552a8ddc2a33e00ea13b84323f5c504f01f340f81e79d7e9f6ccfab2d",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: changing public request cannot rebind proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: changing public request cannot rebind proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 293479,
+      "tx_hash": "0xcfe24b599e346c47ce169f34d872faab4d590196b99e4966f0ec98ef54ccae59",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: corrupted proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: corrupted proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 292711,
+      "tx_hash": "0x9e032c3dcfd5b3b92ba96e38a7ad510e62586a8e1a07948963f371dd8445c31b",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: same scope pseudonym cannot migrate wallet",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: same scope pseudonym cannot migrate wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "gas_used": 295706,
+      "tx_hash": "0x8b84caace4d113a5eea242a7445ef2ad11a737f1a2ba94d2227a3950395ba190",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: not-yet-valid authorization window",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: not-yet-valid authorization window: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 48402,
+      "tx_hash": "0x8cc05a7bdaad2c3e15bf844a0dcd89c7b4db4268d1f921c6cb82eba4c628d6f1",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: authorization exceeds maxTTL",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: authorization exceeds maxTTL: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 51363,
+      "tx_hash": "0x2f1c08f5bc83f36cb94cd7b132128abb79859fff48238129618658484d87eb68",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_direct: cache unavailable",
+      "passed": true,
+      "expected_error": "CacheDisabled",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_direct: cache unavailable",
+      "passed": true,
+      "expected_error": "CacheDisabled",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: fresh wallet has no authorization",
+      "passed": true,
+      "expected_error": "NoCachedAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cached replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: cached replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 29077,
+      "tx_hash": "0x4ad2b3c01efff0fea0010a78a76115ffe392774248157952aff21eb526736290",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: fresh wallet has no authorization",
+      "passed": true,
+      "expected_error": "NoCachedAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cached replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: cached replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 29077,
+      "tx_hash": "0xb25bbf232bf21811cb18c3aeccc5b05932d90e0c2cf5a4a2654b012ac3c88f2c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: policy update invalidates cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: policy update invalidates cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "old signed policy rejected after change",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk cache rejected exactly at expiry",
+      "passed": true,
+      "expected_error": "AuthorizationExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed cache rejected exactly at expiry",
+      "passed": true,
+      "expected_error": "AuthorizationExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: false token return rolls back authorization",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: false token return rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "gas_used": 156437,
+      "tx_hash": "0x819e44c060ecbe13e93bd1605e11dc2c3d7364afc7363f55a57bf1d05ef90997",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: reverting token rolls back authorization",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: reverting token rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "gas_used": 156288,
+      "tx_hash": "0x6d8843bd34c2ad09d1d1122f238e853b610ece58eae0d7fc1e827b6c90c831c5",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: reentrant inner deposit rejected; outer transfer occurs once",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: false token return rolls back authorization",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: false token return rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "gas_used": 433383,
+      "tx_hash": "0xf0d7bfecd888948e5dbf9a85996e9b89c517388cc6874caacef61c4f218e086d",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: reverting token rolls back authorization",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: reverting token rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "gas_used": 433234,
+      "tx_hash": "0xa83b3c8542833fc526df5267717e597eb68743014db4a3580e0090411914e00a",
+      "state_unchanged": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: reentrant inner deposit rejected; outer transfer occurs once",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "circuit rejects registered insufficient tier",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "l1",
+      "name": "circuit rejects registered forbidden jurisdiction",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "l1",
+      "name": "circuit rejects registered expired credential",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "l1",
+      "name": "circuit rejects registered not-yet-valid credential",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "l1",
+      "name": "circuit rejects a nonboolean Merkle direction",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: diagnostic_reauthorize 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdfcc79c1c947aa1b23a7171eca351cdb39563fe140c0c91a97ec7cb1169dcb9b"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: diagnostic_reauthorize 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x11b0bdd2c6f1043409b886e501f440b04ec4c76fd5fab1efcfb416506fb83c0f"
+    },
+    {
+      "chain": "l1",
+      "name": "public credential revocation rejects signed access",
+      "passed": true,
+      "expected_error": "CredentialRevoked",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: public revocation invalidates a current cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: public revocation invalidates a current cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "public ID revocation alone leaves active hidden credential provable; separate issuer-root removal required",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: diagnostic_reauthorize 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfbbee29de45564c124f87bbb0e39e5091fabdb8f53e133e173dc40f955e31f7d"
+    },
+    {
+      "chain": "l1",
+      "name": "removed credential invalidates old membership proof",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "removed credential cannot produce current-root witness",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "l1",
+      "name": "signed_cache: revocation cannot use old cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: revocation cannot use old cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "disabled issuer cannot republish root",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "l1",
+      "name": "disabled issuer rejected for signed access",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "authenticated issuer hierarchy matches independent Poseidon fixture",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: registry-domain credential digest matches independent encoding",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: registry-domain credential digest matches independent encoding",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x62a316fb3997989aaf7548db05322a934ded0f37e76ceb2a61d244cc54f7dc17"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5c1b078898d191023d3a1eda2fda30ef6b20d0ff8ffd72a8b530320fe183d890"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x68cf39026e0bf42d9f7deb4f5dee1519e5c798eca0577aceb7ff7211c26427ca"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1352c90d057ddc6f03f4c1c8849f499031a0fdf90a26a3f77a850000ed7d6799"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3dec251425cb944705cd7bcff20f97913db2901495748c0216fa30737a4f013b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdce8ca311d3dc0fdd70d06861e7e9ad6e7e4e3204cec629d0e00653aa6a2688b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x653c832339b9231c96a6dfa3e29d13344b93ced01c2129d181ba6674a897d0fa"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xaff7eb2de5ace9753641d38973d9e4ab5ae17812750ced9d22391f27406ae70d"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x301c0051b04f27d57b930d41f0523e505e6cad9f92742bcc60677cd3640cea66"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x0b119085051bfc0fb81c077b3fcdf17949fa5b2533c52f15bbc094b0c7f8bf04"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf0e75f26b82638d1bb9a11f33f5ece7546ce4627e206522522a18729ec463f68"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb8342f7878fd23e929caa284c950b589bae4510ed8236316cde37c489aea208a"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x15b9e4902af28dee106a54858727778d330d670c13c6c372bb42cadad4e531aa"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x54a7cdace988a61736a148a0b8a939d9efd0025398a8329f7c112eded11ba92c"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfa878753aae64ac871f2186fd35e5a67de772fc2b08f8689383b6d7d38fa0b36"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe76685859281dd43c5037606b431d281154f385931100132c8772c64468d9d96"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x0b63fb98d33a4a740984d102bf7112dc53ad4724db029c115cde033d830ddb80"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x75ed7198cb3ee5736eab6d9d34c953b9b5796ce43c99140aa8245c82e85dd572"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x93d55c732e47b28c5badebd97f2f3315fe92d9b70e55aad22ea70cc4c2df77ff"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5b2befdf1e4b5a2441866260d965c5605a90ead0aaa822cdd6d2d97f0354dc42"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x067d4c9f016b06ac35a6f204843e6256de33ce1d73278f5e8f6dee050f09d09b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x86b3f249a0a5cd0213af2a4e3891bb1d72511209dc3ab7d58774b450fb217305"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x35be5465f97e24f9f2574b68af92a28ab3cc635132922cfe8d580ebc30708d8c"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd922d09f2a5cb039a37f7f15412cedd4ded6d710f337ee710955a7b9a41ae50f"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf0cef5b9eca364d668a35feb39e5c03049b05d3c1162424671104300c03669ad"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x274a0f53c3b3713103534316cd67c6e385f40e6eeb29db340f57b1716a384fa3"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1d6a4f1494294eeb4a598f2de046a4c2d6f228b4f76c4d9cbd26ec4fdc2cce0a"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xaa9d1f4aa711fe5263193754c599fa2f29b402965ff9211351a23a9dcaa4bda4"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xefb13da50fcdc0619a1343897504335872c18231ab9b995763c53b798f8706da"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x899e9912cfe71931283d1fa59897196cd3f0f87e27eaa7d6b092061946e88fcf"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: access_repeat 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcd2e93dd13b3a8d20727e89a01535b7e85feca29d2e5e3f95fd4c8b51018da62"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_register_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa13fb31758ac2fe5bbfa247746c41dfbcde39dcfd3d9eb3b7ac931091b5fb323"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x33f6135e8aaeeed9b223c418318ae19e2b4a3700329b78528cafcce58cfb07c3"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x52599a1e20bd02d80ce5b31950d06e6fbae02bb0b8e3bebbf5e4a06a9c6c6b46"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb1fa8bc366398c84824f86265ce851b5b7d8fa978690b89b88289ec3ed872889"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf3ffbbc8729f4b759e79c052cb3ec8acc6a741fea178bcc2e7bf271667494346"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2cf91ebd63b5d72a3c265af8e2972ad9b9738e82754176270adcccfd924d5275"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb46c81165bc107392848683e9d49eebe3c1db7ad7dae6ff6766423ffc46505a3"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x21d980e9f9ed59e7133487478607a1245b56fcec9c8487a571e718b8f20397df"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x50e4a188b167f20c839c33b9e3bb80ad2146c6301843a3b471c6239621c1c72e"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x19c01749fc17d1c141b6bf6a7c41c0115b90384a3d4f3ba02ee9718519a23ccf"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd731773e8d4c9157917ed38b9fea417214ec7feffe92f71f43b58a25fa65e567"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3af6b9620588322a5a7c385c4a86fde63ad71236464e469c068433455f299b3a"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xef35e7c6ec90d388d8f5c543c18bb3100f452532f2ff6d4b54ed8570719bf6df"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xae77279d9a8196c624e252e7e50418a5e4644155d0e834cb0e98d78fb558dc42"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5750313c88911db29662bfb53508c17ab87c76488217bbacbb0106183741e709"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf25b56cbcc1231df6fa5e6e0468e62aeefdbb993b469017b7b6012573400ccc2"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xef4e3df600bba3db9dfdd83eb21da3d728e2eabdf6ac772b2a817727e22c856d"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf93e17bf73ee8868899d7f021061589150955a21a3a8c41072ce2f581297fb6d"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf56e55f74fc4a25a61587cc36219bccc41af977254fdc1c4fe4bc341f069dd49"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xbdc3dd8b69b122c9e03947cc798f9c8c1bafc25342a8d0ce9218dbc192e3b755"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xea4fd4e277d0049aa165bd7ca1ccb7bf14a67485850c5a8629bddb6800ed688b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1400fb5f6258f53f9e8377e29be65e739d56e8a5465220d3478e9cf012880598"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfc540c34f078debf7cf3678d7095150dcaa978df499f2f2443fadbab64584980"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x67779fc57f4869eff0aa3bfc97ea6e510b25d4296106b22b546cb1b0f52ccb04"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xdd2faeaa7a4fb03845f29e5c786fd3689650e24236dc4032e336d2f791151dff"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x807e04ef11f807be428bd7606762a20f57dd02adb4f366b417d9988727926ec0"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x919a9cc38f622f949a31bb8f4c445f3e398689b052f4c69cbc5759231d8db159"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfa62508c3f975ce04991da19958e76c29bc1f323a99671930730bda2080a5afe"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa41d1e78258864358d9b984bb79caa659e9a3f2196f30351baf8178ace50340e"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x6d442adcdb03479d3b254166777045cbd64adfea4258a056b65a4e78749c2fa4"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_hit 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2b07315d87cfef1320a53c4f7ae8e0510f76605a5b4966d959741808e7928cc1"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfb97ac9d25ecd0a2e7a5db8aae71388e25120af1905de9dfbb887f98aad949bf"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd3d0c005b6e229fed25736fcbfe17abcfb0fea110b803483683b75a89edf73d2"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4c7d3528892e2f470413fa506de918f7944c92ae0a6a7fa29b94fc7df146e670"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x102b12fb7a95e402b3f7938a3123257761a53d93f928f94554b7b969e698118a"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x9e5e2c5e852e02a5eae2cd25387e6321dd346c4896cebbfc22a83291507e5041"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xef6dc5369e4fe236fe7ada21cf563d25eab422df8a41d5b881cd8d682f8e8f3a"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf3a5033bf830f0b8f464fa8c819390a80bfd998866fd0bcb2a110620abceaff7"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x58ba07c2e198871c88cee475e3824df60bfc75e02662f57fe13bceef53e5c3fc"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3b78c6a89b7e3591dd3e815452e5fbf209034006b49ae150e5162141b9bc2b9a"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xeb3049c850da7582723278f792f1f65d3e6dfdd2461a88b7484b60eaaf8d09c8"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf7201c8855e6557389dbfd92a1908e84840dad5f56cdd50b47997a8679d9b848"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1bac48315ffd2fa556cf188f625c63933bd51571ef36f23b43c2dc09936b0042"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcb0eb634c5a80fa5bc1063032a5f1ae46a13f88fecaaa987a4ec5a8d345d39be"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3898ea365677cd41d6a3fb138b5ceb14bf928d18fe1e7e1235fefc32f1a66c63"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf67077d84706381e78370c01a6cfa4b7b040ebe948c28d7f7c98ae5356f4d3ab"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2d9d1339118906f0a2f34b789e11b963957bd56d3600e6fe0152ad836200f41f"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x955c092ce237df1cc7cdae3e1172fdc8c1d6d46847e6dabd06b1aeee62a3137c"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xaf4fbcc21b32c08f802281f996f01e9bb7594527753449200742971456b12baf"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4b029db7ad7e4644548d3dc142031491ad33cec883ed48b4d943ff7982b82f0d"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x54bfd662bc7e422d7147e0ce95e7cf4ecb0eab14439112744fbcf8da87993ea7"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xadfc13120995e048effcd970cf8ef69ef236d62542007cc119a8e64cdf87c1bd"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfece485d711d511f906b0999133216825496305c93d6092d732f05eafd583647"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x58dfa1217617cb430c6f25eef00bf12a612290437ecc7887f2432cc4479d8c8f"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x84e669adfb898b20839a54fa35f782a16d17d0ff47545d10bcac8ca9803666c3"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcf14036d13429bff5598b9ffb7704f666d92bb9a921004623fad5fbe7855d848"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf56acba022ad14e2aca4a355fa16e09922458d1b4025291d9128bf87ec604f0b"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xbc7392b37c5d67733832055cc48ed899ecad13db0f4f68fbe76456ba5daa10a7"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2bf24a01af75d6e182ececf3be124d8a6bf9b257f9a62d65b5d3a171107142c9"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x4daf94ef94dffa973a0355b3d4cb47fd50ac0aab97cf26569e67e0f960276480"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3a86681a44a653153c106163b575b1e8d3ec131e86361192ce605473e6234fa7"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: access_repeat 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x539c741805eb4a3935edaf8795b7e9e563f923c7f8159a57d19a5e5b69d79857"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_register_first 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcaf272abdbe6458af950fe370eb9e93635b75b8dd89f3766223b617365aecfe0"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x65892634508d6cc16cfd97fd295545bec3128a95a0e8a9769aee19c23bb0eafa"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x518080030579dd2739ee717200dd248e341285836f269e2c10493e3a97a12ec6"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb79f29798903993f8e706d44f2247dcf054cd44a9b6e96b5472a1d9ecfc4f03c"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa74ade1b42114d8572b30b647460c3b0b5f3faaefbe807b1c3e0b6c991e9c6a1"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x43575be2ca0ca237d3880de9bdb9219e6294b69dac7db4e4874bd88c65148385"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1f5e89ded13ff47ffd483559331383ee8b38628a5fc24a766484ee7fb9d30026"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5447486381fcda862586eebf95280dd4e133f2ca1efd3335785cd05a03347af4"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xadd1ecf206eb831b84f13dfc110c19e77e0fa99a1bcec14e4418e1fabcb031a6"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2cc2a7b11a9c99221912856240c4be151d8b0ba61e72c63c0015dfc477a63a82"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1d8175ec5787eebf37f34746aebdf787f9be61f2b506103844b3ebe0ea026086"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf4ce2c18107e4e4258486fd26ec5de2a7456fd881b1e4859479e44787935eaca"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x29f4c9a73994422ab17def89e35ac736ed018a9a4de715e6cd7a0175eb65048b"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe3ea1b0fa41e7893fc73a4383c123ef537f9bcb7dfb2eb59a69e9f484ca0966a"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb75f516ec56b5f749b256862bba805c9fcb0d0131ce808dc3bb071b767ba4118"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x60e202686a3c80008b3d1dd51e7f16799f5a21fdc47f04e497b65de5eaef0bc8"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe9dd061f95fdd7ec870dc15dc5a08729d932b8e5ff77f39867625e336e9c1882"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x58c39ffa2e4cb5203e285eb55cd70ab538e5aae9e6b7f00f575557c529ddbba3"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5a527c58658767b443f99374bef31b10d3a9e11f1a830b3e1cfcfd9355a5aa36"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x110f7c17859e8f8ff85436eeee319726dd19cb601a7c1e26e889dc4bee102a5c"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5e1d99a12dbc9110a9a8933ca4168bff45b302a32bc2d67b7331bffda64b108d"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x99700d00fd87c620899a73a53946ba508101157538c6c662a6c0c785b4dba679"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x78447daa4244b8e591d0f0894447bfde25e437bd4268c50678339f084ef71847"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x16ba52acd2329e764faa80d4f3de47c05f390a92a437c43eae6123f986eefc19"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x38099835b84cd3a15129a13e933442a21a4ff2a7beb9faf49b1e99a6e2ab8a98"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1d26d725e7f9f67b98bfa42b065c084a9340e9b0f44cc822c646da447860ceb0"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x200ca2c3f8ae0c0795569626a495141dfbc6eac4b6b9bef6728d7fa1de2b1c5a"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7defaf4e86421b39129925df0e72c89e8c780d7078ad63d604d2a6f826172a4a"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc020f78c377fe26303e9ea52a0b570fe3d676011b20105aa4d6fe01bec7f0bda"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xaa8a17fb2494834925f2a6edff7289981feb147adb367d695cfd890031da99e4"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_hit 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x92d29dae477eb3c4faa362359dcc4ed4b2e0526c6a939784a6617640d61deb00"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 1",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xa2a35737b81a12f3b98f6f8d56a1acd876bd249bb493a52ef906ed90c3c396f3"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 1",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 1 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf5605b660d1a5874d8877a916757b17cebe78eee5e9f828586b9b9c5a696052e"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 2",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x3b6c5cd6c003bf39219fd4d315257e2059dd557b6022660956808c16b57d1225"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 2",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 2 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc0fe7f48fd98f53b99daa5868cda18881ceee94fd2b7c99afb7b66da4a668459"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 3",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2601d7d942cf9a89bcc60a3ebd19f03a4de04a2cbff938a779bd6a4c995f9a65"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 3",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 3 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb590e8b5cbf854f8bc6a6f6ca4c48a1c3df310cffafb63d4e63969ea8ea3c1ab"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 4",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x8b1d5f80a48f0a6c6b508d4b8d0a6d80fa1579f47305854c2de23a78c3381c67"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 4",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 4 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x479e2fbd514bddfca0a8c0dcdee2f65fde18e86ec5ccaa623a006b2bcaf03128"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 5",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb6819752879ce45aa442ca2c58cd5a66b020fd8dd9e51ddc91fdc29091e49f8a"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 5",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 5 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xecb3ba48f7055f9ddb7cfabcfa595d77f59356fbcb9857583ad2e7356774590b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 6",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcd48868fc57882bde89feb263ac4a9108aae32a81cad50bedc0f6ff4fd2173b5"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 6",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 6 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xbcbd240e2c69553aafb0a2ad04f15d09b6216574db385b77d4bff250677fe519"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 7",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xb71452014e43d924aef813534f7043b5f30ce8d0b08087b0c0891d9b26a81218"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 7",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 7 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x81f5b0eeb694afbd99a5019378ca81bb499b05a5ef3eab3b0bb9ba3694ce6bed"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 8",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfc6f3fcd38ec2bee5ce8c5e2aa1462015afb32b8448d8ea1d0f547779b529711"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 8",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 8 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd86957368155ff5752223c070c915cb9519c06446e14803f5f2e6681a741bef2"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 9",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x02e8b498baefde747a769586fe6bbda5e385afd209518e112174310dee3678db"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 9",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 9 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7b3b10c62f6f016df0705b32cebeee10b82e3b6c357f0d9f7e69ce919b6323e6"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 10",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x26450be3dbe85ef4d0c729d7ebdb44e3c9509c0259539bd3b04c3c35683d77f4"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 10",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 10 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x752da1288831b9a1f78cacd820d482735223d55099b938cf03e4faa6b33dd099"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 11",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5ae84dab0443857a38bb71a9edb788c602636351cee3cdc1fc2e2e25e4162d32"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 11",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 11 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x163e205f04bed589d4eed164a6f0485d462684235a213e09a1265bb098d1db2a"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 12",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1e99a819e5011eae8b08623e7a57977e220c14b3e26edba7407c892e7fb1274f"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 12",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 12 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x74141b1d50e7d97c1d3ac18a872490a42746643ebd79a1fec0809e3c700da4a8"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 13",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5e299813406d7b1b786c21dac033c536ca6a5ba9012ae2a93c4892f5d37c0f1b"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 13",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 13 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd6fe05a56e93e29577b573f8ace66f67507f2c7b1a96ead2c26b08f39bc2f62e"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 14",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x5cb819d69f5d1c95756c9f07329ceb1df94945c03f04697b51854a77e3c16ff4"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 14",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 14 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xfc0a933be364a522026e9bf28a6fe899e8b22b04c56f9f5e3448c67bfd80d922"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 15",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x7bce717cde38fc414f79d279c29b72f2b344d47b229f789836358b6b840bfaef"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 15",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 15 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xcb224b45093bcfc5b8876285a05481e77620bc99ee78b05cf3ad0215d57bef1d"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 16",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x05123c0f1aec5b42d9ab4ea578be8781ed10e2ce1dcb009618d58958c9852338"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 16",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 16 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x22c2d6c3b0c7676ad7e5ede02a6a6b3eef56fa077eb1f8feceb93744cb519e2b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 17",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc63ee51dc2a2508780343232106c228bc04e97af2bdee8afedab599b01e93d5d"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 17",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 17 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe4d52577a3211034619455afa21610868ed6770adceb09faa9533becf835f03b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 18",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf63456f0a5767d649883da7ce55184ea7ccce15c2ce00fabd3e2210bd7db6e9c"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 18",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 18 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x08c24df40610bba945d449835e2d698ffeea0a6f9b477c36b2defe2d42d09042"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 19",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xea19a8b85de2baf42ffcebd0a07fb47be90d662835880ed87348f8ba091a4e9f"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 19",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 19 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc05a93b22a58a26f02101b971cda6d40930288fec3f38b7246a3b408f357fe2a"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 20",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xf3485557ad2d6997c098067e89a31064860c1d4244b934ad5354847332897842"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 20",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 20 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x6999e7496694bc75bd1e11b13cbf8b762f9d519cb8b039d1e851b58532f10f27"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 21",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe3e9432460f7ab155f079326ad001f80eef80f6fe29ac5c8e0c8e1f1ce935678"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 21",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 21 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x291a984960ea25212367183911601e7ba0c2f4349a5365f4f7c2dc57836c2e0b"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 22",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2236ae70b2a14b560d869abcac3bc62149f007d8cc5971821aec6e807809e4d1"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 22",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 22 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe2700c1999a1e3e4090f199244c53a5442e3e333b196bb5449ae34db07b4f634"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 23",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2ac6f64543b718bfa4250819311e9bd1ca6998c4ed1f27c2a3b79b63cbd90fdb"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 23",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 23 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc828a46ff50e278e4e1ebff80592f9e289dfed91e8caadeb08ede8bc7aa27335"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 24",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xc5dcbdd717e0f01e6e924d4a1c81c8d64a54da0fb67affc584bd849550e631de"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 24",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 24 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x93fd5932e53c69ce59c59eebf0ab8a06a06f4a142767f8cec29fa59c6430bf52"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 25",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xe7a58224ce25ecaeeeb8f34ed63b01d112b2741e5320c8135c3ab0133556c3c7"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 25",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 25 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x876b7600554c2b73398376d06bd7e31adf117a4932637d3f7b1e2c8c842e2602"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 26",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xed795cb0cd1e1892f8e26e3f8becb5e3ca8a93f746927477c1c959e2282e84fb"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 26",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 26 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2ad740b345d2ca888e15941669d26d79f6ad7359bfe840464bfb60527d8dd31a"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 27",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x420337493a1c9ed7a4829f94214b6967ce01d74c603e0fd076b4f54953b41062"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 27",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 27 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x0c9d3666b58606dc528333ce7a2a4ef228a3fd57bbca436c06d27d6fff8cb481"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 28",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x0b8872991a5c7374fb4d78591d2a7139c1dd537fdb621d89f48ead5bd74928ac"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 28",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 28 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x6ca9525a189aca6478f349d4f56149535e79e84816946d41827f9cb9f5cd13df"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 29",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x441fe4bbabbd3557e33d5ff8f27f56257bd6b1a52ce13e1cb08ab72a80e9cc06"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 29",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 29 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x2ed18ff16619938d3b58caaf1d48a14601d194bc4e2813de807ee0048600afd5"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: epoch change invalidates cache 30",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cache_reauthorize 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xd73a3baf954faee72aea9eaefe2038e1565bee58f955d2c8cb84855435bc4dfd"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: epoch change invalidates cache 30",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cache_reauthorize 30 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x80d1054411d266e5cd3dad3db80fd5a2ef19e4392c26fda296f4403c11ded531"
+    },
+    {
+      "chain": "op",
+      "name": "untrusted account cannot update issuer root",
+      "passed": true,
+      "expected_error": "NotIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "owner cannot overwrite another issuer root",
+      "passed": true,
+      "expected_error": "NotIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "root must be a canonical field element",
+      "passed": true,
+      "expected_error": "InvalidField",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "unchanged issuer root cannot churn epoch",
+      "passed": true,
+      "expected_error": "Unchanged",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "nonowner cannot change policy",
+      "passed": true,
+      "expected_error": "NotOwner",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "untrusted account cannot revoke public ID",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 31970,
+      "tx_hash": "0xc41044acac047c36615723f694246c6fb2f37982ef3e038e4ce9e701a1eee4ec",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: wrong holder",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: wrong holder: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "gas_used": 32184,
+      "tx_hash": "0x1c63bf33d9cbdc6aebd37af909c54b689d3d0adc1f6fdc8b564dada54eadcea5",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 29708,
+      "tx_hash": "0xbb57a9c60f0c731800d41dc13928e1fca7bf5d153636436d96a814d62a046dc3",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: truncated signature",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: truncated signature: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "gas_used": 38368,
+      "tx_hash": "0x5da4e42cea73061097bdde1f015c3147fefa2badaf3b60fac2dd7c5954c18d7c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: inactive signer",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: inactive signer: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46040,
+      "tx_hash": "0xb5f8eb85af902b9a92a9dcd16aa772b139cbb6db179c846cdbe390d4507a4397",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: expired credential",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: expired credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "gas_used": 32589,
+      "tx_hash": "0xaa0cc243d7d6fae8cccecef953047d6c9398e07b4e6cf13e9cba8103385ba501",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: not-yet-valid credential",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: not-yet-valid credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "gas_used": 32400,
+      "tx_hash": "0xd4b7e131cb2f88453db56e5af417afba42589e9cc11679ebeb9a94b405ee0d02",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: signed denial",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: signed denial: included revert preserves state",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "gas_used": 53803,
+      "tx_hash": "0x330e008d3dd6f31bf47f3e1b153b6c09b43c98c16f26d251040206a581d975d0",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: policy version mismatch",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: policy version mismatch: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "gas_used": 37792,
+      "tx_hash": "0xbad78eda9f1c37b944140e8ac59ca03e79863ba33463e01e9141265c4e7ad76d",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: wrong signature domain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: wrong signature domain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46028,
+      "tx_hash": "0x8f6d8d0cf2e53c55954126c29e905c6ea464538824d56de0eaab1ebc1421c7b5",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: wrong signature chain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: wrong signature chain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46028,
+      "tx_hash": "0x0a1d213ced21687490b8ae11c935f3b48d39600fdec00b19cc3523d6b10603c9",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 31970,
+      "tx_hash": "0xbed71769bff7d666fc7a01fed886c9d47cc6f4c53814e5a7fe13bdb317b372ed",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: wrong holder",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: wrong holder: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "gas_used": 32184,
+      "tx_hash": "0xbcae234be12aa12fc9cb08feeb50cc19c659fd0e1b943b5874d7ae2c0f65474d",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 29708,
+      "tx_hash": "0x07dc42fca238747bf551944c7a9d00c781be81b5cf6eb1c16176031c1ac695c8",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: truncated signature",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: truncated signature: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "gas_used": 38368,
+      "tx_hash": "0xd9a991837c825063850169e8af1e33c6df8f39eceb039f1f4ce251385265db47",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: inactive signer",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: inactive signer: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46040,
+      "tx_hash": "0x05b7050fa2922860d58baf80f5eaa681e1b56035b372283ac1835c67c7d9f7e4",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: expired credential",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: expired credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "gas_used": 32589,
+      "tx_hash": "0xd7411dbc5141aa3d4ba33e4338a845ebf3f29ce63ddd645cbd0e74cc8c74b17c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: not-yet-valid credential",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: not-yet-valid credential: included revert preserves state",
+      "passed": true,
+      "expected_error": "CredentialNotYetValid",
+      "gas_used": 32388,
+      "tx_hash": "0x9b9f58d36b48b5307d65c6d81e60c176ac53141a265886b36a28c286098c67c8",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: signed denial",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: signed denial: included revert preserves state",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "gas_used": 53803,
+      "tx_hash": "0x8702714ffe7573c5aa8ae58d3dd280a94177c089a298e2be73eb8a92568c387f",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: policy version mismatch",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: policy version mismatch: included revert preserves state",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "gas_used": 37792,
+      "tx_hash": "0x128288688858e4c73623d41162bb68b12983f9daaf77bb7a8bf882f432c0b728",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: wrong signature domain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: wrong signature domain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46016,
+      "tx_hash": "0x3da285e342599f1e948a2ba2194e88cd3544f5abc8e50ac501e22ae6505339a9",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: wrong signature chain",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: wrong signature chain: included revert preserves state",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "gas_used": 46028,
+      "tx_hash": "0xd941098737718de52053faebf5a85401d5d466d7351c5fcb4b7b6d420d6cee9f",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 39760,
+      "tx_hash": "0xb995df7784945324bc427b191465a247ed771a14714e878c3a2284ee3b8d2eef",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: proof copied to different wallet",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: proof copied to different wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54585,
+      "tx_hash": "0x801a03e060267b7f1952e43daa8d2fe929b11d100b1b0a793c23e30f65e9f032",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 39580,
+      "tx_hash": "0xa261677dc929e325a5fa8904971e8bfde9754223c96785d68547c43a7d0566b3",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered registry root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered registry root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 42438,
+      "tx_hash": "0x8123826e72666e9fe6be241f0b92413fcf8342c3301b120178284f824e42bff2",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered policy root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered policy root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 45175,
+      "tx_hash": "0x27571090865ab3b0a1c37794dd3e093acd753e434b5fd13d7c796be3897d61bb",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered minimum tier",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered minimum tier: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 47890,
+      "tx_hash": "0xa19c93fc001174212539cdcdaed6394f96b23ea503d4d0b567d981ee31bd66a7",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered scope",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered scope: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 48195,
+      "tx_hash": "0xe7e2ecae3985eaf2fbdc4066390efe52d9bf49635ea73a681e63b592aba78f13",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered request",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: altered request: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54597,
+      "tx_hash": "0x2ea78950ba538a6d1358247dbad054511e7043fc2704c7aa655c786beb8cf5c9",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: changing public request cannot rebind proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: changing public request cannot rebind proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 293455,
+      "tx_hash": "0xba085f9a965f34b19501df1b1bc3c20ee40f9828f446a2d78bcba3e2062cf344",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: corrupted proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: corrupted proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 292687,
+      "tx_hash": "0xb878bbf94b0778e684eddf2a0dd20e71e5dff8887599aa8e6e38e12d5a2f4a66",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: same scope pseudonym cannot migrate wallet",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: same scope pseudonym cannot migrate wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "gas_used": 295706,
+      "tx_hash": "0x5a6262b5d1bdf214ed70eb04739b3d93d660b1890dfa30fd08acd9a4e6f721ef",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: not-yet-valid authorization window",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: not-yet-valid authorization window: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 48366,
+      "tx_hash": "0xf3ae9dd5b98230da777434ac937618f71aa57292a06c30136d88ee9079f0535d",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: authorization exceeds maxTTL",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: authorization exceeds maxTTL: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 51351,
+      "tx_hash": "0xd4bf77f9c24c2aaa3e9f657e305629fb0a5d1aef8ea55e2cb4cb6197133b014c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: old nonce replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: old nonce replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 39730,
+      "tx_hash": "0xbda1e088423019b6b68d8895bc9781b2bb505d863768086adf257bf7bddc1d00",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: proof copied to different wallet",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: proof copied to different wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54573,
+      "tx_hash": "0x4ef0d870b264a96705c36faa961c2501a5368d4790aa829e5ffc3d06614ca9c0",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: zero amount: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 39550,
+      "tx_hash": "0xa33e2738661efd8f9da56d1cce6c82993cb1a5b7ef43b46a2866260673c5219d",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered registry root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered registry root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 42426,
+      "tx_hash": "0x96729ad2ceb91a72460b73ff1a355ca3d6301dcf7ffeef21975176d164bb7042",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered policy root",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered policy root: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 45163,
+      "tx_hash": "0xd027613248259d1d441ce3b8268b764a83613c87330f7d612f1764009f831f53",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered minimum tier",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered minimum tier: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 47878,
+      "tx_hash": "0x6c8a3b4d77c83a4b5f2fd9d6d9de50f7f1c58571651149555b1701a686ea6345",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered scope",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered scope: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 48183,
+      "tx_hash": "0x66039e167d33eb52feb74f3d88cd3eb13959c6e5c3b686e9d76de16055e14220",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered request",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: altered request: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 54585,
+      "tx_hash": "0xee1abdc2c7fabf96b8380241a9fd4e6fa04e3ee18b31b397e23361ec7418c01b",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: changing public request cannot rebind proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: changing public request cannot rebind proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 293443,
+      "tx_hash": "0x4a2b1556ff001e68609755106e0b9f143237558fd18ed64824d400e4075dab4f",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: corrupted proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: corrupted proof: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 292663,
+      "tx_hash": "0x295d4e3f95c3b955b159406d728973b1728568641ab854b32fd6fe8a11602173",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: same scope pseudonym cannot migrate wallet",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: same scope pseudonym cannot migrate wallet: included revert preserves state",
+      "passed": true,
+      "expected_error": "NullifierAlreadyBound",
+      "gas_used": 295730,
+      "tx_hash": "0x391f15d02b4b010d24dfc94bd1951d5a1bdd5c1e258ca318ce70ada82cbe62d0",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: not-yet-valid authorization window",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: not-yet-valid authorization window: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 48354,
+      "tx_hash": "0x55137b1ac69d072a7d00d3740d9180e7701182240878a6229fd4bf0585d9395f",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: authorization exceeds maxTTL",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: authorization exceeds maxTTL: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidWindow",
+      "gas_used": 51339,
+      "tx_hash": "0xc0fb7d322beab74619fae72981c2f06039a3639280907e7b447b20d3408e6fd2",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_direct: cache unavailable",
+      "passed": true,
+      "expected_error": "CacheDisabled",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: cache unavailable",
+      "passed": true,
+      "expected_error": "CacheDisabled",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: fresh wallet has no authorization",
+      "passed": true,
+      "expected_error": "NoCachedAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cached replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: cached replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 29077,
+      "tx_hash": "0x7393913a5225b2e35380f97d1bff4552a8df9f111dc6c31a7e588f85028542d4",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: fresh wallet has no authorization",
+      "passed": true,
+      "expected_error": "NoCachedAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cached replay",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: cached replay: included revert preserves state",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 29077,
+      "tx_hash": "0xfc0c0923f82dfaba6e422236232d36411786c68dcc311a0936edfc26d688d43c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: policy update invalidates cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: policy update invalidates cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "old signed policy rejected after change",
+      "passed": true,
+      "expected_error": "WrongPolicyVersion",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk cache rejected exactly at expiry",
+      "passed": true,
+      "expected_error": "AuthorizationExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed cache rejected exactly at expiry",
+      "passed": true,
+      "expected_error": "AuthorizationExpired",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: false token return rolls back authorization",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: false token return rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "gas_used": 156461,
+      "tx_hash": "0x0321a8c4369dccf3073ff5d6e0456d5302986fcf507b7b44a6071cccc062dba0",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: reverting token rolls back authorization",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: reverting token rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "gas_used": 156312,
+      "tx_hash": "0x9fba05ba7e88cf2415028a101a70929bf2275555e8448d868d8fae51c9be3fc0",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: reentrant inner deposit rejected; outer transfer occurs once",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: false token return rolls back authorization",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: false token return rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "TokenTransferFailed",
+      "gas_used": 433407,
+      "tx_hash": "0x7486c71a567f7c6e3711edc0c74261c2854535060f8e39b4bcd5a8ee968dc49c",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: reverting token rolls back authorization",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: reverting token rolls back authorization: included revert preserves state",
+      "passed": true,
+      "expected_error": "DeliberateTransferFailure",
+      "gas_used": 433258,
+      "tx_hash": "0x25db62350a39dcafff352d6bb5f80a79e7158212bd65eb71779fa151fe60620e",
+      "state_unchanged": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: reentrant inner deposit rejected; outer transfer occurs once",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "circuit rejects registered insufficient tier",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "op",
+      "name": "circuit rejects registered forbidden jurisdiction",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "op",
+      "name": "circuit rejects registered expired credential",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "op",
+      "name": "circuit rejects registered not-yet-valid credential",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "op",
+      "name": "circuit rejects a nonboolean Merkle direction",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: diagnostic_reauthorize 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x1f71f81cc266fe6e8f4716a3f29d133b0af9467a824fbf619e3ce8315b8cec38"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: diagnostic_reauthorize 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0x14bd47bf0acea2304b1e0a12e45c040992fef3eb2e79341e91d7a536df8ce9a8"
+    },
+    {
+      "chain": "op",
+      "name": "public credential revocation rejects signed access",
+      "passed": true,
+      "expected_error": "CredentialRevoked",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: public revocation invalidates a current cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: public revocation invalidates a current cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "public ID revocation alone leaves active hidden credential provable; separate issuer-root removal required",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: diagnostic_reauthorize 0 transfers token and consumes nonce",
+      "passed": true,
+      "tx_hash": "0xba477dc572e3879d20bd3fed3ced1a7f64b2a97d7b23d8f4112402148c972f1b"
+    },
+    {
+      "chain": "op",
+      "name": "removed credential invalidates old membership proof",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "removed credential cannot produce current-root witness",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "chain": "op",
+      "name": "signed_cache: revocation cannot use old cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: revocation cannot use old cache",
+      "passed": true,
+      "expected_error": "StaleAuthorization",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "disabled issuer cannot republish root",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    },
+    {
+      "chain": "op",
+      "name": "disabled issuer rejected for signed access",
+      "passed": true,
+      "expected_error": "InactiveIssuer",
+      "phase": "static_call"
+    }
+  ]
+}

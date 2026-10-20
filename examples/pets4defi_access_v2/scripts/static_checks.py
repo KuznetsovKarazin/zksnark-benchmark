@@ -34,7 +34,10 @@ def main() -> int:
     parser.add_argument("--slither", default="slither", help="Slither executable")
     parser.add_argument("--solc", default="solc", help="Native solc 0.8.37 executable")
     parser.add_argument("--out", type=Path, default=Path("results/static_analysis"))
+    parser.add_argument("--verifier", type=Path, default=Path("build/Verifier.sol"),
+                        help="Generated verifier to scan; can point to a retained CI artifact")
     args = parser.parse_args()
+    scan_targets = dict(TARGETS, generated=[str(args.verifier)])
     out = args.out if args.out.is_absolute() else ROOT / args.out
     out.mkdir(parents=True, exist_ok=True)
     summary = {
@@ -48,12 +51,12 @@ def main() -> int:
         raise RuntimeError("Use native solc 0.8.37 to match the locked benchmark compiler")
     source_hashes = {
         target: hashlib.sha256((ROOT / target).read_bytes()).hexdigest()
-        for targets in TARGETS.values() for target in targets
+        for targets in scan_targets.values() for target in targets
     }
     summary["source_sha256"] = source_hashes
     summary["package_lock_sha256"] = hashlib.sha256((ROOT / "package-lock.json").read_bytes()).hexdigest()
     severe_count = 0
-    for group, targets in TARGETS.items():
+    for group, targets in scan_targets.items():
         for target in targets:
             source = ROOT / target
             if not source.is_file():

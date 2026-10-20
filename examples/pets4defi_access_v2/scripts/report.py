@@ -47,9 +47,11 @@ def main():
     lines+=['','**Browser and physical phone: unmeasured.** The executable harness is provided; server numbers must not be relabelled as mobile performance.',
         '', '## Evidence and interpretation', '',
         '- `measurements.json`: environment, setup provenance, exact source hashes and successful gas events.',
-        '- `transactions.json`, `proof_samples.json`, `test_results.json`: raw receipts, verified proof timings and checks.',
+        '- `raw_ci_node24.zip`: complete successful CI artifact, including raw `transactions.json`; `ci_provenance.json` ties the archive to the tested merge and source head.',
+        '- `proof_samples.json`, `test_results.json`: verified proof timings and checks from that same CI run.',
         '- `fee_snapshot.json` / `fee_history_raw.json.gz`: timestamped public fee evidence and raw RPC archive.',
-        '- `architecture_results.csv`, `trace_counts.csv`, `trace_events.csv`, `break_even.csv`: inspectable state-trace accounting.',
+        '- `architecture_results.csv`, `trace_counts.csv`, `break_even.csv`: inspectable state-trace accounting. All CSVs, including the larger `trace_events.csv` and price conversions, are in `economic_tables.zip` with a checksum manifest.',
+        '- `server_prover.json` / `server_setup.json`: separate local 30-run cold/warm measurement, with its own environment and setup hashes; it is not the CI prover dataset.',
         '- `price_inputs.csv`: missing prices and fee components; assumed stresses and observed fee conversions are distinct.',
         '', 'Read THREAT_MODEL.md and REVIEW_RESPONSE.md before using these numbers in an article. The result is a reproducible architecture experiment with limited privacy properties, not a production system or completed empirical cost–privacy frontier.', '']
     (ROOT/'RESULTS.md').write_text('\n'.join(lines))

@@ -4,12 +4,12 @@ A comprehensive research framework for systematic performance evaluation of zero
 
 > **Research Use Only**: This framework is designed for academic research and educational purposes. Generated cryptographic keys and trusted setup parameters are not suitable for production deployment.
 
-For a small executable comparison of issuer-signed access and signed-credential
-ZK access to the same synthetic deposit, see the
-[PETs4DeFi access-cost pilot](examples/pets4defi_access/README.md).
-It includes local EVM gas measurements, rejection checks, a 270-scenario cost
-export and a [handoff for economic analysis](examples/pets4defi_access/HANDOFF.md).
-This additive example uses its own runner and pinned dependencies.
+For the current experiment, see [PETs4DeFi v2](examples/pets4defi_access_v2/README.md):
+reusable signed and ZK eligibility, each with direct and cached access,
+local L1/OP measurements, explicit privacy assumptions and state-trace accounting.
+Start with its [results](examples/pets4defi_access_v2/RESULTS.md) and
+[handoff for economic analysis](examples/pets4defi_access_v2/HANDOFF.md).
+The [v1 pilot](examples/pets4defi_access/README.md) is retained as historical evidence.
 
 ## Table of Contents
 
