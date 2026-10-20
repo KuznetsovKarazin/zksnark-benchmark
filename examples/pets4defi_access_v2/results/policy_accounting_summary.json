@@ -1,0 +1,82 @@
+{
+  "dataset": "PETs4DeFi eligibility-access policy inputs",
+  "measurements_sha256": "e93a979d8d4db4289d5a0a784ed0a6cf93581975e25dc2440b34ab8062a63620",
+  "exporter_sha256": "fa1e9a932f0b0500a9c34620f89a4e1e462817fab6310e0e21c478ac8e29998b",
+  "measurement_source_sha": "1d7e7cfcbb8a50d2dfc6fb891aa8f173ad186e75",
+  "debug_run": false,
+  "source_file": "examples/pets4defi_access_v2/results/policy_measurements.json",
+  "fee_snapshot_sha256": "0961651ef07461198655daca39dca13f606355e63a832b890d21dc07b0ea2510",
+  "fee_archive_sha256": "3a34c0fa39e5fc1c14c72e8f1d2caa3b182e6e88b3463b8c470c41918e9d228a",
+  "fee_window": {
+    "first_block": {
+      "number": 26228002,
+      "hash": "0xa55c829f4e0d4058f7f6f9158d2d9397ee9d974d236f2693c7f40b8554e88432",
+      "timestamp_unix": 1792429511,
+      "timestamp_utc": "2026-10-19T17:05:11+00:00"
+    },
+    "last_block": {
+      "number": 26235201,
+      "hash": "0x70274a2e1f2b079ef6009a28131e679292ce9b4faecdaf570fde5a9b81989605",
+      "timestamp_unix": 1792516235,
+      "timestamp_utc": "2026-10-20T17:10:35+00:00"
+    },
+    "block_count": 7200,
+    "boundary_timestamp_span_seconds": 86724,
+    "timestamp_note": "Only first/last block timestamps were fetched; individual timestamps are not interpolated."
+  },
+  "fee_metric": "Nearest-rank block-weighted distribution of within-block effective p50 values; NOT global transaction percentiles.",
+  "fx": {
+    "assumed_eur_per_eth": "2170",
+    "status": "assumption_not_market_quote"
+  },
+  "policies": [
+    {
+      "id": "global",
+      "mode": 0,
+      "delta_seconds": 0,
+      "root_grace_seconds": 0
+    },
+    {
+      "id": "security",
+      "mode": 1,
+      "delta_seconds": 0,
+      "root_grace_seconds": 300
+    },
+    {
+      "id": "delay_300",
+      "mode": 2,
+      "delta_seconds": 300,
+      "root_grace_seconds": 300
+    },
+    {
+      "id": "delay_3600",
+      "mode": 2,
+      "delta_seconds": 3600,
+      "root_grace_seconds": 300
+    }
+  ],
+  "counts": {
+    "primary_contexts": 12,
+    "primary_workload_rows": 240,
+    "matched_primary_comparisons": 96,
+    "all_workload_rows": 480
+  },
+  "cost_boundary": "user_transactions;gate_deployment_and_operator_budgets_separate;no_full_system_total",
+  "population_boundary": "synthetic_synchronized_cohort;four_issuers_250_users_each;renewal_reuses_slots;daily_additions_rotate_issuers;fixed_root_gas_extrapolation_from_8_leaf_batch_not_1000_user_execution",
+  "comparison_boundary": "same_eligible_workload;cached_revocation_bounds_matched;direct_delta3600_signed_grace_exceeds_ZK_old_root_presentation_bound300",
+  "files": {
+    "event_costs.csv": "0a191032b308a02ddcf3c078a89cf0655752d8c40008d378626f6d4ac260e4e0",
+    "input_register.csv": "7f1af0f7eb9e2bfbacfc1893d0bb35613c7ec26d88676337ebb919d3ed1f2d79",
+    "privacy_premium.csv": "7d7a122c2a521773004fbb9ccccebe6e62b1535d3d005436492c84189cfee6b5",
+    "revocation_tradeoff.csv": "78b349b4749baf60dc61549e43909667b06de77cc922018ffa6726fef296da8b",
+    "workload_costs.csv": "371a9226b2fb8712c85b2906797a2ef51f559bb371dde2f539730d9693800f0e"
+  },
+  "unmeasured": [
+    "operational_issuer_prices",
+    "population_witness_distribution",
+    "phone_performance",
+    "full_L2_fees",
+    "incident_frequency_and_loss",
+    "minimal_standalone_signed_registry_deployment"
+  ]
+}

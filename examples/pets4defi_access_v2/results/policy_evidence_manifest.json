@@ -1,0 +1,89 @@
+{
+  "archive": "policy_evidence.zip",
+  "sha256": "7ccca550286ad710e71edf95221684c033fb9054fce153d51281dbf7ecebce21",
+  "bytes": 651350,
+  "measurement_source_sha": "1d7e7cfcbb8a50d2dfc6fb891aa8f173ad186e75",
+  "source_dirty": false,
+  "files": [
+    {
+      "path": "policy_accounting_summary.json",
+      "bytes": 3301,
+      "sha256": "953ee004abc9381eedac446c2fcb0436e1826cdd9a8d5ad3af01f98144e1ef0c"
+    },
+    {
+      "path": "policy_artifacts/Verifier.sol",
+      "bytes": 9781,
+      "sha256": "b588c90eaa8fe5e074cf18014c64d932a55f92e020ad5556328ccd5f6a685922"
+    },
+    {
+      "path": "policy_artifacts/setup.json",
+      "bytes": 1117,
+      "sha256": "781bfd8348fb7004d80520a6e882762a75fdd809080437dada444f4482af4f3b"
+    },
+    {
+      "path": "policy_artifacts/verification_key.json",
+      "bytes": 4205,
+      "sha256": "20aa8010570e6e28dafcda4ae9a413a031387ff853d08119778139c5a67f88cd"
+    },
+    {
+      "path": "policy_burst.csv",
+      "bytes": 3529,
+      "sha256": "78b349b4749baf60dc61549e43909667b06de77cc922018ffa6726fef296da8b"
+    },
+    {
+      "path": "policy_burst_trace.csv",
+      "bytes": 6800,
+      "sha256": "a05bd38e6a502cfb073c09e51ecfb75991cf1b74602bc05196ad76345e89720f"
+    },
+    {
+      "path": "policy_comparisons.csv",
+      "bytes": 95893,
+      "sha256": "2d593a2ac1e56257eb3705da02bdbceef89c81e6d3ef584505787a3066ba6fcb"
+    },
+    {
+      "path": "policy_event_costs.csv",
+      "bytes": 27824,
+      "sha256": "0a191032b308a02ddcf3c078a89cf0655752d8c40008d378626f6d4ac260e4e0"
+    },
+    {
+      "path": "policy_exposure.csv",
+      "bytes": 6711,
+      "sha256": "67d1dca792563d009d5059ca598a51d5697832815b26a8728506319c7f6e5172"
+    },
+    {
+      "path": "policy_failure_costs.csv",
+      "bytes": 6606,
+      "sha256": "69441257a0dcecaa2880f9d15cc8f2b8fdcaf4d622d06ba1a62b4c635f30f456"
+    },
+    {
+      "path": "policy_measurements.json",
+      "bytes": 369718,
+      "sha256": "e93a979d8d4db4289d5a0a784ed0a6cf93581975e25dc2440b34ab8062a63620"
+    },
+    {
+      "path": "policy_proofs.json",
+      "bytes": 510269,
+      "sha256": "fe2ddb4653c02d7a66b9ec44ca529bc9eeedecfec72504c33e9d4ab60b51f29e"
+    },
+    {
+      "path": "policy_tests.json",
+      "bytes": 236639,
+      "sha256": "a6299793bd59c29db27d862caad3d5543ea6e7b2e806509a67df2e4e3ad8b1b2"
+    },
+    {
+      "path": "policy_trace.csv",
+      "bytes": 4883032,
+      "sha256": "69902b76686a97273d3d0e22e0616056196f3bc9bf7034e6fb65e3b7da98c454"
+    },
+    {
+      "path": "policy_transactions.json",
+      "bytes": 2999638,
+      "sha256": "5f2f7def71d1759fa9a104d023b09b5c27c1014d5571e20905611ebd83e67a2d"
+    },
+    {
+      "path": "policy_workload_costs.csv",
+      "bytes": 270271,
+      "sha256": "4e970c71ba479f5fe128fd9907e31693f7a06fac66e05efc51551a6127421ce2"
+    }
+  ]
+}

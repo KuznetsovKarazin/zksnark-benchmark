@@ -2,7 +2,7 @@
 
 For the economic assignment and a compact input dataset, use the [project page](../../projects/pets4defi/README.md).
 
-This technical directory contains a runnable, synthetic experiment for the **cost of specified privacy properties under different access and status-update architectures**. The current policy experiment is specified below and in [POLICIES.md](POLICIES.md). Earlier architecture receipts and analyses remain available in `results/`, [RESULTS.md](RESULTS.md), [THREAT_MODEL.md](THREAT_MODEL.md) and [ECONOMICS.md](ECONOMICS.md). Raw transaction receipts, proof samples and fee evidence are retained in `results/`.
+This technical directory contains a runnable, synthetic experiment for the **cost of specified privacy properties under different access and status-update architectures**. The current policy experiment is specified below and in [POLICIES.md](POLICIES.md), with [measured results](POLICY_RESULTS.md). Earlier architecture receipts and analyses remain available in `results/`, [RESULTS.md](RESULTS.md), [THREAT_MODEL.md](THREAT_MODEL.md) and [ECONOMICS.md](ECONOMICS.md). Raw transaction receipts, proof samples and fee evidence are retained in `results/`.
 
 ## Access methods and freshness policies
 

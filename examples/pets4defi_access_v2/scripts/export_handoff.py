@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Export a small, source-checked economic input set for project participants."""
+"""Export the retained global-invalidation architecture dataset to a separate archive directory."""
 import argparse
 import csv
 from decimal import Decimal
@@ -33,7 +33,7 @@ def write_csv(path, rows):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--results', type=Path, default=EXPERIMENT / 'results')
-    parser.add_argument('--out', type=Path, default=REPOSITORY / 'projects/pets4defi/data')
+    parser.add_argument('--out', type=Path, default=EXPERIMENT / 'results/architecture_handoff')
     parser.add_argument('--assumed-eur-per-eth', type=Decimal, default=D('2170'))
     args = parser.parse_args()
     if not args.assumed_eur_per_eth.is_finite() or args.assumed_eur_per_eth <= 0:

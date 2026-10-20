@@ -8,3 +8,8 @@ results/trace_events.csv
 results/price_sensitivity.csv
 results/observed_fee_projection.csv
 results/transactions.json
+# Byte-preserved in policy_evidence.zip and CI artifacts.
+results/policy_transactions.json
+results/policy_proofs.json
+results/policy_trace.csv
+results/policy_burst_trace.csv

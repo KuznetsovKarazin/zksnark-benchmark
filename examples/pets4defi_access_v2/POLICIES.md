@@ -31,13 +31,17 @@ Successful transaction receipts, included-revert receipts, proofs, setup hashes,
 
 ## Accounting and uncertainty
 
-`policy_economics.py` applies measured event costs to explicit, ordered synthetic workloads. Primary tables use batched renewals. Unbatched renewals remain a sensitivity calculation. The focused burst trace makes minute-scale Δ effects observable; evenly spaced quarterly accesses cannot establish a general latency/cost frontier.
+`policy_economics.py` applies measured event costs to explicit, ordered synthetic workloads. The model population is split across four issuers with 250 cohort credentials each. Daily single-leaf additions rotate between issuers; synchronized renewals replace expired slots and publish four roots per round. Primary tables use batched renewals. Unbatched renewals remain a sensitivity calculation. The focused burst trace makes minute-scale Δ effects observable; evenly spaced quarterly accesses cannot establish a general latency/cost frontier.
 
 The revoked-credential exposure calculation is distinct from the cost trace of an unaffected legitimate user. Denied access is not counted as a cheap successful deposit. No incident probability or monetary loss is invented.
 
 The Ethereum fee snapshot is archived and hash checked. Its block-weighted distribution of within-block median effective fees supplies price scenarios, not percentiles of quarterly user bills. €2,170/ETH is an assumption. Full L2 fees, issuer and witness-service prices, physical-device timings, demand and risk valuation remain unknown.
 
 ## Reproduction and evidence
+
+[Measured results](POLICY_RESULTS.md) · [Complete evidence archive](results/policy_evidence.zip) · [Archive manifest](results/policy_evidence_manifest.json)
+
+Raw receipt/proof JSON and long traces listed below are retained byte-for-byte in the archive.
 
 ```sh
 npm ci
