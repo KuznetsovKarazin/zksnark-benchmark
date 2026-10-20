@@ -13,7 +13,7 @@ import subprocess
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 try:
     import psutil
@@ -231,7 +231,7 @@ class Prover:
         Returns:
             Dictionary with proof information
         """
-        info = {}
+        info: dict[str, Any] = {}
         
         try:
             if proof_json.exists():

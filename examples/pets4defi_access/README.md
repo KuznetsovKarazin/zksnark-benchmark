@@ -1,5 +1,7 @@
 # PETs4DeFi: a small signed-credential access-cost pilot
 
+**Status: historical v1 diagnostic; a separate v2 is forthcoming.** This example records the cost of adding a proof to a signed-credential gate. Its baseline already hides the raw age, while the holder and stable credential identifiers remain public, so the measurements do not establish a privacy gain. Preserve these results as the v1 reference. See [PUBLIC_INPUT_REVIEW.md](PUBLIC_INPUT_REVIEW.md) for the tested public-input binding behavior and the npm 10 lockfile repair.
+
 This example compares two ways to authorize the **same synthetic token deposit**. It produces local transaction measurements, rejection tests and an explicit economic scenario table. It is a research prototype, not a KYC service or a production DeFi application.
 
 | Variant | Authorization for the deposit |
