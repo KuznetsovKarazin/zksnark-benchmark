@@ -1,0 +1,51 @@
+name: PETs4DeFi v2
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  demo:
+    name: Node ${{ matrix.node }} / npm ${{ matrix.npm }} v2 demo
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - node: "22"
+            npm: "10"
+          - node: "24"
+            npm: "11"
+    defaults:
+      run:
+        working-directory: examples/pets4defi_access_v2
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+          cache-dependency-path: examples/pets4defi_access_v2/package-lock.json
+      - name: Select npm and report versions
+        run: |
+          npm install --global npm@${{ matrix.npm }}
+          node --version
+          npm --version
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run v2 setup, positive and negative checks, and measurements
+        run: npm run demo
+      - name: Preserve v2 measurements
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: pets4defi-v2-node-${{ matrix.node }}-npm-${{ matrix.npm }}
+          path: examples/pets4defi_access_v2/results/
+          if-no-files-found: warn
