@@ -1,8 +1,10 @@
 # PETs4DeFi — economic analysis of private eligibility checks
 
-**ECON-03 · Nataliya. Technical inputs: Alexander (TECH-01).**
+**Economics: Nataliya (ECON-03 → ECON-04 → ECON-05). Technical inputs: Alexander (TECH-01).**
 
-Estimate the additional user-transaction cost of specified privacy properties, and identify what further evidence is needed to judge their value. Compare an unchecked token deposit, signed eligibility checks and ZK proofs. Signed and ZK checks each have direct and cached access modes.
+Research question: how do private eligibility checks, repeated use and revocation requirements change access costs, who pays them, and what user benefit and service margin would justify their use? The supplied measurements establish technical inputs. Nataliya develops the economic ledger, conditional thresholds and sensitivity analysis.
+
+Compare an unchecked token deposit, signed eligibility checks and ZK proofs. Signed and ZK checks each have direct and cached modes. The **economic regimes** are B0: selected signed access, user-funded; B1: selected ZK access, user-funded; B2: the same ZK implementation with part of its declared access-cost pool paid by the service. Technical methods and financing regimes are different dimensions.
 
 ZK hides the credential identifier, selected trusted issuer and private attributes from the on-chain presentation. Its pseudonym is application-scoped. Public wallets, transfers and timing remain visible. The eligibility policy and user workloads are synthetic.
 
@@ -10,7 +12,13 @@ ZK hides the credential identifier, selected trusted issuer and private attribut
 
 | File | Use |
 |---|---|
-| [privacy_premium.csv](data/privacy_premium.csv) | Start here: 24 decisions comparing the cheapest measured signed and ZK access modes for each workload and policy. |
+| [ECONOMIC_PROTOCOL.md](ECONOMIC_PROTOCOL.md) | Start here: economic boundary, B0/B1/B2, equations, fee rule, sweep and acceptance criteria. |
+| [event_ledger.csv](data/event_ledger.csv) | Event → trigger/count → executor/payee → initial payer/final bearer → source and double-count rule. |
+| [frequency_workload_costs.csv](data/frequency_workload_costs.csv) | Five technical methods at 1, 10 and 100 deposits; new-user workloads, not observed behaviour. |
+| [frequency_event_counts.csv](data/frequency_event_counts.csv) | Exact modeled counts of approve, first/repeat access and cache events, reconciled to each workload. |
+| [frequency_decisions.csv](data/frequency_decisions.csv) | Cheapest signed and ZK user-transaction choices at each frequency. |
+| [economic_sweep_plan.csv](data/economic_sweep_plan.csv) | Fifteen economic scenarios: three frequencies × five user shares. This is a plan, not completed profitability results. |
+| [privacy_premium.csv](data/privacy_premium.csv) | Sensitivity inputs: 24 signed/ZK decisions for service count, credential lifetime and revocation policy. |
 | [workload_costs.csv](data/workload_costs.csv) | The five methods, authorization counts and separate setup/operator budgets: 120 rows. |
 | [input_register.csv](data/input_register.csv) | Record supported values or ranges, unit, source, date and scope. Leave unsupported inputs unknown. |
 | [phase_sensitivity.csv](data/phase_sensitivity.csv) | Thirty rows showing the effect of shifting two revocations while keeping their count fixed. |
@@ -19,13 +27,22 @@ ZK hides the credential identifier, selected trusted issuer and private attribut
 
 ## First deliverable
 
-Prepare a **two-page note and the updated input register**. Begin with one scenario; there is no need to discuss every row.
+Prepare a **two-page note, event ledger and updated input register** in ECON-03. Begin with one scenario; there is no need to discuss every row or implement the full model yet.
 
 1. Select `context_id = n100-K1-N1000-I4-L90-weekly-batched` and `policy = security`. This means 100 deposits, one service, 1,000 users, 90-day credentials, daily additions and weekly unrelated revocations. Use its five rows in `workload_costs.csv` and one row in `privacy_premium.csv`.
 2. State which signed mode and which ZK mode minimize user-transaction gas. Report their difference in gas and under the two fee-price scenarios. Show eligibility overhead relative to unchecked deposits. Explain the counts of full authorizations and cache hits; keep setup and operator budgets separate.
-3. Identify the missing costs that could change the decision. Complete the input register where evidence is available, and list the remaining data requests. Include evidence on revocation frequency and temporal clustering. Keep proof time separate from money unless a suitable valuation is supplied.
+3. Use the event ledger to distinguish external costs, user-to-service fees and reimbursement. Confirm B0/B1/B2, the allocation pool and fixed fee rule in the economic protocol. Record service revenue and fixed expenses as unknown parameters where evidence is absent; report required margin rather than assumed profitability.
+4. Complete supported input values/ranges and list remaining data requests. Include issuance, witness delivery, active user time and revocation timing. Unknown prices remain parameters; they do not prevent a clearly bounded first analysis.
 
-Three optional extensions are available after this first comparison: change the number of services or credential lifetime; inspect the phase table; inspect the burst table. Each should answer one specific question. Attach the note to the existing ECON-03 card and move it to Review. Alexander supplies technical measurements; no contract implementation is required from Nataliya. ECON-02 remains the separate Louafi exercise.
+After review, **ECON-04** implements the ledger with two hand-worked checks. **ECON-05** runs 1/10/100 deposits × 0/25/50/75/100% user funding under the same fixed fee rule. The two archived Ethereum fee scenarios reprice these 15 cases; they are not independent workload experiments. Then choose one focused lifetime, service-count, phase or burst extension if it changes a conclusion. Do not combine all dimensions at once.
+
+Attach the ECON-03 result to its existing card and move it to Review. Alexander owns contracts, ZKP/privacy changes, technical validation and missing device/L2 measurements. For a technical request, state the economic question, missing event/parameter, needed unit/range and affected conclusion on the current card; no ZKP implementation is required from Nataliya. ECON-02 remains a separate bounded Louafi reproduction exercise, not a source of DeFi willingness-to-pay estimates.
+
+The frequency inputs can be regenerated from the archived measurements, without Node or a new proof run, using Python 3.10+ from the repository root:
+
+```sh
+python3 projects/pets4defi/scripts/build_economic_inputs.py
+```
 
 ## Decision rule and cost boundary
 
@@ -51,4 +68,6 @@ Recurring gas events have 30 local measurements; first-holder events and deploym
 
 EUR conversions use the recorded **CoinGecko quote of €2,164.73/ETH on 20 October 2026**; see [fx_quote.json](data/fx_quote.json). Fee p50/p90 are scenarios from the archived Ethereum fee window, not percentiles of quarterly bills. Full L2 fees and phone performance remain unmeasured.
 
-[Provenance](data/provenance.json) · [Technical protocol](../../examples/pets4defi_access_v2/POLICIES.md)
+The grant connection is private, reusable eligibility verification for WP3/WP4 (T3.4/T4.2), including revocation and gas/latency. This local deposit fixture is an input to the integrated zk-KYC prototype, not completion of D4.1. Ethereum EUR figures are a public-network deployment scenario, **not the operating budget of the grant's Besu testnet**, whose test-token gas price may be zero. Hosting, proving and provider costs still need their own accounting.
+
+[Measurement provenance](data/provenance.json) · [Frequency-input provenance](data/economic_inputs_manifest.json) · [Technical protocol](../../examples/pets4defi_access_v2/POLICIES.md)
