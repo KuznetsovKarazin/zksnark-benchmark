@@ -30,7 +30,7 @@ npm ci
 npm run policy
 ```
 
-This runs setup, policy/transfer checks, 30-sample recurring-event measurements, economic accounting and model tests. `npm run policy:economics` rebuilds the participant tables from retained `results/policy_measurements.json`; EUR conversion defaults to the labelled assumption €2,170/ETH. Debug runs (`BENCH_RUNS=2 npm run policy:benchmark`) are explicitly marked and rejected by the final exporter.
+This runs setup, policy/transfer checks, 30-sample recurring-event measurements, economic accounting and model tests. `npm run policy:economics` rebuilds the participant tables from retained `results/policy_measurements.json`; EUR conversion uses the dated quote retained in `projects/pets4defi/data/fx_quote.json`; an explicit CLI override is labelled as an assumption. Debug runs (`BENCH_RUNS=2 npm run policy:benchmark`) are explicitly marked and rejected by the final exporter.
 
 The current participant tables use this policy experiment. The earlier global-only architecture experiment can still be reproduced separately:
 

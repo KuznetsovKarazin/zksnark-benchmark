@@ -2,54 +2,53 @@
 
 **ECON-03 · Nataliya. Technical inputs: Alexander (TECH-01).**
 
-Estimate the additional cost of specified privacy properties and the conditions under which that cost is justified. The experiment compares an unchecked token deposit, signed eligibility checks and ZK proofs. Signed and ZK checks each have direct and cached access modes.
+Estimate the additional user-transaction cost of specified privacy properties, and identify what further evidence is needed to judge their value. Compare an unchecked token deposit, signed eligibility checks and ZK proofs. Signed and ZK checks each have direct and cached access modes.
 
-ZK hides the credential identifier, selected trusted issuer and private credential attributes from the on-chain presentation. Its pseudonym is application-scoped. Public wallets, transfers and timing remain visible. This is a synthetic eligibility experiment.
+ZK hides the credential identifier, selected trusted issuer and private attributes from the on-chain presentation. Its pseudonym is application-scoped. Public wallets, transfers and timing remain visible. The eligibility policy and user workloads are synthetic.
 
 ## Inputs
 
 | File | Use |
 |---|---|
-| [workload_costs.csv](data/workload_costs.csv) | User transaction gas, authorization counts and separate setup/operator budgets. |
-| [privacy_premium.csv](data/privacy_premium.csv) | Signed-minus-unchecked overhead and matched ZK-minus-signed differences. |
-| [revocation_tradeoff.csv](data/revocation_tradeoff.csv) | Eight-row burst example: authorization cost versus the maximum cached revocation exposure window. |
-| [input_register.csv](data/input_register.csv) | Add supported values/ranges, units, source, date and scope. Leave unsupported inputs unknown. |
-| [event_costs.csv](data/event_costs.csv) | Measured operation costs, sample counts, median and interquartile range. |
+| [privacy_premium.csv](data/privacy_premium.csv) | Start here: 24 decisions comparing the cheapest measured signed and ZK access modes for each workload and policy. |
+| [workload_costs.csv](data/workload_costs.csv) | The five methods, authorization counts and separate setup/operator budgets: 120 rows. |
+| [input_register.csv](data/input_register.csv) | Record supported values or ranges, unit, source, date and scope. Leave unsupported inputs unknown. |
+| [phase_sensitivity.csv](data/phase_sensitivity.csv) | Thirty rows showing the effect of shifting two revocations while keeping their count fixed. |
+| [revocation_tradeoff.csv](data/revocation_tradeoff.csv) | Eight-row burst example for bounded revocation delays. |
+| [event_costs.csv](data/event_costs.csv) | Measured gas per operation, sample counts, median and quartiles. |
 
 ## First deliverable
 
-Prepare a **two-page note and the completed input register**. Start with one comparison; the full table is a sensitivity dataset, not a list of separate tasks.
+Prepare a **two-page note and the updated input register**. Begin with one scenario; there is no need to discuss every row.
 
-1. In `workload_costs.csv`, select `context_id = n100-K1-N1000-I4-L90-weekly-batched` and `policy = security`. Compare its five methods. This is 100 deposits, one service, 1,000 users across four issuers, 90-day credentials, daily additions and weekly unrelated revocations. Use the two corresponding rows of `privacy_premium.csv` for direct and cached contrasts.
-2. Change only the revocation schedule to `none` and `monthly`, then compare one versus five services while holding total deposits at 100. Explain differences through full authorizations and cache hits. Check 30-day credentials separately. Use `revocation_tradeoff.csv` for minute-scale delays: evenly spaced quarterly accesses cannot establish their effect.
-3. Report the conditional value of privacy needed to cover its incremental cost. Identify which missing expenses could change the conclusion and provide sourced ranges where available. Keep proving time separate from money unless a suitable valuation is supplied.
+1. Select `context_id = n100-K1-N1000-I4-L90-weekly-batched` and `policy = security`. This means 100 deposits, one service, 1,000 users, 90-day credentials, daily additions and weekly unrelated revocations. Use its five rows in `workload_costs.csv` and one row in `privacy_premium.csv`.
+2. State which signed mode and which ZK mode minimize user-transaction gas. Report their difference in gas and under the two fee-price scenarios. Show eligibility overhead relative to unchecked deposits. Explain the counts of full authorizations and cache hits; keep setup and operator budgets separate.
+3. Identify the missing costs that could change the decision. Complete the input register where evidence is available, and list the remaining data requests. Include evidence on revocation frequency and temporal clustering. Keep proof time separate from money unless a suitable valuation is supplied.
 
-Attach the note to the existing ECON-03 card and move it to Review. Questions and results belong on that card. No contract implementation is required from Nataliya. ECON-02 remains the separate Louafi reproduction exercise.
+Three optional extensions are available after this first comparison: change the number of services or credential lifetime; inspect the phase table; inspect the burst table. Each should answer one specific question. Attach the note to the existing ECON-03 card and move it to Review. Alexander supplies technical measurements; no contract implementation is required from Nataliya. ECON-02 remains the separate Louafi exercise.
 
-## Reading the comparisons
+## Decision rule and cost boundary
 
-- **Eligibility overhead:** signed user transactions minus the matched unchecked deposits.
-- **Privacy increment:** ZK minus signed user transactions with the same workload and access mode. Preserve negative differences if they occur; they are conditional implementation results, not proof that a whole ZK service is cheaper.
-- **Separate budgets:** application setup and operator root/status publication costs are not included in the user-transaction difference. The shared registry is not a minimal standalone signed deployment.
-- **Unknown expenses:** issuance, renewal, witness delivery, proving services, device costs and failure frequency. Unknown does not mean zero. Funding shares redistribute a specified bill; they do not change its total.
+For the **same workload and freshness policy**, select the cheaper measured direct/cached mode within each family. The primary difference is:
 
-The primary workload has daily additions in every context; `none` means **no unrelated revocations**, not an unchanged registry. A 30-day authorization TTL is separate from credential validity. The synthetic population has 250 cohort credentials per issuer; daily single-leaf additions rotate across four issuers. A synchronized renewal publishes four replacement roots. The on-chain batch measurement changes eight leaves; scaling its fixed-size root publication to the model population is an explicit projection, not a 1,000-user load test.
+`minimum ZK user-transaction gas − minimum signed user-transaction gas`.
 
-## Freshness policies
+This selects the minimum **action and approval gas only**. It does not optimize total system cost: deployment, registry operation, issuance, witness delivery, user computation and failures must be assessed separately. Preserve the sign of the calculated difference. A positive difference is one component of the value needed to justify the specified privacy properties; it is not measured willingness to pay.
 
-| Policy | Cache behavior | Ordinary revocation delay |
-|---|---|---:|
-| `global` | Any publication invalidates both caches | 0 s |
-| `security` | Signed checks its own ID; ZK ignores additions and reacts to security changes | 0 s |
-| `delay_300` | Selective checks with a bounded ordinary-revocation delay | 300 s |
-| `delay_3600` | Same policy with a longer bound | 3,600 s |
+Direct-to-direct and cache-to-cache comparisons are technical controls. They remain in the [technical comparison table](../../examples/pets4defi_access_v2/results/policy_comparisons.csv); a cheaper ZK cache relative to a more expensive signed cache would not establish an advantage over the best signed option. The shared registry is not a minimal standalone signed deployment.
 
-Emergency issuer/policy changes invalidate immediately. Recent-root presentation grace is separately fixed at 300 seconds in selective policies. An existing ZK cache may survive for Δ, while an old-root proof is bounded by both Δ and that 300-second grace. The direct `delay_3600` contrast is labelled as having different maximum presentation windows; do not interpret it as an equal-freshness privacy premium. An issuer's addition-only classification is trusted. These are engineering settings, not legal recommendations.
+## Timing and policy assumptions
 
-## Evidence and limits
+The main table contains `global` and `security`, both with immediate ordinary revocation. Under `global`, every publication invalidates both caches. Under `security`, signed access checks its own issuer/ID/policy status; ZK ignores additions but reacts to a shared security epoch. These are architectural choices, not universal costs of privacy.
 
-Gas comes from local Ethereum-compatible execution receipts. Recurring events have 30 samples; first-holder events and deployments are single observations. Workload counts and risk exposure are model scenarios. Included-revert costs and a replacement proof are measured separately; occurrence frequencies remain unknown.
+Daily additions occur in every context. `none` means no unrelated revocations. The main `monthly` schedule uses days 30 and 60, aligned with the 30-day authorization TTL; treat it as an aligned control. The phase table instead fixes two events at days **15/45, 30/60 or 37/67**, with 90-day credentials and one or five services. Do not interpret equal costs in one alignment as evidence that monthly revocation has no effect.
 
-EUR figures use **€2,170/ETH as an assumption** and the archived Ethereum fee window. Fee p50/p90 are price scenarios from a block-weighted distribution, not percentiles of a user's quarterly bill. Full L2 fees and physical-device proof performance remain unmeasured. Do not infer demand, incident loss or whole-service profitability from these inputs.
+The burst table studies delays of 0, 300 and 3,600 seconds. It distinguishes the cost for an unaffected user from the acceptance window of a revoked credential. It demonstrates a mechanism; it does not identify an optimal delay or an observed incident rate. Emergency changes remain immediate. Delays are engineering settings, not legal recommendations.
 
-[Provenance](data/provenance.json) · [Technical protocol and reproduction](../../examples/pets4defi_access_v2/POLICIES.md)
+## Evidence
+
+Recurring gas events have 30 local measurements; first-holder events and deployments have one. The population model has four issuers and 250 cohort credentials per issuer. Renewals publish four roots per round. The measured batch changes eight leaves; population scaling is a projection, not a load test.
+
+EUR conversions use the recorded **CoinGecko quote of €2,164.73/ETH on 20 October 2026**; see [fx_quote.json](data/fx_quote.json). Fee p50/p90 are scenarios from the archived Ethereum fee window, not percentiles of quarterly bills. Full L2 fees and phone performance remain unmeasured.
+
+[Provenance](data/provenance.json) · [Technical protocol](../../examples/pets4defi_access_v2/POLICIES.md)

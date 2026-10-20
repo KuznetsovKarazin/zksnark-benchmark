@@ -1,8 +1,8 @@
 {
   "dataset": "PETs4DeFi eligibility-access policy inputs",
-  "measurements_sha256": "e93a979d8d4db4289d5a0a784ed0a6cf93581975e25dc2440b34ab8062a63620",
-  "exporter_sha256": "fa1e9a932f0b0500a9c34620f89a4e1e462817fab6310e0e21c478ac8e29998b",
-  "measurement_source_sha": "1d7e7cfcbb8a50d2dfc6fb891aa8f173ad186e75",
+  "measurements_sha256": "f805ddf5cfe5abf722ee6788d25277b01a01fa6d11eec1ab5ca8f18961a29935",
+  "exporter_sha256": "2f3f331abd4ba74cad052a881b54fd7848269673a9be673f39bb4eb05cc9020c",
+  "measurement_source_sha": "8e71e52fbfef382b96b75266a7c78d816c7e1751",
   "debug_run": false,
   "source_file": "examples/pets4defi_access_v2/results/policy_measurements.json",
   "fee_snapshot_sha256": "0961651ef07461198655daca39dca13f606355e63a832b890d21dc07b0ea2510",
@@ -26,8 +26,17 @@
   },
   "fee_metric": "Nearest-rank block-weighted distribution of within-block effective p50 values; NOT global transaction percentiles.",
   "fx": {
-    "assumed_eur_per_eth": "2170",
-    "status": "assumption_not_market_quote"
+    "base": "ETH",
+    "quote": "EUR",
+    "value": "2164.73",
+    "retrieved_at_utc": "2026-10-20T19:56:58Z",
+    "source_date": "2026-10-20",
+    "source_url": "https://www.coingecko.com/en/coins/ethereum/eur",
+    "status": "observed_web_quote",
+    "observation": "ETH/EUR conversion and daily history row displayed EUR 2164.73 for October 20 2026.",
+    "quote_timestamp_utc": null,
+    "scope": "Observed dated web quote; retrieval time is not the market tick timestamp or a daily close. Conversion scenario, not a realized bill.",
+    "file_sha256": "5f3faf2f122c9bbb9b73dcd45f53ceece54dceb712161dc128cc17cb85494480"
   },
   "policies": [
     {
@@ -57,19 +66,21 @@
   ],
   "counts": {
     "primary_contexts": 12,
-    "primary_workload_rows": 240,
-    "matched_primary_comparisons": 96,
+    "primary_workload_rows": 120,
+    "primary_decision_rows": 24,
+    "phase_sensitivity_rows": 30,
     "all_workload_rows": 480
   },
   "cost_boundary": "user_transactions;gate_deployment_and_operator_budgets_separate;no_full_system_total",
   "population_boundary": "synthetic_synchronized_cohort;four_issuers_250_users_each;renewal_reuses_slots;daily_additions_rotate_issuers;fixed_root_gas_extrapolation_from_8_leaf_batch_not_1000_user_execution",
   "comparison_boundary": "same_eligible_workload;cached_revocation_bounds_matched;direct_delta3600_signed_grace_exceeds_ZK_old_root_presentation_bound300",
   "files": {
-    "event_costs.csv": "0a191032b308a02ddcf3c078a89cf0655752d8c40008d378626f6d4ac260e4e0",
-    "input_register.csv": "7f1af0f7eb9e2bfbacfc1893d0bb35613c7ec26d88676337ebb919d3ed1f2d79",
-    "privacy_premium.csv": "7d7a122c2a521773004fbb9ccccebe6e62b1535d3d005436492c84189cfee6b5",
-    "revocation_tradeoff.csv": "78b349b4749baf60dc61549e43909667b06de77cc922018ffa6726fef296da8b",
-    "workload_costs.csv": "371a9226b2fb8712c85b2906797a2ef51f559bb371dde2f539730d9693800f0e"
+    "event_costs.csv": "daac8f75a15cfab21bad40f2911648f5886ff9475861f7be6d5e62a7d06cca57",
+    "input_register.csv": "6dbec2ef4ee5defd7c9f6564e663b429559e40527610ea8d7c233d42b5bd771f",
+    "phase_sensitivity.csv": "70ab143e0951cd391571ac972b4a5ccf20ac861ab96c9e9d2811ea7cecdfd3b0",
+    "privacy_premium.csv": "1814cfaaf81065c8dc9c9f3f4ccfb4462bf04895b785733d44f596ccb01856ea",
+    "revocation_tradeoff.csv": "215e28981894b63dc8287e687aa37c612d5db7769c2889d40f3c91524f9c1fab",
+    "workload_costs.csv": "eb7fae05d3248c17f14fb4c0ecefffeb5eb310014b260021b6f76e16650de3d0"
   },
   "unmeasured": [
     "operational_issuer_prices",

@@ -1,14 +1,14 @@
 {
   "archive": "policy_evidence.zip",
-  "sha256": "7ccca550286ad710e71edf95221684c033fb9054fce153d51281dbf7ecebce21",
-  "bytes": 651350,
-  "measurement_source_sha": "1d7e7cfcbb8a50d2dfc6fb891aa8f173ad186e75",
+  "sha256": "1a6f0eb9bc39de02cc73f861f4287ec647769eea01c09fe90bb59a58b0131ffa",
+  "bytes": 716591,
+  "measurement_source_sha": "8e71e52fbfef382b96b75266a7c78d816c7e1751",
   "source_dirty": false,
   "files": [
     {
       "path": "policy_accounting_summary.json",
-      "bytes": 3301,
-      "sha256": "953ee004abc9381eedac446c2fcb0436e1826cdd9a8d5ad3af01f98144e1ef0c"
+      "bytes": 3971,
+      "sha256": "232755cbea85a73ef6509ab67b1af497cd5c56d3c3495c293ba33e862053f736"
     },
     {
       "path": "policy_artifacts/Verifier.sol",
@@ -27,63 +27,78 @@
     },
     {
       "path": "policy_burst.csv",
-      "bytes": 3529,
-      "sha256": "78b349b4749baf60dc61549e43909667b06de77cc922018ffa6726fef296da8b"
+      "bytes": 3570,
+      "sha256": "215e28981894b63dc8287e687aa37c612d5db7769c2889d40f3c91524f9c1fab"
     },
     {
       "path": "policy_burst_trace.csv",
-      "bytes": 6800,
-      "sha256": "a05bd38e6a502cfb073c09e51ecfb75991cf1b74602bc05196ad76345e89720f"
+      "bytes": 7490,
+      "sha256": "39849d6c5596a0a0fa7a1c3849c3816dbeccf326164a01c62ab497dc2fdf2879"
     },
     {
       "path": "policy_comparisons.csv",
-      "bytes": 95893,
-      "sha256": "2d593a2ac1e56257eb3705da02bdbceef89c81e6d3ef584505787a3066ba6fcb"
+      "bytes": 120741,
+      "sha256": "de0a06d8331dbb953bc0ba4910642c5d83711f10ba88e7711ba66c9bb884a596"
+    },
+    {
+      "path": "policy_decisions.csv",
+      "bytes": 74475,
+      "sha256": "9c2dfec62a27760362d7fa600682a155a4d8fa705b3ea80a504774ea26222fe4"
     },
     {
       "path": "policy_event_costs.csv",
-      "bytes": 27824,
-      "sha256": "0a191032b308a02ddcf3c078a89cf0655752d8c40008d378626f6d4ac260e4e0"
+      "bytes": 28387,
+      "sha256": "daac8f75a15cfab21bad40f2911648f5886ff9475861f7be6d5e62a7d06cca57"
     },
     {
       "path": "policy_exposure.csv",
       "bytes": 6711,
-      "sha256": "67d1dca792563d009d5059ca598a51d5697832815b26a8728506319c7f6e5172"
+      "sha256": "84342a128540500a38587c448c67bef335eecbf5705182cec42ff444a857ee8f"
     },
     {
       "path": "policy_failure_costs.csv",
-      "bytes": 6606,
-      "sha256": "69441257a0dcecaa2880f9d15cc8f2b8fdcaf4d622d06ba1a62b4c635f30f456"
+      "bytes": 6605,
+      "sha256": "8386c9955ed92f207c7cd6c7a65eb1953406d15af43d78ce5ee4979adf26e0af"
     },
     {
       "path": "policy_measurements.json",
-      "bytes": 369718,
-      "sha256": "e93a979d8d4db4289d5a0a784ed0a6cf93581975e25dc2440b34ab8062a63620"
+      "bytes": 405056,
+      "sha256": "f805ddf5cfe5abf722ee6788d25277b01a01fa6d11eec1ab5ca8f18961a29935"
+    },
+    {
+      "path": "policy_phase_sensitivity.csv",
+      "bytes": 21164,
+      "sha256": "70ab143e0951cd391571ac972b4a5ccf20ac861ab96c9e9d2811ea7cecdfd3b0"
+    },
+    {
+      "path": "policy_phase_trace.csv",
+      "bytes": 320586,
+      "sha256": "121b13e76d508f3ea1f0c448bda750778a31cc584672a890cf7b0d1ae3d780c3"
     },
     {
       "path": "policy_proofs.json",
-      "bytes": 510269,
-      "sha256": "fe2ddb4653c02d7a66b9ec44ca529bc9eeedecfec72504c33e9d4ab60b51f29e"
+      "bytes": 510261,
+      "sha256": "d6ba28ef3502b08ef924122037b78b07b0636a0276cd6ad64f46d7a6a8d71d03"
     },
     {
       "path": "policy_tests.json",
-      "bytes": 236639,
-      "sha256": "a6299793bd59c29db27d862caad3d5543ea6e7b2e806509a67df2e4e3ad8b1b2"
+      "bytes": 256763,
+      "sha256": "b9d119660a21994348e7f1c314064f5945df61205afc648fd6f4989f9693da79"
     },
     {
       "path": "policy_trace.csv",
-      "bytes": 4883032,
-      "sha256": "69902b76686a97273d3d0e22e0616056196f3bc9bf7034e6fb65e3b7da98c454"
+      "bytes": 4883584,
+      "sha256": "4feacf4392a690e879f1bff109a1ffc9c30767c8225b621b1e6b902a177a328f"
     },
     {
       "path": "policy_transactions.json",
-      "bytes": 2999638,
-      "sha256": "5f2f7def71d1759fa9a104d023b09b5c27c1014d5571e20905611ebd83e67a2d"
+      "bytes": 3169314,
+      "sha256": "808ce691775d41f1eeaabf33acb1ec4b3e944d4a10bdcd8167596e74e564f61d"
     },
     {
       "path": "policy_workload_costs.csv",
-      "bytes": 270271,
-      "sha256": "4e970c71ba479f5fe128fd9907e31693f7a06fac66e05efc51551a6127421ce2"
+      "bytes": 318471,
+      "sha256": "cc064b5326c8d164295e060ee1c84f5ceef46438814accd6196de89fc6dd7bf6"
     }
   ]
 }

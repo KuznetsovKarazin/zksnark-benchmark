@@ -1,5 +1,5 @@
 input,value,lower,upper,unit,status,source_url,source_date,evidence_needed
-ETH_EUR,2170,,,EUR/ETH,assumption_not_market_quote,,,Use a dated rate if making a monetary claim; this value is only an illustration.
+ETH_EUR,2164.73,,,EUR/ETH,observed_web_quote,https://www.coingecko.com/en/coins/ethereum/eur,2026-10-20T19:56:58Z,Dated conversion scenario archived in fx_quote.json; retrieval time is not the tick timestamp or daily close.
 Ethereum_effective_execution_price,0.130658648,0.050009874,0.716536567,gwei,observed_fee_proxy_p50_with_p10_p90,https://ethereum-rpc.publicnode.com,2026-10-20T17:10:35+00:00,Equal-weight distribution of within-block effective p50 prices; exact window in provenance.json.
 signed_initial_issuance,,,,EUR/credential/event,missing,,,"Comparable service quote: identity checks, volume, date and whether root-publication gas is included."
 signed_renewal,,,,EUR/credential/event,missing,,,"Comparable service quote: identity checks, volume, date and whether root-publication gas is included."
@@ -14,3 +14,4 @@ L2_data_and_operator_fee,,,,ETH/transaction,missing_technical_measurement,,,Seri
 stale_proof_failures,,,,events/user/90_days,missing_empirical_frequency,,,"Included-revert gas and a replacement proof are measured in the policy experiment; occurrence frequency is unknown. Separate preflight abandonment, included reverts, witness refresh, replacement proof and waiting."
 revocation_delay_Delta,,0,3600,seconds,experimental_policy_settings,,,"Tested configured values: 0, 300 and 3600 seconds. First security invalidation anchors the bound. No legal acceptability or incident loss is assumed."
 revocation_exposure_loss,,,,EUR/user/90_days,missing_optional_risk_model,,,Use only supported event frequency and consequence estimates; otherwise report exposure time separately.
+revocation_temporal_distribution,,,,timestamped events; seconds between events; cluster size,missing_empirical_timing,,,"Issuer and service scope, observation window, inter-arrival distribution, clustering within 300/3600 seconds and relation to user access times. Synthetic burst/phase traces do not establish an optimal delay."

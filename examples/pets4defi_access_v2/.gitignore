@@ -13,3 +13,4 @@ results/policy_transactions.json
 results/policy_proofs.json
 results/policy_trace.csv
 results/policy_burst_trace.csv
+results/policy_phase_trace.csv

@@ -6,7 +6,7 @@ A comprehensive research framework for systematic performance evaluation of zero
 
 **PETs4DeFi participants: [task and input data](projects/pets4defi/README.md).**
 This is the starting point for the economic analysis: measured operation costs,
-matched privacy premiums, missing inputs and the expected deliverable.
+privacy-cost comparisons against the cheapest tested signed option, missing inputs and the expected deliverable.
 Implementation and reproduction instructions are in the
 [technical experiment](examples/pets4defi_access_v2/README.md).
 
