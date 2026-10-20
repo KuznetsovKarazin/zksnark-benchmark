@@ -119,7 +119,7 @@ async function state(gate,asset=token,wallet=holderAddress){
 }
 async function success(policy,variant,event,run=0,{gate,asset=token,proof,measured=true,extra={}}={}){
   gate??=variant==='unchecked'?unchecked:gates[gateKey(policy,variant)];
-  const before=await state(gate,asset),cacheHit=event==='cache_hit';
+  const before=await state(gate,asset),cacheHit=event==='cache_hit'||event==='cache_hit_grace';
   const p=zk(variant)&&!cacheHit?(proof??await makeProof(gate,{nonce:before.nonce,label:`${policy}/${variant}/${event}/${run}`,costSample:measured})):null;
   let tx;
   if(variant==='unchecked')tx=await gate.deposit(AMOUNT,before.nonce);
@@ -227,6 +227,25 @@ try{
     const receipt=await record(await registry.connect(signers[3]).publishIssuerRoot(3,rootValue,true),
       'shared','shared','issuer_security_update',run,{issuer_index:3,offchain_tree_update_ms:treeMs});
     const changedAt=BigInt((await provider.getBlock(receipt.blockNumber)).timestamp);
+    // An accepted old epoch reads its invalidation timestamp; measure that
+    // branch separately from a cache hit in the current security epoch.
+    for(const policy of POLICIES.filter(p=>p.delta_seconds>0)){
+      const gate=gates[gateKey(policy.id,'zk_cache')],authorization=await gate.caches(holderAddress);
+      const currentEpoch=await registry.securityEpoch();
+      assert(authorization.securityEpoch<currentEpoch,'grace sample must use an old cached epoch');
+      const [accepted,deadline]=await registry.securityDeadline(authorization.securityEpoch,policy.delta_seconds);
+      assert(accepted,'old cached epoch must remain accepted before the grace hit');
+      assert.equal(deadline,changedAt+BigInt(policy.delta_seconds));
+      await success(policy.id,'zk_cache','cache_hit_grace',run,{extra:{
+        cached_security_epoch:authorization.securityEpoch,current_security_epoch:currentEpoch,
+        security_invalidated_at:changedAt,exclusive_security_deadline:deadline}});
+      const inclusion=await now();
+      assert(inclusion<deadline&&inclusion<authorization.until,'grace hit must be included before both deadlines');
+      assert.deepEqual(Array.from(await gate.caches(holderAddress)),Array.from(authorization),
+        'a grace cache hit must not refresh or replace its saved authorization');
+      Object.assign(events.at(-1),{inclusion_timestamp:inclusion,seconds_after_security_change:inclusion-changedAt});
+      check(`${policy.id}/cache_hit_grace/${run}: accepted old epoch without refreshing authorization`);
+    }
     await mineAt(changedAt+3601n);
     for(const policy of POLICIES){
       const zGate=gates[gateKey(policy.id,'zk_cache')];
@@ -457,6 +476,7 @@ try{
     setup,runs:RUNS,debug_run:RUNS!==30,chain:'l1',chain_id:chainId,hardfork:connection.networkConfig.hardfork,
     policies:POLICIES,variants:['unchecked',...VARIANTS],batch_size:BATCH_SIZE,
     measured_first_events:'one observation each',measured_recurring_events:`${RUNS} warmed successful actions per event/treatment`,
+    cache_hit_sampling:'cache_hit uses the current security epoch; cache_hit_grace uses an unchanged old-epoch ZK authorization before its first invalidation deadline, separately for each positive-delay policy.',
     root_publication_work:'Fixed depth10 credential tree, four issuer slots; actual 8-leaf additions and occupied-slot replacements; not a population load test.',
     revocation_model:'Trusted issuer update declaration; opaque root does not enforce addition-only semantics. Public-ID revoke alone is signed-status only; revokeAndPublish pairs representations.',
     failure_model:'Included reverted transactions are measured separately; static preflight rejection incurs no chain gas. No observed network failure frequency is inferred.',

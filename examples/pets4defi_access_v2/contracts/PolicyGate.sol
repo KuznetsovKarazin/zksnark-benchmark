@@ -229,7 +229,7 @@ contract PolicyGate {
     function depositCached(uint256 amount, uint256 nonce) external nonReentrant {
         if (!cacheEnabled) revert CacheDisabled();
         _checkAction(amount, nonce);
-        Authorization memory auth = caches[msg.sender];
+        Authorization storage auth = caches[msg.sender];
         if (auth.until == 0) revert NoCachedAuthorization();
         if (block.timestamp >= auth.until) revert AuthorizationExpired();
         if (policyMode == 0) {
