@@ -1,0 +1,59 @@
+{
+  "dataset": "PETs4DeFi eligibility-access economic inputs",
+  "measurement_source_sha": "cb39a2afcc881651aee424e02d465bf3f8361303",
+  "source_files": {
+    "measurements.json": "45753cc9c06d00125d9f776adebb5fa81a0e1fb9d0f24c2540dea5e84cc41ca3",
+    "event_measurements.csv": "c1478a2b5091e63afe77322f68b8dfbdf7a2273bb85185007458012927ab85b2",
+    "architecture_results.csv": "056fe8305248ea25b7d3cf9e6a8fb1c26738c1409d9a5e629c5a25bd04efb4bd",
+    "fee_snapshot.json": "0961651ef07461198655daca39dca13f606355e63a832b890d21dc07b0ea2510",
+    "fee_history_raw.json.gz": "3a34c0fa39e5fc1c14c72e8f1d2caa3b182e6e88b3463b8c470c41918e9d228a",
+    "ci_provenance.json": "41b8b3592a06dcb70d95138c670d4827d74d89de4f08a74523e087e378f4a099",
+    "server_prover.json": "820d817d3670e52915d57203912011dc0b43c22cfdfb10b91e0f53917abe4c37"
+  },
+  "source_directory": "examples/pets4defi_access_v2/results",
+  "exporter_sha256": "87f92a7b6985b47af5a1f67df0a7231715b8c6eb28a642b2b83cedf65e1bcd76",
+  "files": {
+    "event_costs.csv": "7cedbdd00f452d87267fb225021f7f8d1d72409f9e312e652fd903f85b772f6a",
+    "input_register.csv": "8cef96e78a75876e0cb30b15fac10a7b4d13f187413a23decbda207d908836a5",
+    "privacy_premium.csv": "43671963bc130d490f031b9363353576e944cb6fb9449d07cac059818c59b5ec",
+    "workload_costs.csv": "2ed1655bb592053cc11b16e4273307d17d8634019e8288f774f0eef4913f4407"
+  },
+  "counts": {
+    "workload_contexts": 12,
+    "workload_rows": 48,
+    "matched_premiums": 24
+  },
+  "fee_window": {
+    "first_block": {
+      "number": 26228002,
+      "hash": "0xa55c829f4e0d4058f7f6f9158d2d9397ee9d974d236f2693c7f40b8554e88432",
+      "timestamp_unix": 1792429511,
+      "timestamp_utc": "2026-10-19T17:05:11+00:00"
+    },
+    "last_block": {
+      "number": 26235201,
+      "hash": "0x70274a2e1f2b079ef6009a28131e679292ce9b4faecdaf570fde5a9b81989605",
+      "timestamp_unix": 1792516235,
+      "timestamp_utc": "2026-10-20T17:10:35+00:00"
+    },
+    "block_count": 7200,
+    "boundary_timestamp_span_seconds": 86724,
+    "timestamp_note": "Only first/last block timestamps were fetched; individual timestamps are not interpolated."
+  },
+  "fee_metric": "Nearest-rank block-weighted distribution of within-block effective p50 values; NOT global transaction percentiles.",
+  "fx": {
+    "assumed_eur_per_eth": "2170",
+    "status": "assumption_not_market_quote"
+  },
+  "boundary": "L1 known execution under global cache invalidation; no total cost or ungated baseline",
+  "unmeasured": [
+    "independent_signed_status",
+    "addition_only_invalidation",
+    "bounded_revocation_delay",
+    "batched_population_run",
+    "ungated_deposit",
+    "stale_proof_failures",
+    "phone_prover",
+    "complete_L2_fee"
+  ]
+}

@@ -4,12 +4,11 @@ A comprehensive research framework for systematic performance evaluation of zero
 
 > **Research Use Only**: This framework is designed for academic research and educational purposes. Generated cryptographic keys and trusted setup parameters are not suitable for production deployment.
 
-For the current experiment, see [PETs4DeFi v2](examples/pets4defi_access_v2/README.md):
-reusable signed and ZK eligibility, each with direct and cached access,
-local L1/OP measurements, explicit privacy assumptions and state-trace accounting.
-Start with its [results](examples/pets4defi_access_v2/RESULTS.md) and
-[handoff for economic analysis](examples/pets4defi_access_v2/HANDOFF.md).
-The [v1 pilot](examples/pets4defi_access/README.md) is retained as historical evidence.
+**PETs4DeFi participants: [task and input data](projects/pets4defi/README.md).**
+This is the starting point for the economic analysis: measured operation costs,
+matched privacy premiums, missing inputs and the expected deliverable.
+Implementation and reproduction instructions are in the
+[technical experiment](examples/pets4defi_access_v2/README.md).
 
 ## Table of Contents
 

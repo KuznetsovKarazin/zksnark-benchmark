@@ -1,8 +1,8 @@
-# PETs4DeFi: eligibility privacy and access architecture, v2
+# PETs4DeFi: eligibility privacy and access architecture
 
-V2 is a runnable, synthetic experiment for the **cost of specified privacy properties under different access and status-update architectures**. It replaces v1 as the working basis for TECH-01 / ECON-03. V1 remains historical evidence, not a demonstrated privacy benefit.
+For the economic assignment and a compact input dataset, use the [project page](../../projects/pets4defi/README.md).
 
-**Start with [RESULTS.md](RESULTS.md), [THREAT_MODEL.md](THREAT_MODEL.md), [ECONOMICS.md](ECONOMICS.md), and [REVIEW_RESPONSE.md](REVIEW_RESPONSE.md).** Raw measurements, transaction receipts, proof samples and fee evidence are retained in `results/`.
+This technical directory contains a runnable, synthetic experiment for the **cost of specified privacy properties under different access and status-update architectures**. Read [RESULTS.md](RESULTS.md), [THREAT_MODEL.md](THREAT_MODEL.md) and [ECONOMICS.md](ECONOMICS.md) when reproducing the measurements. Raw transaction receipts, proof samples and fee evidence are retained in `results/`.
 
 ## Four comparable treatments
 
@@ -29,6 +29,16 @@ npm run prover
 python3 scripts/report.py
 python3 scripts/package_results.py
 ```
+
+To regenerate the participant input tables from the retained evidence:
+
+```sh
+python3 scripts/export_handoff.py --assumed-eur-per-eth 2170
+```
+
+The exchange rate is an illustrative assumption. The export preserves measured
+gas, selects 12 workloads and labels all monetary conversions as partial-cost
+scenarios. It does not estimate unmeasured cache policies, batching or failures.
 
 `demo` compiles the circuit, obtains a hash-pinned public Powers of Tau transcript, verifies the local phase-2 setup, executes both local chain environments, exports accounting tables and runs economic tests. The default is **30 warmed repetitions** of the relevant recurring events. First-holder events are explicitly single observations. `BENCH_RUNS=2 npm run benchmark` is a diagnostic run and is labelled as such in metadata; do not publish it as the main result.
 
