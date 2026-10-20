@@ -2,16 +2,19 @@
 
 For the economic assignment and a compact input dataset, use the [project page](../../projects/pets4defi/README.md).
 
-This technical directory contains a runnable, synthetic experiment for the **cost of specified privacy properties under different access and status-update architectures**. Read [RESULTS.md](RESULTS.md), [THREAT_MODEL.md](THREAT_MODEL.md) and [ECONOMICS.md](ECONOMICS.md) when reproducing the measurements. Raw transaction receipts, proof samples and fee evidence are retained in `results/`.
+This technical directory contains a runnable, synthetic experiment for the **cost of specified privacy properties under different access and status-update architectures**. The current policy experiment is specified below and in [POLICIES.md](POLICIES.md). Earlier architecture receipts and analyses remain available in `results/`, [RESULTS.md](RESULTS.md), [THREAT_MODEL.md](THREAT_MODEL.md) and [ECONOMICS.md](ECONOMICS.md). Raw transaction receipts, proof samples and fee evidence are retained in `results/`.
 
-## Four comparable treatments
+## Access methods and freshness policies
 
-| Variant | Eligibility presentation | Later deposit |
+| Method | Eligibility presentation | Later deposit |
 |---|---|---|
-| `signed_direct` | Registry-wide EIP-712 credential | Check signature/status every time |
-| `signed_cache` | Same credential | Read cache until expiry or registry epoch change |
-| `zk_direct` | Groth16 membership/predicate proof | Verify fresh action-bound proof every time |
-| `zk_cache` | Same ZK statement | Read cache until expiry or registry epoch change |
+| `unchecked` | None; matched transfer, nonce and accounting | Same operation |
+| `signed_direct` | Registry-wide EIP-712 credential | Check signature and individual status |
+| `signed_cache` | Same credential | Read authorization and individual status |
+| `zk_direct` | Groth16 membership/predicate proof | Verify a fresh action-bound proof |
+| `zk_cache` | Same ZK statement | Read authorization and security context |
+
+`PolicyRegistry`, `PolicyGate` and `UncheckedDeposit` implement global publication invalidation, selective security invalidation and ordinary-revocation delays of 300 or 3,600 seconds. These are experimental settings. A separate 300-second recent-root window permits in-flight proofs after additions. Emergency issuer/policy changes invalidate immediately. An issuer's classification of an opaque root as addition-only is trusted, not cryptographically enforced.
 
 Both signed and ZK credentials are reusable across gates. ZK hides the selected trusted issuer, credential identifier, tier, jurisdiction and Merkle paths. It exposes a different pseudonym in each application scope. Public wallets, token flows, timing and status updates remain observable. This is not end-to-end anonymity or a legal KYC implementation.
 
@@ -24,21 +27,19 @@ Validated runtime lines: **Node 22 with npm 10** and **Node 24 with npm 11**. Py
 ```sh
 cd examples/pets4defi_access_v2
 npm ci
+npm run policy
+```
+
+This runs setup, policy/transfer checks, 30-sample recurring-event measurements, economic accounting and model tests. `npm run policy:economics` rebuilds the participant tables from retained `results/policy_measurements.json`; EUR conversion defaults to the labelled assumption €2,170/ETH. Debug runs (`BENCH_RUNS=2 npm run policy:benchmark`) are explicitly marked and rejected by the final exporter.
+
+The current participant tables use this policy experiment. The earlier global-only architecture experiment can still be reproduced separately:
+
+```sh
 npm run demo
 npm run prover
 python3 scripts/report.py
 python3 scripts/package_results.py
 ```
-
-To regenerate the participant input tables from the retained evidence:
-
-```sh
-python3 scripts/export_handoff.py --assumed-eur-per-eth 2170
-```
-
-The exchange rate is an illustrative assumption. The export preserves measured
-gas, selects 12 workloads and labels all monetary conversions as partial-cost
-scenarios. It does not estimate unmeasured cache policies, batching or failures.
 
 `demo` compiles the circuit, obtains a hash-pinned public Powers of Tau transcript, verifies the local phase-2 setup, executes both local chain environments, exports accounting tables and runs economic tests. The default is **30 warmed repetitions** of the relevant recurring events. First-holder events are explicitly single observations. `BENCH_RUNS=2 npm run benchmark` is a diagnostic run and is labelled as such in metadata; do not publish it as the main result.
 
@@ -61,9 +62,9 @@ npm run browser
 - L2 execution gas alone is not the full transaction fee. L1 data charges, compression, oracle state and operator fees must be measured separately before a total L1/L2 cost claim.
 - `results/fee_snapshot.json` contains observed fee-history summaries and a hash of the full compressed raw archive. The distribution of within-block median effective fees is **not** the distribution of all transactions. Sensitivity levels remain separately marked as assumptions.
 
-## Economic interpretation
+## Earlier architecture accounting
 
-The accounting uses 96 workload contexts. Four architectures and two local chain runtimes are evaluations of those contexts, not hundreds of independent experiments. Access count is total across services. Cache misses follow an ordered trace of expiry and global registry changes. Credential lifetime and authorization TTL are separate. Issuance is reusable in both families; refresh-driven root publication, fixed deployment, population allocation and cache reauthorization are visible components.
+The retained earlier architecture accounting uses 96 workload contexts. The current policy accounting and its workload assumptions are described in [POLICIES.md](POLICIES.md). Four architectures and two local chain runtimes are evaluations of those contexts, not hundreds of independent experiments. Access count is total across services. Cache misses follow an ordered trace of expiry and global registry changes. Credential lifetime and authorization TTL are separate. Issuance is reusable in both families; refresh-driven root publication, fixed deployment, population allocation and cache reauthorization are visible components.
 
 The comparison conditions on a **common mixed registry**. A minimal standalone signed-credential system need not incur the same Merkle-root infrastructure. Synthetic token deployment/bootstrap costs are disclosed separately. Unknown issuer charges, witness distribution costs, user costs and full L2 fees remain unknown rather than zero. Alpha only distributes a specified invoice; it does not change total system cost or establish demand.
 

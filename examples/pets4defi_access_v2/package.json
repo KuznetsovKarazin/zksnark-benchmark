@@ -13,6 +13,10 @@
     "prover": "node scripts/prover_benchmark.mjs",
     "economics": "python3 scripts/economics.py --measurements results/measurements.json --out results",
     "test:economics": "python3 -m unittest discover -s scripts -p 'test_economics.py'",
+    "policy:benchmark": "node scripts/policy_benchmark.mjs",
+    "policy:economics": "python3 scripts/policy_economics.py",
+    "policy:test": "python3 -m unittest discover -s scripts -p 'test_policy_economics.py'",
+    "policy": "npm run setup && npm run policy:benchmark && npm run policy:economics && npm run policy:test",
     "demo": "npm run setup && npm run benchmark && npm run economics && npm run test:economics",
     "browser": "node browser/server.mjs"
   },
