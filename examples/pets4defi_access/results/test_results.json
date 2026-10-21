@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "source_tree_sha256": "5205513ac86c6b282ad29d200905a8550e6dbae9849bf2c797a9f412defb1a19",
+  "passed": 44,
+  "failed": 0,
+  "tests": [
+    {
+      "name": "baseline: EIP712 digest matches independently encoded digest",
+      "passed": true
+    },
+    {
+      "name": "zk: EIP712 digest matches independently encoded digest",
+      "passed": true
+    },
+    {
+      "name": "baseline: successful deposit 0, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x1f1dac028abe68ec3a549f23c6619c134279414bf84ddb620332c478c8189729"
+    },
+    {
+      "name": "zk: successful deposit 0, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0xfa67889d5793c6c414b37fe61e1ee4e2ca10ebd0ec24c9132dd37fac3d991668"
+    },
+    {
+      "name": "baseline: successful deposit 1, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x8cbac82decf377a88dfe982e08ab8bd39ecf8ae955ae982c113ef07df730c19f"
+    },
+    {
+      "name": "zk: successful deposit 1, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x7c874d8ad8d4b29a13860d986911e9881360019b2791219a56a32020ef8d8074"
+    },
+    {
+      "name": "baseline: successful deposit 2, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x9faa17715718d6e3747b0e0d7da9d0293975a912c6e074b24978ec31a6ea45fd"
+    },
+    {
+      "name": "zk: successful deposit 2, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0xadf2caf4b0493d1fe495f42123f3bc44151e2188b8e312ef000daac626dc8781"
+    },
+    {
+      "name": "baseline: successful deposit 3, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x6c0129739f7a0b7483d3477135599896bfcb7ad879f921689907d01cfcc28900"
+    },
+    {
+      "name": "zk: successful deposit 3, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0xe2e1303a6435b6bd0fb17b2303f9ff3832304aeb67afbbd81b59189bf19d7cf0"
+    },
+    {
+      "name": "baseline: successful deposit 4, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x3df8c517548a736855572e203c43b9aac9089fd1f3de6d25083bc1b2db299f42"
+    },
+    {
+      "name": "zk: successful deposit 4, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0xce6c59a8d66953c73779347bb44118ef52e715aeeba73576e5541cce80fbd56a"
+    },
+    {
+      "name": "baseline: successful deposit 5, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x121c60b04e68708a41fa45e03b99253a04173e3be9665cb62ee1505aaa62f24d"
+    },
+    {
+      "name": "zk: successful deposit 5, token transfer and nonce",
+      "passed": true,
+      "tx_hash": "0x7d72f2f41a6a3bc0eb827c61cfc9eda287cc68cfce4d49cbc1a4a486d308e9a8"
+    },
+    {
+      "name": "baseline: replay old nonce",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 34211,
+      "tx_hash": "0x36171538a96860a5893a825f4bfba2c1298c1e90c7190add3fa4511b974f6711",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: wrong holder",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "gas_used": 29789,
+      "tx_hash": "0x66806e3378f284634dbf9884fa3d3011eb6f7e14f063703d975eb5cb7a14bc49",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 31949,
+      "tx_hash": "0xbbcacd5448f389bba79885e0508704eed19e09677ed5fffa2c448a61e20e9c79",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: untrusted issuer",
+      "passed": true,
+      "expected_error": "InvalidSignature",
+      "gas_used": 39120,
+      "tx_hash": "0x21eddb90a4023ae08ffd8f557eb8d3fd8ccf59f83ea715d0e7f945aee36034ba",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: truncated signature",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "gas_used": 34567,
+      "tx_hash": "0x1a01576ae85d116cf31fbe31aa193209308ebaff5118e4cddce6ec8badad7ccd",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: wrong verifying contract in signature",
+      "passed": true,
+      "expected_error": "InvalidSignature",
+      "gas_used": 39152,
+      "tx_hash": "0x115a62e40c98437919a281afd8df59cc550952ac08089434df8b0251173832d4",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: wrong chain in signature",
+      "passed": true,
+      "expected_error": "InvalidSignature",
+      "gas_used": 39152,
+      "tx_hash": "0x05796b5cf16df0cfb0fa998c468f59254873f4500ad4a41fed6ef35509b0c849",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: expired credential",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "gas_used": 29829,
+      "tx_hash": "0x1c1426535297d0c46ee142def1a7650f05efdc4554adadc014456dc43bb0fa0b",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: replay old nonce",
+      "passed": true,
+      "expected_error": "InvalidNonce",
+      "gas_used": 40238,
+      "tx_hash": "0x09d6735d1377608c2664943e24325a23bb470bf5f02ca2dbb4d53b854c4f3aac",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: wrong holder",
+      "passed": true,
+      "expected_error": "WrongHolder",
+      "gas_used": 35852,
+      "tx_hash": "0x233416a74ce05b042bea049489f8379bbf2d0df2930281081709c1b863b7585c",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: zero amount",
+      "passed": true,
+      "expected_error": "InvalidAmount",
+      "gas_used": 38012,
+      "tx_hash": "0x473fc309687c9303bdec3a2a205bc6cb24e33e63b78f90ad9c506ac27115a009",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: untrusted issuer",
+      "passed": true,
+      "expected_error": "InvalidSignature",
+      "gas_used": 45054,
+      "tx_hash": "0x7558ed3f6c38b0c6e9a2fc2d4b18277105d794c491ac50ecf422c2472724d751",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: truncated signature",
+      "passed": true,
+      "expected_error": "InvalidSignatureLength",
+      "gas_used": 40489,
+      "tx_hash": "0x80c5a06f1320bacf3e44c889e0ddf310b74b8905e4323a332f4be971a09eaa60",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: wrong verifying contract in signature",
+      "passed": true,
+      "expected_error": "InvalidSignature",
+      "gas_used": 45054,
+      "tx_hash": "0x2f73f78fcf39865a6bc1a4c1d6ad3cdffb2b5e764cf9986d83cb37fe9c85a61c",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: wrong chain in signature",
+      "passed": true,
+      "expected_error": "InvalidSignature",
+      "gas_used": 45054,
+      "tx_hash": "0x75e12fa4af4600d749e5eaf5552140fa5b17373a99fffdec7b0603a60394801d",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: expired credential",
+      "passed": true,
+      "expected_error": "CredentialExpired",
+      "gas_used": 35844,
+      "tx_hash": "0xd73916d3e2ccd110b2102cd1afb68ef952b97bf88f4dbe477b83f8787917cc67",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: issuer signed ineligible credential",
+      "passed": true,
+      "expected_error": "Ineligible",
+      "gas_used": 39329,
+      "tx_hash": "0xfe0d44e218128011907419c872e54ac3190f27219f81b2006156967b2a9e2833",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: different amount with old proof",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 46125,
+      "tx_hash": "0xa82d089b403da689de6b04a02a321c85365d91b1f9de22bef94032e6c30f5f57",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: changed request hash cannot rebind old proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 251688,
+      "tx_hash": "0xe0f4942bf1e641b4ccf4daadfb262da34a60f53121381cb652831c665a311e81",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: corrupted Groth16 proof",
+      "passed": true,
+      "expected_error": "InvalidProof",
+      "gas_used": 250908,
+      "tx_hash": "0x9d55b70871f7ba499836a1d0916ff2c642293f560207676a1800917af964071b",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: credential commitment differs from proof",
+      "passed": true,
+      "expected_error": "InvalidPublicSignals",
+      "gas_used": 45279,
+      "tx_hash": "0xa4bb64db1630112dcc26b618478770b6144eb75df1a6e7d8ceca6cc5827fc2c6",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: witness rejects underage",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "name": "zk: witness rejects out of 8-bit age range",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "name": "zk: witness rejects wrong commitment opening",
+      "passed": true,
+      "phase": "witness_generation",
+      "gas_used": 0
+    },
+    {
+      "name": "baseline: nonissuer cannot revoke",
+      "passed": true
+    },
+    {
+      "name": "baseline: revoked credential",
+      "passed": true,
+      "expected_error": "CredentialRevoked",
+      "gas_used": 32011,
+      "tx_hash": "0x7313b17348d745ce4bc3289ad1f62448c77813178613e8ddc0a2fbb6d6e65ad6",
+      "state_unchanged": true
+    },
+    {
+      "name": "zk: nonissuer cannot revoke",
+      "passed": true
+    },
+    {
+      "name": "zk: revoked credential",
+      "passed": true,
+      "expected_error": "CredentialRevoked",
+      "gas_used": 38074,
+      "tx_hash": "0x1848a87296cc128fed7228e63909781e3913b4c13c6ebe08f2dd73aa1015c3ee",
+      "state_unchanged": true
+    },
+    {
+      "name": "baseline: expiry boundary t == validUntil rejected",
+      "passed": true,
+      "timestamp": 1800273608
+    },
+    {
+      "name": "zk: expiry boundary t == validUntil rejected",
+      "passed": true,
+      "timestamp": 1800273608
+    }
+  ]
+}

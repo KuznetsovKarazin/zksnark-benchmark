@@ -1,0 +1,62 @@
+{
+  "dataset": "PETs4DeFi frequency inputs and cost-sharing experiment plan",
+  "measurement_source_sha": "8e71e52fbfef382b96b75266a7c78d816c7e1751",
+  "measurement_recorded_at": "2026-10-20T20:08:12.915Z",
+  "measurements_sha256": "f805ddf5cfe5abf722ee6788d25277b01a01fa6d11eec1ab5ca8f18961a29935",
+  "policy_model_sha256": "2f3f331abd4ba74cad052a881b54fd7848269673a9be673f39bb4eb05cc9020c",
+  "builder_sha256": "1123cbd9ec4fc4a6f828495932b70cc3e06142b18640c58d06043a7b16371151",
+  "fee_snapshot_sha256": "0961651ef07461198655daca39dca13f606355e63a832b890d21dc07b0ea2510",
+  "fee_archive_sha256": "3a34c0fa39e5fc1c14c72e8f1d2caa3b182e6e88b3463b8c470c41918e9d228a",
+  "fx_quote_sha256": "5f3faf2f122c9bbb9b73dcd45f53ceece54dceb712161dc128cc17cb85494480",
+  "debug_run": false,
+  "command": "python3 projects/pets4defi/scripts/build_economic_inputs.py",
+  "counts": {
+    "frequency_workload_costs.csv": 15,
+    "frequency_event_counts.csv": 43,
+    "frequency_decisions.csv": 3,
+    "economic_sweep_plan.csv": 15
+  },
+  "fixed_context": {
+    "services": 1,
+    "credential_validity_days": 90,
+    "authorization_ttl_days": 30,
+    "horizon_days": 90,
+    "population": 1000,
+    "issuers": 4,
+    "policy": "security",
+    "unrelated_revocations": "every_7_days",
+    "background_additions": "daily",
+    "renewal_batching": "batched"
+  },
+  "frequency_grid": [
+    1,
+    10,
+    100
+  ],
+  "user_share_grid": [
+    "0",
+    "0.25",
+    "0.5",
+    "0.75",
+    "1"
+  ],
+  "schedule": "n uniform accesses at 90*i/n days for i=0..n-1; first access at day0",
+  "cohort": "new_user_at_day0;not_a_returning_user_cohort",
+  "unit_of_evidence": "three_synthetic_workloads;alpha_and_prices_are_postprocessing",
+  "price_scope": "archived_public_Ethereum_scenarios_not_grant_testnet_operating_expenses",
+  "selection_scope": "minimum_user_transaction_gas_within_each_family;not_full_system_minimum",
+  "economic_scope": "plan_only;ECON04_completes_event_ledger_and_cash_flows",
+  "exclusions": [
+    "unknown_offchain_prices_not_zero",
+    "no_measured_demand_or_willingness_to_pay",
+    "no_new_crypto_measurements",
+    "no_actual_paymaster_or_sponsorship_implementation",
+    "no_complete_service_profitability_estimate"
+  ],
+  "files": {
+    "frequency_workload_costs.csv": "5266b82b147b040e6afed47a8b170a21ee5f9dd72eed1fdf2797c591ede80a51",
+    "frequency_event_counts.csv": "d7c5fa02202ad8542a3fb768391ec0408e515eef8f699317366791ae2f875585",
+    "frequency_decisions.csv": "49d538e295899ae67ee5523af49cfd79268f92b7c85dde2a81698a03580bb836",
+    "economic_sweep_plan.csv": "140bb465ce90aeb8ebfb8410761d5c55e339a78950075848c7416b10f0f84a54"
+  }
+}

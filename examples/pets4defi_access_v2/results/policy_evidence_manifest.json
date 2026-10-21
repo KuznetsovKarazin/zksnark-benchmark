@@ -1,0 +1,104 @@
+{
+  "archive": "policy_evidence.zip",
+  "sha256": "1a6f0eb9bc39de02cc73f861f4287ec647769eea01c09fe90bb59a58b0131ffa",
+  "bytes": 716591,
+  "measurement_source_sha": "8e71e52fbfef382b96b75266a7c78d816c7e1751",
+  "source_dirty": false,
+  "files": [
+    {
+      "path": "policy_accounting_summary.json",
+      "bytes": 3971,
+      "sha256": "232755cbea85a73ef6509ab67b1af497cd5c56d3c3495c293ba33e862053f736"
+    },
+    {
+      "path": "policy_artifacts/Verifier.sol",
+      "bytes": 9781,
+      "sha256": "b588c90eaa8fe5e074cf18014c64d932a55f92e020ad5556328ccd5f6a685922"
+    },
+    {
+      "path": "policy_artifacts/setup.json",
+      "bytes": 1117,
+      "sha256": "781bfd8348fb7004d80520a6e882762a75fdd809080437dada444f4482af4f3b"
+    },
+    {
+      "path": "policy_artifacts/verification_key.json",
+      "bytes": 4205,
+      "sha256": "20aa8010570e6e28dafcda4ae9a413a031387ff853d08119778139c5a67f88cd"
+    },
+    {
+      "path": "policy_burst.csv",
+      "bytes": 3570,
+      "sha256": "215e28981894b63dc8287e687aa37c612d5db7769c2889d40f3c91524f9c1fab"
+    },
+    {
+      "path": "policy_burst_trace.csv",
+      "bytes": 7490,
+      "sha256": "39849d6c5596a0a0fa7a1c3849c3816dbeccf326164a01c62ab497dc2fdf2879"
+    },
+    {
+      "path": "policy_comparisons.csv",
+      "bytes": 120741,
+      "sha256": "de0a06d8331dbb953bc0ba4910642c5d83711f10ba88e7711ba66c9bb884a596"
+    },
+    {
+      "path": "policy_decisions.csv",
+      "bytes": 74475,
+      "sha256": "9c2dfec62a27760362d7fa600682a155a4d8fa705b3ea80a504774ea26222fe4"
+    },
+    {
+      "path": "policy_event_costs.csv",
+      "bytes": 28387,
+      "sha256": "daac8f75a15cfab21bad40f2911648f5886ff9475861f7be6d5e62a7d06cca57"
+    },
+    {
+      "path": "policy_exposure.csv",
+      "bytes": 6711,
+      "sha256": "84342a128540500a38587c448c67bef335eecbf5705182cec42ff444a857ee8f"
+    },
+    {
+      "path": "policy_failure_costs.csv",
+      "bytes": 6605,
+      "sha256": "8386c9955ed92f207c7cd6c7a65eb1953406d15af43d78ce5ee4979adf26e0af"
+    },
+    {
+      "path": "policy_measurements.json",
+      "bytes": 405056,
+      "sha256": "f805ddf5cfe5abf722ee6788d25277b01a01fa6d11eec1ab5ca8f18961a29935"
+    },
+    {
+      "path": "policy_phase_sensitivity.csv",
+      "bytes": 21164,
+      "sha256": "70ab143e0951cd391571ac972b4a5ccf20ac861ab96c9e9d2811ea7cecdfd3b0"
+    },
+    {
+      "path": "policy_phase_trace.csv",
+      "bytes": 320586,
+      "sha256": "121b13e76d508f3ea1f0c448bda750778a31cc584672a890cf7b0d1ae3d780c3"
+    },
+    {
+      "path": "policy_proofs.json",
+      "bytes": 510261,
+      "sha256": "d6ba28ef3502b08ef924122037b78b07b0636a0276cd6ad64f46d7a6a8d71d03"
+    },
+    {
+      "path": "policy_tests.json",
+      "bytes": 256763,
+      "sha256": "b9d119660a21994348e7f1c314064f5945df61205afc648fd6f4989f9693da79"
+    },
+    {
+      "path": "policy_trace.csv",
+      "bytes": 4883584,
+      "sha256": "4feacf4392a690e879f1bff109a1ffc9c30767c8225b621b1e6b902a177a328f"
+    },
+    {
+      "path": "policy_transactions.json",
+      "bytes": 3169314,
+      "sha256": "808ce691775d41f1eeaabf33acb1ec4b3e944d4a10bdcd8167596e74e564f61d"
+    },
+    {
+      "path": "policy_workload_costs.csv",
+      "bytes": 318471,
+      "sha256": "cc064b5326c8d164295e060ee1c84f5ceef46438814accd6196de89fc6dd7bf6"
+    }
+  ]
+}

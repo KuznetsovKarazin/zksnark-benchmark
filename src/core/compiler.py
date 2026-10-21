@@ -4,7 +4,7 @@ from __future__ import annotations
 import hashlib, json, os, re, shutil, subprocess, tempfile
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Optional, Iterable, Set
+from typing import Any, List, Optional, Iterable, Set
 
 @dataclass
 class CompileResult:
@@ -87,7 +87,7 @@ class Compiler:
         return CompileResult(name, r1cs, wasm, sym, constraints, versions, build_dir, False)
 
     def get_circuit_info(self, r1cs_path: Path) -> dict:
-        info = {"r1cs_path": str(r1cs_path)}
+        info: dict[str, Any] = {"r1cs_path": str(r1cs_path)}
         if not Path(r1cs_path).exists(): info["error"]="R1CS not found"; return info
         try:
             out = self._check_output([self.snarkjs_bin, "r1cs", "info", str(r1cs_path)])
@@ -138,9 +138,9 @@ class Compiler:
                 cand=d/"circuits"
                 if cand.exists(): incs.append(cand.resolve())
         seen:set[str]=set(); uniq:List[Path]=[]
-        for p in incs:
-            s=str(p)
-            if s not in seen: uniq.append(p); seen.add(s)
+        for include_path in incs:
+            s=str(include_path)
+            if s not in seen: uniq.append(include_path); seen.add(s)
         return uniq
 
     def _locate_outputs(self, build_dir: Path, name: str):

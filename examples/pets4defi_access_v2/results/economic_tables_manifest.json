@@ -1,0 +1,53 @@
+{
+  "archive": "economic_tables.zip",
+  "sha256": "464c10531092930fc4c9a7660b92a35a510555098f3b4bb7e3ee25dac7d59bc3",
+  "bytes": 212679,
+  "source_bytes": 6675321,
+  "files": [
+    {
+      "name": "allocation_rules.csv",
+      "bytes": 3383,
+      "sha256": "ef2bb984fa5a1d5a664008ad39e4a5913af924a670c4f8b0d01aa222aad888a8"
+    },
+    {
+      "name": "architecture_results.csv",
+      "bytes": 644393,
+      "sha256": "056fe8305248ea25b7d3cf9e6a8fb1c26738c1409d9a5e629c5a25bd04efb4bd"
+    },
+    {
+      "name": "break_even.csv",
+      "bytes": 241540,
+      "sha256": "c0b8d9f8a1db0794a1422f63034d42b45ed5158a08cfdd7c59d43e38e2906505"
+    },
+    {
+      "name": "event_measurements.csv",
+      "bytes": 69443,
+      "sha256": "c1478a2b5091e63afe77322f68b8dfbdf7a2273bb85185007458012927ab85b2"
+    },
+    {
+      "name": "observed_fee_projection.csv",
+      "bytes": 2545909,
+      "sha256": "d3889594c5ec76c3e9044d214beef8f8b2c873809a6ca055b7777a6371b42501"
+    },
+    {
+      "name": "price_inputs.csv",
+      "bytes": 1369,
+      "sha256": "7f605b17081caa2263720bac79c5378be8421c422394a68b0c3804f63bf92be9"
+    },
+    {
+      "name": "price_sensitivity.csv",
+      "bytes": 1810119,
+      "sha256": "e847ed8fd67a4e2e75bbddc63edb8737ab944e5bbb5ea132cd9d11b9f820b66e"
+    },
+    {
+      "name": "trace_counts.csv",
+      "bytes": 57936,
+      "sha256": "a8a3870d49356928677c533b42990eefd74631c5530de59c44b7028e29ed343b"
+    },
+    {
+      "name": "trace_events.csv",
+      "bytes": 1301229,
+      "sha256": "dbcba3239247ab372283e2c18f75d8acf2da7413438f5e9d08a705f0246161bc"
+    }
+  ]
+}
