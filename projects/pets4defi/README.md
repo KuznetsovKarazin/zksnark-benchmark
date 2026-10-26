@@ -1,12 +1,20 @@
 # PETs4DeFi — economic analysis of private eligibility checks
 
-**Economics: Nataliya (ECON-03 → ECON-04 → ECON-05). Technical inputs: Alexander (TECH-01).**
+**Economics: Nataliya (ECON-03 → ECON-04 → ECON-05 → ECON-06). Technical inputs: Alexander (TECH-01).**
 
 Research question: how do private eligibility checks, repeated use and revocation requirements change access costs, who pays them, and what user benefit and service margin would justify their use? The supplied measurements establish technical inputs. Nataliya develops the economic ledger, conditional thresholds and sensitivity analysis.
 
 Compare an unchecked token deposit, signed eligibility checks and ZK proofs. Signed and ZK checks each have direct and cached modes. The **economic regimes** are B0: selected signed access, user-funded; B1: selected ZK access, user-funded; B2: the same ZK implementation with part of its declared access-cost pool paid by the service. Technical methods and financing regimes are different dimensions.
 
 ZK hides the credential identifier, selected trusted issuer and private attributes from the on-chain presentation. Its pseudonym is application-scoped. Public wallets, transfers and timing remain visible. The eligibility policy and user workloads are synthetic.
+
+## Current task — ECON-06
+
+ECON-01, ECON-03, the bounded ECON-04 implementation and the bounded ECON-05 core/phase analysis are accepted. [REVIEW-01](https://trello.com/c/KHXMwmlu) records the completed internal computational verification and its limitations; it does not constitute independent human or external peer review.
+
+Continue with [ECON-06 — pilot report and reproducibility package](https://trello.com/c/UvvDE39e): reuse the accepted note, tables, figures and calculations, and include the verification record and limitations. No repeat calculation round or additional experiment is required for this synthesis. Alexander supplies any further ZKP/privacy or technical inputs; ECON-02 remains a separate Backlog exercise.
+
+The accepted economic packages are linked from their Trello cards and remain outside this Git branch pending versioned integration with authorship and provenance retained. The technical data and protocol below remain the frozen inputs; TECH-01 acceptance and the draft PR's merge are separate open steps.
 
 ## Inputs
 
@@ -25,7 +33,9 @@ ZK hides the credential identifier, selected trusted issuer and private attribut
 | [revocation_tradeoff.csv](data/revocation_tradeoff.csv) | Eight-row burst example for bounded revocation delays. |
 | [event_costs.csv](data/event_costs.csv) | Measured gas per operation, sample counts, median and quartiles. |
 
-## First deliverable
+## Initial assignment — completed ECON-03–05 scope
+
+The following is the historical assignment, retained to explain the accepted scope. It is not a request to repeat completed work; the current task is ECON-06 above.
 
 Prepare a **two-page note, event ledger and updated input register** in ECON-03. Begin with one scenario; there is no need to discuss every row or implement the full model yet.
 
@@ -37,6 +47,8 @@ Prepare a **two-page note, event ledger and updated input register** in ECON-03.
 After review, **ECON-04** implements the ledger with two hand-worked checks. **ECON-05** runs 1/10/100 deposits × 0/25/50/75/100% user funding under the same fixed fee rule. The two archived Ethereum fee scenarios reprice these 15 cases; they are not independent workload experiments. Then choose one focused lifetime, service-count, phase or burst extension if it changes a conclusion. Do not combine all dimensions at once.
 
 Attach the ECON-03 result to its existing card and move it to Review. Alexander owns contracts, ZKP/privacy changes, technical validation and missing device/L2 measurements. For a technical request, state the economic question, missing event/parameter, needed unit/range and affected conclusion on the current card; no ZKP implementation is required from Nataliya. ECON-02 remains a separate bounded Louafi reproduction exercise, not a source of DeFi willingness-to-pay estimates.
+
+## Reproducing the technical inputs
 
 The frequency inputs can be regenerated from the archived measurements, without Node or a new proof run, using Python 3.10+ from the repository root:
 
