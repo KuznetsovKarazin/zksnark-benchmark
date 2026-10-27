@@ -4,6 +4,12 @@ A comprehensive research framework for systematic performance evaluation of zero
 
 > **Research Use Only**: This framework is designed for academic research and educational purposes. Generated cryptographic keys and trusted setup parameters are not suitable for production deployment.
 
+**PETs4DeFi participants: [task and input data](projects/pets4defi/README.md).**
+This is the starting point for the economic analysis: measured operation costs,
+privacy-cost comparisons against the cheapest tested signed option, missing inputs and the expected deliverable.
+Implementation and reproduction instructions are in the
+[technical experiment](examples/pets4defi_access_v2/README.md).
+
 ## Table of Contents
 
 - [Overview](#overview)

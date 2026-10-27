@@ -1,0 +1,9 @@
+price_id,value,currency,unit,evidence_status,source,accounting_note
+p_signed_initial_issuance,,UNSPECIFIED,per_event,unknown,,"Before adding any quote, determine whether it includes already-counted root-publication gas. Issuer invoices may be internal transfers under a mixed-system boundary."
+p_signed_credential_refresh,,UNSPECIFIED,per_event,unknown,,"Before adding any quote, determine whether it includes already-counted root-publication gas. Issuer invoices may be internal transfers under a mixed-system boundary."
+p_zk_initial_issuance,,UNSPECIFIED,per_event,unknown,,"Before adding any quote, determine whether it includes already-counted root-publication gas. Issuer invoices may be internal transfers under a mixed-system boundary."
+p_zk_credential_refresh,,UNSPECIFIED,per_event,unknown,,"Before adding any quote, determine whether it includes already-counted root-publication gas. Issuer invoices may be internal transfers under a mixed-system boundary."
+ETH_EUR,,EUR,per_ETH,unknown,,No current exchange rate is invented.
+prover_service,,UNSPECIFIED,per_proof,unknown,,CPU milliseconds alone are not an invoice.
+op_L1_data_fee,,ETH,per_transaction,unknown,,Missing OP data fee is not zero; execution component only is reported.
+op_operator_fee,,ETH,per_transaction,unknown,,Missing operator fee is not zero; execution component only is reported.

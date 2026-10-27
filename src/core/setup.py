@@ -101,8 +101,12 @@ class Setup:
     def get_ptau_info(self, ptau: Path) -> Dict[str, object]:
         if not ptau.exists():
             return {"error": "PTAU file not found"}
-        info = {"exists": True, "file_size": ptau.stat().st_size}
-        info["file_size_mb"] = round(info["file_size"] / (1024 * 1024), 2)
+        size = ptau.stat().st_size
+        info: Dict[str, object] = {
+            "exists": True,
+            "file_size": size,
+            "file_size_mb": round(size / (1024 * 1024), 2),
+        }
         return info
 
     def verify_tools(self) -> Dict[str, object]:

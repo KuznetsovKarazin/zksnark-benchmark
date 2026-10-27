@@ -18,42 +18,11 @@ if str(SRC) not in sys.path:
 from benchmark.runner import (
     BenchmarkRunner,
     BenchmarkConfig,
+    load_config_from_yaml,
 )
 
 def _load_yaml_configs(config_path: Path) -> List[BenchmarkConfig]:
-    try:
-        import yaml  # type: ignore
-    except Exception as e:
-        raise SystemExit("PyYAML is required for --config. Install: pip install pyyaml") from e
-
-    data = yaml.safe_load(Path(config_path).read_text()) or {}
-    bench = data.get("benchmark", {}) or {}
-    defaults = {
-        "iterations": int(bench.get("iterations", 1)),
-        "ptau_power": bench.get("ptau_power"),
-        "seed": int(bench.get("seed", 42)),
-    }
-    items = data.get("circuits", []) or []
-    out: List[BenchmarkConfig] = []
-    for it in items:
-        file_val = it.get("file")
-        if not file_val:
-            raise SystemExit("Invalid config: circuits[].file is required")
-        p = Path(file_val)
-        if not p.is_absolute():
-            sc = SRC / "circuits" / p
-            p = sc if sc.exists() else p
-        out.append(
-            BenchmarkConfig(
-                circuit_name=it.get("name") or p.stem,
-                circuit_path=p,
-                iterations=int(it.get("iterations", defaults["iterations"])),
-                ptau_power=it.get("ptau_power", defaults["ptau_power"]),
-                seed=int(it.get("seed", defaults["seed"])),
-                output_name=it.get("output_name"),
-            )
-        )
-    return out
+    return load_config_from_yaml(config_path)
 
 
 def _print_tool_status(status: dict) -> None:

@@ -13,7 +13,7 @@ import subprocess
 import time
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Optional
+from typing import Any, Optional
 
 
 @dataclass
@@ -278,7 +278,7 @@ class Verifier:
         Returns:
             Dictionary with verification metadata
         """
-        info = {}
+        info: dict[str, Any] = {}
         
         try:
             # Verification key info

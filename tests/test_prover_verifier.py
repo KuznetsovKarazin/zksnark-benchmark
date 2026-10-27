@@ -316,7 +316,8 @@ class TestIntegrationWorkflow:
         )
         
         # Run benchmark
-        result = runner.run_single_benchmark(config)
+        result = runner.run_single_benchmark(config, runner.registry.get_circuit("multiply"))
+        assert result.success, result.error_message
         
         # Save and load results
         results_file = tmp_path / "test_results.jsonl"
