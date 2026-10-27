@@ -2,6 +2,16 @@
 
 Review date: 2026-10-20. This is a bounded implementation review, not a production security audit, certification, or real-world KYC validation. The scope is `AccessGate`, `AccessRegistry`, the synthetic token, the generated Groth16 verifier, and the adversarial token fixture.
 
+## Dependency advisory refresh — 2026-10-27
+
+The Solidity review and installed-tree dependency report below are **historical evidence from 2026-10-20**. They do not describe the current advisory database. A fresh `npm audit --package-lock-only --json` against the unchanged lockfile at commit `0c722373dd7de6c11f0554acdb010631d23cb118` reports **0 Critical, 3 High, 0 Moderate, and 15 Low affected dependency nodes** (exit 1). The raw response is [dependency_audit_2026-10-27.json](results/static_analysis/dependency_audit_2026-10-27.json); exact input/report hashes, command, runtime and disposition are in [dependency_review_2026-10-27.json](results/static_analysis/dependency_review_2026-10-27.json). This refresh used the lockfile, not a freshly installed dependency tree.
+
+The three High nodes are **one root advisory**, [Zod GHSA-mrhx-c7xc-m3w5](https://github.com/advisories/GHSA-mrhx-c7xc-m3w5), propagated through `hardhat-zod-utils` and `hardhat`. Zod 3.25.76 is affected by resource exhaustion while validating oversized collections; the advisory identifies 4.6.6 as patched. Here Hardhat is off-chain benchmark/CI tooling: both benchmark scripts create `edr-simulated` networks in-process, with repository-controlled fixtures. Zod is not deployed in the contracts or circuit. This bounds the observed exposure; it is not a claim of general non-exploitability, and the toolchain must not be exposed as an untrusted public validation service.
+
+**Open dependency maintenance task:** Hardhat 3.20.0 requires Zod `^3.23.8`; the registry's current Hardhat 3.21.1 has the same requirement. A Zod 4 override is outside that supported major range, and the automated audit suggestion downgrades Hardhat to 2.29.1. Neither is a safe lockfile-only repair for this Hardhat 3 API. Keep the existing lock until an upstream-supported fix or separately tested migration is available, then verify locked installation and the full demo/policy proof suites on both supported Node/npm combinations. Do not use `npm audit fix --force`.
+
+No contract, circuit, lockfile or frozen economic input changed in this advisory refresh. The 2026-10-20 raw audit and static-analysis summary are retained unchanged for provenance. The 15 Low affected nodes remain the previously disclosed elliptic dependency tree. Advisory counts are dependency-node counts, not counts of independent flaws or proof of an exploitable deployed contract.
+
 ## Reproducible commands and findings
 
 Tools actually used: Slither **0.11.6**, crytic-compile **0.4.2**, and native Solidity **0.8.37+commit.f401782d.Linux.g++**. The npm benchmark also locks solc to 0.8.37. Own-contract pragmas were pinned to exactly 0.8.37; the snarkjs-generated verifier keeps its generator's pragma and is compiled with the same pinned compiler.
@@ -81,7 +91,7 @@ The exact overrides now in `package.json` address the three High root causes whi
 | `underscore` through snarkjs → bfj → jsonpath | 1.13.8 | Fix recursion denial-of-service advisory GHSA-qpx9-hpmf-5gmw |
 | `ws` under @ethersproject/providers | 8.21.0 | Fix memory disclosure/exhaustion advisories GHSA-58qx-3vcg-4xpx and GHSA-96hv-2xvq-fx4p |
 
-`npm ls ws tmp underscore` exits 0 after installation and shows only the intended patched versions (Hardhat retains its newer ws 8.22.0). The final audit reports **0 Critical, 0 High, 0 Moderate, and 15 Low affected nodes**. The remaining tree derives from [elliptic GHSA-848j-6mx2-7j84](https://github.com/advisories/GHSA-848j-6mx2-7j84) in circomlibjs's ethers 5 dependency. It is retained and disclosed; replacing that major dependency requires separate compatibility/security work. This is not a clean audit and does not establish exploitability or non-exploitability for the application. The unfiltered `npm audit` still exits 1 due to the Low findings.
+`npm ls ws tmp underscore` exits 0 after installation and shows only the intended patched versions (Hardhat retains its newer ws 8.22.0). The final **2026-10-20** audit reports **0 Critical, 0 High, 0 Moderate, and 15 Low affected nodes**; see the 2026-10-27 refresh above for the current advisory state. The remaining tree derives from [elliptic GHSA-848j-6mx2-7j84](https://github.com/advisories/GHSA-848j-6mx2-7j84) in circomlibjs's ethers 5 dependency. It is retained and disclosed; replacing that major dependency requires separate compatibility/security work. This is not a clean audit and does not establish exploitability or non-exploitability for the application. The unfiltered `npm audit` still exits 1 due to the Low findings.
 
 ## Verified runtime and continuous-integration evidence
 

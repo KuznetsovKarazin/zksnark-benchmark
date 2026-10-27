@@ -1,0 +1,54 @@
+{
+  "observed_at_utc": "2026-10-27T10:25:56.513646+00:00",
+  "audit_completed_at_utc": "2026-10-27T10:21:15.192721+00:00",
+  "source_commit": "0c722373dd7de6c11f0554acdb010631d23cb118",
+  "command": "npm audit --package-lock-only --json",
+  "working_directory": "examples/pets4defi_access_v2",
+  "exit_code": 1,
+  "node": "v24.22.1",
+  "npm": "11.9.0",
+  "scope": "Current registry advisory response for the exact committed lockfile; not an installed-tree audit, proof benchmark, or production security audit.",
+  "inputs_sha256": {
+    "package.json": "cdc8bc93666488c451e901127bad7a94a7da514490bb5ced0318e28fe2d6d6c5",
+    "package-lock.json": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165"
+  },
+  "report_sha256": "5dd9c7a30667ba48392512eeb7975366926fcda0659cad3527bd6b7ec30c7544",
+  "affected_dependency_nodes": {
+    "info": 0,
+    "low": 15,
+    "moderate": 0,
+    "high": 3,
+    "critical": 0,
+    "total": 18
+  },
+  "high_root_cause": {
+    "package": "zod",
+    "locked_version": "3.25.76",
+    "advisory": "https://github.com/advisories/GHSA-mrhx-c7xc-m3w5",
+    "affected_range": "<4.6.6",
+    "first_patched_version": "4.6.6",
+    "affected_nodes": [
+      "zod",
+      "@nomicfoundation/hardhat-zod-utils",
+      "hardhat"
+    ],
+    "classification": "Off-chain benchmark/CI tooling; not deployed Solidity or circuit code.",
+    "reachability_review": "Both benchmark scripts import Hardhat network and create edr-simulated networks in-process. No public validation service is implemented by these scripts. This bounded inspection does not establish general non-exploitability.",
+    "fix_status": "Open. Current Hardhat 3.20.0 and registry latest 3.21.1 require zod ^3.23.8. Zod >=4.6.6 is outside that supported major range. npm audit proposes Hardhat 2.29.1 (major downgrade), not a compatible lock-only patch.",
+    "next_action": "Recheck for an upstream-supported patched Zod 3 line or Hardhat 3 dependency migration. Validate locked installation and full demo/policy proof suites on Node22/npm10 and Node24/npm11 before accepting a dependency change. Do not force a Zod4 override or Hardhat2 downgrade."
+  },
+  "registry_queries": {
+    "npm view hardhat@latest version dependencies.zod --json": {
+      "version": "3.21.1",
+      "dependencies.zod": "^3.23.8"
+    },
+    "npm view zod dist-tags --json": {
+      "latest": "4.6.7"
+    }
+  },
+  "historical_evidence_preserved": [
+    "dependency_audit.json",
+    "summary.json"
+  ],
+  "changes_to_contracts_circuits_lockfile_or_frozen_economic_inputs": false
+}
