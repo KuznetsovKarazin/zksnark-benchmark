@@ -8,14 +8,15 @@ Compare an unchecked token deposit, signed eligibility checks and ZK proofs. Sig
 
 ZK hides the credential identifier, selected trusted issuer and private attributes from the on-chain presentation. Its pseudonym is application-scoped. Public wallets, transfers and timing remain visible. The eligibility policy and user workloads are synthetic.
 
-## Current task — ECON-06
+## Current task — PUB-01 (checked 31 October 2026)
 
-ECON-01, ECON-03, the bounded ECON-04 implementation and the bounded ECON-05 core/phase analysis are accepted. [REVIEW-01](https://trello.com/c/KHXMwmlu) records the completed internal computational verification and its limitations; it does not constitute independent human or external peer review.
+ECON-01, ECON-03, the bounded ECON-04 implementation and the bounded ECON-05 core/phase analysis are accepted. Oleksandr accepted [ECON-06 v0.3 — pilot report and reproducibility package](https://trello.com/c/UvvDE39e) on 29 October 2026; the agreed pilot is complete. [REVIEW-01](https://trello.com/c/KHXMwmlu) records internal computational verification and its limitations, not independent human or external peer review.
 
-Continue with [ECON-06 — pilot report and reproducibility package](https://trello.com/c/UvvDE39e): reuse the accepted note, tables, figures and calculations, and include the verification record and limitations. No repeat calculation round or additional experiment is required for this synthesis. Alexander supplies any further ZKP/privacy or technical inputs; ECON-02 remains a separate Backlog exercise.
+The next assignment is [PUB-01 — Methods, Results and related-work comparison](https://trello.com/c/tTUolaRK). The task message and editable Word starter were published on ECON-06 on 29 October. Nataliya starts with Methods and Results, using the accepted tables and figures with captions, exact data sources and short explanations. A focused literature comparison follows. No new experiment or repeat pilot-acceptance round is required. The card remains Ready to start until work begins; the first-draft date is still to be agreed.
 
-The accepted economic packages are linked from their Trello cards and remain outside this Git branch pending versioned integration with authorship and provenance retained. The technical data and protocol below remain the frozen inputs; TECH-01 acceptance and the draft PR's merge are separate open steps.
+Keep the accepted ECON-06 v0.3 archive and its inner ECON-05 archive unchanged. Oleksandr owns the separate [SETUP-02 integration and portability cleanup](https://trello.com/c/41YzY99p), retaining Nataliya's authorship and provenance. The accepted economic packages remain linked from Trello and outside this Git branch. Collaborator access/minimal-run confirmation, TECH-01 technical acceptance and the draft PR's merge remain separate open steps.
 
+The technical measurements and protocol below remain the pinned inputs. ECON-02 and NEXT-01 are deferred; they are not additional current assignments.
 ## Inputs
 
 | File | Use |
@@ -35,7 +36,7 @@ The accepted economic packages are linked from their Trello cards and remain out
 
 ## Initial assignment — completed ECON-03–05 scope
 
-The following is the historical assignment, retained to explain the accepted scope. It is not a request to repeat completed work; the current task is ECON-06 above.
+The following is the historical assignment, retained to explain the accepted scope. It is not a request to repeat completed work; the current task is PUB-01 above.
 
 Prepare a **two-page note, event ledger and updated input register** in ECON-03. Begin with one scenario; there is no need to discuss every row or implement the full model yet.
 
