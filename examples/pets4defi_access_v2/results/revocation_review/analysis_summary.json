@@ -1,0 +1,152 @@
+{
+  "status": "PASS",
+  "receipt_count": 3477,
+  "trace_count": 3100,
+  "ordered_core_and_control_paths": 3100,
+  "failed_transactions": 6,
+  "proof_count": 90,
+  "historical_harness_sources_verified": [],
+  "state_decomposition": {
+    "n": 72,
+    "residual_gas": 342621,
+    "formula": "gas = 342621 + calldata gas + 2800*(changed until + changed security epoch)",
+    "observed_classes": {
+      "2": {
+        "n": 43,
+        "min": 355713,
+        "max": 355761
+      },
+      "1": {
+        "n": 29,
+        "min": 352877,
+        "max": 352961
+      }
+    }
+  },
+  "actual_vs_fixed_means": [
+    {
+      "schedule": "repeat_1_aligned_30_60",
+      "k": 3,
+      "actual_gas": 7780337,
+      "projected_gas": 7780318.6,
+      "actual_minus_projection": 18.4,
+      "delta_gas": -447346
+    },
+    {
+      "schedule": "repeat_1_phase_15_45",
+      "k": 4,
+      "actual_gas": 8065664,
+      "projected_gas": 8068448.4,
+      "actual_minus_projection": -2784.4,
+      "delta_gas": -162019
+    },
+    {
+      "schedule": "repeat_1_restart_31_63",
+      "k": 5,
+      "actual_gas": 8348131,
+      "projected_gas": 8356578.2,
+      "actual_minus_projection": -8447.2,
+      "delta_gas": 120448
+    },
+    {
+      "schedule": "repeat_1_weekly",
+      "k": 13,
+      "actual_gas": 10653279,
+      "projected_gas": 10661616.6,
+      "actual_minus_projection": -8337.6,
+      "delta_gas": 2425596
+    },
+    {
+      "schedule": "repeat_2_aligned_30_60",
+      "k": 3,
+      "actual_gas": 7780349,
+      "projected_gas": 7780318.6,
+      "actual_minus_projection": 30.4,
+      "delta_gas": -447334
+    },
+    {
+      "schedule": "repeat_2_phase_15_45",
+      "k": 4,
+      "actual_gas": 8065676,
+      "projected_gas": 8068448.4,
+      "actual_minus_projection": -2772.4,
+      "delta_gas": -162007
+    },
+    {
+      "schedule": "repeat_2_restart_31_63",
+      "k": 5,
+      "actual_gas": 8348155,
+      "projected_gas": 8356578.2,
+      "actual_minus_projection": -8423.2,
+      "delta_gas": 120472
+    },
+    {
+      "schedule": "repeat_2_weekly",
+      "k": 13,
+      "actual_gas": 10653279,
+      "projected_gas": 10661616.6,
+      "actual_minus_projection": -8337.6,
+      "delta_gas": 2425596
+    },
+    {
+      "schedule": "repeat_3_aligned_30_60",
+      "k": 3,
+      "actual_gas": 7780313,
+      "projected_gas": 7780318.6,
+      "actual_minus_projection": -5.6,
+      "delta_gas": -447370
+    },
+    {
+      "schedule": "repeat_3_phase_15_45",
+      "k": 4,
+      "actual_gas": 8065640,
+      "projected_gas": 8068448.4,
+      "actual_minus_projection": -2808.4,
+      "delta_gas": -162043
+    },
+    {
+      "schedule": "repeat_3_restart_31_63",
+      "k": 5,
+      "actual_gas": 8348179,
+      "projected_gas": 8356578.2,
+      "actual_minus_projection": -8399.2,
+      "delta_gas": 120496
+    },
+    {
+      "schedule": "repeat_3_weekly",
+      "k": 13,
+      "actual_gas": 10653315,
+      "projected_gas": 10661616.6,
+      "actual_minus_projection": -8301.6,
+      "delta_gas": 2425632
+    }
+  ],
+  "observed_range_envelopes": [
+    {
+      "k": 4,
+      "min_delta": -168018,
+      "max_delta": -158988
+    },
+    {
+      "k": 5,
+      "min_delta": 117249,
+      "max_delta": 129163
+    }
+  ],
+  "historical_server_proving": {
+    "cold": {
+      "n": 30,
+      "median_ms": 1884.8831329999998,
+      "q1_ms": 1831.415226,
+      "q3_ms": 1904.73980875
+    },
+    "warm": {
+      "n": 30,
+      "median_ms": 1849.4734544999956,
+      "q1_ms": 1815.1874789999965,
+      "q3_ms": 1906.0206587500033
+    }
+  },
+  "historical_prover_source_sha256": "820d817d3670e52915d57203912011dc0b43c22cfdfb10b91e0f53917abe4c37",
+  "limitations": "Finite synthetic states, not confidence intervals. Server timings are historical and are not device costs. No external colleague or cryptographic audit."
+}

@@ -1,0 +1,1253 @@
+{
+  "schema_version": 2,
+  "status": "PASS",
+  "created_utc": "2026-11-03T21:36:16.661Z",
+  "metadata": {
+    "base_commit": "dde8b677c4f1fb01673041ece76fe3b87fce97dc",
+    "git_head": null,
+    "node": "v24.22.1",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "logical_cpus": 9,
+    "solc": "0.8.37+commit.f401782d.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "hardfork": "osaka",
+    "repetitions": 3,
+    "timestamp_override": "updates before access at exact modeled times",
+    "fixture": "Same 20 synthetic credentials. Group partition uses 1, 2 or 4 registries, disjoint public issuer groups, unchanged circuit width and contracts.",
+    "source_files_sha256": {
+      "package.json": "cdc8bc93666488c451e901127bad7a94a7da514490bb5ced0318e28fe2d6d6c5",
+      "package-lock.json": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+      "hardhat.config.js": "7500dd0b61688af22aef2e5ee651e2f9b3de5a0e4558c42951b24439a20dc192",
+      "circuits/access.circom": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+      "contracts/PolicyRegistry.sol": "596bcc917331c18e35b76c07e940e280aa9450c6ca1e83fa12ea53d7eed505e5",
+      "contracts/PolicyGate.sol": "bc83f93c1244fee605befe890cdf3125a0efdb3e4d4e7e9244d09c40c2f6eb60",
+      "contracts/MockToken.sol": "93317c1308cffe63e4133a17502a4933ccd14e207b2f96a28453b6f681a99c60",
+      "scripts/fixtures.mjs": "dfde1142257f6578e1d9760f3b5040357052194b3f66ea5686490711b1e242f0",
+      "scripts/revocation_review.mjs": "c04dd2913012589345bc86b3d47de111aa78ba057e9f842c3210e9547b823804",
+      "scripts/setup.mjs": "31803c6f0a7d2b966993d2ad18c49e65a08489270a2ff9a679efc26f52de73d4"
+    },
+    "setup": {
+      "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+      "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+      "zkey_sha256": "44da9bcfd30b9ef025dbd420ae60fb962fbb825e2d3947bf5a896f46e08e586e",
+      "wasm_sha256": "f9379e40226ce39f341ef51441163214439bb7c129cdb1247f2cb6e4c7261f36",
+      "r1cs_sha256": "d0c374b11fcb0045f82f05422d733c44af54a06dff8fb0710f506100fe33e15d",
+      "verifier_sha256": "17a00b1d8deba2ab25e93d149fa1c3631885c7b7e1729988ab36b3b46c780d54",
+      "verification_key_sha256": "545f824eccdf7e3ba75be50114e4875fde59242da397bf2be10a81c5580908c3",
+      "phase1_source": "explicit --local-demo; single-process phase-1 transcript",
+      "phase1_blake2b512": "ca8e241bd7f34e5205841e6507369afb1d968c29b1a267094dac2e47fae4e1d9df3a4686c4f837fc166fb7e9f941d643f8b806c77fe3ed24a30dd8220e58baee",
+      "phase1_sha256": "4c39acc60a0d4db9b0c1889740cb649c3ca1eafa1ec5dbfec0db0e1f0e93723a",
+      "local_demo_phase1": true,
+      "phase1_provenance": "Explicit single-process local transcript; no production security claim",
+      "phase2_status": "Two contributions from this one local process; NOT independent participants and NOT production-safe",
+      "created_utc": "2026-11-03T21:13:14.368Z"
+    }
+  },
+  "summaries": [
+    {
+      "schedule": "repeat_1_aligned_30_60",
+      "base_schedule": "aligned_30_60",
+      "variant": "signed",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_1_aligned_30_60",
+      "base_schedule": "aligned_30_60",
+      "variant": "zk",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 7780337,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_1_phase_15_45",
+      "base_schedule": "phase_15_45",
+      "variant": "signed",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_1_phase_15_45",
+      "base_schedule": "phase_15_45",
+      "variant": "zk",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 4,
+      "hits": 96,
+      "approval_gas": 46463,
+      "gas": 8065664,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_1_restart_31_63",
+      "base_schedule": "restart_31_63",
+      "variant": "signed",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_1_restart_31_63",
+      "base_schedule": "restart_31_63",
+      "variant": "zk",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 5,
+      "hits": 95,
+      "approval_gas": 46463,
+      "gas": 8348131,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_1_weekly",
+      "base_schedule": "weekly",
+      "variant": "signed",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_1_weekly",
+      "base_schedule": "weekly",
+      "variant": "zk",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 13,
+      "hits": 87,
+      "approval_gas": 46463,
+      "gas": 10653279,
+      "repetition": 1
+    },
+    {
+      "schedule": "repeat_2_aligned_30_60",
+      "base_schedule": "aligned_30_60",
+      "variant": "signed",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_2_aligned_30_60",
+      "base_schedule": "aligned_30_60",
+      "variant": "zk",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 7780349,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_2_phase_15_45",
+      "base_schedule": "phase_15_45",
+      "variant": "signed",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_2_phase_15_45",
+      "base_schedule": "phase_15_45",
+      "variant": "zk",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 4,
+      "hits": 96,
+      "approval_gas": 46463,
+      "gas": 8065676,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_2_restart_31_63",
+      "base_schedule": "restart_31_63",
+      "variant": "signed",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_2_restart_31_63",
+      "base_schedule": "restart_31_63",
+      "variant": "zk",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 5,
+      "hits": 95,
+      "approval_gas": 46463,
+      "gas": 8348155,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_2_weekly",
+      "base_schedule": "weekly",
+      "variant": "signed",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_2_weekly",
+      "base_schedule": "weekly",
+      "variant": "zk",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 13,
+      "hits": 87,
+      "approval_gas": 46463,
+      "gas": 10653279,
+      "repetition": 2
+    },
+    {
+      "schedule": "repeat_3_aligned_30_60",
+      "base_schedule": "aligned_30_60",
+      "variant": "signed",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 3
+    },
+    {
+      "schedule": "repeat_3_aligned_30_60",
+      "base_schedule": "aligned_30_60",
+      "variant": "zk",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 7780313,
+      "repetition": 3
+    },
+    {
+      "schedule": "repeat_3_phase_15_45",
+      "base_schedule": "phase_15_45",
+      "variant": "signed",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 3
+    },
+    {
+      "schedule": "repeat_3_phase_15_45",
+      "base_schedule": "phase_15_45",
+      "variant": "zk",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 4,
+      "hits": 96,
+      "approval_gas": 46463,
+      "gas": 8065640,
+      "repetition": 3
+    },
+    {
+      "schedule": "repeat_3_restart_31_63",
+      "base_schedule": "restart_31_63",
+      "variant": "signed",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 3
+    },
+    {
+      "schedule": "repeat_3_restart_31_63",
+      "base_schedule": "restart_31_63",
+      "variant": "zk",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 5,
+      "hits": 95,
+      "approval_gas": 46463,
+      "gas": 8348179,
+      "repetition": 3
+    },
+    {
+      "schedule": "repeat_3_weekly",
+      "base_schedule": "weekly",
+      "variant": "signed",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683,
+      "repetition": 3
+    },
+    {
+      "schedule": "repeat_3_weekly",
+      "base_schedule": "weekly",
+      "variant": "zk",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 13,
+      "hits": 87,
+      "approval_gas": 46463,
+      "gas": 10653315,
+      "repetition": 3
+    },
+    {
+      "schedule": "shared_signed_aligned_30_60",
+      "base_schedule": "aligned_30_60",
+      "variant": "signed_global",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8728093
+    },
+    {
+      "schedule": "shared_signed_phase_15_45",
+      "base_schedule": "phase_15_45",
+      "variant": "signed_global",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 4,
+      "hits": 96,
+      "approval_gas": 46463,
+      "gas": 8750250
+    },
+    {
+      "schedule": "shared_signed_restart_31_63",
+      "base_schedule": "restart_31_63",
+      "variant": "signed_global",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 5,
+      "hits": 95,
+      "approval_gas": 46463,
+      "gas": 8769778
+    },
+    {
+      "schedule": "shared_signed_weekly",
+      "base_schedule": "weekly",
+      "variant": "signed_global",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 13,
+      "hits": 87,
+      "approval_gas": 46463,
+      "gas": 8969776
+    },
+    {
+      "schedule": "partition_B1",
+      "base_schedule": "partition_31_63",
+      "variant": "zk",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 5,
+      "hits": 95,
+      "approval_gas": 46463,
+      "gas": 8348179,
+      "groups": 1,
+      "published_revocations": [
+        {
+          "day": 31,
+          "issuer": 3,
+          "index": 2
+        },
+        {
+          "day": 63,
+          "issuer": 1,
+          "index": 1
+        }
+      ],
+      "issuer_options": 4,
+      "setup_gas": 10641015,
+      "publication_gas": 980636
+    },
+    {
+      "schedule": "partition_B2",
+      "base_schedule": "partition_31_63",
+      "variant": "zk",
+      "revocations": [
+        63
+      ],
+      "authorizations": 4,
+      "hits": 96,
+      "approval_gas": 46463,
+      "gas": 8060064,
+      "groups": 2,
+      "published_revocations": [
+        {
+          "day": 31,
+          "issuer": 3,
+          "index": 2
+        },
+        {
+          "day": 63,
+          "issuer": 1,
+          "index": 1
+        }
+      ],
+      "issuer_options": 2,
+      "setup_gas": 14948654,
+      "publication_gas": 725354
+    },
+    {
+      "schedule": "partition_B4",
+      "base_schedule": "partition_31_63",
+      "variant": "zk",
+      "revocations": [],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 7774749,
+      "groups": 4,
+      "published_revocations": [
+        {
+          "day": 31,
+          "issuer": 3,
+          "index": 2
+        },
+        {
+          "day": 63,
+          "issuer": 1,
+          "index": 1
+        }
+      ],
+      "issuer_options": 1,
+      "setup_gas": 23912642,
+      "publication_gas": 597712
+    }
+  ],
+  "stateSamples": [],
+  "checks": [
+    {
+      "name": "complete paired replay repeat_1_aligned_30_60",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_1_phase_15_45",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_1_restart_31_63",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_1_weekly",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_2_aligned_30_60",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_2_phase_15_45",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_2_restart_31_63",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_2_weekly",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_3_aligned_30_60",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_3_phase_15_45",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_3_restart_31_63",
+      "passed": true
+    },
+    {
+      "name": "complete paired replay repeat_3_weekly",
+      "passed": true
+    },
+    {
+      "name": "signed count control shared_signed_aligned_30_60",
+      "passed": true
+    },
+    {
+      "name": "signed count control shared_signed_phase_15_45",
+      "passed": true
+    },
+    {
+      "name": "signed count control shared_signed_restart_31_63",
+      "passed": true
+    },
+    {
+      "name": "signed count control shared_signed_weekly",
+      "passed": true
+    },
+    {
+      "name": "partition B=1: only the publishing group advanced",
+      "passed": true
+    },
+    {
+      "name": "B=1 own-revoked cached authorization",
+      "passed": true,
+      "reason": "StaleAuthorization",
+      "tx_hash": "0x1f50c96503d642471ef08f456d9ff70b63dd625b634eda81ad972e9097cee09a"
+    },
+    {
+      "name": "B=1 proof from before own revocation",
+      "passed": true,
+      "reason": "InvalidPublicSignals",
+      "tx_hash": "0x72bb9a82e844140f8e7425c80fdcb5f122b777c35ed64ceec5e2f596b11f5f62"
+    },
+    {
+      "name": "partition B=2 group 0: excluded issuer 2 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=2 group 0: excluded issuer 3 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=2 group 1: excluded issuer 0 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=2 group 1: excluded issuer 1 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=2: only the publishing group advanced",
+      "passed": true
+    },
+    {
+      "name": "partition B=2: proof cannot migrate to another group gate",
+      "passed": true,
+      "reason": "InvalidPublicSignals"
+    },
+    {
+      "name": "B=2 own-revoked cached authorization",
+      "passed": true,
+      "reason": "StaleAuthorization",
+      "tx_hash": "0x2220db26d19a10cfe5dc4c339531fa3204ae8519495dc592dd475529514a5a15"
+    },
+    {
+      "name": "B=2 proof from before own revocation",
+      "passed": true,
+      "reason": "InvalidPublicSignals",
+      "tx_hash": "0x053124ae5f0df4b753c4b8d9b2730a93ab4076cb55933bc590b99c43a075b7b5"
+    },
+    {
+      "name": "partition B=4 group 0: excluded issuer 1 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 0: excluded issuer 2 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 0: excluded issuer 3 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 1: excluded issuer 0 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 1: excluded issuer 2 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 1: excluded issuer 3 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 2: excluded issuer 0 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 2: excluded issuer 1 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 2: excluded issuer 3 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 3: excluded issuer 0 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 3: excluded issuer 1 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4 group 3: excluded issuer 2 cannot publish",
+      "passed": true
+    },
+    {
+      "name": "partition B=4: only the publishing group advanced",
+      "passed": true
+    },
+    {
+      "name": "partition B=4: proof cannot migrate to another group gate",
+      "passed": true,
+      "reason": "InvalidPublicSignals"
+    },
+    {
+      "name": "B=4 own-revoked cached authorization",
+      "passed": true,
+      "reason": "StaleAuthorization",
+      "tx_hash": "0xc039293e2226c4d6cfc661373a7c8eb5a5321aed72abc03e12ecf6c3bf4f6e8c"
+    },
+    {
+      "name": "B=4 proof from before own revocation",
+      "passed": true,
+      "reason": "InvalidPublicSignals",
+      "tx_hash": "0x4f02ee927e5d69c7385bef3dd35bf8b5cc762ade48b6609b4d4998365b1050f9"
+    }
+  ],
+  "proof_timing_diagnostic": [
+    {
+      "label": "repeat_1_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3325.285038
+    },
+    {
+      "label": "repeat_1_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3689.400624
+    },
+    {
+      "label": "repeat_1_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 7252.214555999999
+    },
+    {
+      "label": "repeat_1_phase_15_45",
+      "seed": 0,
+      "proof_ms": 4701.192170000002
+    },
+    {
+      "label": "repeat_1_phase_15_45",
+      "seed": 0,
+      "proof_ms": 3808.228209000001
+    },
+    {
+      "label": "repeat_1_phase_15_45",
+      "seed": 0,
+      "proof_ms": 4779.246283
+    },
+    {
+      "label": "repeat_1_phase_15_45",
+      "seed": 0,
+      "proof_ms": 3795.6630549999973
+    },
+    {
+      "label": "repeat_1_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3669.719455999999
+    },
+    {
+      "label": "repeat_1_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3305.7848099999974
+    },
+    {
+      "label": "repeat_1_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3275.798590000006
+    },
+    {
+      "label": "repeat_1_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3254.749966999996
+    },
+    {
+      "label": "repeat_1_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3279.9954829999915
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3440.6820699999953
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3484.756079999992
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3322.8728730000003
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3214.799404999998
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3171.9045059999917
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3086.7848479999957
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3095.802635
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3062.388481999995
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3512.2333829999843
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3055.1270420000073
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3079.1709550000087
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3019.3933890000044
+    },
+    {
+      "label": "repeat_1_weekly",
+      "seed": 0,
+      "proof_ms": 3025.3712229999946
+    },
+    {
+      "label": "repeat_2_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3011.129905000009
+    },
+    {
+      "label": "repeat_2_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3090.4732800000056
+    },
+    {
+      "label": "repeat_2_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3169.8602359999786
+    },
+    {
+      "label": "repeat_2_phase_15_45",
+      "seed": 0,
+      "proof_ms": 4653.830076999991
+    },
+    {
+      "label": "repeat_2_phase_15_45",
+      "seed": 0,
+      "proof_ms": 3093.6218269999954
+    },
+    {
+      "label": "repeat_2_phase_15_45",
+      "seed": 0,
+      "proof_ms": 4201.1536289999785
+    },
+    {
+      "label": "repeat_2_phase_15_45",
+      "seed": 0,
+      "proof_ms": 4312.928581999993
+    },
+    {
+      "label": "repeat_2_restart_31_63",
+      "seed": 0,
+      "proof_ms": 5984.4358390000125
+    },
+    {
+      "label": "repeat_2_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3521.42386000001
+    },
+    {
+      "label": "repeat_2_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3832.223324999999
+    },
+    {
+      "label": "repeat_2_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3314.159423999983
+    },
+    {
+      "label": "repeat_2_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3631.997634999978
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3363.8357299999916
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3543.4939409999934
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 6521.231920999999
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3644.968269999983
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3569.6644950000045
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3473.235238000023
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 4083.3218190000043
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3622.3613710000063
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3591.0258280000417
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 4073.2587610000046
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3864.105955999985
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3675.3635679999716
+    },
+    {
+      "label": "repeat_2_weekly",
+      "seed": 0,
+      "proof_ms": 3822.9327780000167
+    },
+    {
+      "label": "repeat_3_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3923.6348909999942
+    },
+    {
+      "label": "repeat_3_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3967.5626570000313
+    },
+    {
+      "label": "repeat_3_aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3665.3630429999903
+    },
+    {
+      "label": "repeat_3_phase_15_45",
+      "seed": 0,
+      "proof_ms": 3407.1844000000274
+    },
+    {
+      "label": "repeat_3_phase_15_45",
+      "seed": 0,
+      "proof_ms": 3770.045939999982
+    },
+    {
+      "label": "repeat_3_phase_15_45",
+      "seed": 0,
+      "proof_ms": 3880.9937400000053
+    },
+    {
+      "label": "repeat_3_phase_15_45",
+      "seed": 0,
+      "proof_ms": 3739.8740269999835
+    },
+    {
+      "label": "repeat_3_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3761.666173000005
+    },
+    {
+      "label": "repeat_3_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3199.1995099999476
+    },
+    {
+      "label": "repeat_3_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3261.0679269999964
+    },
+    {
+      "label": "repeat_3_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3253.4993959999993
+    },
+    {
+      "label": "repeat_3_restart_31_63",
+      "seed": 0,
+      "proof_ms": 3251.012578999973
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3154.9550639999798
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3254.398332999961
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3732.553595000005
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3307.306880999997
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3610.1366890000063
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 4078.158486999979
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 4942.013709000021
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3825.167878999957
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3987.3159130000276
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 4569.285839999968
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3864.7240020000027
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 3693.488454000035
+    },
+    {
+      "label": "repeat_3_weekly",
+      "seed": 0,
+      "proof_ms": 4336.332623999973
+    },
+    {
+      "label": "partition_B1",
+      "seed": 0,
+      "proof_ms": 4110.937835000048
+    },
+    {
+      "label": "partition_B1",
+      "seed": 0,
+      "proof_ms": 4692.355413999991
+    },
+    {
+      "label": "partition_B1",
+      "seed": 0,
+      "proof_ms": 4020.639387000003
+    },
+    {
+      "label": "partition_B1",
+      "seed": 0,
+      "proof_ms": 3852.7140890000155
+    },
+    {
+      "label": "partition_B1",
+      "seed": 0,
+      "proof_ms": 3919.68398099998
+    },
+    {
+      "label": "partition_B1",
+      "seed": 0,
+      "proof_ms": 4059.1140819999855
+    },
+    {
+      "label": "partition_B2",
+      "seed": 0,
+      "proof_ms": 4062.012442999985
+    },
+    {
+      "label": "partition_B2",
+      "seed": 0,
+      "proof_ms": 3907.5503269999754
+    },
+    {
+      "label": "partition_B2",
+      "seed": 0,
+      "proof_ms": 3953.4912889999105
+    },
+    {
+      "label": "partition_B2",
+      "seed": 0,
+      "proof_ms": 4046.94296200003
+    },
+    {
+      "label": "partition_B2",
+      "seed": 0,
+      "proof_ms": 4296.578552999999
+    },
+    {
+      "label": "partition_B4",
+      "seed": 0,
+      "proof_ms": 4256.975174000021
+    },
+    {
+      "label": "partition_B4",
+      "seed": 0,
+      "proof_ms": 4122.041225000052
+    },
+    {
+      "label": "partition_B4",
+      "seed": 0,
+      "proof_ms": 4961.630909000058
+    },
+    {
+      "label": "partition_B4",
+      "seed": 0,
+      "proof_ms": 4924.77223100001
+    }
+  ],
+  "counts": {
+    "core_accesses": 2400,
+    "shared_signed_control_accesses": 400,
+    "group_accesses": 300,
+    "negative_control_failures": 6,
+    "proofs": 90
+  },
+  "limits": "Three full replays vary proof randomness under one local setup. They are not independent workloads or devices. Partitions reveal issuer group. Setup and issuer-update gas are retained separately; no total system optimization claimed.",
+  "error": null
+}

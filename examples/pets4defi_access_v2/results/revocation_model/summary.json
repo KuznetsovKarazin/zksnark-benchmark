@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "pair_count": 3916,
+  "count_distribution": {
+    "3": 6,
+    "4": 1675,
+    "5": 2235
+  },
+  "aligned_three_authorization_pairs": [
+    [
+      28,
+      59
+    ],
+    [
+      29,
+      59
+    ],
+    [
+      29,
+      60
+    ],
+    [
+      30,
+      59
+    ],
+    [
+      30,
+      60
+    ],
+    [
+      30,
+      61
+    ]
+  ],
+  "probability_zk_more_gas": 0.5707354443309499,
+  "expected_k_two": 4.569203268641471,
+  "expected_projected_delta_gas_two": 5012.823953013274,
+  "mean_state_aware_delta_observed_calldata_envelope": [
+    -1041.141215526047,
+    -693.3281409601634
+  ],
+  "state_aware_calibration": {
+    "calldata_gas_range": [
+      7456,
+      7540
+    ],
+    "first_authorization_range": [
+      464182,
+      464230
+    ],
+    "signed_receipt_baseline": 8227683,
+    "warning": "Finite observed-range sensitivity projection, not receipts for all 3916 schedules and not a confidence interval."
+  },
+  "poisson_mean_revocations_90d_at_expected_gas_parity": 2.0267304031680204,
+  "first_integer_m_with_positive_expected_delta": 2,
+  "source_sha256": {
+    "validation_report.json": "54d6c538b6c07bdcbd0669cd1f073be23d92cfd81fd231c7910000ef37f28de6",
+    "traces.json": "534c76ba156a00d32d22a187734646b8e70e90a527d700eb51ade028893c7ce5",
+    "receipts_and_proofs.json.gz": "487903d41d208d31e9b69789efc8f1157e83759edc056a63a226d0827fd42a1b"
+  },
+  "review_source_sha256": {
+    "validation_report.json": "a57cf9ff4a966c5acbc496ac4966226289ed499404fbdae3fb1aa87eccbee5c7",
+    "traces.json": "0caab8a02b948dec6402a20dc3600bc19bddd01addf2372ba937b1268aad60c8",
+    "receipts_and_proofs.json.gz": "72b9af61e155e7d7a21e308b5fee7862b130587f53be9447ee642b5ca10a8144"
+  },
+  "assumptions": "Synthetic uniform distinct integer days and homogeneous Poisson alternatives; no empirical prevalence claim. Gas is projected either with historical fixed means or the explicitly labelled observed state/calldata envelope, not newly executed for every schedule. Finite horizon is 100 accesses through day 89.1; Poisson m denotes lambda times 90 days."
+}
