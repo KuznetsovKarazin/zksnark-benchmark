@@ -1,0 +1,578 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "created_utc": "2026-11-03T15:02:57.393Z",
+  "metadata": {
+    "base_commit": "d4031faa59ba5dd1781b663b676dc2c443bdc64f",
+    "git_head": "d4031faa59ba5dd1781b663b676dc2c443bdc64f",
+    "node": "v24.22.1",
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "logical_cpus": 9,
+    "solc": "0.8.37+commit.f401782d.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "hardfork": "osaka",
+    "timestamp_override": "allowBlocksWithSameTimestamp=true: ordered updates before access at exact modeled times",
+    "fixture": "20 synthetic credentials: original 8 plus 12 other leaves in issuer 3; identical population in every trace; five E2 seeds vary holder, secret, salt and public ID",
+    "source_files_sha256": {
+      "package.json": "cdc8bc93666488c451e901127bad7a94a7da514490bb5ced0318e28fe2d6d6c5",
+      "package-lock.json": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+      "hardhat.config.js": "7500dd0b61688af22aef2e5ee651e2f9b3de5a0e4558c42951b24439a20dc192",
+      "circuits/access.circom": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+      "contracts/PolicyRegistry.sol": "596bcc917331c18e35b76c07e940e280aa9450c6ca1e83fa12ea53d7eed505e5",
+      "contracts/PolicyGate.sol": "bc83f93c1244fee605befe890cdf3125a0efdb3e4d4e7e9244d09c40c2f6eb60",
+      "contracts/MockToken.sol": "93317c1308cffe63e4133a17502a4933ccd14e207b2f96a28453b6f681a99c60",
+      "scripts/fixtures.mjs": "dfde1142257f6578e1d9760f3b5040357052194b3f66ea5686490711b1e242f0",
+      "scripts/revocation_validation.mjs": "9b7de53bdd5c4fecf375263233fe171358fcffcfe1c6ae6cceea88b5b5c1ab7b"
+    },
+    "setup": {
+      "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+      "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+      "zkey_sha256": "4c9b129647728cc01667651dac949029296da0d0ba5dcd1ef3ab30e7c131ce84",
+      "wasm_sha256": "f9379e40226ce39f341ef51441163214439bb7c129cdb1247f2cb6e4c7261f36",
+      "r1cs_sha256": "d0c374b11fcb0045f82f05422d733c44af54a06dff8fb0710f506100fe33e15d",
+      "verifier_sha256": "515adf469b68d5cfa395198990272d536a152f5649b7c75b0dcc5833e186b118",
+      "verification_key_sha256": "7ab971f11b1c5ecc5a45a53d80a7b186ce6bc4121a20435a888081f4bc44c4cd",
+      "phase1_source": "https://circom.info/powersOfTau28_hez_final_14.ptau",
+      "phase1_blake2b512": "eeefbcf7c3803b523c94112023c7ff89558f9b8e0cf5d6cdcba3ade60f168af4a181c9c21774b94fbae6c90411995f7d854d02ebd93fb66043dbb06f17a831c1",
+      "phase1_provenance": "Public Perpetual Powers of Tau transcript, hash pinned to iden3/snarkjs table",
+      "phase2_status": "Two contributions from this one local process; NOT independent participants and NOT production-safe",
+      "created_utc": "2026-11-03T14:56:16.679Z"
+    }
+  },
+  "summaries": [
+    {
+      "schedule": "aligned_30_60",
+      "variant": "signed",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683
+    },
+    {
+      "schedule": "aligned_30_60",
+      "variant": "zk",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 7780373
+    },
+    {
+      "schedule": "phase_15_45",
+      "variant": "signed",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683
+    },
+    {
+      "schedule": "phase_15_45",
+      "variant": "zk",
+      "revocations": [
+        15,
+        45
+      ],
+      "authorizations": 4,
+      "hits": 96,
+      "approval_gas": 46463,
+      "gas": 8065688
+    },
+    {
+      "schedule": "restart_31_63",
+      "variant": "signed",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683
+    },
+    {
+      "schedule": "restart_31_63",
+      "variant": "zk",
+      "revocations": [
+        31,
+        63
+      ],
+      "authorizations": 5,
+      "hits": 95,
+      "approval_gas": 46463,
+      "gas": 8348215
+    },
+    {
+      "schedule": "weekly",
+      "variant": "signed",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8227683
+    },
+    {
+      "schedule": "weekly",
+      "variant": "zk",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 13,
+      "hits": 87,
+      "approval_gas": 46463,
+      "gas": 10653303
+    },
+    {
+      "schedule": "shared_signed_aligned_30_60",
+      "variant": "signed_global",
+      "revocations": [
+        30,
+        60
+      ],
+      "authorizations": 3,
+      "hits": 97,
+      "approval_gas": 46463,
+      "gas": 8728093
+    },
+    {
+      "schedule": "shared_signed_weekly",
+      "variant": "signed_global",
+      "revocations": [
+        7,
+        14,
+        21,
+        28,
+        35,
+        42,
+        49,
+        56,
+        63,
+        70,
+        77,
+        84
+      ],
+      "authorizations": 13,
+      "hits": 87,
+      "approval_gas": 46463,
+      "gas": 8969776
+    }
+  ],
+  "stateSamples": [
+    {
+      "seed": 1,
+      "variant": "signed",
+      "approval": 46463,
+      "first": 215235,
+      "hit": 79972,
+      "reauthorize": 104247
+    },
+    {
+      "seed": 1,
+      "variant": "zk",
+      "approval": 46463,
+      "first": 464230,
+      "hit": 67610,
+      "reauthorize": 352937
+    },
+    {
+      "seed": 2,
+      "variant": "signed",
+      "approval": 46463,
+      "first": 215247,
+      "hit": 79972,
+      "reauthorize": 104259
+    },
+    {
+      "seed": 2,
+      "variant": "zk",
+      "approval": 46463,
+      "first": 464206,
+      "hit": 67610,
+      "reauthorize": 352937
+    },
+    {
+      "seed": 3,
+      "variant": "signed",
+      "approval": 46463,
+      "first": 215255,
+      "hit": 79972,
+      "reauthorize": 104267
+    },
+    {
+      "seed": 3,
+      "variant": "zk",
+      "approval": 46463,
+      "first": 464182,
+      "hit": 67610,
+      "reauthorize": 352949
+    },
+    {
+      "seed": 4,
+      "variant": "signed",
+      "approval": 46463,
+      "first": 215247,
+      "hit": 79972,
+      "reauthorize": 104259
+    },
+    {
+      "seed": 4,
+      "variant": "zk",
+      "approval": 46463,
+      "first": 464206,
+      "hit": 67610,
+      "reauthorize": 352961
+    },
+    {
+      "seed": 5,
+      "variant": "signed",
+      "approval": 46463,
+      "first": 215255,
+      "hit": 79972,
+      "reauthorize": 104267
+    },
+    {
+      "seed": 5,
+      "variant": "zk",
+      "approval": 46463,
+      "first": 464206,
+      "hit": 67610,
+      "reauthorize": 352949
+    }
+  ],
+  "checks": [
+    {
+      "name": "E1 aligned_30_60: all 200 paths, timestamps, state transitions and counts match",
+      "passed": true
+    },
+    {
+      "name": "E1 phase_15_45: all 200 paths, timestamps, state transitions and counts match",
+      "passed": true
+    },
+    {
+      "name": "E1 restart_31_63: all 200 paths, timestamps, state transitions and counts match",
+      "passed": true
+    },
+    {
+      "name": "E1 weekly: all 200 paths, timestamps, state transitions and counts match",
+      "passed": true
+    },
+    {
+      "name": "diagnostic shared_signed_aligned_30_60",
+      "passed": true
+    },
+    {
+      "name": "diagnostic shared_signed_weekly",
+      "passed": true
+    },
+    {
+      "name": "E2 distinct holder/credential seed 1",
+      "passed": true
+    },
+    {
+      "name": "E2 distinct holder/credential seed 2",
+      "passed": true
+    },
+    {
+      "name": "E2 distinct holder/credential seed 3",
+      "passed": true
+    },
+    {
+      "name": "E2 distinct holder/credential seed 4",
+      "passed": true
+    },
+    {
+      "name": "E2 distinct holder/credential seed 5",
+      "passed": true
+    },
+    {
+      "name": "used proof nonce replay",
+      "passed": true,
+      "reason": "InvalidNonce",
+      "tx_hash": "0x19e2aac9e6edb2a093bcfa34603b4dc54daaf62ca972c4319891a47bd7650148"
+    },
+    {
+      "name": "signed expired cache at exact TTL",
+      "passed": true,
+      "reason": "AuthorizationExpired",
+      "tx_hash": "0x82dd96355eada50255145d61bea63f0e51c2ca30dd412c9b2b79d7690e3689a0"
+    },
+    {
+      "name": "zk expired cache at exact TTL",
+      "passed": true,
+      "reason": "AuthorizationExpired",
+      "tx_hash": "0x626ee841c0d3790e304fc502caeed4aaa7bd5adc086ea1d02e0944da5b329dca"
+    },
+    {
+      "name": "signed own revocation cached",
+      "passed": true,
+      "reason": "CredentialRevoked",
+      "tx_hash": "0x8305a228bf63a31012f72480ee5b4212fdd7f9baedf58587bab677e1261fe4f0"
+    },
+    {
+      "name": "ZK own revocation cached",
+      "passed": true,
+      "reason": "StaleAuthorization",
+      "tx_hash": "0xe5543c2082dab922a4781635c5a1d1eb84ded841cef0847ca669baafbc54d22d"
+    },
+    {
+      "name": "signed revoked full authorization",
+      "passed": true,
+      "reason": "CredentialRevoked",
+      "tx_hash": "0x13ac0e284bb7fd38c071fe705832f465d53757ef0b9e013cac9dd3122e0bf5cd"
+    },
+    {
+      "name": "pre-update ZK proof after authoritative revocation",
+      "passed": true,
+      "reason": "InvalidPublicSignals",
+      "tx_hash": "0x0febce9dff922a6abae63ffab9a10b9b44db05a26c810dbffe70fccfadf105b3"
+    }
+  ],
+  "proof_timing_diagnostic": [
+    {
+      "label": "aligned_30_60",
+      "seed": 0,
+      "proof_ms": 5342.814788999999
+    },
+    {
+      "label": "aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3736.1383879999994
+    },
+    {
+      "label": "aligned_30_60",
+      "seed": 0,
+      "proof_ms": 3349.033394000002
+    },
+    {
+      "label": "phase_15_45",
+      "seed": 0,
+      "proof_ms": 3586.2248219999965
+    },
+    {
+      "label": "phase_15_45",
+      "seed": 0,
+      "proof_ms": 3423.907380000004
+    },
+    {
+      "label": "phase_15_45",
+      "seed": 0,
+      "proof_ms": 3485.736923999997
+    },
+    {
+      "label": "phase_15_45",
+      "seed": 0,
+      "proof_ms": 3893.8730700000015
+    },
+    {
+      "label": "restart_31_63",
+      "seed": 0,
+      "proof_ms": 5839.801163000004
+    },
+    {
+      "label": "restart_31_63",
+      "seed": 0,
+      "proof_ms": 5131.8532940000005
+    },
+    {
+      "label": "restart_31_63",
+      "seed": 0,
+      "proof_ms": 4989.90725199999
+    },
+    {
+      "label": "restart_31_63",
+      "seed": 0,
+      "proof_ms": 3755.92783700001
+    },
+    {
+      "label": "restart_31_63",
+      "seed": 0,
+      "proof_ms": 3678.093015000006
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 3759.406925000003
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 7442.91941599999
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 4989.303103999991
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 4414.005984000003
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 7966.218496000001
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 3807.497438000006
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 3971.2000119999866
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 3361.8987729999935
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 3715.245171000017
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 7053.82115600002
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 6162.37192200002
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 8579.374293
+    },
+    {
+      "label": "weekly",
+      "seed": 0,
+      "proof_ms": 5869.974213000009
+    },
+    {
+      "label": "holder_1",
+      "seed": 1,
+      "proof_ms": 7299.380704999989
+    },
+    {
+      "label": "holder_1",
+      "seed": 1,
+      "proof_ms": 6243.964378999983
+    },
+    {
+      "label": "holder_2",
+      "seed": 2,
+      "proof_ms": 6131.215403999988
+    },
+    {
+      "label": "holder_2",
+      "seed": 2,
+      "proof_ms": 6314.3661999999895
+    },
+    {
+      "label": "holder_3",
+      "seed": 3,
+      "proof_ms": 4600.957988000009
+    },
+    {
+      "label": "holder_3",
+      "seed": 3,
+      "proof_ms": 4353.816179999994
+    },
+    {
+      "label": "holder_4",
+      "seed": 4,
+      "proof_ms": 4066.177839000011
+    },
+    {
+      "label": "holder_4",
+      "seed": 4,
+      "proof_ms": 4013.1998619999795
+    },
+    {
+      "label": "holder_5",
+      "seed": 5,
+      "proof_ms": 4079.974135000026
+    },
+    {
+      "label": "holder_5",
+      "seed": 5,
+      "proof_ms": 4002.1904599999543
+    },
+    {
+      "label": "negative_controls",
+      "seed": 0,
+      "proof_ms": 4026.7254250000115
+    },
+    {
+      "label": "negative_controls",
+      "seed": 0,
+      "proof_ms": 3883.0712029999704
+    },
+    {
+      "label": "negative_controls",
+      "seed": 0,
+      "proof_ms": 3856.61621800001
+    }
+  ],
+  "counts": {
+    "core_accesses": 800,
+    "shared_signed_control_accesses": 200,
+    "state_sample_accesses": 30,
+    "negative_control_failures": 7,
+    "proofs": 38
+  },
+  "limits": "Local execution only; E2 five fresh holders are a state diagnostic, not a statistical population. Proof durations here are diagnostic sequential server samples, not physical-device UX. Setup phase 2 is one-process demonstration only."
+}

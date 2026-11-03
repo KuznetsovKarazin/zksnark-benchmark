@@ -72,6 +72,23 @@ The useful question is whether saved repeated verification outweighs first-regis
 
 ## Verification and remaining work
 
+The November 2026 [bounded revocation validation](../../projects/pets4defi/VALIDATION_PROTOCOL.md)
+adds four complete 100-deposit traces per family, an existing shared-invalidation
+signed control, five fresh-holder state samples, and exact-TTL/replay/own-revocation
+negative controls. See [the results](../../projects/pets4defi/REVOCATION_VALIDATION.md).
+It changes no contract, circuit, lockfile or historical economic input.
+
+```sh
+node scripts/revocation_validation.mjs  # after npm ci and npm run setup
+python3 scripts/check_revocation_validation.py
+node scripts/verify_revocation_proofs.mjs
+```
+
+Fresh proofs and setup randomization can change calldata bytes and gas slightly;
+the reproducibility targets are event/state agreement and the reported gas
+decomposition, not byte identity of newly generated proofs. A separate colleague
+run and previously identified dependency findings are still outstanding.
+
 See `results/test_results.json`, [CIRCUIT_REVIEW.md](CIRCUIT_REVIEW.md), [STATIC_REVIEW.md](STATIC_REVIEW.md) and [REVIEW_RESPONSE.md](REVIEW_RESPONSE.md). Tests cover valid authorization, context binding/replay, current roots, predicates, activation/expiry boundaries, revocation, policy/issuer changes, and token failure/reentry rollback.
 
 The phase-1 transcript is public and hash-pinned. Two phase-2 contributions come from **one local process**; they are not independent and the resulting keys are not production-safe. A production ceremony, operational issuer/witness service, physical-device measurements and full L2 fees are release/research gaps. A signature-inside-circuit treatment and proof-system comparisons are separate follow-up experiments, not features claimed by this version.

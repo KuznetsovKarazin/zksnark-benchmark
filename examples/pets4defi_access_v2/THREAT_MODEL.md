@@ -1,5 +1,12 @@
 # Threat model and claim boundaries
 
+**Version scope:** this document describes the earlier global-publication
+architecture. Its global cache rule is retained as historical documentation,
+not as the current security-policy specification. For selective signed status
+checks, the ZK security epoch, addition-only updates, and paired revocation,
+use [POLICIES.md](POLICIES.md). The bounded November replay is documented in
+[VALIDATION_PROTOCOL.md](../../projects/pets4defi/VALIDATION_PROTOCOL.md).
+
 This is a synthetic access-control experiment for an Ethereum-compatible DeFi deposit gate. It is neither a KYC service nor a demonstration of legal compliance. All names, secrets, credentials, jurisdictions and tokens in the fixtures are public test data.
 
 ## What is compared
