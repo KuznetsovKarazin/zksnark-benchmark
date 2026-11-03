@@ -1,6 +1,6 @@
 # PETs4DeFi — economic analysis of private eligibility checks
 
-**Economics: Nataliya (ECON-03 → ECON-04 → ECON-05 → ECON-06). Technical inputs: Alexander (TECH-01).**
+**Economics: Nataliya Kolyada. Technical inputs: Oleksandr Kuznetsov.**
 
 Research question: how do private eligibility checks, repeated use and revocation requirements change access costs, who pays them, and what user benefit and service margin would justify their use? The supplied measurements establish technical inputs. Nataliya develops the economic ledger, conditional thresholds and sensitivity analysis.
 
@@ -8,17 +8,45 @@ Compare an unchecked token deposit, signed eligibility checks and ZK proofs. Sig
 
 ZK hides the credential identifier, selected trusted issuer and private attributes from the on-chain presentation. Its pseudonym is application-scoped. Public wallets, transfers and timing remain visible. The eligibility policy and user workloads are synthetic.
 
-## Current task — PUB-01 (checked 3 November 2026)
+## Article and integrated evidence (3 November 2026)
 
-ECON-01, ECON-03, the bounded ECON-04 implementation and the bounded ECON-05 core/phase analysis are accepted. Oleksandr accepted [ECON-06 v0.3 — pilot report and reproducibility package](https://trello.com/c/UvvDE39e) on 29 October 2026; the agreed pilot is complete. [REVIEW-01](https://trello.com/c/KHXMwmlu) records internal computational verification and its limitations, not independent human or external peer review.
+The current article is **Revocation Externalities in Private DeFi Access: Timing,
+Gas Costs and Cost Sharing**. Its empirical result concerns shared invalidation,
+rolling authorization expiry and repeated-access cost. Two revocations at days
+30/60 versus 31/63 change the observed ZK-minus-signed gas from -447,310 to
++120,532 in matched 100-deposit traces. A signed shared-invalidation control
+reproduces the authorization-count effect, so this is not a universal cost of ZK.
 
-[PUB-01 — Methods, Results and related-work comparison](https://trello.com/c/tTUolaRK) remains **in Review** for the full-paper scientific decision. Oleksandr posted feedback on 2 November; Nataliya delivered **v0.6.2 on 2 November 2026**, incorporating the cache/revocation explanation, code/data links for five detailed studies and their consulted PDF versions. The 3 November follow-up verified all 26 manifest entries, matching standalone/packaged DOCX, and byte-identical regeneration of the fee-sensitivity CSV and three PNG figures. The requested small revision is complete; no new experiment or repeat pilot acceptance is assigned. The current manuscript contains Methods, Results and Related Work, but still needs the full-paper framing (Introduction, Abstract, integrated Discussion and Conclusions), a venue decision and final scientific/release review. Latest files and the next action are maintained on PUB-01.
+- [Complete EVM trace results and reproduction](REVOCATION_VALIDATION.md):
+  800 main and 200 control deposits, 30 fresh-holder state samples, seven included
+  reverts, all 38 saved proofs verified, and exact state-sensitive gas checks.
+- [Nataliya Kolyada's economic code and reproduction](economics/README.md):
+  26 files imported byte-for-byte from the accepted ECON-05 v0.3 core inside
+  ECON-06 v0.3; 39 tests and four byte-identical regenerated numerical CSVs.
+- [Validation protocol](VALIDATION_PROTOCOL.md): the bounded design written before
+  executing the new traces. Historical unit-cost inputs retain their own versions.
 
-For the manuscript's cache question, `PolicyGate.depositCached` checks signed issuer/credential/policy status but checks a shared security epoch for ZK. In the core `security` policy (`delta=0`), twelve unrelated weekly revocations leave the signed user's credential valid (3 TTL authorizations, 97 hits) while requiring 1 initial + 12 ZK authorizations (87 hits); these frequent renewals reset the rolling TTL. Both paths enforce immediate rejection of the affected old authorization after the authoritative matched issuer/root update. Correct issuer classification and timely on-chain publication are assumptions. In nonzero-delay policies, the signed deadline is `revokedAt + delta`; the ZK deadline is the first invalidation time of its stored epoch plus `delta`, which later updates cannot extend. This is a fixture-specific architecture comparison, not a universal ZK cost bound or complete privacy/security equivalence.
+The accepted ECON-01/03/04/05/06 scope remains closed. Original ECON-05 and ECON-06
+archives are unchanged; their checksums and source members are recorded in the
+[economic source manifest](economics/SOURCE_MANIFEST.json). The new integration
+adds an attributed computational copy, not a new economic model. Article framing,
+full text and MDPI LaTeX preparation are handled separately from the old task
+assignments below. User-authorized Git integration does not constitute external
+scientific review, cryptographic audit or journal acceptance.
 
-Keep the accepted ECON-06 v0.3 archive and its inner ECON-05 archive unchanged. Oleksandr owns the separate [SETUP-02 integration and portability cleanup](https://trello.com/c/41YzY99p), retaining Nataliya's authorship and provenance. The accepted economic packages remain linked from Trello and outside this Git branch. Collaborator access/minimal-run confirmation, TECH-01 technical acceptance and the draft PR's merge remain separate open steps.
+In the core `security` policy (`delta=0`), signed cache hits check their own issuer,
+credential and policy, while the private cache checks a shared security epoch.
+Twelve unrelated weekly revocations therefore produce 3 signed and 13 ZK full
+authorizations. Correct issuer classification and timely paired publication
+remain assumptions. Both affected old paths must reject after the authoritative
+update. Refunds/paymasters, full off-chain pricing and real demand are not
+implemented or measured. CI also checks the imported economics and saved proofs.
 
-The technical measurements and protocol below remain the pinned inputs. ECON-02 and NEXT-01 are deferred; they are not additional current assignments.
+A colleague's clean-environment reproduction and the earlier dependency tooling
+findings remain separate open items. No claim of production readiness is made.
+ECON-02 and NEXT-01 remain deferred; the historical assignment below is retained
+for provenance and does not reopen completed stages.
+
 ## Inputs
 
 | File | Use |

@@ -99,6 +99,8 @@ derived by the offline checker. New runs should use a fresh output directory
 (`VALIDATION_OUT`) or retain the recorded directory separately first. Proof
 randomness changes hashes/calldata, so fresh outputs need not be byte-identical.
 
-Historical economic archives and inputs are unchanged. This extension does not
-integrate the collaborator's economic code, resolve earlier dependency findings,
-replace a colleague's clean-environment run or establish production security.
+Historical economic archives and inputs are unchanged. The later
+[economic integration](economics/README.md) imports Nataliya Kolyada's attributed
+computational core byte-for-byte and checks it in CI. Neither this validation nor
+that integration resolves earlier dependency findings, replaces a colleague's
+clean-environment run or establishes production security.

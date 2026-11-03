@@ -1,0 +1,12 @@
+{
+  "scope": "n100 K1 security, 90d, alpha=50%, p50",
+  "gas_unchecked": "5556651",
+  "gas_signed": "8227440",
+  "gas_ZK": "10661616.6",
+  "A_signed_eur_user": "0.75540781718547889656",
+  "A_ZK_eur_user": "1.443892018689218274624",
+  "user_ZK_minus_signed_network_eur": "-0.0334618078408697592480",
+  "service_reimbursement_eur_user": "0.7219460093446091373120",
+  "alpha_reimbursement_conservation": true,
+  "source": "inputs/frequency_workload_costs.csv"
+}

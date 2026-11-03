@@ -31,6 +31,11 @@ jobs:
       - name: Verify archived economic inputs and financing scenarios
         working-directory: .
         run: python3 projects/pets4defi/scripts/test_economic_inputs.py
+      - name: Reproduce attributed economic core without changing archived inputs
+        working-directory: .
+        run: python3 projects/pets4defi/economics/reproduce.py
+      - name: Check saved revocation traces and state-dependent gas
+        run: python3 scripts/check_revocation_validation.py
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: ${{ matrix.node }}
@@ -43,6 +48,8 @@ jobs:
           npm --version
       - name: Install locked dependencies
         run: npm ci
+      - name: Verify all 38 saved revocation-control proofs
+        run: node scripts/verify_revocation_proofs.mjs
       - name: Run v2 setup, positive and negative checks, and measurements
         run: npm run demo
       - name: Verify access policies, batching and matched economic accounting

@@ -1,0 +1,80 @@
+{
+  "researcher": "Nataliya Kolyada",
+  "stage": "ECON-05 reproducible core sweep v0.3 with ONE source-verified technical phase extension",
+  "technical_owner_and_reviewer": "Oleksandr Kuznetsov",
+  "source_commit_identifiers_supplied_by_technical_owner": {
+    "implementation_snapshot_commit": "9e5cde998cf15a2fda24d54a2bfad288b107642f",
+    "economic_inputs_protocol_commit": "eb9244439fb798aae359ee03f270870fc8e5d7be",
+    "measurement_source_commit": "8e71e52fbfef382b96b75266a7c78d816c7e1751"
+  },
+  "reuse": "economic_model.py is byte-identical to accepted ECON-04 v0.1 implementation",
+  "input_file_sha256": {
+    "frequency_workload_costs.csv": "5266b82b147b040e6afed47a8b170a21ee5f9dd72eed1fdf2797c591ede80a51",
+    "frequency_event_counts.csv": "d7c5fa02202ad8542a3fb768391ec0408e515eef8f699317366791ae2f875585",
+    "frequency_decisions.csv": "49d538e295899ae67ee5523af49cfd79268f92b7c85dde2a81698a03580bb836",
+    "economic_sweep_plan.csv": "140bb465ce90aeb8ebfb8410761d5c55e339a78950075848c7416b10f0f84a54",
+    "phase_sensitivity.csv": "70ab143e0951cd391571ac972b4a5ccf20ac861ab96c9e9d2811ea7cecdfd3b0",
+    "ECONOMIC_PROTOCOL.md": "c9cc1460a99400aa655f9cc52ab77f63916c398a3b1c82153afc3852d77067a5",
+    "PETs4DeFi_source_README.md": "f1fd983a64d1c356cb3564e74ac1013b2e13298591b165f5af8e5b5c006b4ada",
+    "event_costs.csv": "daac8f75a15cfab21bad40f2911648f5886ff9475861f7be6d5e62a7d06cca57",
+    "event_ledger.csv": "6c2106f777a5b14ae1e9637d5bf19bc4dc1b306c82c7d93abd53e2c7c81acd12"
+  },
+  "config_sha256": "e9e2c4aab73b57739f7303a0da57a7841b2a22deee7b0678b6e66ae5be630c82",
+  "fee_scenarios": "archived p50/p90 gwei prices, not daily/90d invoice quantiles",
+  "row_count": 30,
+  "distinct_economic_cases": 15,
+  "pricing_cases": 2,
+  "context": {
+    "horizon_days": 90,
+    "policy": "security",
+    "services": 1,
+    "population_n": 1000,
+    "issuers": 4,
+    "credential_days": 90,
+    "auth_ttl_days": 30,
+    "deposit_counts": [
+      1,
+      10,
+      100
+    ],
+    "user_shares": [
+      "0",
+      "0.25",
+      "0.5",
+      "0.75",
+      "1"
+    ],
+    "price_scenarios": [
+      "p50",
+      "p90"
+    ]
+  },
+  "scope": "15×2 core weekly sensitivity plus 3×2 separately controlled two-revocation phase; no Cartesian product",
+  "warning": "No profit, demand, WTP, live subsidy, tested payout overhead or observed user behavior is inferred.",
+  "unresolved": "u_other, s_other, f, m, F, v, timing, cash payout overhead/implementation and liquidity requirements",
+  "ai_assistance": "AI-assisted code, tables, visualizations, drafting; externally supplied gas measurement data are not remeasured; requires independent review",
+  "selected_extension": {
+    "name": "fixed-count revocation phase",
+    "source": "inputs/phase_sensitivity.csv",
+    "technical_context": "n=100,K=1,N=1000,L=90,TTL=30,policy=security,2 unrelated revocations",
+    "phase_day_pairs": [
+      [
+        15,
+        45
+      ],
+      [
+        30,
+        60
+      ],
+      [
+        37,
+        67
+      ]
+    ],
+    "other_extension_axes": "not run",
+    "user_share_for_economic_example": "0.5",
+    "note": "Monthly two-revocation phase sensitivity, not the 12-weekly-revocation core."
+  },
+  "phase_extension_rows": 6,
+  "phase_source_sha256": "70ab143e0951cd391571ac972b4a5ccf20ac861ab96c9e9d2811ea7cecdfd3b0"
+}
