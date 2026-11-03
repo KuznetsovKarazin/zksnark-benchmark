@@ -126,3 +126,5 @@ The article v0.10 review extension adds exhaustive timing counts, a finite-horiz
 Poisson model, three repetitions per paired schedule, all four signed scope
 controls and enforced public issuer partitions. See
 [REVOCATION_REVIEW_V010.md](REVOCATION_REVIEW_V010.md) for commands and limits.
+
+Latest paper review: [bounded sensitivity and provenance, v0.11](REVOCATION_REVIEW_V011.md).

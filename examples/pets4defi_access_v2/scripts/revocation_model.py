@@ -9,6 +9,7 @@ from collections import Counter, defaultdict
 from itertools import combinations
 from math import ceil, comb, exp, fsum
 from pathlib import Path
+from decimal import Decimal
 import argparse
 import csv
 import json
@@ -24,6 +25,40 @@ UNCHECKED = 5556651
 ZK_THREE = 7780318.6
 MARGINAL = 288129.8
 EUR_PER_GAS = .130658648 * 2164.73 / 1e9
+EVENT_COSTS = Path(__file__).resolve().parents[3] / 'projects/pets4defi/data/event_costs.csv'
+
+
+def validated_unit_costs(path=EVENT_COSTS):
+    """Fail closed if the historical gas projection drifts from its CSV source.
+
+    Decimal arithmetic checks the four reported constants exactly; explicit
+    errors also work under python -O. No current measurements replace this CSV.
+    """
+    with Path(path).open(newline='') as f:
+        rows = list(csv.DictReader(f))
+    costs = {}
+    for variant, policy, events in [
+        ('signed_cache', 'security', ('approve', 'cache_register_first', 'cache_reauthorize', 'cache_hit')),
+        ('zk_cache', 'security', ('approve', 'cache_register_first', 'cache_reauthorize', 'cache_hit')),
+        ('unchecked', 'none', ('approve', 'access_first', 'access_repeat')),
+    ]:
+        costs[variant] = {}
+        for event in events:
+            matches = [r for r in rows if (r['variant'], r['policy'], r['event'], r['unit'])
+                       == (variant, policy, event, 'gas')]
+            if len(matches) != 1:
+                raise ValueError(f'Expected one historical gas cell: {variant}/{policy}/{event}')
+            costs[variant][event] = Decimal(matches[0]['mean'])
+    def total(c):
+        return c['approve'] + c['cache_register_first'] + 2*c['cache_reauthorize'] + 97*c['cache_hit']
+    u = costs['unchecked']; z = costs['zk_cache']
+    derived = {'SIGNED': total(costs['signed_cache']), 'ZK_THREE': total(z),
+               'UNCHECKED': u['approve'] + u['access_first'] + 99*u['access_repeat'],
+               'MARGINAL': z['cache_reauthorize'] - z['cache_hit']}
+    for name, value in derived.items():
+        if value != Decimal(str(globals()[name])):
+            raise ValueError(f'{name}: code={globals()[name]}, event_costs.csv={value}')
+    return costs
 
 
 def authorization_indices(update_seconds, n=N, step=STEP, ttl=TTL):
@@ -125,7 +160,9 @@ def csv_write(path, rows):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, default=Path(__file__).resolve().parents[1]/'results/revocation_model')
-    args=parser.parse_args(); args.out.mkdir(parents=True, exist_ok=True)
+    args=parser.parse_args()
+    validated_unit_costs()
+    args.out.mkdir(parents=True, exist_ok=True)
     evidence=Path(__file__).resolve().parents[1]/'results/revocation_validation'
     historical=json.loads((evidence/'validation_report.json').read_text())
     traces=json.loads((evidence/'traces.json').read_text())
@@ -205,6 +242,7 @@ def main():
                     warning='Finite observed-range sensitivity projection, not receipts for all 3916 schedules and not a confidence interval.'),
                  poisson_mean_revocations_90d_at_expected_gas_parity=(lo+hi)/2,
                  first_integer_m_with_positive_expected_delta=next(r['m'] for r in fixed_rows if r['expected_projected_delta_gas']>0),
+                 event_costs_sha256=hashlib.sha256(EVENT_COSTS.read_bytes()).hexdigest(),
                  source_sha256={name:hashlib.sha256((evidence/name).read_bytes()).hexdigest() for name in ['validation_report.json','traces.json','receipts_and_proofs.json.gz']},
                  review_source_sha256={name:hashlib.sha256((review_evidence/name).read_bytes()).hexdigest() for name in ['validation_report.json','traces.json','receipts_and_proofs.json.gz']},
                  assumptions='Synthetic uniform distinct integer days and homogeneous Poisson alternatives; no empirical prevalence claim. Gas is projected either with historical fixed means or the explicitly labelled observed state/calldata envelope, not newly executed for every schedule. Finite horizon is 100 accesses through day 89.1; Poisson m denotes lambda times 90 days.')

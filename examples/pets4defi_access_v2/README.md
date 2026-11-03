@@ -93,6 +93,33 @@ See `results/test_results.json`, [CIRCUIT_REVIEW.md](CIRCUIT_REVIEW.md), [STATIC
 
 The phase-1 transcript is public and hash-pinned. Two phase-2 contributions come from **one local process**; they are not independent and the resulting keys are not production-safe. A production ceremony, operational issuer/witness service, physical-device measurements and full L2 fees are release/research gaps. A signature-inside-circuit treatment and proof-system comparisons are separate follow-up experiments, not features claimed by this version.
 
+### Follow-up review (article v0.11)
+
+The [v0.11 report](../../projects/pets4defi/REVOCATION_REVIEW_V011.md) adds twelve
+bounded model-sensitivity configurations and a source guard for historical gas
+constants. It does not replace any saved EVM evidence. The 57.07% result belongs
+to the specified uniform grid; TTL, access density and clustering can change it.
+
+```sh
+python3 -m unittest discover -s scripts -p 'test_revocation*.py' -v
+python3 scripts/revocation_sensitivity.py --out /tmp/pets4defi-sensitivity-check
+diff -r results/revocation_sensitivity /tmp/pets4defi-sensitivity-check
+```
+
+The checker accepts only **exact hash-matching** historical harness snapshots:
+v0.9 for `revocation_validation.mjs` and `package.json`, and v0.10 for `setup.mjs`.
+The latter retains the setup script actually used for the saved review evidence.
+Contracts, circuit, fixtures and dependency lock still require a current-file hash
+match; there is no general hash bypass and no rewriting of old reports.
+
+The default public powers-of-tau path verifies the pinned BLAKE2b-512 digest.
+Re-verifying the full public ceremony exceeded the 45-minute CI limit on both
+Node configurations, so that optional, expensive check is now requested with
+`node scripts/setup.mjs --verify-public-phase1` (which bypasses the setup cache).
+The explicit `--local-demo` path still verifies its newly generated transcript.
+Both paths continue to verify the resulting circuit-specific zkey. Neither
+single-process phase-2 setup is production-safe.
+
 ### Revocation review extension (article v0.10)
 
 The review extension adds three paired replays per main schedule, all four

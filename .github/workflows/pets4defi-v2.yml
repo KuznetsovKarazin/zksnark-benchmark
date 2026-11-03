@@ -39,9 +39,11 @@ jobs:
       - name: Check repeated traces, partition controls and exact timing model
         run: |
           python3 scripts/check_revocation_validation.py --out results/revocation_review
-          python3 -m unittest discover -s scripts -p test_revocation_model.py -v
+          python3 -m unittest discover -s scripts -p 'test_revocation*.py' -v
           python3 scripts/revocation_model.py --out /tmp/pets4defi-model-check
           diff -r results/revocation_model /tmp/pets4defi-model-check
+          python3 scripts/revocation_sensitivity.py --out /tmp/pets4defi-sensitivity-check
+          diff -r results/revocation_sensitivity /tmp/pets4defi-sensitivity-check
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: ${{ matrix.node }}

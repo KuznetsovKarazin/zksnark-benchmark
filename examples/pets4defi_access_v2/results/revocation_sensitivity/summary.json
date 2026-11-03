@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scenarios": 12,
+  "pair_evaluations": 39843,
+  "event_costs_sha256": "daac8f75a15cfab21bad40f2911648f5886ff9475861f7be6d5e62a7d06cca57",
+  "model_source_sha256": "a86b27f2019c1a445be972b5b2c043f837d82adaafab2a2fd11d7bebf555e4fb",
+  "assumptions": [
+    "Synthetic model-only sensitivity, not an EVM sweep, field prevalence or a confidence interval.",
+    "Regular n and spacing satisfy spacing=90/n days; frequency and count are not independent at a fixed horizon.",
+    "Uniform distinct days 1..89; clustered laws condition this grid on a gap <=1 or <=7 days. They are not empirical or Poisson arrival models.",
+    "Events after the last accepted access cannot affect its cost; expired accesses are ineligible and have no simulated receipt or renewal.",
+    "Fixed historical unit gas for cached paths; no family-wise direct/cache optimization, changed-state calibration, setup or rejected-transaction fees.",
+    "Gas ranking suppressed when the credential expires before all scheduled accesses. No assertion of workload equivalence after expiry."
+  ]
+}

@@ -53,6 +53,7 @@
   },
   "poisson_mean_revocations_90d_at_expected_gas_parity": 2.0267304031680204,
   "first_integer_m_with_positive_expected_delta": 2,
+  "event_costs_sha256": "daac8f75a15cfab21bad40f2911648f5886ff9475861f7be6d5e62a7d06cca57",
   "source_sha256": {
     "validation_report.json": "54d6c538b6c07bdcbd0669cd1f073be23d92cfd81fd231c7910000ef37f28de6",
     "traces.json": "534c76ba156a00d32d22a187734646b8e70e90a527d700eb51ade028893c7ce5",

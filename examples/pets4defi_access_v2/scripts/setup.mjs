@@ -20,7 +20,7 @@ const previous=fs.existsSync('build/setup.json')?JSON.parse(fs.readFileSync('bui
 const localDemo=process.argv.includes('--local-demo');
 const suppliedPot=process.env.PTAU_FILE?path.resolve(process.env.PTAU_FILE):null;
 if(localDemo&&suppliedPot)throw new Error('Choose --local-demo OR PTAU_FILE.');
-if(previous?.circuit_sha256===circuitHash&&previous?.lock_sha256===lockHash&&
+if(!process.argv.includes('--verify-public-phase1')&&previous?.circuit_sha256===circuitHash&&previous?.lock_sha256===lockHash&&
    Boolean(previous?.local_demo_phase1)===localDemo&&
    (!suppliedPot||previous?.phase1_sha256===digest(suppliedPot))&&
    Object.entries(artifacts).every(([key,p])=>fs.existsSync(p)&&previous[key]===digest(p))) {
@@ -53,7 +53,15 @@ if(localDemo){
   }
   if(!ok)throw new Error('Cannot obtain hash-verified public powers of tau; no insecure silent fallback.');
 }
-run([cli,'powersoftau','verify',pot]);
+// The public transcript is pinned byte-for-byte by its published BLAKE2b-512.
+// Rechecking its entire ceremony history exceeded both 45-minute CI jobs.
+// A newly made local demonstration transcript still needs algebraic checking.
+if(localDemo||process.argv.includes('--verify-public-phase1')) {
+  run([cli,'powersoftau','verify',pot]);
+} else {
+  if(digest(pot,'blake2b512')!==expected)throw new Error('Public transcript digest mismatch.');
+  console.log('Pinned public phase-1 digest verified; use --verify-public-phase1 for the full ceremony check.');
+}
 run([cli,'groth16','setup','build/access.r1cs',pot,'build/access_0.zkey']);
 run([cli,'zkey','contribute','build/access_0.zkey','build/access_1.zkey','--name=local-demo-contribution-1',`-e=${crypto.randomBytes(64).toString('hex')}`]);
 run([cli,'zkey','contribute','build/access_1.zkey','build/access_final.zkey','--name=local-demo-contribution-2',`-e=${crypto.randomBytes(64).toString('hex')}`]);

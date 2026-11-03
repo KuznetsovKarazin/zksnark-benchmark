@@ -29,10 +29,12 @@ historical_sources_used = []
 for name, digest in report['metadata']['source_files_sha256'].items():
     current = ROOT / name
     if sha(current) != digest:
-        # Only mutable harness/package metadata may use the saved v0.9 copy.
-        # Contracts, circuit, fixtures and dependency lock must still match.
-        assert name in ('scripts/revocation_validation.mjs', 'package.json'), name
-        original = ROOT / 'scripts/historical_sources/v0.9' / Path(name).name
+        # Exact executed harness/setup snapshots preserve old evidence after
+        # maintenance. Contracts, circuit, fixtures and lock remain strict.
+        snapshots = {'scripts/revocation_validation.mjs': 'v0.9',
+                     'package.json': 'v0.9', 'scripts/setup.mjs': 'v0.10'}
+        assert name in snapshots, name
+        original = ROOT / 'scripts/historical_sources' / snapshots[name] / Path(name).name
         assert original.exists() and sha(original) == digest, name
         historical_sources_used.append(name)
 traces = read(OUT / 'traces.json')
