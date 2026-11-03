@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+"""Offline checks of saved receipts, traces and historical prover samples.
+
+Python standard library only. No RPC, fresh setup or economic-archive changes.
+The runtime's assertions and this independent reconstruction are separate checks.
+"""
+from pathlib import Path
+import collections
+import gzip
+import hashlib
+import json
+import statistics
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / 'results/revocation_validation'
+read = lambda p: json.loads(p.read_text())
+sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+report = read(OUT / 'validation_report.json')
+assert report['status'] == 'PASS'
+for name, digest in read(OUT / 'manifest.json').items():
+    assert sha(OUT / name) == digest, name
+for name, digest in report['metadata']['source_files_sha256'].items():
+    assert sha(ROOT / name) == digest, name
+traces = read(OUT / 'traces.json')
+raw = json.loads(gzip.decompress((OUT / 'receipts_and_proofs.json.gz').read_bytes()))
+receipts = {(r['label'], r['receipt']['hash']): r for r in raw['transactions']}
+assert len(receipts) == len(raw['transactions'])
+assert len(traces) == 1034
+assert len(raw['proofs']) == 38
+assert sum(r['kind'] == 'rejected' for r in raw['transactions']) == 7
+for r in raw['transactions']:
+    assert r['receipt']['status'] == (0 if r['kind'] == 'rejected' else 1)
+amount = 100 * 10**18
+residuals = []
+gas_classes = collections.defaultdict(list)
+for row in traces:
+    r = receipts[row['label'], row['tx_hash']]
+    assert int(r['receipt']['gasUsed']) == row['gas']
+    before, after = row['before'], row['after']
+    for key, change in [('nonce', 1), ('deposit', amount),
+                        ('holderBalance', -amount), ('gateBalance', amount)]:
+        assert int(after[key]) - int(before[key]) == change
+    if row['event'] == 'hit':
+        assert before['cache'] == after['cache']
+    if row['variant'] == 'zk' and row['event'] == 'reauthorize':
+        data = bytes.fromhex(r['transaction']['data'][2:])
+        calldata = sum(4 if b == 0 else 16 for b in data)
+        changed = sum(before['cache'][i] != after['cache'][i] for i in (0, 2))
+        residuals.append(row['gas'] - calldata - 2800 * changed)
+        gas_classes[changed].append(row['gas'])
+# Empirical state decomposition; not a claim for arbitrary contracts or slots.
+assert len(residuals) == 27 and set(residuals) == {342621}
+comparison = []
+for summary in report['summaries']:
+    variant = 'signed' if summary['variant'] == 'signed_global' else summary['variant']
+    rows = [r for r in traces if r['label'] == summary['schedule'] and r['variant'] == variant]
+    assert len(rows) == 100
+    actual = summary['approval_gas'] + sum(r['gas'] for r in rows)
+    assert actual == summary['gas']
+    shared = variant == 'zk' or summary['variant'] == 'signed_global'
+    # Reconstruct independently in integer seconds from receipt timestamps.
+    base = receipts[rows[0]['label'], rows[0]['tx_hash']]['timestamp']
+    deadline = None
+    authorization_time = None
+    updates = [d * 86400 for d in summary['revocations']]
+    for i, row in enumerate(rows):
+        now = int(row['day_seconds'])
+        assert now == i * 77760
+        assert receipts[row['label'], row['tx_hash']]['timestamp'] == base + now
+        outdated = authorization_time is not None and shared and any(authorization_time < u <= now for u in updates)
+        expected = 'first' if deadline is None else 'reauthorize' if now >= deadline or outdated else 'hit'
+        assert row['event'] == expected
+        if expected != 'hit':
+            authorization_time = now
+            deadline = min(now + 30*86400, 90*86400)
+        assert int(row['after']['cache'][0]) == base + deadline
+    assert sum(r['event'] != 'hit' for r in rows) == summary['authorizations']
+    if summary['variant'] == 'zk':
+        k = summary['authorizations']
+        projection = 7780318.6 + 288129.8 * (k-3)
+        signed = next(s for s in report['summaries'] if s['schedule'] == summary['schedule'] and s['variant'] == 'signed')['gas']
+        comparison.append(dict(schedule=summary['schedule'], k=k, actual_gas=actual,
+                               projected_gas=round(projection, 1),
+                               actual_minus_projection=round(actual-projection, 1),
+                               delta_gas=actual-signed))
+        assert (actual-signed < 0) == (k <= 4)
+# Finite observed-range envelope includes the five new first-use samples and
+# all observed reauthorization states, including capped validity and stale epochs.
+envelopes = []
+for k in (4, 5):
+    bounds = {}
+    for variant, count in [('signed', 3), ('zk', k)]:
+        samples = [s for s in report['stateSamples'] if s['variant'] == variant]
+        first = [s['first'] for s in samples]
+        reauth = [r['gas'] for r in traces if r['variant'] == variant and r['event'] == 'reauthorize' and not r['label'].startswith('shared_signed')]
+        hits = [s['hit'] for s in samples]
+        bounds[variant] = [46463+f(first)+(count-1)*f(reauth)+(100-count)*f(hits) for f in (min,max)]
+    low, high = bounds['zk'][0]-bounds['signed'][1], bounds['zk'][1]-bounds['signed'][0]
+    assert (high < 0) if k == 4 else (low > 0)
+    envelopes.append(dict(k=k, min_delta=low, max_delta=high))
+prover = read(ROOT / 'results/server_prover.json')
+assert prover['circuit_sha256'] == sha(ROOT / 'circuits/access.circom')
+assert all(x['verified'] for group in ('cold', 'warm') for x in prover[group])
+assert len(prover['cold']) == len(prover['warm']) == 30
+prover_summary = {}
+for group in ('cold', 'warm'):
+    xs = sorted(x['proof_time_ms'] for x in prover[group])
+    def quantile(p):
+        index = (len(xs)-1)*p; lo = int(index); hi = min(lo+1,len(xs)-1)
+        return xs[lo]+(xs[hi]-xs[lo])*(index-lo)
+    prover_summary[group] = dict(n=len(xs), median_ms=statistics.median(xs), q1_ms=quantile(.25),q3_ms=quantile(.75))
+result = dict(status='PASS', receipt_count=len(receipts), trace_count=len(traces),
+              ordered_core_and_control_paths=1000, failed_transactions=7,
+              state_decomposition=dict(n=len(residuals), residual_gas=342621,
+                 formula='gas = 342621 + calldata gas + 2800*(changed until + changed security epoch)',
+                 observed_classes={str(k):dict(n=len(v),min=min(v),max=max(v)) for k,v in gas_classes.items()}),
+              actual_vs_fixed_means=comparison, observed_range_envelopes=envelopes,
+              historical_server_proving=prover_summary,
+              historical_prover_source_sha256=sha(ROOT / 'results/server_prover.json'),
+              limitations='Finite synthetic states, not confidence intervals. Server timings are historical and are not device costs. No external colleague or cryptographic audit.')
+(OUT / 'analysis_summary.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps(result,indent=2))

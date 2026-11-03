@@ -1,0 +1,142 @@
+{
+  "research_author": "Nataliya Kolyada",
+  "technical_source_owner_and_scientific_reviewer": "Oleksandr Kuznetsov",
+  "source_archive": "ECON-05_Reproducible_Core_and_Phase_v0.3_Nataliya_Kolyada.zip",
+  "source_archive_sha256": "cf1d70bef374856690bfe3be6bdb281b6d92f53855ff864e7004ca142d31bc5f",
+  "parent_archive": "ECON-06_Synchronized_Review_Package_v0.3_Nataliya_Kolyada.zip",
+  "parent_archive_sha256": "b6f33b73b3eecfd1f4a4d18daec7012c73abb4e15c5936129745671c915f14ed",
+  "integration_date": "2026-11-03",
+  "integration_note": "Selected computational core copied byte-for-byte. Original archives remain unchanged. Archived README describes its submission-time status, not current status. Workbook, workbook builder, prose reports and old figures omitted; none is needed for numeric reproduction.",
+  "files": [
+    {
+      "path": "econ05_v03/economic_model.py",
+      "archive_member": "ECON05_Sweep_v0.3/economic_model.py",
+      "sha256": "a64756dd3d87e17ee9ebd5b8b23f0745f76593c1eb40bb21c3de47701c7ebecf"
+    },
+    {
+      "path": "econ05_v03/economic_sweep.py",
+      "archive_member": "ECON05_Sweep_v0.3/economic_sweep.py",
+      "sha256": "ab9ac6539939d60ee6038a3984da3de72e480b999b843b730e1eaa49edc89b5e"
+    },
+    {
+      "path": "econ05_v03/derive_review_extensions_v03.py",
+      "archive_member": "ECON05_Sweep_v0.3/derive_review_extensions_v03.py",
+      "sha256": "be6694020806a277c8bbcb2db5e45b9f1118386f5b04751aaac4c0a9d13149c9"
+    },
+    {
+      "path": "econ05_v03/independent_central_result.py",
+      "archive_member": "ECON05_Sweep_v0.3/independent_central_result.py",
+      "sha256": "c91bb810520116e2cbd40541f18703eaab10a001ad16adae97d1a2a2acd1b7a1"
+    },
+    {
+      "path": "econ05_v03/test_econ04.py",
+      "archive_member": "ECON05_Sweep_v0.3/test_econ04.py",
+      "sha256": "bb56e31c59a077fa01ef8af24bed104fb0c36476c9b9a118d9c0c252ff731525"
+    },
+    {
+      "path": "econ05_v03/test_sweep.py",
+      "archive_member": "ECON05_Sweep_v0.3/test_sweep.py",
+      "sha256": "7bebe91ed65aa5369f06abd81cb9d2bc10a20a16a14d57427684668a557fa17e"
+    },
+    {
+      "path": "econ05_v03/test_review_v03.py",
+      "archive_member": "ECON05_Sweep_v0.3/test_review_v03.py",
+      "sha256": "fec7e008fe740e74fc6aeb4f1ff6a7752cb103ff22cd94816e427ee40b200a2b"
+    },
+    {
+      "path": "econ05_v03/make_figures.py",
+      "archive_member": "ECON05_Sweep_v0.3/make_figures.py",
+      "sha256": "4d55f4926385509bcfad2c40d7c715c641d73cac9f1dee0ee121a0563fbbd2db"
+    },
+    {
+      "path": "econ05_v03/econ05_config.json",
+      "archive_member": "ECON05_Sweep_v0.3/econ05_config.json",
+      "sha256": "e9e2c4aab73b57739f7303a0da57a7841b2a22deee7b0678b6e66ae5be630c82"
+    },
+    {
+      "path": "econ05_v03/run_config.json",
+      "archive_member": "ECON05_Sweep_v0.3/run_config.json",
+      "sha256": "d1452b015e59cd801a46b1216484ed62c069c424e35fbcfa0a7750fafac9b612"
+    },
+    {
+      "path": "econ05_v03/README.md",
+      "archive_member": "ECON05_Sweep_v0.3/README.md",
+      "sha256": "21040828f40db7b4e32ebf469c7577d8b72b2a3f0eeeb37a31e588938fc57906"
+    },
+    {
+      "path": "econ05_v03/inputs/ECONOMIC_PROTOCOL.md",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/ECONOMIC_PROTOCOL.md",
+      "sha256": "c9cc1460a99400aa655f9cc52ab77f63916c398a3b1c82153afc3852d77067a5"
+    },
+    {
+      "path": "econ05_v03/inputs/PETs4DeFi_source_README.md",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/PETs4DeFi_source_README.md",
+      "sha256": "f1fd983a64d1c356cb3564e74ac1013b2e13298591b165f5af8e5b5c006b4ada"
+    },
+    {
+      "path": "econ05_v03/inputs/economic_sweep_plan.csv",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/economic_sweep_plan.csv",
+      "sha256": "140bb465ce90aeb8ebfb8410761d5c55e339a78950075848c7416b10f0f84a54"
+    },
+    {
+      "path": "econ05_v03/inputs/event_costs.csv",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/event_costs.csv",
+      "sha256": "daac8f75a15cfab21bad40f2911648f5886ff9475861f7be6d5e62a7d06cca57"
+    },
+    {
+      "path": "econ05_v03/inputs/event_ledger.csv",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/event_ledger.csv",
+      "sha256": "6c2106f777a5b14ae1e9637d5bf19bc4dc1b306c82c7d93abd53e2c7c81acd12"
+    },
+    {
+      "path": "econ05_v03/inputs/frequency_decisions.csv",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/frequency_decisions.csv",
+      "sha256": "49d538e295899ae67ee5523af49cfd79268f92b7c85dde2a81698a03580bb836"
+    },
+    {
+      "path": "econ05_v03/inputs/frequency_event_counts.csv",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/frequency_event_counts.csv",
+      "sha256": "d7c5fa02202ad8542a3fb768391ec0408e515eef8f699317366791ae2f875585"
+    },
+    {
+      "path": "econ05_v03/inputs/frequency_workload_costs.csv",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/frequency_workload_costs.csv",
+      "sha256": "5266b82b147b040e6afed47a8b170a21ee5f9dd72eed1fdf2797c591ede80a51"
+    },
+    {
+      "path": "econ05_v03/inputs/phase_sensitivity.csv",
+      "archive_member": "ECON05_Sweep_v0.3/inputs/phase_sensitivity.csv",
+      "sha256": "70ab143e0951cd391571ac972b4a5ccf20ac861ab96c9e9d2811ea7cecdfd3b0"
+    },
+    {
+      "path": "econ05_v03/results/b0_reference_6rows.csv",
+      "archive_member": "ECON05_Sweep_v0.3/results/b0_reference_6rows.csv",
+      "sha256": "c9ee828ca46f2d8115d09e2660c41c98cb090136be4b1b471f87fe3b11aa1cad"
+    },
+    {
+      "path": "econ05_v03/results/econ05_sweep_30rows.csv",
+      "archive_member": "ECON05_Sweep_v0.3/results/econ05_sweep_30rows.csv",
+      "sha256": "d3d6c39d52f36b9af5ea6983bd8a7e924163058b16d75d9397c6e0db1966c639"
+    },
+    {
+      "path": "econ05_v03/results/independent_central_result.json",
+      "archive_member": "ECON05_Sweep_v0.3/results/independent_central_result.json",
+      "sha256": "82467ea74144212f4d1ad0868aae49e785e939725c4dc9ddc4f8b1230a47c738"
+    },
+    {
+      "path": "econ05_v03/results/phase_selected_source_verified_6rows.csv",
+      "archive_member": "ECON05_Sweep_v0.3/results/phase_selected_source_verified_6rows.csv",
+      "sha256": "3b6760afcbaa5be78b9a0a4981231a5b80fdbf797041f7701722862bbfa25e40"
+    },
+    {
+      "path": "econ05_v03/results/run_metadata.json",
+      "archive_member": "ECON05_Sweep_v0.3/results/run_metadata.json",
+      "sha256": "24d7191ec257ad9dbb93c25a7981ef46c7793180256f065fdfc54bb4f0650a12"
+    },
+    {
+      "path": "econ05_v03/results/thresholds_30rows.csv",
+      "archive_member": "ECON05_Sweep_v0.3/results/thresholds_30rows.csv",
+      "sha256": "c68742bb3f1f60efb8c2a5610760ca6cf297fb6e9180a34cf7b6f6fcc63bb690"
+    }
+  ]
+}

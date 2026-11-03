@@ -1,0 +1,26 @@
+input,value,lower,upper,unit,status,source_url,source_date,evidence_needed
+ETH_EUR,2164.73,,,EUR/ETH,observed_web_quote,https://www.coingecko.com/en/coins/ethereum/eur,2026-10-20T19:56:58Z,Dated conversion scenario archived in fx_quote.json; retrieval time is not the tick timestamp or daily close.
+Ethereum_effective_execution_price,0.130658648,0.050009874,0.716536567,gwei,observed_fee_proxy_p50_with_p10_p90,https://ethereum-rpc.publicnode.com,2026-10-20T17:10:35+00:00,Equal-weight distribution of within-block effective p50 prices; exact window in provenance.json.
+signed_initial_issuance,,,,EUR/credential/event,missing,,,"Comparable service quote: identity checks, volume, date and whether root-publication gas is included."
+signed_renewal,,,,EUR/credential/event,missing,,,"Comparable service quote: identity checks, volume, date and whether root-publication gas is included."
+zk_initial_issuance,,,,EUR/credential/event,missing,,,"Comparable service quote: identity checks, volume, date and whether root-publication gas is included."
+zk_renewal,,,,EUR/credential/event,missing,,,"Comparable service quote: identity checks, volume, date and whether root-publication gas is included."
+witness_delivery,,,,EUR/user/update,missing,,,Service scope and volume; separate fetching a path from operating the service; identify invoice overlap.
+proving_service,,,,EUR/proof,missing_optional_service_price,,,Use only if outsourcing proof generation is part of the scenario; do not also charge the same computation as local work.
+server_warm_proof_time,1849.4734544999956,1815.1874789999965,1906.0206587500033,ms/proof,measured_server_median_with_q1_q3,,2026-10-20T17:15:30.250Z,"Retained separate prover benchmark for the same 7409-constraint circuit: results/server_prover.json. AMD EPYC 9V74, Node24, n=30; not phone performance or a price. Per-event policy timings are separately recorded."
+phone_proof_time,,,,ms/proof,missing_technical_measurement,,,"Physical device/browser, cold/warm samples and actual circuit; do not substitute server timing."
+user_time_valuation,,,,EUR/hour,missing_optional_valuation,,,Source and population; elapsed computation does not necessarily occupy the user. No default zero.
+L2_data_and_operator_fee,,,,ETH/transaction,missing_technical_measurement,,,Serialized transaction and pinned oracle/network state; not available from execution gas alone.
+stale_proof_failures,,,,events/user/90_days,missing_empirical_frequency,,,"Included-revert gas and a replacement proof are measured in the policy experiment; occurrence frequency is unknown. Separate preflight abandonment, included reverts, witness refresh, replacement proof and waiting."
+revocation_delay_Delta,,0,3600,seconds,experimental_policy_settings,,,"Tested configured values: 0, 300 and 3600 seconds. First security invalidation anchors the bound. No legal acceptability or incident loss is assumed."
+revocation_exposure_loss,,,,EUR/user/90_days,missing_optional_risk_model,,,Use only supported event frequency and consequence estimates; otherwise report exposure time separately.
+revocation_temporal_distribution,,,,timestamped events; seconds between events; cluster size,missing_empirical_timing,,,"Issuer and service scope, observation window, inter-arrival distribution, clustering within 300/3600 seconds and relation to user access times. Synthetic burst/phase traces do not establish an optimal delay."
+access_frequency,,1,100,deposits/user/90_days,experimental_sweep,,,"Core values 1,10,100; evenly spaced new-user traces starting day0. Not observed usage or returning-user cohorts."
+user_cost_share,,0,1,fraction of declared incremental access-cost pool A,experimental_sweep,,,"Values 0,0.25,0.5,0.75,1; B0 remains1. Same ZK implementation across financing regimes; reimbursement not implemented."
+service_fee,,,,EUR/user/90_days,symbolic_fixed_fee_rule,,,Common fixed f across n and alpha in core control; no numerical fee or zero assumed. Record source or clearly labeled policy assumption before numeric coverage claims.
+other_net_service_revenue,,,,EUR/user/90_days,missing,,,"Other net margin m, excluding access fee and reconciled costs; do not substitute TVL or user yield. If unknown, report required margin."
+fixed_service_expense,,,,EUR/service/90_days,missing,,,"Hosting, maintenance, allocated setup and scope. Exclude costs already in provider invoices or variable ledger; choose amortisation horizon."
+active_user_time,,,,hours/user/90_days,missing_technical_or_UX_evidence,,,Active attention time by step/device; not server wall-clock proof time. May remain symbolic in benefit threshold.
+reimbursement_overhead,,,,EUR/user/90_days,missing_implementation_cost,,,B2 is an accounting allocation; if actual reimbursement/paymaster is implemented measure settlement and administrative overhead separately.
+provider_billing_and_cost_bearer,,,,contractual allocation by event,missing,,,"For issuance, renewal, witness and proof: provider/payee, billed party, initial payer, final bearer, volume and included operations; use event_ledger.csv."
+deployment_amortisation_horizon,,,,days,model_boundary_to_document,,,Measured gate cost is separated; choose its accounting horizon and N before including F or s. Minimal standalone signed registry deployment remains unmeasured.

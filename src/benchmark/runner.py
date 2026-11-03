@@ -40,8 +40,8 @@ class BenchmarkResult:
     success: bool
     error_stage: Optional[str] = None
     error_message: Optional[str] = None
-    versions: Dict[str, str] = None
-    timestamp: float = None
+    versions: Optional[Dict[str, str]] = None
+    timestamp: Optional[float] = None
 
 
 class BenchmarkError(RuntimeError):
@@ -57,21 +57,31 @@ def load_config_from_yaml(config_path: Path) -> List[BenchmarkConfig]:
 
     data = yaml.safe_load(Path(config_path).read_text()) or {}
     bench = data.get("benchmark", {}) or {}
-    defaults = {
+    defaults: Dict[str, Any] = {
         "iterations": int(bench.get("iterations", 1)),
         "ptau_power": bench.get("ptau_power"),
         "seed": int(bench.get("seed", 42)),
     }
     items = data.get("circuits", []) or []
+    # Shipped configs group circuits by category; also accept the flat list form.
+    if isinstance(items, dict):
+        groups = items.values()
+        if not all(isinstance(group, list) for group in groups):
+            raise BenchmarkError("Circuit categories must contain lists")
+        items = [entry for group in groups for entry in group]
+    if not isinstance(items, list) or not items:
+        raise BenchmarkError("Config must contain a non-empty circuits list or mapping")
     out: List[BenchmarkConfig] = []
 
     for it in items:
+        if not isinstance(it, dict):
+            raise BenchmarkError("Each circuit entry must be a mapping")
         file_val = it.get("file")
         if not file_val:
             raise BenchmarkError("Missing 'file' in circuits entry")
         p = Path(file_val)
         if not p.is_absolute():
-            sc = Path("src") / "circuits" / p
+            sc = Path(__file__).resolve().parents[1] / "circuits" / p
             p = sc if sc.exists() else p
 
         cfg = BenchmarkConfig(

@@ -13,8 +13,7 @@ class TestCompiler:
     
     def test_compile_multiply_circuit(self, tmp_path: Path):
         """Test compilation of basic multiply circuit."""
-        #compiler = Compiler()
-        compiler = Compiler(snarkjs_bin="node C:/Users/kuzne/AppData/Roaming/npm/snarkjs")
+        compiler = Compiler()
         circuit_path = Path("src/circuits/basic/multiply.circom")
         
         # Skip if circuit doesn't exist

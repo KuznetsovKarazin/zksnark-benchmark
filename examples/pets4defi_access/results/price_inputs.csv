@@ -1,0 +1,6 @@
+price_id,applies_to,value,currency,per_unit,evidence_status,source_ref,note
+b0_initial_issuance,b0 initial_issuance,,UNSPECIFIED,event,unknown,,No numerical full-cost total is computed; refresh is not assumed to repeat full KYC.
+b0_credential_refresh,b0 credential_refresh,,UNSPECIFIED,event,unknown,,No numerical full-cost total is computed; refresh is not assumed to repeat full KYC.
+b1_initial_issuance,b1 initial_issuance,,UNSPECIFIED,event,unknown,,No numerical full-cost total is computed; refresh is not assumed to repeat full KYC.
+b1_credential_refresh,b1 credential_refresh,,UNSPECIFIED,event,unknown,,No numerical full-cost total is computed; refresh is not assumed to repeat full KYC.
+ETH_EUR,optional_currency_conversion,,EUR,ETH,unknown,,ETH costs are reported without an invented current exchange rate.

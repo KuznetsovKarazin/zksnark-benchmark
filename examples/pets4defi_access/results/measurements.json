@@ -1,0 +1,343 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "recorded_at": "2026-10-20T13:53:41.594Z",
+    "source_sha": "005e230f496c112e3781aa79f7560e426aedbb80",
+    "source_dirty": false,
+    "source_files_sha256": {
+      "package.json": "e64b98e42f9175cd6c1e0ee7d2795f3b1d4a6fa24052ad469db727c12f825a6b",
+      "package-lock.json": "568b373fdf098dee7b2a2617a840353273a7d842bcd481002cb34cfb27623502",
+      "circuits/eligible.circom": "beb4ffca32ec3af874c56a36021707fa096cec369256d1c356ee4838e9d6dc8f",
+      "contracts/AccessGate.sol": "de75a7f71955555e8d576f5391b2b4363b41201c33492eed54477a5e40bba33a",
+      "contracts/MockToken.sol": "dd687676d903224d734a3ce4edb12ad185ff8a68b40868ccafa0ba6668747a34",
+      "scripts/setup.mjs": "8d82f5c1f080c8c80f7a72d2e7808cedf7979f6b062f7a2a08feb3deed270c91",
+      "scripts/benchmark.mjs": "b8064b6603d8dbd4f92ce31e3f1d4fc687468f0c8776e7e1440cc405d13cab89",
+      "scripts/economics.py": "f70cae54030693428989c6cf7deb9ce060569fd87cd36a68d89a42e089caf134",
+      "scripts/test_economics.py": "0ce69442be79d64bbe9475746660008d73a5e56d25c4ffe838ca8ea1bf1c4db1"
+    },
+    "source_tree_sha256": "5205513ac86c6b282ad29d200905a8550e6dbae9849bf2c797a9f412defb1a19",
+    "node": "v24.19.0",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logical_cpus": 9,
+    "memory_bytes": 10451439616,
+    "chain_id": 31337,
+    "evm": "Ganache 7.9.2; Shanghai hardfork; local in-memory chain",
+    "solc": "0.8.37+commit.f401782d.Emscripten.clang",
+    "compiler_settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "shanghai",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object",
+            "evm.deployedBytecode.object"
+          ]
+        }
+      }
+    },
+    "dependencies": {
+      "circom2": "0.2.23",
+      "circomlib": "2.0.5",
+      "circomlibjs": "0.1.7",
+      "ethers": "6.17.0",
+      "ganache": "7.9.2",
+      "snarkjs": "0.7.6",
+      "solc": "0.8.37"
+    },
+    "setup": {
+      "circuit_sha256": "beb4ffca32ec3af874c56a36021707fa096cec369256d1c356ee4838e9d6dc8f",
+      "lock_sha256": "568b373fdf098dee7b2a2617a840353273a7d842bcd481002cb34cfb27623502",
+      "zkey_sha256": "91686afc07357ee03dd8afc6fc707c44c43935d6f5b2af970aa052a896db1adb",
+      "wasm_sha256": "1b9774adb38d762b31833e57c0be207f6e100d4f676c9a87b69202f9c75ab455",
+      "verifier_sha256": "30f3e748ad436626a5065c241bab51991b31a684b14973746352322eacf28a0b",
+      "verification_key_sha256": "dc6a127117db7cecad17a402337af76dc19cf2c464e2be2722258cc591aee5f2",
+      "setup_status": "single-process local demonstration; NOT a production trusted setup",
+      "created_utc": "2026-10-20T13:51:03.466Z"
+    },
+    "synthetic": true,
+    "age": 25,
+    "predicate": "8-bit age >= 18",
+    "signature": "secp256k1 EIP712, checked outside ZK",
+    "proof": "Groth16 BN254, 496 constraints",
+    "public_signals": [
+      "actionBinding",
+      "commitment",
+      "requestHash"
+    ],
+    "token": "Mock Test EUR, 18 decimals, no monetary value",
+    "deposit_amount": "100",
+    "validity_days": 90,
+    "addresses": {
+      "issuer": "0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1",
+      "holder": "0xFFcf8FDEE72ac11b5c542428B35EEF5769C409f0",
+      "token": "0xe78A0F7E598Cc8b0Bb87894B0F60dD2a88d6a8Ab",
+      "verifier": "0x5b1869D9A4C187F2EAa108f3062412ecf0526b24",
+      "baseline_gate": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "zk_gate": "0x254dffcd3277C0b1660F6d42EFbB754edaBAbC2B"
+    },
+    "timing_boundary": "fullProve: WASM/key reads + witness generation + Groth16 proving, singleThread=true. Offchain verify separately. No network/issuer/wallet/user latency. First run is cold, later runs sequential.",
+    "sampling": "One first-holder deposit and five sequential repeat deposits per variant. Shared gate token balance preseeded once and excluded from per-user cost. Pilot, not a population estimate. Six fresh ZK proofs; first process run may be cold, which is independent of new/returning user identity. Negative-test proofs excluded from cost inputs.",
+    "limitations": [
+      "Local Shanghai EVM gas; not current mainnet measurement or monetary quote.",
+      "Single-process trusted setup and deterministic public fixture salt/keys: never production.",
+      "Stable commitment, holder address, deposit amount, credential ID and expiry remain public/linkable.",
+      "Baseline already discloses only an issuer-signed eligibility bit. No automatic privacy superiority claim.",
+      "Revocation is per gate and must be propagated; no oracle, issuer service, relayer or full KYC workflow.",
+      "Receipt gas includes token transfer, calldata and verification; verifier gas must not be added again.",
+      "No withdrawal function. Test tokens only."
+    ],
+    "execution_source_sha": "f8353b6732f5b650c849af3e700641ecd3568e5a",
+    "source_git_tree": "64b38d9cccc1c320be6c65d64cda554d6a3b9413",
+    "publication_note": "Executed local commit is preserved in execution_source_sha. Published source_sha has an exactly identical Git tree; only commit metadata differs because publication used the GitHub connector."
+  },
+  "events": [
+    {
+      "variant": "shared",
+      "event": "deploy_token",
+      "run": 0,
+      "gas_used": 399317,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x58665e1be6601651d077efee3e0117e2e6e85f4a3122326c2cecb7615c3968d7",
+      "evidence_status": "measured_local",
+      "scope": "shared_fixed"
+    },
+    {
+      "variant": "zk",
+      "event": "deploy_verifier",
+      "run": 0,
+      "gas_used": 385549,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x62815c2535682e703127b0da53b6bce1051b22a42de2dcc53b0f9c7ca7879e23",
+      "evidence_status": "measured_local",
+      "scope": "shared_fixed"
+    },
+    {
+      "variant": "baseline",
+      "event": "deploy_gate",
+      "run": 0,
+      "gas_used": 989928,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0xd54f308cd3786e43223587209d4e8222e7d2eb9b786c50c04f83791d09c71d01",
+      "evidence_status": "measured_local",
+      "scope": "shared_fixed"
+    },
+    {
+      "variant": "baseline",
+      "event": "bootstrap_token_balance",
+      "run": 0,
+      "gas_used": 51673,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0xb6f9532b5573d956d0496fd33752019eacd1f116f9461b4f5ab3e9ef9e230da0",
+      "evidence_status": "measured_local",
+      "scope": "shared_fixed"
+    },
+    {
+      "variant": "baseline",
+      "event": "approve",
+      "run": 0,
+      "gas_used": 46463,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x65117837a510810f758b5d9d899abdf575dab091ff964962e4881a90bb14615d",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "zk",
+      "event": "deploy_gate",
+      "run": 0,
+      "gas_used": 992614,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x50a9c6373f4627a5adf9576c2751d7cd4acbd3fd86c9dade75d88f5f8fbe5579",
+      "evidence_status": "measured_local",
+      "scope": "shared_fixed"
+    },
+    {
+      "variant": "zk",
+      "event": "bootstrap_token_balance",
+      "run": 0,
+      "gas_used": 51673,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x0d637b614c95e3fa7fca7b5c2ebf5bb5dfb8ed4c42bb2da6a474b39d14a3d136",
+      "evidence_status": "measured_local",
+      "scope": "shared_fixed"
+    },
+    {
+      "variant": "zk",
+      "event": "approve",
+      "run": 0,
+      "gas_used": 46463,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x74782d26f07032b623f5b255a61dcae2fc3c23f107dc064198b24a4da47efbc2",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "baseline",
+      "event": "deposit_first",
+      "run": 0,
+      "gas_used": 99774,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x1f1dac028abe68ec3a549f23c6619c134279414bf84ddb620332c478c8189729",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "zk",
+      "event": "deposit_first",
+      "run": 0,
+      "gas_used": 312107,
+      "proof_time_ms": 470.101901,
+      "offchain_verify_ms": 344.926007,
+      "tx_hash": "0xfa67889d5793c6c414b37fe61e1ee4e2ca10ebd0ec24c9132dd37fac3d991668",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "baseline",
+      "event": "deposit_repeat",
+      "run": 1,
+      "gas_used": 65586,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x8cbac82decf377a88dfe982e08ab8bd39ecf8ae955ae982c113ef07df730c19f",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "zk",
+      "event": "deposit_repeat",
+      "run": 1,
+      "gas_used": 277943,
+      "proof_time_ms": 376.38880399999834,
+      "offchain_verify_ms": 15.157877999998163,
+      "tx_hash": "0x7c874d8ad8d4b29a13860d986911e9881360019b2791219a56a32020ef8d8074",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "baseline",
+      "event": "deposit_repeat",
+      "run": 2,
+      "gas_used": 65586,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x9faa17715718d6e3747b0e0d7da9d0293975a912c6e074b24978ec31a6ea45fd",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "zk",
+      "event": "deposit_repeat",
+      "run": 2,
+      "gas_used": 277955,
+      "proof_time_ms": 401.869362999998,
+      "offchain_verify_ms": 21.559344000001147,
+      "tx_hash": "0xadf2caf4b0493d1fe495f42123f3bc44151e2188b8e312ef000daac626dc8781",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "baseline",
+      "event": "deposit_repeat",
+      "run": 3,
+      "gas_used": 65586,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x6c0129739f7a0b7483d3477135599896bfcb7ad879f921689907d01cfcc28900",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "zk",
+      "event": "deposit_repeat",
+      "run": 3,
+      "gas_used": 277955,
+      "proof_time_ms": 426.2603010000021,
+      "offchain_verify_ms": 16.047487000003457,
+      "tx_hash": "0xe2e1303a6435b6bd0fb17b2303f9ff3832304aeb67afbbd81b59189bf19d7cf0",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "baseline",
+      "event": "deposit_repeat",
+      "run": 4,
+      "gas_used": 65586,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x3df8c517548a736855572e203c43b9aac9089fd1f3de6d25083bc1b2db299f42",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "zk",
+      "event": "deposit_repeat",
+      "run": 4,
+      "gas_used": 277955,
+      "proof_time_ms": 441.60736200000974,
+      "offchain_verify_ms": 25.966090000001714,
+      "tx_hash": "0xce6c59a8d66953c73779347bb44118ef52e715aeeba73576e5541cce80fbd56a",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "baseline",
+      "event": "deposit_repeat",
+      "run": 5,
+      "gas_used": 65586,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x121c60b04e68708a41fa45e03b99253a04173e3be9665cb62ee1505aaa62f24d",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "zk",
+      "event": "deposit_repeat",
+      "run": 5,
+      "gas_used": 277895,
+      "proof_time_ms": 444.10124400000495,
+      "offchain_verify_ms": 22.928641000005882,
+      "tx_hash": "0x7d72f2f41a6a3bc0eb827c61cfc9eda287cc68cfce4d49cbc1a4a486d308e9a8",
+      "evidence_status": "measured_local",
+      "scope": "per_action"
+    },
+    {
+      "variant": "baseline",
+      "event": "revoke",
+      "run": 0,
+      "gas_used": 44824,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x0b4d0df136e087a924844f76c0d36c4646332c4ff820b161ff537d2e43d91528",
+      "evidence_status": "measured_local",
+      "scope": "per_credential"
+    },
+    {
+      "variant": "zk",
+      "event": "revoke",
+      "run": 0,
+      "gas_used": 44824,
+      "proof_time_ms": null,
+      "offchain_verify_ms": null,
+      "tx_hash": "0x4004cba239fe925cb95c5b0dba6d8db9c6bf033e1e2253ec35fe955dd903433a",
+      "evidence_status": "measured_local",
+      "scope": "per_credential"
+    }
+  ]
+}

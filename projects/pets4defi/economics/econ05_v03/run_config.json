@@ -1,0 +1,12 @@
+{
+  "horizon_days": 90,
+  "policy": "security",
+  "services": 1,
+  "population_n": 1000,
+  "issuers": 4,
+  "credential_days": 90,
+  "auth_ttl_days": 30,
+  "activity_examples": [100, 10],
+  "user_share_b2": "0.5",
+  "pricing_scenario": "p50"
+}

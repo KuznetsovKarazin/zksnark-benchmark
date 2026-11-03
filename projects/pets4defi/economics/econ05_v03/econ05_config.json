@@ -1,0 +1,55 @@
+{
+  "scope": "ECON-05 accepted core sweep, not the optional n>100 or timing extension",
+  "horizon_days": 90,
+  "policy": "security",
+  "services": 1,
+  "population_n": 1000,
+  "issuers": 4,
+  "credential_days": 90,
+  "auth_ttl_days": 30,
+  "deposit_counts": [
+    1,
+    10,
+    100
+  ],
+  "user_shares": [
+    "0",
+    "0.25",
+    "0.5",
+    "0.75",
+    "1"
+  ],
+  "price_scenarios": [
+    "p50",
+    "p90"
+  ],
+  "currency": "EUR",
+  "fee_f": "unknown, common symbolic fee",
+  "other_user_expenses": "unknown: u_other",
+  "other_service_expenses": "unknown: s_other",
+  "other_net_service_revenue": "unknown: m",
+  "fixed_service_costs": "unknown: F",
+  "cash_reimbursement": "hypothetical equivalent settlement, not deployed",
+  "selected_single_technical_extension": {
+    "name": "fixed-count revocation phase",
+    "source": "inputs/phase_sensitivity.csv",
+    "technical_context": "n=100,K=1,N=1000,L=90,TTL=30,policy=security,2 unrelated revocations",
+    "phase_day_pairs": [
+      [
+        15,
+        45
+      ],
+      [
+        30,
+        60
+      ],
+      [
+        37,
+        67
+      ]
+    ],
+    "other_extension_axes": "not run",
+    "user_share_for_economic_example": "0.5",
+    "note": "Monthly two-revocation phase sensitivity, not the 12-weekly-revocation core."
+  }
+}

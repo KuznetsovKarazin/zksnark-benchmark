@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PETs4DeFi — synthetic browser benchmark</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.5; }
+    body { max-width: 1050px; margin: 2rem auto; padding: 0 1rem 3rem; }
+    h1 { line-height: 1.2; font-size: 1.8rem; }
+    h2 { margin-top: 2rem; font-size: 1.25rem; }
+    p, li { max-width: 90ch; }
+    button { padding: .65rem 1rem; margin: .25rem .35rem .25rem 0; font: inherit; cursor: pointer; }
+    button:disabled { cursor: default; }
+    progress { width: min(100%, 32rem); height: 1.2rem; }
+    .table-scroll { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+    th, td { text-align: right; border-bottom: 1px solid #888; padding: .5rem .65rem; white-space: nowrap; }
+    th:first-child, td:first-child { text-align: left; }
+    caption { text-align: left; margin-bottom: .7rem; }
+    pre { overflow: auto; padding: 1rem; border: 1px solid #888; max-height: 32rem; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .82rem; }
+    code { overflow-wrap: anywhere; }
+    .error { color: #c32f2f; }
+    @media (prefers-color-scheme: dark) { .error { color: #ffaaaa; } }
+  </style>
+</head>
+<body>
+  <h1>PETs4DeFi browser benchmark</h1>
+  <p><strong>Synthetic demonstration only.</strong> This page generates and verifies real Groth16 proofs with snarkjs 0.7.6. It uses public synthetic fixtures; it does not request credentials, connect a wallet, or submit a blockchain transaction.</p>
+  <p>One session performs <strong>30 cold-worker runs</strong>, then <strong>one excluded warm-up and 30 warm-worker runs</strong>. Every proof must pass strict off-chain verification. Keep this tab visible and avoid other heavy work while it runs.</p>
+  <ul>
+    <li><strong>Cold worker:</strong> each sample creates a fresh dedicated worker. Worker wall time includes startup, the library, asset loading and hashing, proof generation, verification, and the result message. This does not flush browser, operating-system, or CPU caches.</li>
+    <li><strong>Warm worker:</strong> one different worker keeps its JavaScript runtime and loaded asset bytes. Its first verified run is excluded from statistics. Each measured run still calls the complete <code>fullProve</code> API.</li>
+    <li><strong>Single-thread policy:</strong> <code>fullProve</code> receives <code>{singleThread: true}</code> as its sixth argument. Nested workers are disabled inside the benchmark worker, activating snarkjs's single-thread verification fallback.</li>
+    <li><strong>Timing:</strong> fullProve covers witness calculation and proof generation; off-chain verification is timed separately. Their timers exclude asset downloads. Worker wall time is measured by this page, so it also captures messaging and scheduling overhead.</li>
+  </ul>
+  <p>Results describe this browser session only. No mobile performance is inferred from desktop measurements. The export records user agent, reported hardware concurrency, and device memory if available; no account, location, wallet, or personal inputs are collected. Results stay in this page until you download them.</p>
+
+  <div>
+    <button id="start" type="button">Start 30 cold + 30 warm runs</button>
+    <button id="cancel" type="button" disabled>Cancel</button>
+    <button id="download" type="button" disabled>Download JSON results</button>
+  </div>
+  <p id="status" role="status" aria-live="polite">Ready. No measurements have been run.</p>
+  <progress id="progress" max="61" value="0" aria-label="Verified runs completed, including warm-up"></progress>
+  <p id="environment"></p>
+  <section aria-labelledby="summary-heading">
+    <h2 id="summary-heading">Measured results</h2>
+    <p>All values are milliseconds. Quartiles use linear interpolation at (n − 1) × p; IQR = Q3 − Q1. Warm-up is never included. Incomplete sessions are labelled and retain only successfully verified samples.</p>
+    <div class="table-scroll">
+      <table>
+        <caption id="summary-caption">No samples yet.</caption>
+        <thead><tr><th scope="col">Phase / metric</th><th scope="col">n</th><th scope="col">Median</th><th scope="col">Q1</th><th scope="col">Q3</th><th scope="col">IQR</th><th scope="col">Min</th><th scope="col">Max</th></tr></thead>
+        <tbody id="summary-body"></tbody>
+      </table>
+    </div>
+  </section>
+  <details>
+    <summary>Raw JSON results</summary>
+    <pre id="raw-results">No results yet.</pre>
+  </details>
+
+  <script type="module">
+    const RUNS = 30;
+    const RUN_TIMEOUT_MS = 120000;
+    const ui = Object.fromEntries(['start', 'cancel', 'download', 'status', 'progress', 'environment', 'summary-body', 'summary-caption', 'raw-results'].map(id => [id, document.getElementById(id)]));
+    const environment = {
+      userAgent: navigator.userAgent,
+      hardwareConcurrency: Number.isFinite(navigator.hardwareConcurrency) ? navigator.hardwareConcurrency : null,
+      deviceMemoryGiB: Number.isFinite(navigator.deviceMemory) ? navigator.deviceMemory : null,
+    };
+    ui.environment.textContent = `This session: reported concurrency ${environment.hardwareConcurrency ?? 'unavailable'}; device memory ${environment.deviceMemoryGiB == null ? 'unavailable' : `${environment.deviceMemoryGiB} GiB`}. Browser details are recorded in the export.`;
+
+    let results = null;
+    let running = false;
+    let cancelled = false;
+    let activeCancel = null;
+    let nextRequestId = 0;
+    let sessionStarted = 0;
+    let downloadURL = null;
+    const metrics = {
+      fullProveMs: 'fullProve',
+      offchainVerifyMs: 'Off-chain verification',
+      proveAndVerifyMs: 'fullProve + verification',
+      workerWallMs: 'Worker wall time',
+    };
+
+    function quantile(sorted, p) {
+      const position = (sorted.length - 1) * p;
+      const lower = Math.floor(position);
+      const fraction = position - lower;
+      return sorted[lower] + (sorted[Math.min(lower + 1, sorted.length - 1)] - sorted[lower]) * fraction;
+    }
+
+    function summarize(values) {
+      const sorted = [...values].sort((a, b) => a - b);
+      if (!sorted.length) return { n: 0, median: null, q1: null, q3: null, iqr: null, min: null, max: null };
+      const q1 = quantile(sorted, .25);
+      const q3 = quantile(sorted, .75);
+      return { n: sorted.length, median: quantile(sorted, .5), q1, q3, iqr: q3 - q1, min: sorted[0], max: sorted.at(-1) };
+    }
+
+    function render() {
+      results.summary = {};
+      const rows = [];
+      for (const phase of ['cold', 'warm']) {
+        results.summary[phase] = {};
+        for (const [metric, label] of Object.entries(metrics)) {
+          const stats = summarize(results.samples[phase].map(sample => sample[metric]));
+          results.summary[phase][metric] = stats;
+          const row = document.createElement('tr');
+          for (const value of [`${phase === 'cold' ? 'Cold' : 'Warm'} / ${label}`, stats.n, ...['median', 'q1', 'q3', 'iqr', 'min', 'max'].map(key => stats[key] == null ? '—' : stats[key].toFixed(2))]) {
+            const cell = document.createElement('td');
+            cell.textContent = String(value);
+            row.appendChild(cell);
+          }
+          rows.push(row);
+        }
+      }
+      ui['summary-body'].replaceChildren(...rows);
+      ui['summary-caption'].textContent = `${results.status}: ${results.samples.cold.length}/${RUNS} cold and ${results.samples.warm.length}/${RUNS} warm samples. ${results.warmup ? 'One verified warm-up excluded.' : 'Warm-up not completed.'}`;
+      ui['raw-results'].textContent = JSON.stringify(results, null, 2);
+    }
+
+    function runWorker(worker, wallStarted, phase, iteration) {
+      return new Promise((resolve, reject) => {
+        const requestId = ++nextRequestId;
+        const startedVisibility = document.visibilityState;
+        let timeout;
+        let settled = false;
+        const finish = (error, sample) => {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timeout);
+          worker.removeEventListener('message', onMessage);
+          worker.removeEventListener('error', onError);
+          worker.removeEventListener('messageerror', onMessageError);
+          activeCancel = null;
+          if (error) reject(error); else resolve(sample);
+        };
+        const onMessage = (event) => {
+          if (event.data?.requestId !== requestId) return;
+          if (event.data.type === 'error') {
+            finish(new Error(event.data.error || 'Worker reported an error.'));
+          } else if (event.data.type === 'result') {
+            const sample = event.data.result;
+            if (sample?.verified !== true || !['fullProveMs', 'offchainVerifyMs', 'proveAndVerifyMs'].every(key => Number.isFinite(sample[key]) && sample[key] >= 0)) {
+              finish(new Error('Worker returned an unverified or invalid timing sample.'));
+              return;
+            }
+            finish(null, {
+              ...sample,
+              phase,
+              iteration,
+              workerWallMs: performance.now() - wallStarted,
+              pageVisibilityAtStart: startedVisibility,
+              pageVisibilityAtEnd: document.visibilityState,
+            });
+          }
+        };
+        const onError = (event) => finish(new Error(event.message || 'Worker crashed.'));
+        const onMessageError = () => finish(new Error('Could not deserialize the worker result.'));
+        activeCancel = () => {
+          worker.terminate();
+          finish(new Error('Cancelled by the user.'));
+        };
+        worker.addEventListener('message', onMessage);
+        worker.addEventListener('error', onError);
+        worker.addEventListener('messageerror', onMessageError);
+        timeout = setTimeout(() => {
+          worker.terminate();
+          finish(new Error(`Worker timed out after ${RUN_TIMEOUT_MS / 1000} seconds; sample rejected.`));
+        }, RUN_TIMEOUT_MS);
+        try { worker.postMessage({ type: 'run', requestId }); }
+        catch (error) { finish(error); }
+      });
+    }
+
+    function recordAssets(sample) {
+      if (!results.assets) results.assets = sample.assets;
+      else if (JSON.stringify(results.assets) !== JSON.stringify(sample.assets)) throw new Error('Assets changed during the session; the session is not comparable.');
+      delete sample.assets;
+    }
+
+    function assertNotCancelled() {
+      if (cancelled) throw new Error('Cancelled by the user.');
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (running) results.visibilityChanges.push({ elapsedMs: performance.now() - sessionStarted, state: document.visibilityState });
+    });
+
+    ui.start.addEventListener('click', async () => {
+      if (running) return;
+      if (typeof Worker !== 'function' || typeof WebAssembly !== 'object') {
+        ui.status.textContent = 'This browser must support dedicated workers and WebAssembly.';
+        ui.status.className = 'error';
+        return;
+      }
+      running = true;
+      cancelled = false;
+      sessionStarted = performance.now();
+      ui.start.disabled = true;
+      ui.cancel.disabled = false;
+      ui.download.disabled = true;
+      ui.status.className = '';
+      ui.progress.value = 0;
+      results = {
+        schemaVersion: 1,
+        benchmark: 'PETs4DeFi access v2 browser Groth16',
+        syntheticOnly: true,
+        status: 'running',
+        startedAt: new Date().toISOString(),
+        completedAt: null,
+        snarkjsVersion: '0.7.6',
+        environment,
+        configuration: {
+          coldSamples: RUNS,
+          warmSamples: RUNS,
+          excludedWarmupSamples: 1,
+          runTimeoutMs: RUN_TIMEOUT_MS,
+          provingOptions: { singleThread: true },
+          verificationExecution: 'Dedicated worker with nested Worker disabled; ffjavascript browser single-thread fallback',
+          coldDefinition: 'Fresh dedicated worker for each sample; browser/OS/CPU caches are not flushed',
+          warmDefinition: 'One separate worker; asset bytes and JavaScript runtime retained; one verified warm-up excluded',
+          fullProveDefinition: 'Witness calculation plus proof generation; assets loaded before timer',
+          offchainVerifyDefinition: 'snarkjs.groth16.verify, required to return exactly true',
+          workerWallDefinition: 'Main-thread performance.now, before worker construction for cold and warm-up; before postMessage for warm; ends on result message',
+          statistics: 'Linear-interpolated quantiles at (n - 1) * p; IQR = Q3 - Q1; raw milliseconds retained',
+          deviceInference: 'None: measurements apply only to this browser session',
+        },
+        pageVisibilityAtStart: document.visibilityState,
+        visibilityChanges: [],
+        assets: null,
+        samples: { cold: [], warm: [] },
+        warmup: null,
+        summary: {},
+        error: null,
+      };
+      render();
+      let warmWorker;
+      try {
+        for (let iteration = 1; iteration <= RUNS; iteration++) {
+          assertNotCancelled();
+          ui.status.textContent = `Cold worker ${iteration}/${RUNS}: generating and verifying a proof…`;
+          const wallStarted = performance.now();
+          const worker = new Worker('/worker.js');
+          try {
+            const sample = await runWorker(worker, wallStarted, 'cold', iteration);
+            recordAssets(sample);
+            results.samples.cold.push(sample);
+          } finally { worker.terminate(); }
+          ui.progress.value++;
+          render();
+        }
+        assertNotCancelled();
+        ui.status.textContent = 'Warm worker: running one verified warm-up (excluded from statistics)…';
+        const warmupStarted = performance.now();
+        warmWorker = new Worker('/worker.js');
+        const warmup = await runWorker(warmWorker, warmupStarted, 'warmup', 0);
+        recordAssets(warmup);
+        results.warmup = warmup;
+        ui.progress.value++;
+        render();
+        for (let iteration = 1; iteration <= RUNS; iteration++) {
+          assertNotCancelled();
+          ui.status.textContent = `Warm worker ${iteration}/${RUNS}: generating and verifying a proof…`;
+          const sample = await runWorker(warmWorker, performance.now(), 'warm', iteration);
+          recordAssets(sample);
+          results.samples.warm.push(sample);
+          ui.progress.value++;
+          render();
+        }
+        results.status = 'complete';
+        ui.status.textContent = 'Complete: all 60 measured proofs and the excluded warm-up passed strict verification. JSON results are ready to download.';
+      } catch (error) {
+        results.status = cancelled ? 'cancelled' : 'failed';
+        results.error = error instanceof Error ? error.message : String(error);
+        ui.status.textContent = `${results.status === 'cancelled' ? 'Cancelled' : 'Failed'}: ${results.error} Partial verified results remain available for download.`;
+        ui.status.className = 'error';
+      } finally {
+        warmWorker?.terminate();
+        activeCancel = null;
+        results.completedAt = new Date().toISOString();
+        results.sessionWallMs = performance.now() - sessionStarted;
+        results.pageVisibilityAtEnd = document.visibilityState;
+        running = false;
+        ui.start.disabled = false;
+        ui.cancel.disabled = true;
+        ui.download.disabled = false;
+        render();
+      }
+    });
+
+    ui.cancel.addEventListener('click', () => {
+      cancelled = true;
+      activeCancel?.();
+    });
+
+    ui.download.addEventListener('click', () => {
+      if (!results || running) return;
+      if (downloadURL) URL.revokeObjectURL(downloadURL);
+      downloadURL = URL.createObjectURL(new Blob([JSON.stringify(results, null, 2) + '\n'], { type: 'application/json' }));
+      const link = document.createElement('a');
+      link.href = downloadURL;
+      link.download = `pets4defi-browser-${results.startedAt.replace(/[:.]/g, '-')}.json`;
+      link.click();
+    });
+  </script>
+</body>
+</html>

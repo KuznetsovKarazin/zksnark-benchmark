@@ -1,0 +1,576 @@
+{
+  "generated_utc": "2026-10-20T17:12:12.737908+00:00",
+  "slither_version": "0.11.6",
+  "solc_version": "solc, the solidity compiler commandline interface\nVersion: 0.8.37+commit.f401782d.Linux.g++",
+  "exit_policy": "High or Medium findings in ANY scanned target return exit 1; no automatic waivers",
+  "runs": [
+    {
+      "group": "application",
+      "target": "contracts/AccessGate.sol",
+      "source_sha256": "fe65e159a7b9ade8556e43e6908d92551103cb66676efa9539e1ac51d99ca41c",
+      "command": [
+        "/workspace/scratch/727104793148/tmp/slither-env/bin/slither",
+        "contracts/AccessGate.sol",
+        "--solc",
+        "/workspace/scratch/727104793148/tmp/solc-0.8.37",
+        "--json",
+        "/workspace/scratch/727104793148/tmp/static-review-ci-artifact/AccessGate.json"
+      ],
+      "slither_exit_code": 255,
+      "counts": {
+        "Low": 3,
+        "Informational": 1
+      },
+      "high_medium_count": 0,
+      "findings": [
+        {
+          "check": "timestamp",
+          "impact": "Low",
+          "confidence": "Medium",
+          "description": "AccessGate.depositSigned(AccessGate.Credential,bytes,uint256,uint256) (contracts/AccessGate.sol#154-171) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- block.timestamp < credential.validFrom (contracts/AccessGate.sol#160)\n\t- block.timestamp >= credential.validUntil (contracts/AccessGate.sol#161)\n\t- ttlEnd < credential.validUntil (contracts/AccessGate.sol#168)\n"
+        },
+        {
+          "check": "timestamp",
+          "impact": "Low",
+          "confidence": "Medium",
+          "description": "AccessGate.depositCached(uint256,uint256) (contracts/AccessGate.sol#187-195) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- block.timestamp >= auth.until (contracts/AccessGate.sol#193)\n"
+        },
+        {
+          "check": "timestamp",
+          "impact": "Low",
+          "confidence": "Medium",
+          "description": "AccessGate._checkProofContext(uint256[8],uint256,uint256) (contracts/AccessGate.sol#197-211) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- s[4] > type()(uint64).max || s[5] > type()(uint64).max || s[4] > block.timestamp || s[5] <= block.timestamp || s[5] <= s[4] || s[5] - s[4] > registry.maxTTL() (contracts/AccessGate.sol#204-206)\n"
+        },
+        {
+          "check": "assembly",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "AccessGate._recover(bytes32,bytes) (contracts/AccessGate.sol#225-238) uses assembly\n\t- INLINE ASM (contracts/AccessGate.sol#230-234)\n"
+        }
+      ]
+    },
+    {
+      "group": "application",
+      "target": "contracts/AccessRegistry.sol",
+      "source_sha256": "d381a9e3bbf8a2a76fef0b9e5eee970e17104c94e04a0c4f21ecccf27e6e36be",
+      "command": [
+        "/workspace/scratch/727104793148/tmp/slither-env/bin/slither",
+        "contracts/AccessRegistry.sol",
+        "--solc",
+        "/workspace/scratch/727104793148/tmp/solc-0.8.37",
+        "--json",
+        "/workspace/scratch/727104793148/tmp/static-review-ci-artifact/AccessRegistry.json"
+      ],
+      "slither_exit_code": 0,
+      "counts": {},
+      "high_medium_count": 0,
+      "findings": []
+    },
+    {
+      "group": "application",
+      "target": "contracts/MockToken.sol",
+      "source_sha256": "93317c1308cffe63e4133a17502a4933ccd14e207b2f96a28453b6f681a99c60",
+      "command": [
+        "/workspace/scratch/727104793148/tmp/slither-env/bin/slither",
+        "contracts/MockToken.sol",
+        "--solc",
+        "/workspace/scratch/727104793148/tmp/solc-0.8.37",
+        "--json",
+        "/workspace/scratch/727104793148/tmp/static-review-ci-artifact/MockToken.json"
+      ],
+      "slither_exit_code": 0,
+      "counts": {},
+      "high_medium_count": 0,
+      "findings": []
+    },
+    {
+      "group": "generated",
+      "target": "results/cryptographic_artifacts/Verifier.sol",
+      "source_sha256": "8d160f4f093d73a9a64c5fbb37460835473950adf08c0338dace4efd1998a266",
+      "command": [
+        "/workspace/scratch/727104793148/tmp/slither-env/bin/slither",
+        "results/cryptographic_artifacts/Verifier.sol",
+        "--solc",
+        "/workspace/scratch/727104793148/tmp/solc-0.8.37",
+        "--json",
+        "/workspace/scratch/727104793148/tmp/static-review-ci-artifact/Verifier.json"
+      ],
+      "slither_exit_code": 255,
+      "counts": {
+        "High": 3,
+        "Informational": 46
+      },
+      "high_medium_count": 3,
+      "findings": [
+        {
+          "check": "incorrect-return",
+          "impact": "High",
+          "confidence": "Medium",
+          "description": "Groth16Verifier.verifyProof.asm_0.checkPairing() (results/cryptographic_artifacts/Verifier.sol#115-186) calls Groth16Verifier.verifyProof.asm_0.g1_mulAccC() (results/cryptographic_artifacts/Verifier.sol#90-113) which halt the execution return(uint256,uint256)(0,0x20) (results/cryptographic_artifacts/Verifier.sol#101)\n"
+        },
+        {
+          "check": "incorrect-return",
+          "impact": "High",
+          "confidence": "Medium",
+          "description": "Groth16Verifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[8]) (results/cryptographic_artifacts/Verifier.sol#80-216) calls Groth16Verifier.verifyProof.asm_0.checkPairing() (results/cryptographic_artifacts/Verifier.sol#115-186) which halt the execution return(uint256,uint256)(0,0x20) (results/cryptographic_artifacts/Verifier.sol#111)\n"
+        },
+        {
+          "check": "incorrect-return",
+          "impact": "High",
+          "confidence": "Medium",
+          "description": "Groth16Verifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[8]) (results/cryptographic_artifacts/Verifier.sol#80-216) calls Groth16Verifier.verifyProof.asm_0.checkField() (results/cryptographic_artifacts/Verifier.sol#82-87) which halt the execution return(uint256,uint256)(0,0x20) (results/cryptographic_artifacts/Verifier.sol#85)\n"
+        },
+        {
+          "check": "assembly",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Groth16Verifier.verifyProof.asm_0.checkPairing() (results/cryptographic_artifacts/Verifier.sol#115-186) uses assembly\n\t- INLINE ASM (results/cryptographic_artifacts/Verifier.sol#115-186)\n"
+        },
+        {
+          "check": "assembly",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Groth16Verifier.verifyProof.asm_0.g1_mulAccC() (results/cryptographic_artifacts/Verifier.sol#90-113) uses assembly\n\t- INLINE ASM (results/cryptographic_artifacts/Verifier.sol#90-113)\n"
+        },
+        {
+          "check": "assembly",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Groth16Verifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[8]) (results/cryptographic_artifacts/Verifier.sol#80-216) uses assembly\n\t- INLINE ASM (results/cryptographic_artifacts/Verifier.sol#81-215)\n"
+        },
+        {
+          "check": "assembly",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Groth16Verifier.verifyProof.asm_0.checkField() (results/cryptographic_artifacts/Verifier.sol#82-87) uses assembly\n\t- INLINE ASM (results/cryptographic_artifacts/Verifier.sol#82-87)\n"
+        },
+        {
+          "check": "solc-version",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Version constraint >=0.7.0<0.9.0 is too complex.\nIt is used by:\n\t- >=0.7.0<0.9.0 (results/cryptographic_artifacts/Verifier.sol#21)\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC4x (results/cryptographic_artifacts/Verifier.sol#58) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC8x (results/cryptographic_artifacts/Verifier.sol#70) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC6y (results/cryptographic_artifacts/Verifier.sol#65) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC7y (results/cryptographic_artifacts/Verifier.sol#68) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.alphay (results/cryptographic_artifacts/Verifier.sol#31) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC0x (results/cryptographic_artifacts/Verifier.sol#46) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.betax1 (results/cryptographic_artifacts/Verifier.sol#32) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Parameter Groth16Verifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[8])._pA (results/cryptographic_artifacts/Verifier.sol#80) is not in mixedCase\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.gammay1 (results/cryptographic_artifacts/Verifier.sol#38) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.deltay1 (results/cryptographic_artifacts/Verifier.sol#42) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.gammay2 (results/cryptographic_artifacts/Verifier.sol#39) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC2y (results/cryptographic_artifacts/Verifier.sol#53) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.pLastMem (results/cryptographic_artifacts/Verifier.sol#78) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.pPairing (results/cryptographic_artifacts/Verifier.sol#76) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC6x (results/cryptographic_artifacts/Verifier.sol#64) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC0y (results/cryptographic_artifacts/Verifier.sol#47) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC3x (results/cryptographic_artifacts/Verifier.sol#55) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC5x (results/cryptographic_artifacts/Verifier.sol#61) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC4y (results/cryptographic_artifacts/Verifier.sol#59) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.deltax2 (results/cryptographic_artifacts/Verifier.sol#41) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC8y (results/cryptographic_artifacts/Verifier.sol#71) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC1x (results/cryptographic_artifacts/Verifier.sol#49) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC2x (results/cryptographic_artifacts/Verifier.sol#52) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.deltay2 (results/cryptographic_artifacts/Verifier.sol#43) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.r (results/cryptographic_artifacts/Verifier.sol#25) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.betax2 (results/cryptographic_artifacts/Verifier.sol#33) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.gammax1 (results/cryptographic_artifacts/Verifier.sol#36) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Parameter Groth16Verifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[8])._pB (results/cryptographic_artifacts/Verifier.sol#80) is not in mixedCase\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC3y (results/cryptographic_artifacts/Verifier.sol#56) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC5y (results/cryptographic_artifacts/Verifier.sol#62) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.pVk (results/cryptographic_artifacts/Verifier.sol#75) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Parameter Groth16Verifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[8])._pubSignals (results/cryptographic_artifacts/Verifier.sol#80) is not in mixedCase\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.deltax1 (results/cryptographic_artifacts/Verifier.sol#40) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC7x (results/cryptographic_artifacts/Verifier.sol#67) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Parameter Groth16Verifier.verifyProof(uint256[2],uint256[2][2],uint256[2],uint256[8])._pC (results/cryptographic_artifacts/Verifier.sol#80) is not in mixedCase\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.gammax2 (results/cryptographic_artifacts/Verifier.sol#37) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.betay2 (results/cryptographic_artifacts/Verifier.sol#35) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.IC1y (results/cryptographic_artifacts/Verifier.sol#50) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.q (results/cryptographic_artifacts/Verifier.sol#27) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.alphax (results/cryptographic_artifacts/Verifier.sol#30) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        },
+        {
+          "check": "naming-convention",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Constant Groth16Verifier.betay1 (results/cryptographic_artifacts/Verifier.sol#34) is not in UPPER_CASE_WITH_UNDERSCORES\n"
+        }
+      ]
+    },
+    {
+      "group": "adversarial_fixture",
+      "target": "contracts/AdversarialToken.sol",
+      "source_sha256": "ed71c870a625fad4bc109b4ab68d35a1597b589801ce9880a032354f82a06d0d",
+      "command": [
+        "/workspace/scratch/727104793148/tmp/slither-env/bin/slither",
+        "contracts/AdversarialToken.sol",
+        "--solc",
+        "/workspace/scratch/727104793148/tmp/solc-0.8.37",
+        "--json",
+        "/workspace/scratch/727104793148/tmp/static-review-ci-artifact/AdversarialToken.json"
+      ],
+      "slither_exit_code": 255,
+      "counts": {
+        "Medium": 1,
+        "Low": 3,
+        "Informational": 1
+      },
+      "high_medium_count": 1,
+      "findings": [
+        {
+          "check": "reentrancy-no-eth",
+          "impact": "Medium",
+          "confidence": "Medium",
+          "description": "Reentrancy in AdversarialToken.transferFrom(address,address,uint256) (contracts/AdversarialToken.sol#37-49):\n\tExternal calls:\n\t- (success,result) = reentryTarget.call(reentryData) (contracts/AdversarialToken.sol#42)\n\tState variables written after the call(s):\n\t- inCallback = false (contracts/AdversarialToken.sol#43)\n\tAdversarialToken.inCallback (contracts/AdversarialToken.sol#17) can be used in cross function reentrancies:\n\t- AdversarialToken.transferFrom(address,address,uint256) (contracts/AdversarialToken.sol#37-49)\n"
+        },
+        {
+          "check": "missing-zero-check",
+          "impact": "Low",
+          "confidence": "Medium",
+          "description": "AdversarialToken.setReentry(address,bytes,bool,bool).target (contracts/AdversarialToken.sol#30) lacks a zero-check on :\n\t\t- reentryTarget = target (contracts/AdversarialToken.sol#31)\n"
+        },
+        {
+          "check": "reentrancy-benign",
+          "impact": "Low",
+          "confidence": "Medium",
+          "description": "Reentrancy in AdversarialToken.transferFrom(address,address,uint256) (contracts/AdversarialToken.sol#37-49):\n\tExternal calls:\n\t- (success,result) = reentryTarget.call(reentryData) (contracts/AdversarialToken.sol#42)\n\tState variables written after the call(s):\n\t- super.transferFrom(sender,recipient,amount) (contracts/AdversarialToken.sol#48)\n\t\t- allowance[sender][msg.sender] = approved - amount (contracts/MockToken.sol#41)\n\t- super.transferFrom(sender,recipient,amount) (contracts/AdversarialToken.sol#48)\n\t\t- balanceOf[sender] -= amount (contracts/MockToken.sol#51)\n\t\t- balanceOf[recipient] += amount (contracts/MockToken.sol#52)\n\t- lastReentryResult = result (contracts/AdversarialToken.sol#45)\n\t- lastReentrySuccess = success (contracts/AdversarialToken.sol#44)\n"
+        },
+        {
+          "check": "reentrancy-events",
+          "impact": "Low",
+          "confidence": "Medium",
+          "description": "Reentrancy in AdversarialToken.transferFrom(address,address,uint256) (contracts/AdversarialToken.sol#37-49):\n\tExternal calls:\n\t- (success,result) = reentryTarget.call(reentryData) (contracts/AdversarialToken.sol#42)\n\tEvent emitted after the call(s):\n\t- Approval(sender,msg.sender,approved - amount) (contracts/MockToken.sol#42)\n\t\t- super.transferFrom(sender,recipient,amount) (contracts/AdversarialToken.sol#48)\n\t- Transfer(sender,recipient,amount) (contracts/MockToken.sol#53)\n\t\t- super.transferFrom(sender,recipient,amount) (contracts/AdversarialToken.sol#48)\n"
+        },
+        {
+          "check": "low-level-calls",
+          "impact": "Informational",
+          "confidence": "High",
+          "description": "Low level call in AdversarialToken.transferFrom(address,address,uint256) (contracts/AdversarialToken.sol#37-49):\n\t- (success,result) = reentryTarget.call(reentryData) (contracts/AdversarialToken.sol#42)\n"
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "contracts/AccessGate.sol": "fe65e159a7b9ade8556e43e6908d92551103cb66676efa9539e1ac51d99ca41c",
+    "contracts/AccessRegistry.sol": "d381a9e3bbf8a2a76fef0b9e5eee970e17104c94e04a0c4f21ecccf27e6e36be",
+    "contracts/MockToken.sol": "93317c1308cffe63e4133a17502a4933ccd14e207b2f96a28453b6f681a99c60",
+    "results/cryptographic_artifacts/Verifier.sol": "8d160f4f093d73a9a64c5fbb37460835473950adf08c0338dace4efd1998a266",
+    "contracts/AdversarialToken.sol": "ed71c870a625fad4bc109b4ab68d35a1597b589801ce9880a032354f82a06d0d"
+  },
+  "package_lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+  "high_medium_count": 4,
+  "exit_code": 1,
+  "reviewed_source_commit": "13bd6e58e7d4f6f6c55df8ec07ee4a1c34b5024a",
+  "ci_provenance": {
+    "artifact_id": 12274189769,
+    "artifact_sha256": "48077dfd9be20872ad4751359a982d84a6afb317f2f7e11fef845308503cc7ee",
+    "workflow_run": 39443693715,
+    "workflow_url": "https://github.com/KuznetsovKarazin/zksnark-benchmark/actions/runs/39443693715",
+    "head_sha": "13bd6e58e7d4f6f6c55df8ec07ee4a1c34b5024a",
+    "tested_merge_sha": "cb39a2afcc881651aee424e02d465bf3f8361303",
+    "source_files_match_head": true,
+    "primary_transaction_evidence": "raw_ci_node24.zip",
+    "note": "Primary published event/accounting evidence is the complete successful Node24/npm11 CI run. Raw files are unchanged. Separate local prover and market-fee data have their own recorded environment/time."
+  },
+  "verified_artifact_sha256": {
+    "verifier_sha256": "8d160f4f093d73a9a64c5fbb37460835473950adf08c0338dace4efd1998a266",
+    "verification_key_sha256": "54fa9730252f50da61363e6dbd53ba6782c4e8b58c71ec3ad643b8561f7e3610",
+    "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+    "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+    "ci_archive_sha256": "48077dfd9be20872ad4751359a982d84a6afb317f2f7e11fef845308503cc7ee"
+  },
+  "setup_declared_artifact_sha256": {
+    "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+    "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+    "zkey_sha256": "4a7f997ad5df2448939abb9ae31f32d2d2298d64c84ec24347230371d29e249b",
+    "wasm_sha256": "f9379e40226ce39f341ef51441163214439bb7c129cdb1247f2cb6e4c7261f36",
+    "r1cs_sha256": "d0c374b11fcb0045f82f05422d733c44af54a06dff8fb0710f506100fe33e15d",
+    "verifier_sha256": "8d160f4f093d73a9a64c5fbb37460835473950adf08c0338dace4efd1998a266",
+    "verification_key_sha256": "54fa9730252f50da61363e6dbd53ba6782c4e8b58c71ec3ad643b8561f7e3610"
+  },
+  "setup_artifact_note": "Verifier, verification key, circuit, package-lock and CI zip digests were recomputed. Other hashes are declarations from the retained CI setup manifest; missing local zkey/R1CS/WASM were not independently recomputed in this review.",
+  "ci_status_evidence": {
+    "head_sha": "13bd6e58e7d4f6f6c55df8ec07ee4a1c34b5024a",
+    "read_utc": "2026-10-20T17:13:18.940Z",
+    "runs": [
+      {
+        "id": 39443694252,
+        "name": "CI",
+        "head_sha": "13bd6e58e7d4f6f6c55df8ec07ee4a1c34b5024a",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/KuznetsovKarazin/zksnark-benchmark/actions/runs/39443694252",
+        "created_at": "2026-10-20T14:55:38Z",
+        "updated_at": "2026-10-20T14:57:25Z",
+        "jobs": [
+          {
+            "id": 118699894153,
+            "name": "Python 3.11 legacy tests",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "id": 118699894685,
+            "name": "Python 3.10 legacy tests",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "id": 118699894986,
+            "name": "Python 3.12 legacy tests",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      },
+      {
+        "id": 39443693715,
+        "name": "PETs4DeFi v2",
+        "head_sha": "13bd6e58e7d4f6f6c55df8ec07ee4a1c34b5024a",
+        "status": "completed",
+        "conclusion": "success",
+        "html_url": "https://github.com/KuznetsovKarazin/zksnark-benchmark/actions/runs/39443693715",
+        "created_at": "2026-10-20T14:55:38Z",
+        "updated_at": "2026-10-20T15:02:18Z",
+        "jobs": [
+          {
+            "id": 118699891782,
+            "name": "Node 24 / npm 11 v2 demo",
+            "status": "completed",
+            "conclusion": "success"
+          },
+          {
+            "id": 118699892215,
+            "name": "Node 22 / npm 10 v2 demo",
+            "status": "completed",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ]
+  },
+  "raw_output_note": "All detector findings are retained below. Full raw JSON/logs can be regenerated with static_checks.py --verifier results/cryptographic_artifacts/Verifier.sol.",
+  "verifier_runtime_assertions": [
+    {
+      "chain": "l1",
+      "name": "zk_direct: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    },
+    {
+      "chain": "l1",
+      "name": "zk_cache: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_direct: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    },
+    {
+      "chain": "op",
+      "name": "zk_cache: generated verifier returns false for malformed point and out-of-field public input",
+      "passed": true
+    }
+  ]
+}

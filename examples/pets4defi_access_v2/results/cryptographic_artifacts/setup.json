@@ -1,0 +1,14 @@
+{
+  "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+  "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+  "zkey_sha256": "4a7f997ad5df2448939abb9ae31f32d2d2298d64c84ec24347230371d29e249b",
+  "wasm_sha256": "f9379e40226ce39f341ef51441163214439bb7c129cdb1247f2cb6e4c7261f36",
+  "r1cs_sha256": "d0c374b11fcb0045f82f05422d733c44af54a06dff8fb0710f506100fe33e15d",
+  "verifier_sha256": "8d160f4f093d73a9a64c5fbb37460835473950adf08c0338dace4efd1998a266",
+  "verification_key_sha256": "54fa9730252f50da61363e6dbd53ba6782c4e8b58c71ec3ad643b8561f7e3610",
+  "phase1_source": "https://circom.info/powersOfTau28_hez_final_14.ptau",
+  "phase1_blake2b512": "eeefbcf7c3803b523c94112023c7ff89558f9b8e0cf5d6cdcba3ade60f168af4a181c9c21774b94fbae6c90411995f7d854d02ebd93fb66043dbb06f17a831c1",
+  "phase1_provenance": "Public Perpetual Powers of Tau transcript, hash pinned to iden3/snarkjs table",
+  "phase2_status": "Two contributions from this one local process; NOT independent participants and NOT production-safe",
+  "created_utc": "2026-10-20T14:56:43.796Z"
+}
