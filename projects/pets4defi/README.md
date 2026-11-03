@@ -120,3 +120,11 @@ EUR conversions use the **CoinGecko web quote of €2,164.73/ETH observed on 20 
 The grant connection is private, reusable eligibility verification for WP3/WP4 (T3.4/T4.2), including revocation and gas/latency. This local deposit fixture is an input to the integrated zk-KYC prototype, not completion of D4.1. Ethereum EUR figures are a public-network deployment scenario, **not the operating budget of the proposed project testnet (Besu)**, whose test-token gas price may be zero. Hosting, proving and provider costs still need their own accounting.
 
 [Measurement provenance](data/provenance.json) · [Frequency-input provenance](data/economic_inputs_manifest.json) · [Technical protocol](../../examples/pets4defi_access_v2/POLICIES.md)
+
+
+The article v0.10 review extension adds exhaustive timing counts, a finite-horizon
+Poisson model, three repetitions per paired schedule, all four signed scope
+controls and enforced public issuer partitions. See
+[REVOCATION_REVIEW_V010.md](REVOCATION_REVIEW_V010.md) for commands and limits.
+
+Latest paper review: [bounded sensitivity and provenance, v0.11](REVOCATION_REVIEW_V011.md).

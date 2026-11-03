@@ -92,3 +92,94 @@ run and previously identified dependency findings are still outstanding.
 See `results/test_results.json`, [CIRCUIT_REVIEW.md](CIRCUIT_REVIEW.md), [STATIC_REVIEW.md](STATIC_REVIEW.md) and [REVIEW_RESPONSE.md](REVIEW_RESPONSE.md). Tests cover valid authorization, context binding/replay, current roots, predicates, activation/expiry boundaries, revocation, policy/issuer changes, and token failure/reentry rollback.
 
 The phase-1 transcript is public and hash-pinned. Two phase-2 contributions come from **one local process**; they are not independent and the resulting keys are not production-safe. A production ceremony, operational issuer/witness service, physical-device measurements and full L2 fees are release/research gaps. A signature-inside-circuit treatment and proof-system comparisons are separate follow-up experiments, not features claimed by this version.
+
+### Follow-up review (article v0.11)
+
+The [v0.11 report](../../projects/pets4defi/REVOCATION_REVIEW_V011.md) adds twelve
+bounded model-sensitivity configurations and a source guard for historical gas
+constants. It does not replace any saved EVM evidence. The 57.07% result belongs
+to the specified uniform grid; TTL, access density and clustering can change it.
+
+```sh
+python3 -m unittest discover -s scripts -p 'test_revocation*.py' -v
+python3 scripts/revocation_sensitivity.py --out /tmp/pets4defi-sensitivity-check
+diff -r results/revocation_sensitivity /tmp/pets4defi-sensitivity-check
+```
+
+The checker accepts only **exact hash-matching** historical harness snapshots:
+v0.9 for `revocation_validation.mjs` and `package.json`, and v0.10 for `setup.mjs`.
+The latter retains the setup script actually used for the saved review evidence.
+Contracts, circuit, fixtures and dependency lock still require a current-file hash
+match; there is no general hash bypass and no rewriting of old reports.
+
+The default public powers-of-tau path verifies the pinned BLAKE2b-512 digest.
+Re-verifying the full public ceremony exceeded the 45-minute CI limit on both
+Node configurations, so that optional, expensive check is now requested with
+`node scripts/setup.mjs --verify-public-phase1` (which bypasses the setup cache).
+The explicit `--local-demo` path still verifies its newly generated transcript.
+Both paths continue to verify the resulting circuit-specific zkey. Neither
+single-process phase-2 setup is production-safe.
+
+### Revocation review extension (article v0.10)
+
+The review extension adds three paired replays per main schedule, all four
+signed shared-invalidation controls, and an enforced partition of four issuers
+into 1, 2 or 4 public groups. Contracts, circuit and dependency lock are unchanged.
+The partition is a deployment alternative: excluded issuers are permanently
+disabled in each registry, and attempts to publish outside their group fail.
+It reveals the chosen issuer group. This is not an audited production protocol.
+
+From this directory, check the saved evidence and model without a new EVM run:
+
+```sh
+python3 scripts/check_revocation_validation.py
+python3 scripts/check_revocation_validation.py --out results/revocation_review
+python3 -m unittest discover -s scripts -p test_revocation_model.py -v
+python3 scripts/revocation_model.py --out /tmp/pets4defi-model-check
+node scripts/verify_revocation_proofs.mjs --out results/revocation_review
+```
+
+The checker defaults to stdout and does not rewrite archived analysis. Use
+`--analysis-output /tmp/analysis.json` for a separate derived report. It accepts
+`--out DIRECTORY` or `VALIDATION_OUT`; proof verification accepts the same paths.
+The historical checker authenticates the preserved v0.9 runner snapshot where
+its source hash differs from the revised runner. Protocol source and lockfile
+hashes must still match the historical manifest.
+
+For a fresh run, choose a **new** output directory. No `.git` directory is needed;
+missing Git metadata is recorded as `null`, while file hashes remain available.
+The article's new run was executed from a directory without Git metadata.
+
+```sh
+npm ci
+npm run setup
+VALIDATION_OUT=/tmp/pets4defi-review-new node scripts/revocation_review.mjs
+python3 scripts/check_revocation_validation.py --out /tmp/pets4defi-review-new
+node scripts/verify_revocation_proofs.mjs --out /tmp/pets4defi-review-new
+```
+
+If public transcript download is blocked, an existing local copy of the pinned
+public transcript can be selected explicitly:
+
+```sh
+PTAU_FILE=/absolute/path/powersOfTau28_hez_final_14.ptau npm run setup
+```
+
+`PTAU_FILE` must match the published BLAKE2b-512 digest already pinned by the
+setup script. For **local experiments only**, an explicit alternative creates
+and verifies a single-process phase-1 transcript and records its hashes:
+
+```sh
+node scripts/setup.mjs --local-demo
+```
+
+This mode is never selected silently. Both its phase-1 and phase-2 ceremonies are
+local demonstrations; do not deploy their keys for real assets. It keeps the
+circuit and EVM operations fixed, but fresh keys/proofs change bytes and small
+calldata costs. To reuse these local artifacts, repeat the same `--local-demo`
+option rather than calling the default public-transcript setup.
+
+`revocation_model.py` exhausts all 3,916 distinct integer-day pairs and uses exact
+finite-state calculations for fixed event counts and Poisson arrivals. These
+are specified synthetic distributions, not empirical prevalence estimates.
+See `projects/pets4defi/REVOCATION_REVIEW_V010.md` for the evidence boundaries.

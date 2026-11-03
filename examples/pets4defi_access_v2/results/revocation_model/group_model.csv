@@ -1,0 +1,4 @@
+groups,issuer_slots_per_group,expected_total_revocations_90d,expected_relevant_revocations_90d,mean_k,expected_projected_delta_gas
+1,4,12,12.0,12.337344948181347,2243245.9324505012
+2,2,12,6.0,7.434968760938371,830725.2620954197
+4,1,12,3.0,5.22836405314919,194936.68896106444

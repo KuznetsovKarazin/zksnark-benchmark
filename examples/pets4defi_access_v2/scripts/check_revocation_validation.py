@@ -10,24 +10,42 @@ import gzip
 import hashlib
 import json
 import statistics
+import argparse
+import os
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'results/revocation_validation'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--out', type=Path, default=Path(os.environ.get('VALIDATION_OUT', ROOT / 'results/revocation_validation')))
+parser.add_argument('--analysis-output', type=Path, help='Write analysis here; default is stdout only, leaving saved evidence unchanged.')
+args = parser.parse_args()
+OUT = args.out.resolve()
 read = lambda p: json.loads(p.read_text())
 sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
 report = read(OUT / 'validation_report.json')
 assert report['status'] == 'PASS'
 for name, digest in read(OUT / 'manifest.json').items():
     assert sha(OUT / name) == digest, name
+historical_sources_used = []
 for name, digest in report['metadata']['source_files_sha256'].items():
-    assert sha(ROOT / name) == digest, name
+    current = ROOT / name
+    if sha(current) != digest:
+        # Exact executed harness/setup snapshots preserve old evidence after
+        # maintenance. Contracts, circuit, fixtures and lock remain strict.
+        snapshots = {'scripts/revocation_validation.mjs': 'v0.9',
+                     'package.json': 'v0.9', 'scripts/setup.mjs': 'v0.10'}
+        assert name in snapshots, name
+        original = ROOT / 'scripts/historical_sources' / snapshots[name] / Path(name).name
+        assert original.exists() and sha(original) == digest, name
+        historical_sources_used.append(name)
 traces = read(OUT / 'traces.json')
 raw = json.loads(gzip.decompress((OUT / 'receipts_and_proofs.json.gz').read_bytes()))
 receipts = {(r['label'], r['receipt']['hash']): r for r in raw['transactions']}
 assert len(receipts) == len(raw['transactions'])
-assert len(traces) == 1034
-assert len(raw['proofs']) == 38
-assert sum(r['kind'] == 'rejected' for r in raw['transactions']) == 7
+historical = report.get('schema_version', 1) == 1
+assert len(traces) == (1034 if historical else 800*report['metadata']['repetitions']+400+300)
+assert len(raw['proofs']) == report['counts']['proofs']
+assert sum(r['kind'] == 'rejected' for r in raw['transactions']) == report['counts']['negative_control_failures']
+assert all(c['passed'] for c in report['checks'])
 for r in raw['transactions']:
     assert r['receipt']['status'] == (0 if r['kind'] == 'rejected' else 1)
 amount = 100 * 10**18
@@ -49,7 +67,8 @@ for row in traces:
         residuals.append(row['gas'] - calldata - 2800 * changed)
         gas_classes[changed].append(row['gas'])
 # Empirical state decomposition; not a claim for arbitrary contracts or slots.
-assert len(residuals) == 27 and set(residuals) == {342621}
+assert residuals and set(residuals) == {342621}
+if historical: assert len(residuals) == 27
 comparison = []
 for summary in report['summaries']:
     variant = 'signed' if summary['variant'] == 'signed_global' else summary['variant']
@@ -63,6 +82,14 @@ for summary in report['summaries']:
     deadline = None
     authorization_time = None
     updates = [d * 86400 for d in summary['revocations']]
+    publications = [r for r in raw['transactions'] if r['label']==summary['schedule'] and r['kind']=='revocation']
+    if summary.get('groups'):
+        assert [r['timestamp']-base for r in publications] == [e['day']*86400 for e in summary['published_revocations']]
+        assert [r['issuer'] for r in publications] == [e['issuer'] for e in summary['published_revocations']]
+        observed_updates = [r['timestamp']-base for r in publications if r['group']==0]
+    else:
+        observed_updates = [r['timestamp']-base for r in publications]
+    assert observed_updates == updates
     for i, row in enumerate(rows):
         now = int(row['day_seconds'])
         assert now == i * 77760
@@ -75,7 +102,7 @@ for summary in report['summaries']:
             deadline = min(now + 30*86400, 90*86400)
         assert int(row['after']['cache'][0]) == base + deadline
     assert sum(r['event'] != 'hit' for r in rows) == summary['authorizations']
-    if summary['variant'] == 'zk':
+    if summary['variant'] == 'zk' and not summary.get('groups'):
         k = summary['authorizations']
         projection = 7780318.6 + 288129.8 * (k-3)
         signed = next(s for s in report['summaries'] if s['schedule'] == summary['schedule'] and s['variant'] == 'signed')['gas']
@@ -91,9 +118,9 @@ for k in (4, 5):
     bounds = {}
     for variant, count in [('signed', 3), ('zk', k)]:
         samples = [s for s in report['stateSamples'] if s['variant'] == variant]
-        first = [s['first'] for s in samples]
+        first = [s['first'] for s in samples] or [r['gas'] for r in traces if r['variant']==variant and r['event']=='first' and not r['label'].startswith('shared_signed')]
         reauth = [r['gas'] for r in traces if r['variant'] == variant and r['event'] == 'reauthorize' and not r['label'].startswith('shared_signed')]
-        hits = [s['hit'] for s in samples]
+        hits = [s['hit'] for s in samples] or [r['gas'] for r in traces if r['variant']==variant and r['event']=='hit' and not r['label'].startswith('shared_signed')]
         bounds[variant] = [46463+f(first)+(count-1)*f(reauth)+(100-count)*f(hits) for f in (min,max)]
     low, high = bounds['zk'][0]-bounds['signed'][1], bounds['zk'][1]-bounds['signed'][0]
     assert (high < 0) if k == 4 else (low > 0)
@@ -110,7 +137,8 @@ for group in ('cold', 'warm'):
         return xs[lo]+(xs[hi]-xs[lo])*(index-lo)
     prover_summary[group] = dict(n=len(xs), median_ms=statistics.median(xs), q1_ms=quantile(.25),q3_ms=quantile(.75))
 result = dict(status='PASS', receipt_count=len(receipts), trace_count=len(traces),
-              ordered_core_and_control_paths=1000, failed_transactions=7,
+              ordered_core_and_control_paths=sum(100 for s in report['summaries']), failed_transactions=report['counts']['negative_control_failures'],
+              proof_count=len(raw['proofs']),historical_harness_sources_verified=historical_sources_used,
               state_decomposition=dict(n=len(residuals), residual_gas=342621,
                  formula='gas = 342621 + calldata gas + 2800*(changed until + changed security epoch)',
                  observed_classes={str(k):dict(n=len(v),min=min(v),max=max(v)) for k,v in gas_classes.items()}),
@@ -118,5 +146,6 @@ result = dict(status='PASS', receipt_count=len(receipts), trace_count=len(traces
               historical_server_proving=prover_summary,
               historical_prover_source_sha256=sha(ROOT / 'results/server_prover.json'),
               limitations='Finite synthetic states, not confidence intervals. Server timings are historical and are not device costs. No external colleague or cryptographic audit.')
-(OUT / 'analysis_summary.json').write_text(json.dumps(result,indent=2)+'\n')
+if args.analysis_output:
+    args.analysis_output.write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps(result,indent=2))

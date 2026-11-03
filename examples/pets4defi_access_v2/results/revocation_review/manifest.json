@@ -1,0 +1,7 @@
+{
+  "validation_report.json": "a57cf9ff4a966c5acbc496ac4966226289ed499404fbdae3fb1aa87eccbee5c7",
+  "traces.json": "0caab8a02b948dec6402a20dc3600bc19bddd01addf2372ba937b1268aad60c8",
+  "receipts_and_proofs.json.gz": "72b9af61e155e7d7a21e308b5fee7862b130587f53be9447ee642b5ca10a8144",
+  "verification_key.json": "0d79b92df76a89d49d5a03dae6c6a13b8ae557354a65e309717e94d8c203a71d",
+  "Verifier.sol": "17a00b1d8deba2ab25e93d149fa1c3631885c7b7e1729988ab36b3b46c780d54"
+}
