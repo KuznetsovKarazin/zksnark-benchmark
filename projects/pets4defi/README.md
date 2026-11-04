@@ -8,10 +8,10 @@ Compare an unchecked token deposit, signed eligibility checks and ZK proofs. Sig
 
 ZK hides the credential identifier, selected trusted issuer and private attributes from the on-chain presentation. Its pseudonym is application-scoped. Public wallets, transfers and timing remain visible. The eligibility policy and user workloads are synthetic.
 
-## Article and integrated evidence (3 November 2026)
+## Article and integrated evidence (4 November 2026)
 
-The current article is **Revocation Externalities in Private DeFi Access: Timing,
-Gas Costs and Cost Sharing**. Its empirical result concerns shared invalidation,
+The current article is **Revocation Spillovers in Private DeFi Eligibility: Timing, Gas
+Costs and Cost Sharing**. Its empirical result concerns shared invalidation,
 rolling authorization expiry and repeated-access cost. Two revocations at days
 30/60 versus 31/63 change the observed ZK-minus-signed gas from -447,310 to
 +120,532 in matched 100-deposit traces. A signed shared-invalidation control
@@ -20,6 +20,12 @@ reproduces the authorization-count effect, so this is not a universal cost of ZK
 - [Complete EVM trace results and reproduction](REVOCATION_VALIDATION.md):
   800 main and 200 control deposits, 30 fresh-holder state samples, seven included
   reverts, all 38 saved proofs verified, and exact state-sensitive gas checks.
+- [Review extension and bounded sensitivity, v0.11](REVOCATION_REVIEW_V011.md):
+  3,100 additional saved access paths and 90 saved proofs; exact two-day and
+  finite-horizon models; 12 sensitivity configurations covering 39,843 date pairs.
+  Three replays per paired schedule vary proof randomness under one setup, not
+  independently sampled workloads. The signed shared control attributes counts,
+  not the per-authorization gas premium.
 - [Nataliya Kolyada's economic code and reproduction](economics/README.md):
   26 files imported byte-for-byte from the accepted ECON-05 v0.3 core inside
   ECON-06 v0.3; 39 tests and four byte-identical regenerated numerical CSVs.
@@ -31,7 +37,12 @@ archives are unchanged; their checksums and source members are recorded in the
 [economic source manifest](economics/SOURCE_MANIFEST.json). The new integration
 adds an attributed computational copy, not a new economic model. Article framing,
 full text and MDPI LaTeX preparation are handled separately from the old task
-assignments below. User-authorized Git integration does not constitute external
+assignments below. PRs #1 and #2 are merged. The v0.11 technical integration is pinned at
+`660bac1921e6f4f7948a20111e7fa16bfb3d051e`; CI and PETs4DeFi v2 both passed
+on its identical reviewed code tree at `6bf3feddd9cee85c46ed7209fbdadecb307ec38e`.
+The full v0.11 manuscript is an author-review deliverable; journal submission
+and final author declarations remain separate steps. User-authorized Git
+integration does not constitute external
 scientific review, cryptographic audit or journal acceptance.
 
 In the core `security` policy (`delta=0`), signed cache hits check their own issuer,
@@ -123,7 +134,8 @@ The grant connection is private, reusable eligibility verification for WP3/WP4 (
 
 
 The article v0.10 review extension adds exhaustive timing counts, a finite-horizon
-Poisson model, three repetitions per paired schedule, all four signed scope
+Poisson model, three replays differing only in proof randomness per paired schedule,
+all four signed scope
 controls and enforced public issuer partitions. See
 [REVOCATION_REVIEW_V010.md](REVOCATION_REVIEW_V010.md) for commands and limits.
 
