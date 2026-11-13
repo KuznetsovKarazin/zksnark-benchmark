@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "audit": {
+    "status": "PASS",
+    "scenarios": 32,
+    "workload_accesses": 1616,
+    "transactions": 2679,
+    "proofs": 87,
+    "categories": {
+      "deployment": 358,
+      "initial_publication": 212,
+      "fixture_bootstrap": 53,
+      "approval": 53,
+      "access": 1659,
+      "status_publication": 69,
+      "partition_setup": 212,
+      "rejected": 54,
+      "emergency_update": 8,
+      "diagnostic_access": 1
+    }
+  },
+  "timing": {
+    "n": 30,
+    "sessions": 3,
+    "observations_per_session": 10,
+    "excluded_warmups": 3,
+    "p95_definition": "empirical nearest rank, ceil(0.95*n)",
+    "operations": {
+      "proof_ms": {
+        "p50": 1804.5312640000002,
+        "p95": 1985.0565539999989,
+        "min": 1686.9301999999998,
+        "max": 2054.183231000001,
+        "session_medians": [
+          1845.0426270000003,
+          1785.1937319999997,
+          1803.6932924999996
+        ],
+        "warmups": [
+          1886.2334360000002,
+          1838.5777159999998,
+          1967.9667639999998
+        ]
+      },
+      "verify_ms": {
+        "p50": 14.964387500000157,
+        "p95": 21.572390999999698,
+        "min": 13.022455000000264,
+        "max": 24.801519000000553,
+        "session_medians": [
+          14.579948000000059,
+          14.432751500000904,
+          17.69482650000009
+        ],
+        "warmups": [
+          297.0880480000001,
+          241.2035249999999,
+          237.13892699999997
+        ]
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "matplotlib": "3.10.8"
+  },
+  "limits": "One machine, fixed synthetic input and one setup; no independence across devices or populations. Figures are native descriptive results, not whole-lifecycle euros or an equal-privacy external comparison."
+}

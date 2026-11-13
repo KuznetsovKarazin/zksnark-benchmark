@@ -1,0 +1,117 @@
+{
+  "scope": "pre-experiment algebraic financing pilot; no EVM, no off-chain prices, no L2 fee evidence",
+  "reference_price": {
+    "q0_gwei": "0.130658648",
+    "eur_per_eth": "2164.73",
+    "kind": "historical_ECON07_reference_not_current_quote"
+  },
+  "source_sha256": "30b2b605cc36e4d5d1fe07194604127436e2d795e55d71c957521a4fad18491f",
+  "anchors": {
+    "1": {
+      "S_gas": "13817033",
+      "h_gas": "10653405",
+      "source_scenario": "N16_zk_B1_d0_HIGH_weekly"
+    },
+    "2": {
+      "S_gas": "16592944",
+      "h_gas": "8930165",
+      "source_scenario": "N16_zk_B2_d0_HIGH_weekly"
+    },
+    "4": {
+      "S_gas": "24791056",
+      "h_gas": "8068512",
+      "source_scenario": "N16_zk_B4_d0_HIGH_weekly"
+    }
+  },
+  "q_grid_gwei": [
+    "0",
+    "0.01",
+    "0.1",
+    "0.130658648",
+    "1",
+    "10",
+    "100",
+    "1000"
+  ],
+  "active_holder_grid": [
+    4,
+    32
+  ],
+  "cost_corrections": [
+    {
+      "A_active": 4,
+      "comparison": "B1_minus_B2",
+      "direct_holder_eur": "0.48740239939834432960",
+      "full_boundary_per_holder_eur": "0.29111725021479221174"
+    },
+    {
+      "A_active": 4,
+      "comparison": "B2_minus_B4",
+      "direct_holder_eur": "0.24371053344210997112",
+      "full_boundary_per_holder_eur": "-0.33597939067414189000"
+    },
+    {
+      "A_active": 32,
+      "comparison": "B1_minus_B2",
+      "direct_holder_eur": "0.48740239939834432960",
+      "full_boundary_per_holder_eur": "0.4628667557504003148675"
+    },
+    {
+      "A_active": 32,
+      "comparison": "B2_minus_B4",
+      "direct_holder_eur": "0.24371053344210997112",
+      "full_boundary_per_holder_eur": "0.17124929292757848848"
+    }
+  ],
+  "constructed_witnesses": [
+    {
+      "case": "holder_route_limit",
+      "A_active": 4,
+      "q_gwei": "0.130658648",
+      "sponsor_cap_eur": "7.01191951093215140224",
+      "holder_cap_eur": "2.40395880910304124604",
+      "unconstrained_cheapest_B": 2,
+      "restricted_feasible_B": [
+        4
+      ],
+      "free_transfer_feasible_B": [
+        1,
+        2,
+        4
+      ],
+      "interpretation": "constructed existence example; not empirical funding limits or a journal-ready result"
+    },
+    {
+      "case": "operator_funding_limit",
+      "A_active": 32,
+      "q_gwei": "0.130658648",
+      "sponsor_cap_eur": "5.85253966269964768000",
+      "holder_cap_eur": "2.52581407582409623160",
+      "unconstrained_cheapest_B": 4,
+      "restricted_feasible_B": [
+        2
+      ],
+      "free_transfer_feasible_B": [
+        2,
+        4
+      ],
+      "interpretation": "constructed existence example; not empirical funding limits or a journal-ready result"
+    }
+  ],
+  "checks": {
+    "scenario_threshold_checks": 3924,
+    "free_transfer_reversals": 0,
+    "restricted_rule_reversal_checks": 28,
+    "boundary_checks": "passed",
+    "raw_anchor_reconciliation": "passed"
+  },
+  "decision": "NO-GO for the claim that a gas-price sweep with unrestricted transfers changes the optimal design. Conditional GO only for a justified restricted-payment/liquidity model and independently demonstrated materiality; frontier and no-reversal result are useful diagnostics, not sufficient publication novelty.",
+  "limitations": [
+    "A=32 is a frozen-cost projection from the four-wallet N16 workload, not an EVM result. It is not an N16/A32 deployment: an actual cohort needs N>=32 and remeasurement of shared costs.",
+    "S includes deployment and all shared publications; it is not initial liquidity.",
+    "Operator-only sponsorship is a deliberately explicit scenario restriction, not observed practice.",
+    "Sponsor caps in the sweep are scenarios expressed as multiples of observed B2 shared cost.",
+    "No empirical threshold X gwei, L2 comparison or market viability is established.",
+    "Dynamic liquidity needs timed events and receipts; terminal costs cannot measure it."
+  ]
+}

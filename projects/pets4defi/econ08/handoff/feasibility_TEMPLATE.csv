@@ -1,0 +1,9 @@
+scenario_id,payment_rule,funded_account,refill_interval_hours,required_balance_EUR,cumulative_topups_EUR,ending_balance_EUR,resource_expense_EUR,evidence,status_or_question
+N16_zk_B1_d0_HIGH_weekly,SELF,holder_0; add separate rows for holders 1 to 3,24,,,,,FINANCING_RULES.md; supplied timed actor table,Compare paired no-update; shared operator/issuer accounts separately
+N16_zk_B1_d0_HIGH_weekly,PM,pooled holder-operation account,24,,,,,FINANCING_RULES.md; supplied timed account table,Direct-gas proxy; shared accounts and AA overhead excluded
+N16_zk_B2_d0_HIGH_weekly,SELF,holder_0; add separate rows for holders 1 to 3,24,,,,,FINANCING_RULES.md; supplied timed actor table,Compare paired no-update; shared operator/issuer accounts separately
+N16_zk_B2_d0_HIGH_weekly,PM,pooled holder-operation account,24,,,,,FINANCING_RULES.md; supplied timed account table,Direct-gas proxy; shared accounts and AA overhead excluded
+N16_zk_B4_d0_HIGH_weekly,SELF,holder_0; add separate rows for holders 1 to 3,24,,,,,FINANCING_RULES.md; supplied timed actor table,Compare paired no-update; shared operator/issuer accounts separately
+N16_zk_B4_d0_HIGH_weekly,PM,pooled holder-operation account,24,,,,,FINANCING_RULES.md; supplied timed account table,Direct-gas proxy; shared accounts and AA overhead excluded
+N16_signed_control_d0_HIGH_weekly,SELF,holder_0; add separate rows for holders 1 to 3,24,,,,,FINANCING_RULES.md; supplied timed actor table,Compare paired no-update; shared operator/issuer accounts separately
+N16_signed_control_d0_HIGH_weekly,PM,pooled holder-operation account,24,,,,,FINANCING_RULES.md; supplied timed account table,Direct-gas proxy; shared accounts and AA overhead excluded

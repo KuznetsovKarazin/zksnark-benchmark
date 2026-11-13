@@ -1,0 +1,14 @@
+✔ W3C example expansion and leftmost-first boundary indices (4.8486ms)
+✔ signed initial list, shared cache and published revocation (28.490928ms)
+✔ reject changed payload, different signing key, list URL, purpose, and out-of-range index (7.116471ms)
+✔ re-fetching an old signature never extends its age; exact expiry and future publication are rejected (9.925996ms)
+✔ refuse a signed rollback and an alternative signed list at the same publication time (4.824233ms)
+✔ outage reuses only an authenticated list within its age limit (2.236482ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 231.713208

@@ -1,0 +1,5 @@
+scenario_id,payment_rule,actor,support_and_payment_timing,min_holder_budget_EUR_90d,min_initial_liquidity_EUR,calculation_or_source,assumptions,status,open_question
+N16_zk_B1_d0_HIGH_weekly,,,,,,cohort_summary.csv; START_HERE worked example,A=4; define sponsor support and payment routes before calculating,not_evaluated,Budget is an output; name the actor for liquidity
+N16_zk_B2_d0_HIGH_weekly,,,,,,cohort_summary.csv; START_HERE worked example,A=4; define sponsor support and payment routes before calculating,not_evaluated,Budget is an output; name the actor for liquidity
+N16_zk_B4_d0_HIGH_weekly,,,,,,cohort_summary.csv; START_HERE worked example,A=4; define sponsor support and payment routes before calculating,not_evaluated,Budget is an output; name the actor for liquidity
+N16_signed_control_d0_HIGH_weekly,,,,,,cohort_summary.csv; START_HERE worked example,A=4; define sponsor support and payment routes before calculating,not_evaluated,Budget is an output; name the actor for liquidity

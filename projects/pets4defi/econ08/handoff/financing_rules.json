@@ -1,0 +1,14 @@
+{
+  "version": "0.4",
+  "status": "fixed research policies; operational feasibility not established",
+  "origin": {"formula": "report.context.base - 3600", "meaning": "common fixture lifecycle origin before setup", "access_base_offset_seconds": 3600},
+  "families": {
+    "SELF": {"holder_payer": "each holder's own account", "reimbursement": false, "shared_payers": "operator and issuer role accounts separately"},
+    "PM": {"holder_payer": "one prepaid holder-operation pool", "covered": ["approval", "access first authorization", "access reauthorization", "access cache hit"], "shared_payers": "same operator and issuer role accounts, outside pool", "measured_ERC4337": false}
+  },
+  "refill": {"rule": "reset each account to fixed target K before same-time debits", "initial_funding_at_seconds": 0, "primary_interval_seconds": 86400, "sensitivity_intervals_seconds": [604800, null], "null_means": "no refill after initial funding", "phase_seconds": 0, "delay_seconds": 0, "topup_fee": "unmeasured; excluded from debit-floor diagnostic", "funding_source": "explicit external treasury for the relevant account; availability not assumed proven"},
+  "accounting": {"initial_and_refill_deposits": "transfers, not extra resource expense", "stake": "separate unknown locked asset, not gas deposit", "asset_principal": "excluded", "external_revenues": [], "reimbursements": [], "operating_refunds": [], "resource_cost": "observed actual gas debits repriced at a stated constant q", "gross_treasury_requirement": "initial transfer plus all refill transfers", "end_balance": "retained asset to report, not expense"},
+  "admission": {"cash_target": "actual-debit lower bound", "UserOperation_prefund": "unknown; needs gas limits, fee caps and versioned validation rules", "bundle_reservations": "unknown; serial proxy cannot certify bundle acceptance", "AA_overhead": "unknown, not set to zero for service cost claims"},
+  "secondary": {"primary_daily_later_window_cutoff_seconds": 86400, "rule": "describe all subsequent fixed daily windows, never choose cutoff adaptively", "role": "does not replace full-lifecycle target or change primary policy"},
+  "control": "unrestricted costless transfers without timing constraints remain a theoretical no-reversal control; v0.3 operator_only_sponsor is not PM"
+}
