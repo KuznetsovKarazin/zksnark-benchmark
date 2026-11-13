@@ -1,0 +1,48 @@
+name: ECON-08 archived evidence
+on:
+  push:
+    branches: [econ08-native-pilot]
+  pull_request:
+    paths:
+      - 'examples/pets4defi_access_v2/**'
+      - 'projects/pets4defi/econ08/**'
+      - '.github/workflows/econ08.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: examples/pets4defi_access_v2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: |
+            examples/pets4defi_access_v2/package-lock.json
+            projects/pets4defi/econ08/status-list/package-lock.json
+      - run: npm ci --ignore-scripts
+      - name: Import original source commits and audit all archived evidence
+        run: |
+          repo_root="$(git rev-parse --show-toplevel)"
+          git bundle verify "$repo_root/projects/pets4defi/econ08/ECON08_source.bundle"
+          git fetch "$repo_root/projects/pets4defi/econ08/ECON08_source.bundle" refs/heads/econ08-cohort
+          python3 scripts/econ08/audit_archive.py
+      - name: Run event-model and evidence-corruption tests
+        run: |
+          node --test scripts/econ08/test_config.mjs scripts/econ08/test_transactions.mjs
+          python3 -m unittest discover -s scripts/econ08 -p 'test_check.py' -v
+      - name: Verify all 512 proofs and signed transaction hashes
+        run: node scripts/econ08/verify_proofs.mjs --expected-proofs 512 results/econ08_native_pilot results/econ08_cohort/runs/*
+      - name: Check authenticated status-list component
+        working-directory: projects/pets4defi/econ08/status-list
+        run: |
+          npm ci --ignore-scripts
+          node --test status.test.mjs

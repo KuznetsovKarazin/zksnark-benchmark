@@ -1,0 +1,186 @@
+[
+  {
+    "scenario": "N16_signed_control_d0_LOW_weekly",
+    "purpose": "workload",
+    "index": 0,
+    "at": 0,
+    "event": "first",
+    "reason": "NoCachedAuthorization",
+    "gas": 215247,
+    "tx_hash": "0xcc257465269ffb55f0b19f71876ac5b81bdd3c42282adb747e27d473b2e5acc6",
+    "proof_index": null,
+    "proof_ms": null,
+    "before": {
+      "nonce": "0",
+      "deposit": "0",
+      "holderBalance": "9969999999999999999999996",
+      "gateBalance": "1",
+      "cache": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0x0000000000000000000000000000000000000000",
+        "0",
+        "0"
+      ],
+      "securityEpoch": "1"
+    },
+    "after": {
+      "nonce": "1",
+      "deposit": "100000000000000000000",
+      "holderBalance": "9969899999999999999999996",
+      "gateBalance": "100000000000000000001",
+      "cache": [
+        "1795093200",
+        "0",
+        "0",
+        "0",
+        "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "101",
+        "1"
+      ],
+      "securityEpoch": "1"
+    },
+    "holder_issuer": 0,
+    "group": 0
+  },
+  {
+    "scenario": "N16_signed_control_d0_LOW_weekly",
+    "purpose": "workload",
+    "index": 0,
+    "at": 0,
+    "event": "first",
+    "reason": "NoCachedAuthorization",
+    "gas": 215293,
+    "tx_hash": "0x94b9c162f8224e114db41701278c8e0a469029f1614e493ad744a47a0461830c",
+    "proof_index": null,
+    "proof_ms": null,
+    "before": {
+      "nonce": "0",
+      "deposit": "0",
+      "holderBalance": "10000000000000000000001",
+      "gateBalance": "100000000000000000001",
+      "cache": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0x0000000000000000000000000000000000000000",
+        "0",
+        "0"
+      ],
+      "securityEpoch": "1"
+    },
+    "after": {
+      "nonce": "1",
+      "deposit": "100000000000000000000",
+      "holderBalance": "9900000000000000000001",
+      "gateBalance": "200000000000000000001",
+      "cache": [
+        "1795093200",
+        "0",
+        "0",
+        "0",
+        "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "102",
+        "1"
+      ],
+      "securityEpoch": "1"
+    },
+    "holder_issuer": 1,
+    "group": 0
+  },
+  {
+    "scenario": "N16_signed_control_d0_LOW_weekly",
+    "purpose": "workload",
+    "index": 0,
+    "at": 0,
+    "event": "first",
+    "reason": "NoCachedAuthorization",
+    "gas": 215297,
+    "tx_hash": "0xca0dbfaebbcf664aedcdbfb1355a6860ed554cb70919661014d6df0cf1fa502b",
+    "proof_index": null,
+    "proof_ms": null,
+    "before": {
+      "nonce": "0",
+      "deposit": "0",
+      "holderBalance": "10000000000000000000001",
+      "gateBalance": "200000000000000000001",
+      "cache": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0x0000000000000000000000000000000000000000",
+        "0",
+        "0"
+      ],
+      "securityEpoch": "1"
+    },
+    "after": {
+      "nonce": "1",
+      "deposit": "100000000000000000000",
+      "holderBalance": "9900000000000000000001",
+      "gateBalance": "300000000000000000001",
+      "cache": [
+        "1795093200",
+        "0",
+        "0",
+        "0",
+        "0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",
+        "103",
+        "1"
+      ],
+      "securityEpoch": "1"
+    },
+    "holder_issuer": 2,
+    "group": 0
+  },
+  {
+    "scenario": "N16_signed_control_d0_LOW_weekly",
+    "purpose": "workload",
+    "index": 0,
+    "at": 0,
+    "event": "first",
+    "reason": "NoCachedAuthorization",
+    "gas": 215317,
+    "tx_hash": "0x7337bf1168859009758e3b70f33b5bc34589e78f5f19c691d38535ede9d9001a",
+    "proof_index": null,
+    "proof_ms": null,
+    "before": {
+      "nonce": "0",
+      "deposit": "0",
+      "holderBalance": "10000000000000000000001",
+      "gateBalance": "300000000000000000001",
+      "cache": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0x0000000000000000000000000000000000000000",
+        "0",
+        "0"
+      ],
+      "securityEpoch": "1"
+    },
+    "after": {
+      "nonce": "1",
+      "deposit": "100000000000000000000",
+      "holderBalance": "9900000000000000000001",
+      "gateBalance": "400000000000000000001",
+      "cache": [
+        "1795093200",
+        "0",
+        "0",
+        "0",
+        "0x90F79bf6EB2c4f870365E785982E1f101E93b906",
+        "104",
+        "1"
+      ],
+      "securityEpoch": "1"
+    },
+    "holder_issuer": 3,
+    "group": 0
+  }
+]

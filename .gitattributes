@@ -1,2 +1,11 @@
 # This generated verifier is retained byte for byte with its receipt manifest.
 examples/pets4defi_access_v2/results/revocation_review/Verifier.sol whitespace=-blank-at-eol
+# ECON-08 raw generated verifier/plots are retained with their SHA-256 manifests.
+examples/pets4defi_access_v2/results/econ08_native_pilot/** linguist-generated=true
+examples/pets4defi_access_v2/results/econ08_native_pilot/Verifier.sol whitespace=-blank-at-eol
+examples/pets4defi_access_v2/results/econ08_native_pilot/analysis/*.svg whitespace=-blank-at-eol
+
+# Preserve archived CSV CRLF bytes while checking meaningful whitespace.
+examples/pets4defi_access_v2/results/econ08_cohort/summary.csv -text whitespace=cr-at-eol
+projects/pets4defi/econ08/handoff/*.csv -text whitespace=cr-at-eol
+projects/pets4defi/econ08/status-list/measurements/summary.csv -text whitespace=cr-at-eol
