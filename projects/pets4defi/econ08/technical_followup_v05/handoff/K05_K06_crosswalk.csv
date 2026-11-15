@@ -1,0 +1,7 @@
+mechanism,schedule,holders,accesses,K05_common_gas,K06_incremental_gas,holder_whole_gas,approval_common_gas,unchecked_access_gas,evidence
+zk_B1,weekly,4,400,22226604,20387016,42613620,185852,22040752,archived approval + calibrated unchecked access; K06 excludes approval byte differences
+zk_B1,control,4,400,22226604,8872272,31098876,185852,22040752,archived approval + calibrated unchecked access; K06 excludes approval byte differences
+zk_B2,weekly,4,400,22226604,13494056,35720660,185852,22040752,archived approval + calibrated unchecked access; K06 excludes approval byte differences
+zk_B2,control,4,400,22226604,8872428,31099032,185852,22040752,archived approval + calibrated unchecked access; K06 excludes approval byte differences
+zk_B4,weekly,4,400,22226604,10047444,32274048,185852,22040752,archived approval + calibrated unchecked access; K06 excludes approval byte differences
+zk_B4,control,4,400,22226604,8872416,31099020,185852,22040752,archived approval + calibrated unchecked access; K06 excludes approval byte differences

@@ -1,3 +1,5 @@
+> **Status, 15 November 2026:** This first assignment has been returned in Nataliya’s v0.2.4 package. Preserve it as history. Continue with the [v0.5 follow-up](../technical_followup_v05/handoff/READ_ME_FIRST.txt) and [two-page note](../technical_followup_v05/handoff/START_HERE_v05.docx). The original 30 November target below is no longer an outstanding first-return deadline.
+
 # Your first economic task for ECON 08
 
 Nataliya Kolyada and Oleksandr Kuznetsov. Version 0.4, 13 November 2026.

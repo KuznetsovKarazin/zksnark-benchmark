@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "unique_workloads": 960,
+  "median_rows": 5760,
+  "paired_effect_rows": 2880,
+  "gas_coefficient_sets": 3,
+  "event_model": "deterministic; no estimated expectation or random process",
+  "scope": "Hypothetical access/TTL/grace scenarios using empirical class gas proxies, not new EVM observations."
+}

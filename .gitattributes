@@ -8,4 +8,7 @@ examples/pets4defi_access_v2/results/econ08_native_pilot/analysis/*.svg whitespa
 # Preserve archived CSV CRLF bytes while checking meaningful whitespace.
 examples/pets4defi_access_v2/results/econ08_cohort/summary.csv -text whitespace=cr-at-eol
 projects/pets4defi/econ08/handoff/*.csv -text whitespace=cr-at-eol
+projects/pets4defi/econ08/technical_followup_v05/*.csv -text whitespace=cr-at-eol
+projects/pets4defi/econ08/technical_followup_v05/handoff/*.csv -text whitespace=cr-at-eol
+projects/pets4defi/econ08/technical_followup_v05/op_projection/*.csv -text whitespace=cr-at-eol
 projects/pets4defi/econ08/status-list/measurements/summary.csv -text whitespace=cr-at-eol

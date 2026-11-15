@@ -1,0 +1,66 @@
+ECON-08 v0.5 — conditional Optimism fee scenario
+15 November 2026. For information and economic interpretation.
+
+WHAT THE NUMBERS MEAN
+We priced the existing B2 weekly and no-update transactions using three
+components: execution, publication of transaction data to L1, and the OP
+operator fee. The operator fee returned zero at this specific historical
+state; it was queried, not assumed absent.
+
+For four holders and 400 accesses over 90 days:
+                                      Weekly updates       No updates
+Holder-operation expense (EUR)           0.008223311        0.007296680
+Shared deployment/publications (EUR)     0.004409694        0.004162828
+Whole measured service (EUR)             0.012633005        0.011459508
+Daily holder pool target, full life      0.000433877        0.000433878
+Daily pool target, service after day 1   0.000247057        0.000298652
+Sum of SELF targets, after day 1         0.000331193        0.000298652
+
+The weekly case has greater cumulative expense but a smaller continuing
+service pool target. Its pooling reduction is about EUR 0.000084136 for all
+four holders. These very small absolute amounts do not support a claim that
+the tested L2 direct-gas scenario alone creates an important funding problem.
+An operating balance is an asset; neither its deposit nor its replenishment
+is an additional resource expense. Startup remains separately payable in
+the after-day-1 comparison.
+
+HOW THE PROJECTION WAS MADE
+The read-only calculation uses OP mainnet block 158458797, timestamp
+20 October 2026, 17:12:51 UTC, hash:
+0x4751aa2942644e95811e66e09100ca1cc5218b563aa11ae6620dba1bf4bd0764.
+The original archived fee snapshot records the same block. Its block-weighted
+median of within-block execution-price p50 values is 6,661 wei per gas.
+That historical window statistic, not a live quote, prices every event here.
+EUR/ETH remains the original dated input, 2,164.73.
+
+Execution = original local-EVM gas used multiplied by 6,661 wei.
+Data fee = historical GasPriceOracle.getL1Fee(unsigned transaction).
+Operator fee = historical GasPriceOracle.getOperatorFee(gas used proxy).
+The oracle address is 0x420000000000000000000000000000000000000F.
+Type-2 transaction envelopes retain original destination, calldata, value,
+nonce and gas limit; the chain ID is 10 and fee fields are the stated OP
+scenario. Every fee is calculated before conversion to EUR. Archived RPC
+requests/responses allow offline reconstruction of all 848 quotes.
+
+BOUNDARIES
+This is not execution on OP and not measurement of an ERC-4337 paymaster.
+Original gas usage is a proxy; the same pinned oracle state prices all
+90-day events. Future volatility, OP-specific execution changes, bundling,
+validation, sponsor policy, failed operations and refill overhead/delay are
+not measured. The cash targets are hindsight debit floors and cannot be
+advertised as safe production deposits. These two B2 cases do not establish
+that funding constraints can never matter on L2 or at larger scale.
+
+FILES AND SOURCES
+OP_FEE_COMPONENTS.csv and OP_FUNDING_SUMMARY.csv contain the exact quantities.
+Full evidence and reproduction scripts (for information only):
+https://github.com/KuznetsovKarazin/zksnark-benchmark/tree/econ08-native-pilot/projects/pets4defi/econ08/technical_followup_v05/op_projection
+Historical price source in the repository:
+examples/pets4defi_access_v2/results/fee_snapshot.json
+Official oracle specification:
+https://specs.optimism.io/protocol/predeploys.html
+Official operator-fee interfaces and subsequent formula change:
+https://specs.optimism.io/protocol/isthmus/predeploys.html
+https://specs.optimism.io/protocol/jovian/exec-engine.html
+ERC-4337 deposit and prefunding context:
+https://eips.ethereum.org/EIPS/eip-4337

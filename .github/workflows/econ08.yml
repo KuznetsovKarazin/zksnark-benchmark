@@ -41,6 +41,14 @@ jobs:
           python3 -m unittest discover -s scripts/econ08 -p 'test_check.py' -v
       - name: Verify all 512 proofs and signed transaction hashes
         run: node scripts/econ08/verify_proofs.mjs --expected-proofs 512 results/econ08_native_pilot results/econ08_cohort/runs/*
+      - name: Verify bounded timing follow-up and common-cost calibration
+        run: |
+          python3 -m unittest discover -s ../../projects/pets4defi/econ08/technical_followup_v05 -p 'test_followup.py' -v
+          node scripts/econ08/verify_followup.mjs
+          node scripts/econ08/verify_op_projection.mjs
+          python3 ../../projects/pets4defi/econ08/technical_followup_v05/analyze.py
+          python3 ../../projects/pets4defi/econ08/technical_followup_v05/summarize_op.py
+          git diff --exit-code -- ../../projects/pets4defi/econ08/technical_followup_v05
       - name: Check authenticated status-list component
         working-directory: projects/pets4defi/econ08/status-list
         run: |
