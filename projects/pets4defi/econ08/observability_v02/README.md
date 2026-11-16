@@ -11,8 +11,8 @@ demonstrated. Independent assessment of scientific novelty remains open.
 
 ## Start here
 
-* Russian review: [PDF](ECON08_Observability_Review_RU_v0_2.pdf) / [DOCX](ECON08_Observability_Review_RU_v0_2.docx) — six-page results and assessment.
-* [Nataliya's task](handoff/START_HERE.md) — one short economic note and a supplied payment table.
+* English review: [PDF](ECON08_Observability_Review_EN_v0_2.pdf) / [DOCX](ECON08_Observability_Review_EN_v0_2.docx) — six-page results and assessment.
+* [Nataliya's revised task](handoff/START_HERE.md) — one short economic note and a supplied payment table.
 * [Conditional statements and proofs](proofs/CONDITIONAL_RESULTS.md).
 * [Model and scope](MODEL.md) and [related work](review/RELATED_WORK.md).
 * [Validation record](VALIDATION.md), [numeric checks](results/validation.json) and [changes from v0.1](CHANGES.md).
@@ -33,7 +33,7 @@ python3 reproduce.py
 
 Use Python 3.12 for the recorded byte-exact reproduction; the code requires only
 the Python standard library and can run on Python 3.10+. The command checks the package hashes,
-runs 34 unit tests, replays all 54 archived scenarios, reruns every modeled grid and
+runs 38 unit tests, replays all 54 archived scenarios, reruns every modeled grid and
 exact check in a temporary directory, then compares every result file byte for
 byte. It also regenerates and compares the two small handoff CSVs. It does not overwrite the published results. Runtime varies by CPU; allow
 several minutes. No credentials or network access are needed for reproduction.

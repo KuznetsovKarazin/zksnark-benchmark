@@ -24,3 +24,20 @@
 The old claim that common epochs dominate all randomized relaxations is not used.
 The strong guarantees and empirical attack findings are reported under their exact
 conditions; scientific novelty is not certified by a passing test suite.
+
+## Economic handoff revision 2 and English publication
+
+16 November 2026. The technical pilot remains v0.2. Added a beneficiary-funded
+benchmark allocating the common-minus-selective premium equally per active holder,
+compared with SELF and the two existing issuer-funded rules. The payment table
+now has 96 actor rows and 12 balanced comparisons; the previous 72 rows retain
+their numbers. Four tests check unequal populations, symmetric equivalence to
+SELF, exact fractional budget balance and invalid empty populations. All 26
+technical result files and the original source evidence remain unchanged.
+
+The task now explicitly explains the symmetric issuer-plus-holder circular
+transfer and the approximately EUR 0.73 historical premium per holder over
+90 days. The Russian review and its generator text are replaced by English
+versions; the standalone ZIP is rebuilt as EN revision 2. Historical commits
+remain available and the earlier sent email points to its original immutable
+commit. Use the current START_HERE and EN revision 2 package for new work.

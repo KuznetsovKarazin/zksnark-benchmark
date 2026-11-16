@@ -22,7 +22,7 @@ for name,size in [('Title',22),('Heading 1',16),('Heading 2',12)]:
     style=doc.styles[name];style.font.name='Arial';style.font.size=Pt(size)
     style.font.color.rgb=RGBColor(0,0,0)
     style.paragraph_format.space_before=Pt(8);style.paragraph_format.space_after=Pt(7)
-doc.core_properties.title='Цена сокрытия эмитента: условная граница и измеренные затраты'
+doc.core_properties.title='The cost of hiding the issuer'
 doc.core_properties.subject='ECON08 observability pilot v0.2; research review'
 doc.core_properties.author='Oleksandr Kuznetsov'
 footer=sec.footer.paragraphs[0];footer.alignment=2
@@ -36,6 +36,10 @@ def table(headers,rows,widths):
     t=doc.add_table(rows=1,cols=len(headers));t.style='Table Grid';t.autofit=False
     t.alignment=WD_TABLE_ALIGNMENT.CENTER
     for col,w in zip(t.columns,widths):col.width=Cm(w)
+    borders=OxmlElement('w:tblBorders')
+    for edge in ['top','left','bottom','right','insideH','insideV']:
+        e=OxmlElement('w:'+edge);e.set(qn('w:val'),'single');e.set(qn('w:sz'),'4');e.set(qn('w:color'),'D9D9D9');borders.append(e)
+    t._tbl.tblPr.append(borders)
     for cell,text,w in zip(t.rows[0].cells,headers,widths):
         cell.width=Cm(w);cell.text=text
         for r in cell.paragraphs[0].runs:r.bold=True
@@ -56,79 +60,80 @@ def fig(name,caption,width=17):
     x=p(caption)
     for r in x.runs:r.font.size=Pt(9)
 
-doc.add_heading('Цена сокрытия эмитента',0)
-p('Условная граница и измеренные затраты · ECON08 v0.2 · 16 ноября 2026')
-p('Результат',True)
-p('Продолжение имеет смысл. В заданной архитектуре публично различимого кеша общая эпоха минимизирует число полных авторизаций при совершенном сокрытии эмитента. Пилот измеряет цену этого требования и проверяет, как ослабление сокрытия меняет затраты. Это узкая архитектурная граница, а не универсальная теорема о credential-системах. Научная новизна отдельной статьи требует независимой проверки.')
-table(['Что изменено','Что получено'],[
- ['Общая эпоха','Доказательства необходимости общей инвалидации и минимума числа авторизаций; проверка 576 малых расписаний.'],
- ['Одна монета на публикацию','Точная недельная кривая по 21 значению ρ. При ρ=0,75 экономия 6,11%, при ρ=0,95 — 1,22% относительно общей эпохи.'],
- ['Анонимные публикации','1 800 прогонов кластеризации для 16/32/64 держателей; отдельный учёт ошибок после внешней привязки.'],
- ['Доступность','Полная сетка сбоев и свежести; правило двух ветвей обозначено как известная по смыслу лемма.'],
- ['Экономика','Три случая, 96 коалиционных стоимостей и два правила компенсации. Готова небольшая задача Наталье.']],[4.3,12.7])
-p('Объём проверки',True)
-p('54 архивных сценария: 8 832 решения воспроизведены без расхождений. Новые модельные сетки: 78 168 прогонов и 25 246 120 решений. Дополнительно выполнены точные переборы; в комплекте 34 модульных теста. Команда reproduce.py повторяет вычисления и сверяет численные файлы побайтно. Это внутренняя проверка, не внешняя репликация.')
-p('Новые EVM-измерения не проводились. Для всех новых политик используются одинаковые архивные коэффициенты B1: первый доступ 464 200 gas, кеш 67 610 gas, повторная полная авторизация 355 749 gas. Нового контракта или реализации приватного выборочного кеша нет.')
-p('Исправления интерпретации',True)
-p('Случайное покрытие одной монетой не доминируется общей эпохой по всем метрикам: оно даёт реальную экономию. Однако ε=ln(1/ρ) не является гарантией для полного наблюдения. Кластеризация без меток эмитентов не равна их автоматическому именованию. Нулевой успех одного алгоритма не доказывает приватность.')
+doc.add_heading('The cost of hiding the issuer',0)
+p('Conditional bounds and modeled access costs | ECON08 v0.2 | 16 November 2026')
+p('Result',True)
+p('The bounded follow-up is justified. In the specified observable-cache architecture, common invalidation minimizes the number of full authorizations under perfect issuer hiding. The pilot quantifies this requirement and the cost savings obtained by relaxing hiding. This is an architectural result, not a universal theorem about credential systems. A distinct scientific contribution still requires independent review.')
+table(['Component','Evidence'],[
+ ['Common invalidation','Scoped necessity and authorization-count optimality proofs; exhaustive checks on 576 small schedules.'],
+ ['One coin per publication','Exact weekly curve at 21 rho values. Savings against common invalidation: 6.11% at rho=0.75 and 1.22% at rho=0.95.'],
+ ['Anonymous publications','1,800 clustering runs with 16/32/64 holders; separate correct and false attribution after an external anchor.'],
+ ['Availability','Full outage and freshness grid; the two-branch support condition is a supporting partition lemma.'],
+ ['Economic incidence','Three cases, 96 coalition costs, two issuer-funded allocations and an equal-per-holder beneficiary benchmark.']],[4.3,12.7])
+p('Validation scope',True)
+p('All 8,832 access decisions in 54 archived scenarios match the replay. The modeled grids contain 78,168 runs and 25,246,120 decisions. Exact enumerations supplement these runs. The original 34 unit tests are retained; four beneficiary-accounting tests bring the total to 38. The reproduction command reruns the calculations and compares numeric files byte for byte. This is internal validation, not external replication.')
+p('No new EVM measurements were made. All new policies use the same archived B1 gas coefficients: 464,200 for first access, 67,610 for a cache hit and 355,749 for reauthorization. No new contract or private selective-cache implementation is supplied.')
+p('Interpretation',True)
+p('One-coin cover gives real cost savings, but ln(1/rho) is not a privacy bound for the full observation. Clustering anonymous histories does not automatically name their issuers. Failure of one attack algorithm is not evidence of security against stronger observers.')
 
-page('Что именно доказано')
-p('Условия модели',True)
-p('Один неизменный скрытый эмитент, заданные успешные обращения и публичные публикации с известными эмитентами. Наблюдатель связывает обращения и различает full/hit. Полная авторизация обновляет TTL и поглощает все предшествующие публикации. Кеш не выполняет независимой проверки текущего статуса. Правило безопасности требует обновления после публикации своего эмитента, когда истёк допуск δ. Допуск не означает периодическое пакетирование.')
-p('1. Необходимость общей инвалидации',True)
-p('Если после публикации эмитента j кеш уже недопустим для j, безопасный ответ для этой гипотезы обязан быть full. Одинаковый транскрипт для всех эмитентов требует full и для остальных гипотез. Несколько публикаций могут быть поглощены одной авторизацией; без обращения транзакция не требуется.')
-p('2. Минимум числа авторизаций',True)
-p('Общая политика обновляет статус только при первой необходимости. Более поздняя последняя авторизация поглощает больше публикаций и позже исчерпывает TTL. По индукции k-я авторизация любой допустимой политики происходит не позже k-й авторизации общей политики. Поэтому альтернативная политика не может использовать меньше полных вызовов. При постоянных коэффициентах full дороже hit, следовательно минимален и условный gas.')
-p('Граница утверждения',True)
-p('Обязательная инвалидация после своего события — предпосылка архитектуры, а не следствие безопасности всех анонимных credential. При скрытых классах обращений, частном обновлении witness, другом контракте или независимой проверке в hit доказательство нужно пересматривать. При меняющейся цене газа минимум числа вызовов не обязательно минимизирует евро: в пакете есть численный контрпример с ранним дешёвым обновлением.')
-p('Рандомизация не устраняет нулевые вероятности',True)
-p('Для одного изолированного события P(full | свой)=1 и P(full | чужой)=ρ. Но P(hit | свой)=0 и P(hit | чужой)=1−ρ. При ρ<1 на исходе hit отношение вероятностей бесконечно. Поэтому конечной двусторонней гарантии ε для всех исходов нет. ln(1/ρ) описывает только исход full. Однособытийная гарантия с добавочным допуском η требует η≥1−ρ; гарантии композиции здесь не заявлены.')
-p('Если всё же требовать конечное двустороннее отношение вероятностей для полных транскриптов при безошибочной безопасности, их носители должны совпадать. Запрещённый для одного эмитента hit запрещён для всех. Нижняя граница числа авторизаций сохраняется и при рандомизации.')
-p('Подробные определения и доказательства: proofs/CONDITIONAL_RESULTS.md. Аргументы монотонности и совпадения носителей стандартны; возможный вклад — их точная специализация, наблюдаемая граница и экономическая калибровка. Пересечение множеств и selective failure не объявляются новыми.')
+page('What the conditional results establish')
+p('Model assumptions',True)
+p('There is one fixed hidden issuer, a fixed sequence of successful accesses and public issuer-labeled publications. The observer links accesses and distinguishes full authorization from a cache hit. A full authorization resets TTL and absorbs earlier publications. A hit does not independently verify current status. After an own-issuer publication and the expiry of grace delta, the architecture requires a full authorization. Grace is not a batching interval.')
+p('Necessary common invalidation',True)
+p('Once a publication makes a hit invalid for issuer j, safety requires a full authorization under that issuer hypothesis. An identical transcript for all issuer hypotheses therefore requires a full under every hypothesis. One authorization can absorb several publications; no transaction is required when there is no access.')
+p('Minimum number of authorizations',True)
+p('The common policy refreshes at the first access where it must. A later last authorization absorbs more publications and expires later under TTL. By induction, the kth full of any feasible alternative occurs no later than the kth full of the common policy. No alternative can use fewer full calls. With fixed coefficients and full more expensive than hit, this also minimizes access-gas cost.')
+p('Boundary of the claim',True)
+p('Mandatory own-event invalidation is an architectural assumption. Hidden access classes, private witness updates or an independent status check on a hit require a different argument. Minimum authorization count need not minimize monetary expenditure with changing gas prices; the package includes an early-cheap-refresh counterexample.')
+p('Randomization and zero probabilities',True)
+p('For an isolated update, a full has probability 1 for its own issuer and rho for a foreign issuer. A hit has probability 0 for its own issuer and 1-rho for a foreign issuer. Thus the worst-case two-sided likelihood ratio is infinite whenever rho is below 1. The expression ln(1/rho) describes only the full outcome. An additive-slack guarantee for this isolated event requires slack at least 1-rho; no composition guarantee is claimed.')
+p('A finite two-sided likelihood-ratio guarantee over complete transcripts requires matching support. A hit forbidden under one issuer hypothesis must be forbidden under every hypothesis. The authorization-count bound therefore also applies to randomized policies with that guarantee and zero-error safety.')
+p('Full definitions and proofs are in proofs/CONDITIONAL_RESULTS.md. Monotonicity and support arguments are standard. The possible contribution is their scoped application, quantitative boundary and economic calibration, not the invention of intersection or selective-failure attacks.')
 
-page('Одна монета на публикацию')
-p('Чужая публикация выбирается для покрытия один раз с вероятностью ρ. Пропущенное событие не получает новой попытки на следующем обращении. Публикации своего эмитента всегда требуют обновления. Последующий full, в том числе по TTL, поглощает все предыдущие события.')
-p('Недельный пример: четыре эмитента, 90 дней, 100 обращений, TTL 30 дней, δ=0, 12 поочерёдных публикаций. Для каждого эмитента три события свои и девять чужие. Точно: E[R]=4+9ρ. Число оставшихся кандидатов K=1+Binomial(3,ρ³); остаточная энтропия равна E[log₂K].')
-fig('01_one_coin_frontier.png','Рисунок 1. Точные ожидания, проверенные перебором 4 096 бинарных историй для каждой точки. Начальная энтропия — 2 бита.')
+page('One coin per publication')
+p('Each foreign publication is selected once for cover with probability rho. A skipped event is not retried on the next access. Own-issuer publications always require refresh. Any later full, including a TTL refresh, absorbs all preceding events.')
+p('The weekly case has four issuers, 90 days, 100 accesses, TTL 30 days, zero grace and 12 rotating publications. Each issuer has three own and nine foreign events. The exact expected number of authorizations is 4+9rho. Final candidate count follows 1+Binomial(3,rho cubed); residual entropy is the expected base-2 logarithm of that count.')
+fig('01_one_coin_frontier.png','Figure 1. Exact expectations, checked against 4,096 binary histories at every point. Initial entropy is 2 bits.')
 rows=[]
 for rho in [0,.25,.75,.95,1]:
     r=next(x for x in weekly if float(x['rho'])==rho)
-    rows.append([str(rho),f"{float(r['expected_authorizations']):.2f}",f"{float(r['gas_proxy'])/1e6:.3f}",
-                 f"{float(r['entropy_bits']):.3f}",f"{float(r['singleton_probability'])*100:.2f}%"])
-table(['ρ','E[R]','Gas, млн','Энтропия, бит','Один кандидат'],rows,[1.5,2,3.5,4.3,5.7])
-p('Общая эпоха: 13 авторизаций и 10 615 258 gas; выборочная политика: 4 и 8 022 007 gas. Разница — 2 593 251 gas на держателя. Экономия при переходе к выборочной политике составляет 24,43% от общей стоимости; обратная надбавка составляет 32,33% от выборочной. Знаменатели различаются.')
-p('При ρ=0,75 точное определение эмитента случается в 19,32% историй; при ρ=0,95 — в 0,29%. Это не вероятность успешной догадки: даже при нескольких кандидатах наблюдатель может угадывать. Bayes accuracy отдельно сохранена в таблице. Вывод относится к этому горизонту и расписанию, а не ко всем будущим историям.')
+    rows.append([str(rho),f"{float(r['expected_authorizations']):.2f}",f"{float(r['gas_proxy'])/1e6:.3f}",f"{float(r['entropy_bits']):.3f}",f"{float(r['singleton_probability'])*100:.2f}%"])
+table(['rho','Expected fulls','Million gas','Entropy in bits','Singleton'],rows,[1.4,3.6,3.7,4.5,3.8])
+p('Common invalidation requires 13 authorizations and 10,615,258 gas per holder; selective invalidation requires 4 and 8,022,007. The difference is 2,593,251 gas. Selective saves 24.43% relative to common; common costs 32.33% more relative to selective. These use different denominators.')
+p('At rho=0.75, the issuer is identified exactly in 19.32% of histories; at rho=0.95, in 0.29%. Singleton probability differs from successful guessing: an observer can guess among several candidates. Bayes accuracy is reported separately. These findings concern this horizon and schedule.')
 
-page('Что видно без меток эмитентов')
-p('Наблюдателю передаются времена анонимных публикаций и связуемые full/hit-истории держателей. Истинный эмитент и номера классов исключены из интерфейса атаки. Расписания обращений независимы; идентификаторы держателей перемешаны. Истина используется только для оценки качества.')
-fig('02_anonymous_clustering.png','Рисунок 2. Фиксированный алгоритм кластеризации, 20 семян на точку. ARI=1 означает точное восстановление классов, ARI≈0 — случайное соответствие. Полная сетка содержит 16/32/64 держателя.')
-p('Проверочная точка: 32 держателя, по восемь на эмитента, 100 обращений на держателя, в среднем 12 публикаций на эмитента за 90 дней. Для выборочной политики все четыре класса восстановлены во всех 20 прогонах. Один известный держатель позволяет правильно подписать ещё семь участников его кластера, а не всю популяцию.')
+page('What anonymous publication histories reveal')
+p('The observer receives anonymous publication times and linkable holder full/hit histories. True issuers and class labels are excluded from its input. Holder handles are shuffled and access schedules are independently sampled. Ground truth is used only for evaluation.')
+fig('02_anonymous_clustering.png','Figure 2. Fixed clustering algorithm, 20 seeds per point. ARI=1 means exact class recovery; ARI near zero indicates chance agreement. The full grid covers 16/32/64 holders.')
+p('At the selected 32-holder point, each issuer has eight holders and an expected 12 publications over 90 days; each holder makes 100 accesses. All four selective-policy classes are recovered in all 20 runs. One known holder can correctly label seven other members of its cluster, not the entire population.')
 rows=[]
-for policy,label in [('selective','Выборочная'),('coin_0.25','ρ=0,25'),('coin_0.75','ρ=0,75'),('coin_0.95','ρ=0,95'),('common','Общая')]:
+for policy,label in [('selective','Selective'),('coin_0.25','rho=0.25'),('coin_0.75','rho=0.75'),('coin_0.95','rho=0.95'),('common','Common')]:
     r=next(x for x in cluster if x['holders_per_issuer']=='8' and x['accesses']=='100' and x['nu']=='12' and x['policy']==policy)
     rows.append([label,f"{float(r['ari_mean']):.4f}",f"{float(r['pair_auc_mean']):.3f}",f"{float(r['anchor_precision_pooled'])*100:.1f}%"])
-table(['Политика','ARI','AUC пар','Верны среди приписанных'],rows,[4,2.5,3,7.5])
-p('При сильном покрытии этот простой алгоритм часто строит неверные кластеры. Перенос имени эмитента с одного известного держателя тогда даёт много ложных приписываний. В CSV сохранены охват, правильные и неправильные привязки; одной точности без охвата недостаточно.')
-p('Этот эксперимент не доказывает атаку на дизайн Ethereum Foundation. Для переноса необходимо отдельно установить наличие связуемых обращений и наблюдаемого full/hit-канала. Общий реестр с анонимными публикациями сам по себе таких наблюдений не гарантирует.')
+table(['Policy','ARI','Pair AUC','Correct among attributed'],rows,[4,2.5,3,7.5])
+p('Strong cover often makes this simple algorithm produce incorrect clusters. Propagating an issuer label from one known holder then creates false attributions. The CSVs report coverage and correct and incorrect links; precision alone is insufficient.')
+p('This is not a demonstrated attack on the Ethereum Foundation design. Applying the result requires evidence of linkable accesses and an observable full/hit channel. A shared registry with anonymous publications does not itself establish either condition.')
 
-page('Доступность: полная сетка вместо одной точки')
-p('При видимых попытках и совершенном сокрытии одна небезопасная гипотеза эмитента требует общего отказа. Если достаточно хотя бы k кандидатов, обе непустые ветви accept/deny должны содержать не менее k кандидатов. Это вспомогательная лемма о разбиении множества, а не заявка на новую общую теорию анонимности.')
-fig('03_availability_grid.png','Рисунок 3. Четыре эмитента, k=2. Вероятности переходов заданы на сутки; это сценарии чувствительности, не оценка надёжности реальной сети.',width=16)
-p('Сетка включает 4/8 эмитентов, вероятность отказа 0,02/0,1 и восстановления 0,2/0,5 в сутки, допустимый возраст F=1/3/7 дней, три уровня k и 20 семян. Heartbeat публикуется в начале каждого рабочего дня. Доступность — доля принятых запланированных запросов.')
-p('В стрессовой точке n=4, k=2, F=1, отказ 0,1 и восстановление 0,5: общая остановка даёт 49,56%, текущий fresh-k — 82,72%, защита истории — 69,25%. Fresh-k не сохраняет размер множества после пересечения историй. При k=3 защита истории совпадает с общей остановкой.')
-p('Больший F повышает доступность ценой допуска более старого статуса. Правило защиты истории оптимизирует число принимаемых кандидатов только на одном шаге; справедливость и суммарное качество обслуживания на всей истории не доказаны. Денежная цена простоя и оптимальная частота heartbeat здесь не оценены.')
-p('Связь с предшественниками: ABC4Trust D2.2 обсуждает выборочный отзыв и время обновлений; Danezis и Serjantov — раскрытие и пересечения. Свежесть CRL/OCSP и recency requirements Rivest являются исходной рамкой. Полные ссылки и отличия: review/RELATED_WORK.md.')
+page('Availability across the full sensitivity grid')
+p('With visible attempts and perfect hiding, one unsafe issuer hypothesis requires a common rejection. Under a support requirement of at least k candidates, both nonempty accept/deny branches must retain at least k candidates. This is a supporting set-partition lemma, not a new general theory of anonymity.')
+fig('03_availability_grid.png','Figure 3. Four issuers and k=2. Daily transition probabilities are sensitivity assumptions, not estimated deployment reliability.',width=16)
+p('The grid covers 4/8 issuers, daily outage probabilities 0.02/0.1, daily recovery probabilities 0.2/0.5, freshness caps of 1/3/7 days, three support thresholds and 20 seeds. An online issuer publishes a heartbeat at the start of each day. Availability is the fraction of scheduled requests accepted.')
+p('At n=4, k=2, freshness cap 1 day, outage probability 0.1 and recovery probability 0.5, common admission gives 49.56% availability, current fresh-k 82.72% and the history guard 69.25%. Fresh-k does not preserve support after intersecting histories. At k=3, the guard reduces to common admission.')
+p('A larger freshness cap improves availability while accepting older status. The guard maximizes accepted candidate count at one step; fairness and service quality across the entire history are not proved. Downtime valuation and optimal heartbeat frequency are unmeasured.')
+p('ABC4Trust D2.2 discusses selective revocation and update timing. Disclosure and intersection attacks have earlier treatments by Danezis and Serjantov. CRL/OCSP freshness and Rivest recency requirements provide related context. Full sources and distinctions are in review/RELATED_WORK.md.')
 
-page('Экономический результат и задача Наталье')
-p('Газ, вызванный чужими публикациями, оплачивают держатели. Компенсация переносит финансовую нагрузку на эмитентов и не устраняет ресурсные затраты. Для каждого набора держателей вычислена стоимость всех подмножеств чужих публикаций; учтены и поздние отрицательные поправки из-за сдвига TTL.')
-fig('04_compensation.png','Рисунок 4. Асимметричный случай A=32: частотное правило и распределение Шепли. Общая компенсация одинакова — 116 120 017 gas в эквиваленте. Расчёты модельные.')
-p('Недельный A=4: надбавка общей эпохи — 10 373 004 gas на четырёх держателей за 90 дней. При исторических q₀=0,130658648 gwei/gas и e₀=2 164,73 EUR/ETH это €2,93 на группу, или €0,7335 на держателя. Это условная стоимость доступов; запуск, выпуск, публикации и расчёты по компенсациям сюда не включены.')
-p('Конкретный первый результат Натальи',True)
-p('Заполнить готовую десятиколоночную таблицу для SELF, компенсации по частоте публикаций и распределения Шепли. Проверить расходы, полученные/уплаченные компенсации и итоговую нагрузку; пересчитать историческую цену и сценарии ×10/×100. Начать с A=4, сравнить распределение в асимметричном A=32. Вернуть таблицу и записку на 2–3 страницы, мягкий ориентир — 30 ноября.')
-p('Нужна оценка бюджетного баланса, проверяемости, административных затрат и риска стимулов откладывать отзыв. Правила уже заданы нами. Их совместимость со стимулами не доказана; полные затраты и готовность платить нельзя выводить из одной компенсационной таблицы.')
-p('Её предыдущий addendum v0.2.1 завершён: малый эффект пулинга и различие между капиталом и расходом сохраняются. Новое задание не просит пересчитать этот отрицательный результат. Технический отчёт и доказательства — только для ознакомления; краткий вход — handoff/START_HERE.md.')
-p('Мой вывод',True)
-p('Теперь есть проверяемая узкая постановка и содержательный случайный компромисс. Следующий научный шаг — независимая проверка доказательств и отстройки от PUB-01/ABC4Trust, а не новый контракт. Утверждение о готовой новизне, универсальной цене приватности или пригодности для конкретного журнала было бы преждевременным.')
+page('Economic incidence and the next task')
+p('Common invalidation consumes additional gas. A payment rule changes who finances that gas, not the resource total. The supplied coalition costs include later negative event differences caused by TTL shifts. Aggregate costs remain balanced.')
+fig('04_compensation.png','Figure 4. The two issuer-funded allocations for modeled asymmetric A=32. Both reimburse 116,120,017 gas equivalent. The beneficiary benchmark below instead charges holders.')
+p('Compare SELF with three allocation rules: foreign-publication frequency, Shapley marginal externality and beneficiary pays. The beneficiary benchmark divides the total common-minus-selective premium equally across all active holders, regardless of their issuer. Each group bears its selective baseline plus its holder count times the common per-person premium. Net settlement among holder groups reconciles this allocation with gas they actually paid. Issuers pay no reimbursement under this benchmark.')
+p('In symmetric weekly A=4, each issuer pays 2,593,251 gas equivalent under either issuer-funded rule and its own holder receives the same amount. Consolidating each issuer with its affiliated holder gives a zero net transfer; these remain distinct economic actors. The beneficiary rule coincides with SELF here. Use asymmetric A=32 to examine distributional differences.')
+p('The weekly premium is 10,373,004 gas for four holders. At historical q0=0.130658648 gwei and EUR/ETH=2,164.73, that is about EUR 2.93 per group or EUR 0.73 per holder over 90 days. This small reference magnitude must be explicit. Startup, issuance, publications and settlement overhead are outside this access-only comparison.')
+p('Nataliya should return a 2–3 page note, the completed 96-row payment table and a short missing-input list by the soft target of 30 November. Check the historical and x10/x100 scenarios, budget balance, administrative effort and reporting incentives. An equal beneficiary allocation is a normative benchmark, not evidence of equal willingness to pay or incentive compatibility.')
+p('The prior funding addendum v0.2.1 remains complete. No new paymaster calculation or cryptographic review is requested. Oleksandr retains responsibility for technical inputs and independent assessment of the claims and novelty. The short entry point is handoff/START_HERE.md.')
 
-doc.save(ROOT/'ECON08_Observability_Review_RU_v0_2.docx')
-print('Review created: six planned pages')
+# Remove inherited decorative paragraph rules from the document and styles.
+for element in [doc._element, doc.styles.element]:
+    for border in list(element.iter(qn('w:pBdr'))):
+        border.getparent().remove(border)
+doc.save(ROOT/'ECON08_Observability_Review_EN_v0_2.docx')
+print('English review created: six planned pages')

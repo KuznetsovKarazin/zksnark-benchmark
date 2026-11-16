@@ -5,7 +5,7 @@ independent external review, new EVM measurement or scientific novelty decision.
 
 `python3 reproduce.py` completed with exit status 0:
 
-* 34 unit tests passed.
+* The original 34 unit tests passed.
 * 73 source files verified; 54 archived scenarios and 8,832 access decisions
   replayed with zero discrepancies.
 * 576 small schedules agreed with exhaustive optimality enumeration.
@@ -18,7 +18,7 @@ independent external review, new EVM measurement or scientific novelty decision.
   bundled files byte for byte.
 * The two handoff CSVs were regenerated and matched byte for byte. Nine actor
   comparisons balance transfers and resource totals; there are 72 actor rows.
-* Four figures and all six pages of the Russian review were visually inspected.
+* Four figures and all six pages of the original review were visually inspected.
   Local Markdown links resolve within the standalone package.
 
 See [reproduction log](REPRODUCTION_LOG.txt), [numeric validation](results/validation.json)
@@ -36,3 +36,13 @@ The remaining limits are in [MODEL.md](MODEL.md) and the
 [conditional statements](proofs/CONDITIONAL_RESULTS.md). In particular, high cover
 probabilities defeating the supplied clustering baseline do not prove security
 against stronger attackers, and no attack against the EF design is demonstrated.
+
+## Revision 2 validation
+
+The English revision adds four beneficiary-accounting tests (38 tests total).
+The payment handoff contains 96 actor rows and 12 balanced comparisons, including
+SELF and the three allocation rules. The original 72 actor rows retain their
+numerical values. Technical model results are unchanged. The English review
+is rendered and visually checked before packaging. The final manifest covers
+all current package files except itself. Earlier reproduction logs are historical;
+`reproduce.py` runs the current tests and compares the current handoff.

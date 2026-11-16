@@ -10,7 +10,7 @@ Scientific novelty still requires independent review.
 Nataliya's Economic Addendum v0.2.1 completes the earlier funding task. Its small
 pooling effect and the distinction between retained capital and gas expenditure
 remain accepted. The new assignment concerns **who pays the cost of hiding issuer
-reactions and how issuer compensation changes that burden**. It does not reopen the
+reactions and how issuer-funded or beneficiary-funded allocation changes that burden**. It does not reopen the
 pooling calculation. Soft first-return target: **30 November 2026**, adjustable.
 
 ## Current entry points
@@ -19,10 +19,10 @@ pooling calculation. Soft first-return target: **30 November 2026**, adjustable.
   [prefilled payment table](observability_v02/handoff/payment_comparison_REFERENCE.csv),
   [historical price inputs](observability_v02/handoff/price_inputs.csv).
   Return a 2–3 page note and the completed table. Start with weekly A=4, then
-  compare the two compensation rules in asymmetric A=32; the latter is modeled.
-- **Complete standalone download:** [ECON08 Observability v0.2 ZIP](packages/ECON08_Observability_v0_2_2026-11-16.zip).
+  compare three allocation rules against SELF in asymmetric A=32; the latter is modeled.
+- **Complete standalone download:** [ECON08 Observability v0.2 ZIP](packages/ECON08_Observability_v0_2_EN_rev2_2026-11-16.zip).
   Contains code, inputs, all numeric outputs, figures, proofs and the handoff.
-- **Oleksandr and reviewer:** [six-page Russian PDF](observability_v02/ECON08_Observability_Review_RU_v0_2.pdf),
+- **Oleksandr and reviewer:** [six-page English PDF](observability_v02/ECON08_Observability_Review_EN_v0_2.pdf),
   [proofs](observability_v02/proofs/CONDITIONAL_RESULTS.md),
   [model](observability_v02/MODEL.md), [validation](observability_v02/results/validation.json).
 - **Completed preceding work:** [funding follow-up v0.5](technical_followup_v05/README.md)
@@ -132,7 +132,7 @@ The report records the actual local source commit `012044c17d4dc98ca6eae8f696e04
 ## Nataliya's current deliverable
 
 Use the [v0.2 task](observability_v02/handoff/START_HERE.md). The technical quantity
-inputs and three reference payment rules are fixed. The note should distinguish
+inputs and four alternatives (SELF plus three allocation rules) are fixed. The note should distinguish
 resource cost, transfers and net actor burden, and assess the incentive limits of
 charging issuers for effects on foreign holders. Technical proofs and the full
 research report are for information only for this checkpoint.

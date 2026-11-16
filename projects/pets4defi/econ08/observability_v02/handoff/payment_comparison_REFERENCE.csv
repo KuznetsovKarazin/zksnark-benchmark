@@ -23,6 +23,14 @@ weekly_A4,shapley_externality,issuer_1,0,2593251.0,0,2593251.0,,,"publication/se
 weekly_A4,shapley_externality,issuer_2,0,2593251.0,0,2593251.0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 weekly_A4,shapley_externality,issuer_3,0,2593251.0,0,2593251.0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 weekly_A4,shapley_externality,issuer_4,0,2593251.0,0,2593251.0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A4,beneficiary_equal_per_holder,holder_group_1,10615258,0.0,0.0,10615258.0,,,1 active holders; access-only scope; selective baseline 8022007 gas; allocated premium 2593251.0 gas eq; paid/received are net settlement among holder groups
+weekly_A4,beneficiary_equal_per_holder,holder_group_2,10615258,0.0,0.0,10615258.0,,,1 active holders; access-only scope; selective baseline 8022007 gas; allocated premium 2593251.0 gas eq; paid/received are net settlement among holder groups
+weekly_A4,beneficiary_equal_per_holder,holder_group_3,10615258,0.0,0.0,10615258.0,,,1 active holders; access-only scope; selective baseline 8022007 gas; allocated premium 2593251.0 gas eq; paid/received are net settlement among holder groups
+weekly_A4,beneficiary_equal_per_holder,holder_group_4,10615258,0.0,0.0,10615258.0,,,1 active holders; access-only scope; selective baseline 8022007 gas; allocated premium 2593251.0 gas eq; paid/received are net settlement among holder groups
+weekly_A4,beneficiary_equal_per_holder,issuer_1,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A4,beneficiary_equal_per_holder,issuer_2,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A4,beneficiary_equal_per_holder,issuer_3,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A4,beneficiary_equal_per_holder,issuer_4,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 weekly_A32,SELF,holder_group_1,84922064,0,0,84922064,,,8 active holders; access-only scope
 weekly_A32,SELF,holder_group_2,84922064,0,0,84922064,,,8 active holders; access-only scope
 weekly_A32,SELF,holder_group_3,84922064,0,0,84922064,,,8 active holders; access-only scope
@@ -47,6 +55,14 @@ weekly_A32,shapley_externality,issuer_1,0,20746008.0,0,20746008.0,,,"publication
 weekly_A32,shapley_externality,issuer_2,0,20746008.0,0,20746008.0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 weekly_A32,shapley_externality,issuer_3,0,20746008.0,0,20746008.0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 weekly_A32,shapley_externality,issuer_4,0,20746008.0,0,20746008.0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A32,beneficiary_equal_per_holder,holder_group_1,84922064,0.0,0.0,84922064.0,,,8 active holders; access-only scope; selective baseline 64176056 gas; allocated premium 20746008.0 gas eq; paid/received are net settlement among holder groups
+weekly_A32,beneficiary_equal_per_holder,holder_group_2,84922064,0.0,0.0,84922064.0,,,8 active holders; access-only scope; selective baseline 64176056 gas; allocated premium 20746008.0 gas eq; paid/received are net settlement among holder groups
+weekly_A32,beneficiary_equal_per_holder,holder_group_3,84922064,0.0,0.0,84922064.0,,,8 active holders; access-only scope; selective baseline 64176056 gas; allocated premium 20746008.0 gas eq; paid/received are net settlement among holder groups
+weekly_A32,beneficiary_equal_per_holder,holder_group_4,84922064,0.0,0.0,84922064.0,,,8 active holders; access-only scope; selective baseline 64176056 gas; allocated premium 20746008.0 gas eq; paid/received are net settlement among holder groups
+weekly_A32,beneficiary_equal_per_holder,issuer_1,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A32,beneficiary_equal_per_holder,issuer_2,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A32,beneficiary_equal_per_holder,issuer_3,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+weekly_A32,beneficiary_equal_per_holder,issuer_4,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 asymmetric_A32,SELF,holder_group_1,100193431,0,0,100193431,,,8 active holders; access-only scope
 asymmetric_A32,SELF,holder_group_2,99617153,0,0,99617153,,,8 active holders; access-only scope
 asymmetric_A32,SELF,holder_group_3,102786682,0,0,102786682,,,8 active holders; access-only scope
@@ -71,3 +87,11 @@ asymmetric_A32,shapley_externality,issuer_1,0,3121505.833333333,0,3121505.833333
 asymmetric_A32,shapley_externality,issuer_2,0,18344849.666666664,0,18344849.666666664,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 asymmetric_A32,shapley_externality,issuer_3,0,30878896.166666664,0,30878896.166666664,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
 asymmetric_A32,shapley_externality,issuer_4,0,63774765.33333333,0,63774765.33333333,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+asymmetric_A32,beneficiary_equal_per_holder,holder_group_1,100193431,0.0,6987370.75,93206060.25,,,8 active holders; access-only scope; selective baseline 64176056 gas; allocated premium 29030004.25 gas eq; paid/received are net settlement among holder groups
+asymmetric_A32,beneficiary_equal_per_holder,holder_group_2,99617153,0.0,2377146.75,97240006.25,,,8 active holders; access-only scope; selective baseline 68210002 gas; allocated premium 29030004.25 gas eq; paid/received are net settlement among holder groups
+asymmetric_A32,beneficiary_equal_per_holder,holder_group_3,102786682,0.0,936451.75,101850230.25,,,8 active holders; access-only scope; selective baseline 72820226 gas; allocated premium 29030004.25 gas eq; paid/received are net settlement among holder groups
+asymmetric_A32,beneficiary_equal_per_holder,holder_group_4,101057848,10300969.25,0.0,111358817.25,,,8 active holders; access-only scope; selective baseline 82328813 gas; allocated premium 29030004.25 gas eq; paid/received are net settlement among holder groups
+asymmetric_A32,beneficiary_equal_per_holder,issuer_1,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+asymmetric_A32,beneficiary_equal_per_holder,issuer_2,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+asymmetric_A32,beneficiary_equal_per_holder,issuer_3,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"
+asymmetric_A32,beneficiary_equal_per_holder,issuer_4,0,0,0,0,,,"publication/setup/settlement costs excluded, not zero lifecycle cost"

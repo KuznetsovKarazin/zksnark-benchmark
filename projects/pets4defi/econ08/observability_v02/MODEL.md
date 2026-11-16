@@ -159,3 +159,14 @@ model with issuer update means [1,3,6,12] over 90 days and independent holder ti
 A is active holders, not the issued population N. There is no new A=32 EVM point.
 Historical q0/e0 are available for illustrative conversion; downtime remains in
 request units unless an independently justified value is provided.
+
+### Beneficiary-funded economic benchmark
+
+Economic handoff revision 2 adds equal allocation of the aggregate access premium
+per active holder. It changes the payment comparison, not the observer model or
+any technical result. For group g, the final access burden is its selective
+baseline plus A_g/A of the total common-minus-selective premium. The payment
+table reconciles this with actual common-policy gas through net holder-to-holder
+settlement; issuers are not charged. Equal sharing is a normative comparison,
+not an estimate of benefit valuations, demand or incentive compatibility.
+See handoff/START_HERE.md for scope and the symmetric control.
