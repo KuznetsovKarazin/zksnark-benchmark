@@ -3,7 +3,7 @@ pragma circom 2.1.6;
 
 include "circomlib/circuits/bitify.circom";
 
-// Доказать: 0 <= x < 2^N
+// Prove: 0 <= x < 2^N
 template RangeProof(N) {
     assert(N > 0);
     signal input x;         // the number to prove
