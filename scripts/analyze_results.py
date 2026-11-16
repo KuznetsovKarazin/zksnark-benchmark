@@ -32,10 +32,10 @@ def plot_with_regression(df: pd.DataFrame, metric: str, out_png: Path) -> None:
     ok = df[(df["success"]) & (df[metric] > 0) & (df["constraints"] > 0)].copy()
     if ok.empty: return
     plt.figure()
-    # точки
+    # Data points
     for name, g in ok.groupby("circuit"):
         plt.loglog(g["constraints"], g[metric], marker="o", linestyle="", label=name)
-    # регрессия по всем точкам
+    # Regression over all data points
     x = np.log(ok["constraints"].values.astype(float))
     y = np.log(ok[metric].values.astype(float))
     A = np.vstack([x, np.ones_like(x)]).T
