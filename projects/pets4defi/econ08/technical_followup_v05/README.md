@@ -1,5 +1,29 @@
 # ECON 08 technical follow up v0.5
 
+## Status checked 16 November 2026
+
+Nataliya's Economic Addendum v0.2.1 (dated 15 November, returned 16 November) completes the requested economic checkpoint ahead of the soft 23 November target. Its ten manifest entries, verifier, K05/K06 split and all six archived daily SELF/PM operating cash cases pass internal review. A separate aggregation from the archived event inputs reproduces the cash targets and expenses. The original economic files and both source archives are preserved.
+
+The next action belongs to Oleksandr: decide whether a precise additional scientific claim warrants a bounded extension. The original full-lifecycle G0a hypothesis has not passed, and the operating pooling inequality alone is not a new contribution. A32 and the broad campaign remain deferred. No further calculation or manuscript assignment is currently pending from Nataliya. The historical assignment below records what she has now completed.
+
+The technical evidence is pinned at commit `333566637e2c67df2edfa2808903fc6beda8dfda`: CI, ECON-08 archived evidence and PETs4DeFi v2 all passed. This status clarification changes documentation only; the data, code, handoff ZIP and original measurements are unchanged. PR #3 remains draft and unmerged.
+
+### Account definition and bounded economic interpretation
+
+In `model_effects.csv` and `MODEL_SUMMARY.csv`, the reported delta K is **PM pool_K with weekly updates minus PM pool_K without updates**. It is neither the SELF change nor the within-scenario pooling gap. The underlying `model_grid.csv` separately reports `SELF_sum_K`. Calculate its weekly-minus-no-update difference using the same scenario, stage and refill key. The within-scenario pooling gap is `SELF_sum_K - pool_K`.
+
+Checking all 5,760 median-grid rows confirms zero full-lifecycle changes for both accounts in all 360 ZK pairs at each daily and weekly refill policy. Daily continuing-service sign counts are:
+
+| Mechanism | PM positive / zero / negative | SELF positive / zero / negative |
+|---|---:|---:|
+| B1 | 44 / 74 / 2 | 56 / 60 / 4 |
+| B2 | 0 / 40 / 80 | 45 / 56 / 19 |
+| B4 | 0 / 40 / 80 | 41 / 58 / 21 |
+
+Each row covers 120 deterministic paired settings, not a probability estimate or new EVM measurements. The archived B2/B4 pattern (higher SELF targets but lower PM target) is therefore not universal for SELF. Published low/median/high coefficient sign checks concern the PM delta; this review has not extended that check to SELF.
+
+For the archived B2 weekly operating case, the 441,106-gas pooling gap releases EUR 0.1247627276 of retained cash at historical q0. With an illustrative common annual capital rate r, an 89/365-year holding period and 392 operating accesses, the conditional PM-only overhead ceiling is `441106 * r * (89/365) / 392 = 274.3810036 * r` gas per access. At r = 10%, the total financing value is about EUR 0.00304216 and the ceiling is 27.4381 gas/access. This is an optimistic conditional ceiling, not measured AA overhead, observed financing rates or commercial viability. A common L1 gas-price multiplier scales the capital value and the gas charge equally; it does not improve this ratio. Fixed costs, changed prefunding requirements, different financing rates and fee/refill risks need separate treatment.
+
 15 November 2026. The first economic checkpoint is complete. This addendum supplies the missing common-cost calibration, an independent event replay and bounded timing controls. Accepted ECON-07 and Nataliya's v0.2.4 submission remain unchanged.
 
 ## Decision after the bounded check
@@ -46,7 +70,7 @@ Let a_i be successive eligible-holder access times, u the first relevant publica
 
 With constant event gas prices, each window debit is the sum of approval, first-authorization, renewal and cache-hit debits. K is the maximum of these window sums. For each reset-to-target account, G = K + subsequent top-ups and G − expense = ending cash. No refill implies K = cumulative expense. Pool K cannot exceed the sum of separate holder K values; equality depends on peak alignment. No Poisson expectation or population scaling has been established in this deterministic study.
 
-## What Nataliya should do now
+## Historical assignment — completed 16 November 2026
 
 Please return **one short addendum, about 1–2 pages**, using the small tables in the v0.5 handoff. A soft target is **23 November**, adjustable together, so we can discuss it before the 25 November meeting.
 
