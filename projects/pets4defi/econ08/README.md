@@ -1,16 +1,39 @@
-# ECON-07 + ECON-08 evidence and research status v0.5
+# ECON-07 + ECON-08 research status
 
-**15 November 2026:** Nataliya's first economic checkpoint is complete. The active follow-up is the [two-page note](technical_followup_v05/handoff/START_HERE_v05.docx), [small download package](technical_followup_v05/ECON08_Nataliya_Technical_Followup_v0_5_2026-11-15.zip), and [technical results](technical_followup_v05/README.md). The next return is a short economic addendum, with a soft, adjustable target of 23 November before the 25 November discussion. Accepted ECON-07, Nataliya's v0.2.4 submission and the original v0.4 packet are preserved.
+**16 November 2026: observability pilot v0.2 is the current technical checkpoint.**
+The [new pilot](observability_v02/README.md) includes scoped optimality proofs,
+one-coin-per-publication experiments, anonymous-publication clustering, the full
+availability sensitivity grid, and economic externality inputs. It uses archived
+gas coefficients; no new EVM measurement or deployment-security claim is made.
+Scientific novelty still requires independent review.
 
-The bounded technical work supplies a matched unchecked K05 baseline, exact independent recurrence agreement on 54 traces / 8,832 accesses, 960 modeled workloads, and a historical OP fee projection. The primary full-lifecycle funding effect remains unconfirmed: startup dominates daily and weekly targets throughout the tested grid. Separately funding startup exposes conditional operating-reserve and pooling effects, but their economic meaning and novelty still require review. This result does not justify a broad A32 campaign yet. Model outputs are distinct from the 1,200 new unchecked local-EVM deposits; no new ZK or paymaster execution is claimed.
+Nataliya's Economic Addendum v0.2.1 completes the earlier funding task. Its small
+pooling effect and the distinction between retained capital and gas expenditure
+remain accepted. The new assignment concerns **who pays the cost of hiding issuer
+reactions and how issuer compensation changes that burden**. It does not reopen the
+pooling calculation. Soft first-return target: **30 November 2026**, adjustable.
 
-## Start here
+## Current entry points
 
-- **Nataliya:** [current instructions](technical_followup_v05/handoff/READ_ME_FIRST.txt), [two-page note](technical_followup_v05/handoff/START_HERE_v05.docx), [small packet](technical_followup_v05/ECON08_Nataliya_Technical_Followup_v0_5_2026-11-15.zip). Three main ten-column tables, a clear L2 note and optional summaries; no installation is needed.
-- **Oleksandr:** [v0.5 findings and reproduction](technical_followup_v05/README.md), [declared bounded scope](technical_followup_v05/ANALYSIS_PLAN.md), and [v0.4 original plan](IMPLEMENTATION_PLAN_V04.md). Technical validity, financing rules and the decision on a new article remain our responsibility.
-- **Prior checkpoint:** [v0.4 START_HERE](handoff/START_HERE.md), [protocol](handoff/ECON07_08_Research_Protocol_v0_4.docx), [original ZIP](handoff/ECON08_Nataliya_First_Checkpoint.zip). This first assignment has already been returned.
-- **Archived technical evidence:** [validation](VALIDATION.md), [pilot](RESULTS.md), [cohort](COHORT.md). It contains 32 pilot and 22 cohort scenarios, 8,832 ordinary accesses and 512 proofs. N counts issued credentials; the original cohort has only four active wallets. No population-scaled claim follows from those traces.
-- **Source and recovery:** [public research branch](https://github.com/KuznetsovKarazin/zksnark-benchmark/tree/econ08-native-pilot), [draft PR #3](https://github.com/KuznetsovKarazin/zksnark-benchmark/pull/3), [original source bundle](ECON08_source.bundle). The bundle covers the original archive; v0.5 source is in the research branch. The PR is not merged and these are internal checks, not independent external replication.
+- **Nataliya:** [short instructions](observability_v02/handoff/START_HERE.md),
+  [prefilled payment table](observability_v02/handoff/payment_comparison_REFERENCE.csv),
+  [historical price inputs](observability_v02/handoff/price_inputs.csv).
+  Return a 2–3 page note and the completed table. Start with weekly A=4, then
+  compare the two compensation rules in asymmetric A=32; the latter is modeled.
+- **Complete standalone download:** [ECON08 Observability v0.2 ZIP](packages/ECON08_Observability_v0_2_2026-11-16.zip).
+  Contains code, inputs, all numeric outputs, figures, proofs and the handoff.
+- **Oleksandr and reviewer:** [six-page Russian PDF](observability_v02/ECON08_Observability_Review_RU_v0_2.pdf),
+  [proofs](observability_v02/proofs/CONDITIONAL_RESULTS.md),
+  [model](observability_v02/MODEL.md), [validation](observability_v02/results/validation.json).
+- **Completed preceding work:** [funding follow-up v0.5](technical_followup_v05/README.md)
+  and [original v0.4 assignment](handoff/START_HERE.md). Their historical deadlines
+  are not new pending tasks. Accepted ECON-07 and original measured evidence remain unchanged.
+- **Research branch:** [econ08-native-pilot](https://github.com/KuznetsovKarazin/zksnark-benchmark/tree/econ08-native-pilot).
+  [PR #3](https://github.com/KuznetsovKarazin/zksnark-benchmark/pull/3) remains unmerged.
+  Reproduction is internal validation, not independent external replication.
+
+The material below documents the original EVM archive. Its measured population
+and four-wallet cohort must not be confused with new modeled 16/32/64-holder grids.
 
 ## Archived v0.1 implementation
 
@@ -106,17 +129,25 @@ node scripts/econ08/verify_proofs.mjs results/econ08_native_pilot
 
 The report records the actual local source commit `012044c17d4dc98ca6eae8f696e04252f9fb0d5a`. The exact commit is preserved in [source-at-run.bundle](source-at-run.bundle), based on the public parent `53f47c383a96e86641b6a18fb98636f7ab9b5da4`. It can be inspected with `git bundle verify` and imported with `git fetch projects/pets4defi/econ08/source-at-run.bundle refs/heads/econ08-native-pilot:refs/heads/econ08-source-at-run`. The report's individual source SHA-256 values also match the delivered experiment files. The publication commit adds results, analysis and documentation without changing the executed runner.
 
-## Nataliya's next small deliverable
+## Nataliya's current deliverable
 
-Use [START_HERE](handoff/START_HERE.md): map accepted K01–K16 to events and actors, source prices or mark unknowns, and calculate required holder, prepaid-account and shared-actor funding under the fixed SELF/PM rules. Budgets are outputs, not assumed willingness to pay. Measured quantities remain in the original summaries; templates contain 10 columns each. Return a short note, one worked case and missing inputs. The technical plan is for information only. Soft target: 30 November 2026, adjustable together.
+Use the [v0.2 task](observability_v02/handoff/START_HERE.md). The technical quantity
+inputs and three reference payment rules are fixed. The note should distinguish
+resource cost, transfers and net actor burden, and assess the incentive limits of
+charging issuers for effects on foreign holders. Technical proofs and the full
+research report are for information only for this checkpoint.
 
-## What remains before a new publication
+## What remains before a new article
 
-- G0a must establish a substantive timing/liquidity result beyond PUB-01 and ECON-07. A constructed cap, a familiar payment architecture or a no-refill cumulative-cost identity is insufficient by itself.
-- Exact independent replay of 54 archived scenarios, then only the expectation and robustness extensions needed for the selected question.
-- One A=32 EVM workload configuration with matched mechanisms and no-update controls, at N≥32 within capacity. δ=3/7/14 days remains model-only; A64 and contract changes are deferred.
-- Own-revocation/reissuance economics is deferred. Existing security rejection checks remain required.
-- Sourced prices, one full L2 fee model, and validated funding/liquidity frontiers. No assertion of an L1 threshold or no L2 effect before calculation.
-- Fresh figures and explicit overlap review. No external PRC adapter or W3C gas comparison is required.
+- Independent review of the scoped lower bound and comparison with PUB-01,
+  ABC4Trust and the relevant disclosure/intersection literature.
+- Nataliya's bounded incidence/compensation note, including budget balance,
+  administrative costs and the risk of discouraging timely revocation reporting.
+- A publication decision based on distinct contribution. The pilot alone does not
+  establish novelty, market adoption, willingness to pay or a viable incentive mechanism.
+- No new contract, A32 EVM campaign or main-branch merge is required by this checkpoint.
+  Real settlement, issuance, publication and downtime costs remain separate unknowns.
 
-Delta is measured from authoritative publication; issuer reporting delay remains outside that clock. B=1/2/4 corresponds to potential issuer sets 4/2/1 conditional on metadata, not anonymity entropy. Wallet linkage remains. No user adoption, profitability, market willingness to pay or production-security claim is established by these experiments.
+Delta is measured from authoritative publication; issuer reporting delay is
+outside that clock. Fixed gas-coefficient optimality is not monetary optimality
+under arbitrary time-varying prices. See the new model and counterexample.

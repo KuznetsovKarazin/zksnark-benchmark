@@ -11,6 +11,20 @@ on:
 permissions:
   contents: read
 jobs:
+  observability:
+    name: Observability v0.2 exact reproduction
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Verify package, models and economic handoff
+        working-directory: projects/pets4defi/econ08/observability_v02
+        env:
+          PYTHONDONTWRITEBYTECODE: '1'
+        run: python -u reproduce.py
   audit:
     runs-on: ubuntu-latest
     timeout-minutes: 15

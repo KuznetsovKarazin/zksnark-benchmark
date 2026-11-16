@@ -1,0 +1,765 @@
+[
+  {
+    "policy": "common",
+    "issuer": 0,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 0,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 0,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 1,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 1,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 1,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 2,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 2,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 2,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 3,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 3,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "common",
+    "issuer": 3,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 0,
+    "step": 0,
+    "accepted": true,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [
+      0,
+      1,
+      2
+    ],
+    "candidates": [
+      0,
+      1,
+      2
+    ],
+    "support": 3,
+    "entropy": 1.584962500721156,
+    "positive_support": 3
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 0,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [
+      1,
+      2
+    ],
+    "candidates": [
+      0
+    ],
+    "support": 1,
+    "entropy": 0.0,
+    "positive_support": 3
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 0,
+    "step": 2,
+    "accepted": true,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [
+      0
+    ],
+    "candidates": [
+      0
+    ],
+    "support": 1,
+    "entropy": 0.0,
+    "positive_support": 2
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 1,
+    "step": 0,
+    "accepted": true,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [
+      0,
+      1,
+      2
+    ],
+    "candidates": [
+      0,
+      1,
+      2
+    ],
+    "support": 3,
+    "entropy": 1.584962500721156,
+    "positive_support": 3
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 1,
+    "step": 1,
+    "accepted": true,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [
+      1,
+      2
+    ],
+    "candidates": [
+      1,
+      2
+    ],
+    "support": 2,
+    "entropy": 1.0,
+    "positive_support": 2
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 1,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [
+      2
+    ],
+    "candidates": [
+      1
+    ],
+    "support": 1,
+    "entropy": 0.0,
+    "positive_support": 2
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 2,
+    "step": 0,
+    "accepted": true,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [
+      0,
+      1,
+      2
+    ],
+    "candidates": [
+      0,
+      1,
+      2
+    ],
+    "support": 3,
+    "entropy": 1.584962500721156,
+    "positive_support": 3
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 2,
+    "step": 1,
+    "accepted": true,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [
+      1,
+      2
+    ],
+    "candidates": [
+      1,
+      2
+    ],
+    "support": 2,
+    "entropy": 1.0,
+    "positive_support": 2
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 2,
+    "step": 2,
+    "accepted": true,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [
+      2
+    ],
+    "candidates": [
+      2
+    ],
+    "support": 1,
+    "entropy": 0.0,
+    "positive_support": 1
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 3,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [
+      0,
+      1,
+      2
+    ],
+    "candidates": [
+      3
+    ],
+    "support": 1,
+    "entropy": 0.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 3,
+    "step": 1,
+    "accepted": true,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [
+      3
+    ],
+    "candidates": [
+      3
+    ],
+    "support": 1,
+    "entropy": 0.0,
+    "positive_support": 3
+  },
+  {
+    "policy": "fresh_k",
+    "issuer": 3,
+    "step": 2,
+    "accepted": true,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [
+      3
+    ],
+    "candidates": [
+      3
+    ],
+    "support": 1,
+    "entropy": 0.0,
+    "positive_support": 2
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 0,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 0,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 0,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 1,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 1,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 1,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 2,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 2,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 2,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 3,
+    "step": 0,
+    "accepted": false,
+    "fresh": [
+      0,
+      1,
+      2
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 3,
+    "step": 1,
+    "accepted": false,
+    "fresh": [
+      1,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  },
+  {
+    "policy": "guard_k",
+    "issuer": 3,
+    "step": 2,
+    "accepted": false,
+    "fresh": [
+      0,
+      2,
+      3
+    ],
+    "accepting": [],
+    "candidates": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "support": 4,
+    "entropy": 2.0,
+    "positive_support": 4
+  }
+]

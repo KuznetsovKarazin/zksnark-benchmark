@@ -1,3 +1,9 @@
+STATUS UPDATE — 16 November 2026
+This funding assignment was completed by Nataliya's addendum v0.2.1.
+The new bounded task is in ../../observability_v02/handoff/START_HERE.md
+(cost incidence and issuer compensation; soft first return 30 November).
+The original instructions and 23 November date below are historical.
+
 ECON-08 — Nataliya's technical follow-up v0.5
 15 November 2026
 

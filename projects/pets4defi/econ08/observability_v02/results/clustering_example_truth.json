@@ -1,0 +1,130 @@
+[
+  {
+    "handle": "H000",
+    "issuer": 2
+  },
+  {
+    "handle": "H001",
+    "issuer": 2
+  },
+  {
+    "handle": "H002",
+    "issuer": 0
+  },
+  {
+    "handle": "H003",
+    "issuer": 0
+  },
+  {
+    "handle": "H004",
+    "issuer": 3
+  },
+  {
+    "handle": "H005",
+    "issuer": 3
+  },
+  {
+    "handle": "H006",
+    "issuer": 2
+  },
+  {
+    "handle": "H007",
+    "issuer": 2
+  },
+  {
+    "handle": "H008",
+    "issuer": 0
+  },
+  {
+    "handle": "H009",
+    "issuer": 2
+  },
+  {
+    "handle": "H010",
+    "issuer": 1
+  },
+  {
+    "handle": "H011",
+    "issuer": 3
+  },
+  {
+    "handle": "H012",
+    "issuer": 1
+  },
+  {
+    "handle": "H013",
+    "issuer": 1
+  },
+  {
+    "handle": "H014",
+    "issuer": 3
+  },
+  {
+    "handle": "H015",
+    "issuer": 1
+  },
+  {
+    "handle": "H016",
+    "issuer": 1
+  },
+  {
+    "handle": "H017",
+    "issuer": 1
+  },
+  {
+    "handle": "H018",
+    "issuer": 0
+  },
+  {
+    "handle": "H019",
+    "issuer": 1
+  },
+  {
+    "handle": "H020",
+    "issuer": 2
+  },
+  {
+    "handle": "H021",
+    "issuer": 3
+  },
+  {
+    "handle": "H022",
+    "issuer": 0
+  },
+  {
+    "handle": "H023",
+    "issuer": 2
+  },
+  {
+    "handle": "H024",
+    "issuer": 0
+  },
+  {
+    "handle": "H025",
+    "issuer": 3
+  },
+  {
+    "handle": "H026",
+    "issuer": 0
+  },
+  {
+    "handle": "H027",
+    "issuer": 0
+  },
+  {
+    "handle": "H028",
+    "issuer": 1
+  },
+  {
+    "handle": "H029",
+    "issuer": 3
+  },
+  {
+    "handle": "H030",
+    "issuer": 2
+  },
+  {
+    "handle": "H031",
+    "issuer": 3
+  }
+]

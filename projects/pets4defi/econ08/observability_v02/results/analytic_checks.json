@@ -1,0 +1,13 @@
+{
+  "safe_accept_set_enumerations": 15472,
+  "exact_bayes_transcripts": 172,
+  "anonymous_label_control_posterior": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "simultaneous_updates_control": "PASS",
+  "always_expired_ttl_control": "PASS",
+  "all_checks": "PASS"
+}

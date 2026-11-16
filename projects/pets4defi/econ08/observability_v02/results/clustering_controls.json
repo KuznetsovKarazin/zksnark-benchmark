@@ -1,0 +1,19 @@
+{
+  "controls": [
+    {
+      "control": "all_common_responses",
+      "pair_auc": 0.5,
+      "ari": 0.03125000000000001,
+      "interpretation": "forced clusters may be arbitrary; pair scores contain no information"
+    },
+    {
+      "control": "no_publications",
+      "pair_auc": 0.5,
+      "ari": 0.03125000000000001,
+      "interpretation": "forced clusters may be arbitrary; pair scores contain no information"
+    }
+  ],
+  "anonymous_API_rejects_issuer_fields": "unit tested",
+  "issuer_name_permutation": "public projection and pairwise same-issuer truth invariant",
+  "truth_shuffle": "included for every run in clustering_runs.csv"
+}

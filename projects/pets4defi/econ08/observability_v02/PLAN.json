@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-16",
+  "scope": "Research pilot for repository publication and economic follow-up. Archived EVM inputs; new mechanisms and cohort analysis are modeled.",
+  "issuers_timing": 4,
+  "horizon_days": 90,
+  "rho": [
+    0,
+    0.25,
+    0.75,
+    0.95
+  ],
+  "timing_policies": [
+    "common",
+    "selective",
+    "dummy_0.25",
+    "dummy_0.75",
+    "dummy_0.95",
+    "cover_0.25",
+    "cover_0.75",
+    "cover_0.95",
+    "cover_1.0",
+    "every",
+    "coin_0.0",
+    "coin_0.25",
+    "coin_0.5",
+    "coin_0.75",
+    "coin_0.9",
+    "coin_0.95",
+    "coin_1.0"
+  ],
+  "plan_amendment": "v0.2 extends v0.1 after reviewer feedback. One independent coin per foreign publication; anonymous clustering; formal conditional statements; matched economic inputs. Not preregistered. All old grid points retained.",
+  "synthetic_mean_updates_per_issuer": [
+    0,
+    1,
+    3,
+    12
+  ],
+  "synthetic_accesses": [
+    10,
+    100,
+    400
+  ],
+  "synthetic_ttl_days": [
+    1,
+    7,
+    30
+  ],
+  "synthetic_delta_days": [
+    0,
+    1,
+    3,
+    7,
+    14
+  ],
+  "seeds": 20,
+  "outage_issuers": [
+    4,
+    8
+  ],
+  "outage_fail_probability_per_day": [
+    0.02,
+    0.1
+  ],
+  "outage_recovery_probability_per_day": [
+    0.2,
+    0.5
+  ],
+  "outage_freshness_days": [
+    1,
+    3,
+    7
+  ],
+  "outage_thresholds": "2, ceil(0.75*n), n",
+  "outage_policies": [
+    "common",
+    "fresh_k",
+    "guard_k"
+  ],
+  "privacy_metrics": [
+    "posterior entropy bits",
+    "posterior support",
+    "maximum posterior",
+    "exact singleton",
+    "time to exact singleton",
+    "positive-observation intersection"
+  ],
+  "gas_scope": "B1 archived median access gas as common accounting coefficients only; excludes new mechanisms, setup, publication, heartbeat and account abstraction overhead",
+  "go_gate": "Nonzero conditional temporal leakage with valid negative controls; bounded mitigation has a checkable guarantee. Publication novelty remains a separate unpassed gate.",
+  "stop_gate": "Source replay mismatch, privileged attacker data, leakage in issuer-independent negative controls, or a guard violating its stated support bound",
+  "version": "0.2",
+  "clustering": {
+    "issuers": 4,
+    "holders_per_issuer": [
+      4,
+      8,
+      16
+    ],
+    "accesses": [
+      30,
+      100,
+      400
+    ],
+    "nu": [
+      3,
+      12
+    ],
+    "delta_days": [
+      0
+    ],
+    "ttl_days": 30,
+    "policies": [
+      "common",
+      "selective",
+      "coin_0.25",
+      "coin_0.75",
+      "coin_0.95"
+    ],
+    "seeds": 20,
+    "algorithm": "Average-linkage agglomerative clustering to four groups; distance is mismatch rate of shared isolated-update response features; <2 shared features uses uninformative distance 0.5. Handles randomly permuted independently of issuer.",
+    "external_anchor": "one fixed public holder handle, then reveal only that holder issuer; label its cluster, measure coverage, precision and wrong assignments.",
+    "negative_controls": [
+      "common refresh",
+      "no publications",
+      "truth-label shuffle",
+      "public issuer-label permutation invariance"
+    ]
+  },
+  "economics": {
+    "cases": [
+      "weekly_A4",
+      "weekly_A32",
+      "asymmetric_A32"
+    ],
+    "reference_rules": [
+      "SELF",
+      "publication_frequency",
+      "shapley_externality"
+    ],
+    "scope": "holder access-gas proxy only; incremental foreign-issuer publication effects from exact coalition replays; no new prices or monetized outage values"
+  }
+}

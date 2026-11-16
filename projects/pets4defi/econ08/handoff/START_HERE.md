@@ -1,4 +1,4 @@
-> **Status, 15 November 2026:** This first assignment has been returned in Nataliya’s v0.2.4 package. Preserve it as history. Continue with the [v0.5 follow-up](../technical_followup_v05/handoff/READ_ME_FIRST.txt) and [two-page note](../technical_followup_v05/handoff/START_HERE_v05.docx). The original 30 November target below is no longer an outstanding first-return deadline.
+> **Status, 16 November 2026:** This original assignment and the later funding addendum v0.2.1 are complete. The current task is [observability v0.2: cost incidence and compensation](../observability_v02/handoff/START_HERE.md), with a soft 30 November first-return target. The text below is historical; do not redo it.
 
 # Your first economic task for ECON 08
 

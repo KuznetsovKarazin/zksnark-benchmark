@@ -1,0 +1,482 @@
+[
+  {
+    "target": "T000",
+    "issuer": 0
+  },
+  {
+    "target": "T001",
+    "issuer": 0
+  },
+  {
+    "target": "T002",
+    "issuer": 0
+  },
+  {
+    "target": "T003",
+    "issuer": 0
+  },
+  {
+    "target": "T004",
+    "issuer": 0
+  },
+  {
+    "target": "T005",
+    "issuer": 0
+  },
+  {
+    "target": "T006",
+    "issuer": 0
+  },
+  {
+    "target": "T007",
+    "issuer": 0
+  },
+  {
+    "target": "T008",
+    "issuer": 0
+  },
+  {
+    "target": "T009",
+    "issuer": 0
+  },
+  {
+    "target": "T010",
+    "issuer": 0
+  },
+  {
+    "target": "T011",
+    "issuer": 0
+  },
+  {
+    "target": "T012",
+    "issuer": 0
+  },
+  {
+    "target": "T013",
+    "issuer": 0
+  },
+  {
+    "target": "T014",
+    "issuer": 0
+  },
+  {
+    "target": "T015",
+    "issuer": 0
+  },
+  {
+    "target": "T016",
+    "issuer": 0
+  },
+  {
+    "target": "T017",
+    "issuer": 0
+  },
+  {
+    "target": "T018",
+    "issuer": 0
+  },
+  {
+    "target": "T019",
+    "issuer": 0
+  },
+  {
+    "target": "T020",
+    "issuer": 0
+  },
+  {
+    "target": "T021",
+    "issuer": 0
+  },
+  {
+    "target": "T022",
+    "issuer": 0
+  },
+  {
+    "target": "T023",
+    "issuer": 0
+  },
+  {
+    "target": "T024",
+    "issuer": 0
+  },
+  {
+    "target": "T025",
+    "issuer": 0
+  },
+  {
+    "target": "T026",
+    "issuer": 0
+  },
+  {
+    "target": "T027",
+    "issuer": 0
+  },
+  {
+    "target": "T028",
+    "issuer": 0
+  },
+  {
+    "target": "T029",
+    "issuer": 0
+  },
+  {
+    "target": "T030",
+    "issuer": 0
+  },
+  {
+    "target": "T031",
+    "issuer": 0
+  },
+  {
+    "target": "T032",
+    "issuer": 0
+  },
+  {
+    "target": "T033",
+    "issuer": 1
+  },
+  {
+    "target": "T034",
+    "issuer": 2
+  },
+  {
+    "target": "T035",
+    "issuer": 3
+  },
+  {
+    "target": "T036",
+    "issuer": 0
+  },
+  {
+    "target": "T037",
+    "issuer": 1
+  },
+  {
+    "target": "T038",
+    "issuer": 2
+  },
+  {
+    "target": "T039",
+    "issuer": 3
+  },
+  {
+    "target": "T040",
+    "issuer": 0
+  },
+  {
+    "target": "T041",
+    "issuer": 1
+  },
+  {
+    "target": "T042",
+    "issuer": 2
+  },
+  {
+    "target": "T043",
+    "issuer": 3
+  },
+  {
+    "target": "T044",
+    "issuer": 0
+  },
+  {
+    "target": "T045",
+    "issuer": 1
+  },
+  {
+    "target": "T046",
+    "issuer": 2
+  },
+  {
+    "target": "T047",
+    "issuer": 3
+  },
+  {
+    "target": "T048",
+    "issuer": 0
+  },
+  {
+    "target": "T049",
+    "issuer": 1
+  },
+  {
+    "target": "T050",
+    "issuer": 2
+  },
+  {
+    "target": "T051",
+    "issuer": 3
+  },
+  {
+    "target": "T052",
+    "issuer": 0
+  },
+  {
+    "target": "T053",
+    "issuer": 1
+  },
+  {
+    "target": "T054",
+    "issuer": 2
+  },
+  {
+    "target": "T055",
+    "issuer": 3
+  },
+  {
+    "target": "T056",
+    "issuer": 0
+  },
+  {
+    "target": "T057",
+    "issuer": 1
+  },
+  {
+    "target": "T058",
+    "issuer": 2
+  },
+  {
+    "target": "T059",
+    "issuer": 3
+  },
+  {
+    "target": "T060",
+    "issuer": 0
+  },
+  {
+    "target": "T061",
+    "issuer": 1
+  },
+  {
+    "target": "T062",
+    "issuer": 2
+  },
+  {
+    "target": "T063",
+    "issuer": 3
+  },
+  {
+    "target": "T064",
+    "issuer": 0
+  },
+  {
+    "target": "T065",
+    "issuer": 1
+  },
+  {
+    "target": "T066",
+    "issuer": 2
+  },
+  {
+    "target": "T067",
+    "issuer": 3
+  },
+  {
+    "target": "T068",
+    "issuer": 0
+  },
+  {
+    "target": "T069",
+    "issuer": 1
+  },
+  {
+    "target": "T070",
+    "issuer": 2
+  },
+  {
+    "target": "T071",
+    "issuer": 3
+  },
+  {
+    "target": "T072",
+    "issuer": 0
+  },
+  {
+    "target": "T073",
+    "issuer": 1
+  },
+  {
+    "target": "T074",
+    "issuer": 2
+  },
+  {
+    "target": "T075",
+    "issuer": 3
+  },
+  {
+    "target": "T076",
+    "issuer": 0
+  },
+  {
+    "target": "T077",
+    "issuer": 1
+  },
+  {
+    "target": "T078",
+    "issuer": 2
+  },
+  {
+    "target": "T079",
+    "issuer": 3
+  },
+  {
+    "target": "T080",
+    "issuer": 0
+  },
+  {
+    "target": "T081",
+    "issuer": 1
+  },
+  {
+    "target": "T082",
+    "issuer": 2
+  },
+  {
+    "target": "T083",
+    "issuer": 3
+  },
+  {
+    "target": "T084",
+    "issuer": 0
+  },
+  {
+    "target": "T085",
+    "issuer": 1
+  },
+  {
+    "target": "T086",
+    "issuer": 2
+  },
+  {
+    "target": "T087",
+    "issuer": 3
+  },
+  {
+    "target": "T088",
+    "issuer": 0
+  },
+  {
+    "target": "T089",
+    "issuer": 1
+  },
+  {
+    "target": "T090",
+    "issuer": 2
+  },
+  {
+    "target": "T091",
+    "issuer": 3
+  },
+  {
+    "target": "T092",
+    "issuer": 0
+  },
+  {
+    "target": "T093",
+    "issuer": 1
+  },
+  {
+    "target": "T094",
+    "issuer": 2
+  },
+  {
+    "target": "T095",
+    "issuer": 3
+  },
+  {
+    "target": "T096",
+    "issuer": 0
+  },
+  {
+    "target": "T097",
+    "issuer": 1
+  },
+  {
+    "target": "T098",
+    "issuer": 2
+  },
+  {
+    "target": "T099",
+    "issuer": 3
+  },
+  {
+    "target": "T100",
+    "issuer": 0
+  },
+  {
+    "target": "T101",
+    "issuer": 1
+  },
+  {
+    "target": "T102",
+    "issuer": 2
+  },
+  {
+    "target": "T103",
+    "issuer": 3
+  },
+  {
+    "target": "T104",
+    "issuer": 0
+  },
+  {
+    "target": "T105",
+    "issuer": 1
+  },
+  {
+    "target": "T106",
+    "issuer": 2
+  },
+  {
+    "target": "T107",
+    "issuer": 3
+  },
+  {
+    "target": "T108",
+    "issuer": 0
+  },
+  {
+    "target": "T109",
+    "issuer": 1
+  },
+  {
+    "target": "T110",
+    "issuer": 2
+  },
+  {
+    "target": "T111",
+    "issuer": 3
+  },
+  {
+    "target": "T112",
+    "issuer": 0
+  },
+  {
+    "target": "T113",
+    "issuer": 1
+  },
+  {
+    "target": "T114",
+    "issuer": 2
+  },
+  {
+    "target": "T115",
+    "issuer": 3
+  },
+  {
+    "target": "T116",
+    "issuer": 0
+  },
+  {
+    "target": "T117",
+    "issuer": 1
+  },
+  {
+    "target": "T118",
+    "issuer": 2
+  },
+  {
+    "target": "T119",
+    "issuer": 3
+  }
+]
