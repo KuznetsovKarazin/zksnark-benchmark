@@ -15,7 +15,9 @@ jobs:
         run: python3 projects/pets4defi/econ08/empirical_v03/freshness_revision/check_release.py
       - name: Verify published file hashes
         working-directory: projects/pets4defi/econ08/empirical_v03/freshness_revision
-        run: sha256sum -c SHA256SUMS
+        run: |
+          sha256sum -c SHA256SUMS
+          (cd .. && sha256sum -c SHA256SUMS)
       - uses: actions/setup-node@v7.1.0
         with:
           node-version: '24'
