@@ -1,5 +1,8 @@
 # ECON-08 empirical extension v0.3
 
+The [matched-freshness revision](freshness_revision/README.md) supersedes the original cost figure. It includes the calibrated cache controls, grouping results, the independent issuer heartbeat prototype, and source coverage for the separate descriptive study.
+
+
 Research implementation for the 17 November 2026 extension proposal. This is a
 separate extension of `econ08-native-pilot` at
 `004fa70891b466a95c78572eb8354a400b3fb1db`; it does not change PUB-01 or its results.

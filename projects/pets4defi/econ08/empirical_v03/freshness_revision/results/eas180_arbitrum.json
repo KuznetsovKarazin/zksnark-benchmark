@@ -1,0 +1,36 @@
+{
+  "chain": "arbitrum",
+  "endpoint": "https://arbitrum.easscan.org/graphql",
+  "start": "2026-05-21T00:00:00Z",
+  "end_exclusive": "2026-11-17T00:00:00Z",
+  "indexer_pagination_complete": true,
+  "chain_log_coverage_verified": false,
+  "interpretation": "Indexer candidate screen only; not a chain-completeness certificate",
+  "errors": [],
+  "latest_indexed_issuance_time": 1794857876,
+  "onchain_revocations_returned": 4,
+  "attesters_returned": 2,
+  "candidates": [
+    {
+      "local_id": "attester_1",
+      "revocations": 2,
+      "distinct_utc_days": 2,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_2",
+      "revocations": 2,
+      "distinct_utc_days": 2,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    }
+  ],
+  "qualifying_attesters": 0,
+  "revocations_sha256": "352ff52c84956ac6c9199b4d94f7390f0d6792f7872b4908784674cddbadca4d",
+  "aggregate_revocation_count": 4,
+  "aggregate_matches_pagination": true,
+  "watermark_note": "Last indexed issuance is an activity date, not an index-completeness watermark."
+}

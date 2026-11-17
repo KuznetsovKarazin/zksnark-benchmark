@@ -1,5 +1,8 @@
 # Verified status — 17 November 2026
 
+The [matched-freshness revision](freshness_revision/README.md) supersedes the original cost figure. It includes the calibrated cache controls, grouping results, the independent issuer heartbeat prototype, and source coverage for the separate descriptive study.
+
+
 | Work package | Executed evidence | Status and limit |
 |---|---|---|
 | Real EAS schedules | Complete indexer pagination: Ethereum 5, Base 23,125, Optimism 6 revocations in the frozen 90-day window | INDEXER_INSUFFICIENT: two qualified independent attesters, four required; full independent chain coverage UNKNOWN |

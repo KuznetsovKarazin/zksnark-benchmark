@@ -1,0 +1,37 @@
+name: ECON-08 matched freshness
+on:
+  push:
+    branches: [feat/econ08-freshness-frontier]
+  pull_request:
+    branches: [feat/econ08-empirical-extension]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Recheck published seed means and trace/fee accounting
+        run: python3 projects/pets4defi/econ08/empirical_v03/freshness_revision/check_release.py
+      - name: Verify published file hashes
+        working-directory: projects/pets4defi/econ08/empirical_v03/freshness_revision
+        run: sha256sum -c SHA256SUMS
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+      - name: Install locked verification dependencies
+        working-directory: examples/pets4defi_access_v2
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify membership proof from the independent issuer run
+        working-directory: examples/pets4defi_access_v2
+        run: |
+          node --input-type=module - <<'NODE'
+          import fs from 'node:fs';
+          import * as snarkjs from 'snarkjs';
+          const read = path => JSON.parse(fs.readFileSync(path));
+          const base = '../../projects/pets4defi/econ08/empirical_v03/results/';
+          const run = read(base + '../freshness_revision/results/issuer_epochs.json');
+          const ok = await snarkjs.groth16.verify(read(base + 'evm_setup/verification_key.json'), run.public_signals, run.proof);
+          console.log('Independent issuer membership proof', ok);
+          process.exit(ok ? 0 : 1);
+          NODE

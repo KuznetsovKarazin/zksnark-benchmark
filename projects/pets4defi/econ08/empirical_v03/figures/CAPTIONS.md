@@ -1,17 +1,7 @@
 # Figure interpretation
 
-Both figures use the 80-case synthetic daily model (128 holders per run, 20
-independent seeds). Noise parameters and activity probability are known to the
-attacker. Rates differ across issuers; the displayed panels use uniform issuer
-priors and issuer-independent access probabilities. Errors are independent.
-These are not real-chain identification rates.
+**Cost and cache response.** Each panel fixes one maximum revocation age F. All displayed policies process the same issuer changes at the same cutoffs, with both a common period P = F minus 300 seconds and the same assumed publication lag. At each access we calculate the fraction of ordered pairs of distinct issuers whose full-proof decisions differ under exactly the same path, TTL and random cover coin. The y-axis averages this fraction across accesses. It measures the sensitivity of a cache decision to issuer identity. Longitudinal identification accuracy is a different quantity. The x-axis counts full authorizations. Registry writes and empty freshness certificates appear separately in the economic tables.
 
-`hmm_robustness`: all displayed cells were run; color and labels give final-day
-accuracy. Seed-level Student-t 95% intervals are in `summary.csv`. Identification
-with posterior >= 0.95 is a different metric, available in the result files.
+The 16 model issuers use two measured hourly Base profiles, with synthetic within-hour timestamps, replicated templates and random whole-day shifts. Each seed uses 256 paired holder paths. Sessions contain two accesses 20 minutes apart. Twenty independent seeds give the displayed 95% Student-t intervals. Same-position points are expected for common epochs and heartbeats in this workload. G is issuers per group. Blank space between points does not represent an achievable policy. Literal 1/6/24-hour periods and their actual 65/365/1445-minute maximum ages are tabulated in the revision. All output is conditional on the specified workload and on-time reporting.
 
-`cost_observability`: error bars are 95% intervals across seed means. The x-axis
-is a proof-count cost proxy, not money or measured L2 fees. A seven-day batching
-period additionally needs ingestion/publication/finality lag L in its freshness
-budget. Common/batch preserve the prior in this channel; this does not prove
-privacy against auxiliary information, address linkage or service-side signals.
+**HMM robustness.** The earlier 80-case daily simulation used 128 holders and 20 seeds. Colors and labels show final-day model accuracy at known observation-error and missing-access rates. Seed-level intervals and separate posterior-confidence results are available in the earlier summary tables.
