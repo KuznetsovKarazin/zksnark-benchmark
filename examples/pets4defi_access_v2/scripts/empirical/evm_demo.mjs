@@ -132,8 +132,11 @@ for(let i=0;i<N;i++) await full(i);
 check('reauthorization_with_unchanged_gate_and_circuit');
 assert.equal((await registry.acceptedRoot(f.registryRoot,1,0))[0],false);check('extra_grace_rejected');
 if(!live) {
+  const queuedSameRoot=await proof(0);
   await advance(cutoff+2*P);
   await record(await registry.publishCombinedRoot(f.registryRoot,cutoff+2*P));check('unchanged_root_heartbeat_allowed');
+  await assert.rejects(gate.connect(wallets[0]).depositCached.staticCall(1,await gate.nonces(wallets[0].address)));check('unchanged_root_heartbeat_invalidates_cache');
+  await assert.rejects(gate.connect(wallets[0]).depositZK.staticCall(queuedSameRoot.tuple,1,queuedSameRoot.nonce));check('queued_same_root_old_epoch_proof_rejected');
   await full(0);
   await advance(cutoff+3*P+L-1);await gate.connect(wallets[0]).depositCached.staticCall(1,await gate.nonces(wallets[0].address));check('cache_valid_before_freshness_boundary');
   await advance(cutoff+3*P+L);

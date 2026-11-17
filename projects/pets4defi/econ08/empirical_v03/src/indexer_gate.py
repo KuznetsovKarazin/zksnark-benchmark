@@ -60,10 +60,11 @@ def audit(name,folder,spec):
                 count=query(url,q,folder)['data']['aggregateAttestation']['_count']['_all']
                 entry['attestations_before_end']=count
                 entry['qualifies']=count>=spec['selection']['min_attestations_per_issuer_before_window_end']
-            except Exception as exc:entry['count_error']=str(exc)
+            except Exception as exc:
+                entry['count_error']=str(exc);entry['qualifies']=None
         candidates.append(entry)
     report.update(onchain_revocations_returned=len(all_rows),attesters_returned=len(by),candidates=candidates,
-                  qualifying_attesters=sum(c['qualifies'] for c in candidates),
+                  qualifying_attesters=sum(c['qualifies'] is True for c in candidates),
                   revocations_sha256=hashlib.sha256((folder/'revocations.json').read_bytes()).hexdigest())
     # Cross-check the paginated row count using a separate aggregate query.
     if report['indexer_pagination_complete']:
@@ -84,7 +85,10 @@ if __name__=='__main__':
         reports=list(pool.map(lambda name:audit(name,args.private_out,spec),ENDPOINTS))
     complete=all(r['indexer_pagination_complete'] and r.get('aggregate_matches_pagination') and r.get('latest_indexed_issuance_time',0)>=timestamp(spec['window_end_exclusive']) for r in reports)
     qualified=sum(r['qualifying_attesters'] for r in reports)
-    summary=dict(date='2026-11-17',gate='UNKNOWN' if not complete else ('INDEXER_CANDIDATE_PASS' if qualified>=spec['selection']['min_issuers'] else 'INDEXER_INSUFFICIENT'),
+    potential=sum(c['distinct_utc_days']>=spec['selection']['min_distinct_revocation_days_per_issuer'] for r in reports for c in r['candidates'])
+    counts_known=all(c['qualifies'] is not None for r in reports for c in r['candidates'])
+    gate='INDEXER_CANDIDATE_PASS' if qualified>=spec['selection']['min_issuers'] else 'INDEXER_INSUFFICIENT' if complete and (counts_known or potential<spec['selection']['min_issuers']) else 'UNKNOWN'
+    summary=dict(date='2026-11-17',gate=gate,
                  chain_validated_gate='UNKNOWN',qualifying_attesters_returned=qualified,
                  reports=reports,notes=['Incomplete acquisition is not zero revocations.','Indexer counts require chain-log coverage validation.','No real EAS-to-DeFi holder mapping is inferred.'])
     save_json(Path(args.summary),summary);print(json.dumps(summary),flush=True)

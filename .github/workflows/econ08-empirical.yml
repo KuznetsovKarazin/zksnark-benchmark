@@ -1,0 +1,38 @@
+name: ECON-08 empirical extension checks
+on:
+  push:
+    branches: [feat/econ08-empirical-extension]
+    paths: ['.github/workflows/econ08-empirical.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks-and-availability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Install pinned analysis dependencies
+        run: python -m pip install -r projects/pets4defi/econ08/empirical_v03/requirements.txt
+      - name: Verify exact observer, controls and data semantics
+        run: python -m unittest discover -s projects/pets4defi/econ08/empirical_v03/src -p 'test_*.py' -v
+      - name: Check public RPC availability (not historical coverage)
+        run: python projects/pets4defi/econ08/empirical_v03/src/network_smoke.py /tmp/econ08-network-smoke.json
+      - name: Collect EAS candidate-screen aggregates
+        run: python projects/pets4defi/econ08/empirical_v03/src/indexer_gate.py --private-out /tmp/econ08-private-indexer --summary /tmp/econ08-data-gate.json
+      - name: Preserve aggregate checks only
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: econ08-empirical-availability
+          path: |
+            /tmp/econ08-network-smoke.json
+            /tmp/econ08-data-gate.json
+          if-no-files-found: warn
+          retention-days: 14
