@@ -1,0 +1,244 @@
+{
+  "status": "PASS",
+  "scope": "Offline archived local-EVM transactions; not a public-testnet result. Block timestamps were archived by the harness, not re-fetched from a public chain.",
+  "files": 25,
+  "transactions": 15346,
+  "accesses": 8875,
+  "mismatches": 0,
+  "negative_tests": [
+    "private-metadata-poisoning",
+    "block-hash-mismatch",
+    "reverted-call",
+    "missing-event",
+    "unsupported-selector",
+    "unknown-fee-components",
+    "jovian-fee-formula"
+  ],
+  "rows": [
+    {
+      "archive": "results/econ08_cohort/runs/N128_zk_B2_d0_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "b92908620c3984ed92770eeb89bd8f72978fab9afe5f84035129090041ca8a29",
+      "transactions": 436,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N128_zk_B2_d0_LOW_weekly/receipts_and_proofs.json.gz",
+      "sha256": "530ff3630bdde06ac57df7f4f01a36d75d9a9dc3786f25bb09e752cde82d63f3",
+      "transactions": 40,
+      "accesses": 4,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_signed_control_d0_HIGH_control/receipts_and_proofs.json.gz",
+      "sha256": "a4851aa40fc812a4781bd89f615cef7d2dee06092f2d807f38737a1873d117e0",
+      "transactions": 416,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 4
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_signed_control_d0_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "90c86c4a52089eb77c20110de93ea84e8d43143c6ebc311f0c761e9c5f71fa91",
+      "transactions": 428,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_signed_control_d0_LOW_weekly/receipts_and_proofs.json.gz",
+      "sha256": "cd81098b2e2e87908596dce9bccddf71fa0de03d92bdefc8af4df5fed3948566",
+      "transactions": 32,
+      "accesses": 4,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_signed_control_d3600_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "22b260baa3348b9af80bcd73323091ea5f5b5e5e6a663dc3471ea769434baff2",
+      "transactions": 428,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_signed_control_d86400_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "8ddb45f72d87f1fb3633e289555c0274587cc7cc58524870f13cd2481e70ee3b",
+      "transactions": 428,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_control/receipts_and_proofs.json.gz",
+      "sha256": "7a066d64e6f203fba2f4fcfb7ba77bbb1558cda6177b367c8386c2c5cdcab611",
+      "transactions": 417,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 4
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "4aa9226ed12903c95109daf62b85f9cb711b867d115bd59d659ffebd5edb09ce",
+      "transactions": 429,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B1_d3600_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "2f4635231389a7820aa4b054f060952a0d3a5708255d8dc821e182fa5f214967",
+      "transactions": 429,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B1_d86400_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "825778c71ca6aea071d800632f92d17de9098de985be78046fda8579c22633b1",
+      "transactions": 429,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_control/receipts_and_proofs.json.gz",
+      "sha256": "312af3d7c8be2dd6b10847d7587b7d594736242c670a7557f334bd3ba660a97a",
+      "transactions": 424,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 4
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "1d67107e5c586dd975959f92e448b9147cb6abbd13b6d52a38c4a055c7473d84",
+      "transactions": 436,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B2_d0_LOW_weekly/receipts_and_proofs.json.gz",
+      "sha256": "40860b7e4ab554c49f9b1927a10cb37a643a7405947a4a889a517bb385881507",
+      "transactions": 40,
+      "accesses": 4,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B2_d3600_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "fa58af522f4b4b421f64304ceb972b37df17b619e7c3d80b9a5eedcccdd55f91",
+      "transactions": 436,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B2_d86400_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "060d2f0efb69c133bf7dff423b34957b57e075937af17b3c1a2a97581fddcfb9",
+      "transactions": 436,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_control/receipts_and_proofs.json.gz",
+      "sha256": "8bc30d14f8adcbc701e0c558f3791f109ed59d2e541a2f28c931f6df75440947",
+      "transactions": 438,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 4
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "f7673513ced05d8fd6dd3b4828c7c3fc8e5d205796f230a1c1f67b9f01ff2fed",
+      "transactions": 450,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B4_d3600_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "f3d4b43b90e2a1fdeb392e759b053dc1b0f865cafd90fff724bb0094d2326f40",
+      "transactions": 450,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N16_zk_B4_d86400_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "e0a855536d4223f9824b56236161a484b768dada99ea6ed42f50fac391f0a995",
+      "transactions": 450,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N512_zk_B2_d0_HIGH_weekly/receipts_and_proofs.json.gz",
+      "sha256": "bddd3c7932b4b8bcb507d1745799dba7201a5886f782eda010e207ad6e62ec6c",
+      "transactions": 436,
+      "accesses": 400,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_cohort/runs/N512_zk_B2_d0_LOW_weekly/receipts_and_proofs.json.gz",
+      "sha256": "dec63059cea391c015d586a8cc16464e5302c8dae955d53cd21ba3a241539fc5",
+      "transactions": 40,
+      "accesses": 4,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 16
+    },
+    {
+      "archive": "results/econ08_native_pilot/receipts_and_proofs.json.gz",
+      "sha256": "e1c05d91e40f7501ee9a94bd61e4e13e7e33eb4e8c55f4317737cd5d7bd4ff0d",
+      "transactions": 2679,
+      "accesses": 1659,
+      "mismatches": 0,
+      "reverted": 54,
+      "publications": 228
+    },
+    {
+      "archive": "results/revocation_review/receipts_and_proofs.json.gz",
+      "sha256": "72b9af61e155e7d7a21e308b5fee7862b130587f53be9447ee642b5ca10a8144",
+      "transactions": 3477,
+      "accesses": 0,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 0
+    },
+    {
+      "archive": "results/revocation_validation/receipts_and_proofs.json.gz",
+      "sha256": "487903d41d208d31e9b69789efc8f1157e83759edc056a63a226d0827fd42a1b",
+      "transactions": 1242,
+      "accesses": 0,
+      "mismatches": 0,
+      "reverted": 0,
+      "publications": 0
+    }
+  ]
+}

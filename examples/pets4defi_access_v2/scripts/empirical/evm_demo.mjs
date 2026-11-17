@@ -53,6 +53,10 @@ const record=async(tx,expected=1)=>{
   const rawReceipt=await provider.send('eth_getTransactionReceipt',[tx.hash]);
   const rawTx=await provider.send('eth_getTransactionByHash',[tx.hash]);
   records.push({transaction:rawTx,receipt:rawReceipt,block:{number:block.number,hash:block.hash,timestamp:block.timestamp}});
+  if(records.length%32===0) {
+    fs.writeFileSync(path.join(out,'public_records.partial.json.gz'),zlib.gzipSync(json(records)));
+    fs.writeFileSync(path.join(out,'progress.json'),json({status:'IN_PROGRESS',recorded_transactions:records.length,public_testnet_complete:false}));
+  }
   return receipt;
 };
 const deploy=async(file,name,args)=>{
@@ -128,7 +132,7 @@ await advance(cutoff+P);
 await record(await registry.publishCombinedRoot(f.registryRoot,cutoff+P));
 await assert.rejects(gate.connect(wallets[0]).depositCached.staticCall(1,await gate.nonces(wallets[0].address)));check('batch_invalidates_existing_cache');
 await assert.rejects(gate.connect(wallets[0]).depositZK.staticCall(queued.tuple,1,queued.nonce));check('queued_old_root_proof_rejected');
-for(let i=0;i<N;i++) await full(i);
+for(let i=0;i<N;i++) {await full(i);if(i%8===0)console.log(json({phase:'reauthorization',done:i+1,holders:N}).trim());}
 check('reauthorization_with_unchanged_gate_and_circuit');
 assert.equal((await registry.acceptedRoot(f.registryRoot,1,0))[0],false);check('extra_grace_rejected');
 if(!live) {
@@ -155,6 +159,8 @@ const report={...manifest,status:'PASS',checks,transactions:records.length,acces
   gas_by_kind:Object.fromEntries(['full_zk','hit','publication'].map(k=>[k,extracted.filter(x=>x.kind===k).map(x=>Number(x.fees.gas_used))])),
   public_testnet_complete:live};
 fs.writeFileSync(path.join(out,'report.json'),json(report));
+fs.writeFileSync(path.join(out,'progress.json'),json({status:'PASS',recorded_transactions:records.length,public_testnet_complete:live}));
+fs.rmSync(path.join(out,'public_records.partial.json.gz'),{force:true});
 fs.writeFileSync(path.join(out,'public_records.json.gz'),zlib.gzipSync(json(records)));
 fs.writeFileSync(path.join(out,'extracted.json'),json(extracted));
 console.log(json({status:'PASS',holders:N,accesses:truth.length,transactions:records.length,checks:checks.length,live}).trim());

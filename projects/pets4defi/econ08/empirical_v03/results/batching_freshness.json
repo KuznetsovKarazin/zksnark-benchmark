@@ -1,0 +1,78 @@
+{
+  "source": "Complete on-chain-only EAS indexer screen; chain-log coverage not independently verified",
+  "observation_count": 23136,
+  "unique_issuer_timestamp_count": 21448,
+  "interpretation": "Computed scenario delays, not measured publication latency; cadence origin is Unix epoch",
+  "rows": [
+    {
+      "period_seconds": 3300,
+      "assumed_lag_seconds": 300,
+      "worst_case_bound_seconds": 3600,
+      "event_weighted_median_seconds": 1949.0,
+      "event_weighted_p95_seconds": 3432.0,
+      "coalesced_publication_proxy_median_seconds": 1951.0,
+      "meets_one_hour_bound": true,
+      "meets_one_day_bound": true
+    },
+    {
+      "period_seconds": 3600,
+      "assumed_lag_seconds": 300,
+      "worst_case_bound_seconds": 3900,
+      "event_weighted_median_seconds": 2095.0,
+      "event_weighted_p95_seconds": 3711.0,
+      "coalesced_publication_proxy_median_seconds": 2097.0,
+      "meets_one_hour_bound": false,
+      "meets_one_day_bound": true
+    },
+    {
+      "period_seconds": 21300,
+      "assumed_lag_seconds": 300,
+      "worst_case_bound_seconds": 21600,
+      "event_weighted_median_seconds": 10823.0,
+      "event_weighted_p95_seconds": 20578.25,
+      "coalesced_publication_proxy_median_seconds": 10835.0,
+      "meets_one_hour_bound": false,
+      "meets_one_day_bound": true
+    },
+    {
+      "period_seconds": 21600,
+      "assumed_lag_seconds": 300,
+      "worst_case_bound_seconds": 21900,
+      "event_weighted_median_seconds": 10214.5,
+      "event_weighted_p95_seconds": 20604.0,
+      "coalesced_publication_proxy_median_seconds": 10253.0,
+      "meets_one_hour_bound": false,
+      "meets_one_day_bound": true
+    },
+    {
+      "period_seconds": 86100,
+      "assumed_lag_seconds": 300,
+      "worst_case_bound_seconds": 86400,
+      "event_weighted_median_seconds": 49714.5,
+      "event_weighted_p95_seconds": 83319.5,
+      "coalesced_publication_proxy_median_seconds": 49915.0,
+      "meets_one_hour_bound": false,
+      "meets_one_day_bound": true
+    },
+    {
+      "period_seconds": 86400,
+      "assumed_lag_seconds": 300,
+      "worst_case_bound_seconds": 86700,
+      "event_weighted_median_seconds": 33859.5,
+      "event_weighted_p95_seconds": 82005.0,
+      "coalesced_publication_proxy_median_seconds": 33847.0,
+      "meets_one_hour_bound": false,
+      "meets_one_day_bound": false
+    },
+    {
+      "period_seconds": 604800,
+      "assumed_lag_seconds": 300,
+      "worst_case_bound_seconds": 605100,
+      "event_weighted_median_seconds": 340032.0,
+      "event_weighted_p95_seconds": 576350.0,
+      "coalesced_publication_proxy_median_seconds": 339041.5,
+      "meets_one_hour_bound": false,
+      "meets_one_day_bound": false
+    }
+  ]
+}

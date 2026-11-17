@@ -1,0 +1,38 @@
+[
+  {
+    "source": "eas_ethereum",
+    "chain_id": 1,
+    "rpc": "https://ethereum-rpc.publicnode.com",
+    "complete_window": false,
+    "status": "RECENT_RANGE_READ",
+    "first_block": 26436337,
+    "last_block": 26437336,
+    "latest_timestamp": 1794949463,
+    "log_count": 0,
+    "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "source": "eas_base",
+    "chain_id": 8453,
+    "rpc": "https://base-rpc.publicnode.com",
+    "complete_window": false,
+    "status": "RECENT_RANGE_READ",
+    "first_block": 58792388,
+    "last_block": 58793387,
+    "latest_timestamp": 1794949053,
+    "log_count": 0,
+    "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  {
+    "source": "eas_optimism",
+    "chain_id": 10,
+    "rpc": "https://optimism-rpc.publicnode.com",
+    "complete_window": false,
+    "status": "RECENT_RANGE_READ",
+    "first_block": 159674062,
+    "last_block": 159675061,
+    "latest_timestamp": 1794948899,
+    "log_count": 0,
+    "response_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  }
+]

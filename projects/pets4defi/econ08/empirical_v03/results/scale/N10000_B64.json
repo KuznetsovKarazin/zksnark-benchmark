@@ -1,0 +1,15 @@
+{
+  "holders": 10000,
+  "issuers": 64,
+  "seed": 20261117,
+  "label_error": 0.1,
+  "missing": 0.1,
+  "seconds": 265.2013308970054,
+  "ari": 0.12443863322938781,
+  "ami": 0.250257095768438,
+  "truth_permutation_null_ari": -4.6314118383490115e-05,
+  "anchor_count": 1000,
+  "nonanchor_coverage": 1.0,
+  "nonanchor_accuracy": 0.2797777777777778,
+  "caveat": "One seed: scalability demonstration, not a confidence interval or privacy guarantee"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "issuers": 4,
+    "holders_per_seed": 1000,
+    "seeds": 20,
+    "accuracy": 0.737675,
+    "identified_fraction": 0.47525000000000006,
+    "full_per_holder": 27.672499999999992,
+    "posterior_entropy_bits": 0.5254349495389729,
+    "distinct_binary_schedules": 2.95
+  },
+  {
+    "issuers": 16,
+    "holders_per_seed": 1000,
+    "seeds": 20,
+    "accuracy": 0.53981875,
+    "identified_fraction": 0.45635000000000003,
+    "full_per_holder": 27.733250000000005,
+    "posterior_entropy_bits": 1.5513508403885972,
+    "distinct_binary_schedules": 8.7
+  },
+  {
+    "issuers": 64,
+    "holders_per_seed": 1000,
+    "seeds": 20,
+    "accuracy": 0.4199739583333334,
+    "identified_fraction": 0.31715000000000004,
+    "full_per_holder": 27.699,
+    "posterior_entropy_bits": 2.71686578833173,
+    "distinct_binary_schedules": 27.25
+  }
+]

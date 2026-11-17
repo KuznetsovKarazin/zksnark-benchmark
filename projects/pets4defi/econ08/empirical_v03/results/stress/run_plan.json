@@ -1,0 +1,638 @@
+{
+  "cases": [
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "common",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "common",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "common",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "common",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "common",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "common",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "cover",
+      "rho": 0.5,
+      "period": 7,
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "cover",
+      "rho": 0.5,
+      "period": 7,
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "cover",
+      "rho": 0.5,
+      "period": 7,
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "cover",
+      "rho": 0.5,
+      "period": 7,
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "cover",
+      "rho": 0.5,
+      "period": 7,
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "cover",
+      "rho": 0.5,
+      "period": 7,
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "batch",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "batch",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "batch",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "batch",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "batch",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.2,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "batch",
+      "rho": 0,
+      "period": 7,
+      "label_error": 0.2,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": false
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true,
+      "skewed_prior": true
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "holders": 128,
+  "days": 90,
+  "scale_cases": [
+    {
+      "holders": 10000,
+      "issuers": 4,
+      "seed": 20261117
+    },
+    {
+      "holders": 10000,
+      "issuers": 64,
+      "seed": 20261117
+    }
+  ],
+  "scope": "Synthetic stress study; 10000-holder cases test sparse clustering only, not the complete HMM matrix."
+}

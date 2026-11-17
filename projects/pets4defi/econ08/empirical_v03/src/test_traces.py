@@ -10,12 +10,16 @@ from acquire import load_logs,canonical,REVOKED,SUPPLY_AAVE,WITHDRAW_AAVE,SUPPLY
 from traces import decode
 from replay import pattern,evaluate
 from observers import hmm
+from freshness import delays
 
 
 def topic_address(n):return '0x'+format(n,'064x')
 
 
 class TraceTests(unittest.TestCase):
+    def test_freshness_cutoff_and_lag_boundary(self):
+        np.testing.assert_array_equal(delays([0,1,3299,3300],3300,300),[300,3599,301,300])
+
     def test_beneficiary_semantics(self):
         one,two,three=map(topic_address,[1,2,3])
         supply=decode({'topics':[SUPPLY_AAVE,one,two,topic_address(0)],'data':three+format(100,'064x')},'aave_base')

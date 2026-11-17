@@ -55,6 +55,9 @@ roots. Wrapping those calls in one transaction does not hide the publisher.
 The new adapter accepts only a combined Poseidon root from a trusted coordinator.
 No new ZK circuit is introduced; the on-chain circuit still has **four** slots.
 The 8–64 issuer experiments are model experiments, not deployments of that circuit.
+The existing credential tree also has 1,024 leaf slots per issuer; the
+10,000-holder experiment is a model/clustering experiment, not that circuit's
+on-chain capacity demonstration.
 
 Deploy the adapter only with `PolicyGate(zkMode=true, cacheEnabled=true,
 policyMode=1, deltaSeconds=0, rootGraceSeconds=0)`, as enforced by the harness.
@@ -93,6 +96,16 @@ The optional `--scale` adds two 10,000-holder sparse-clustering cases (one seed
 each). These demonstrate execution at that size; they are not confidence
 intervals or a complete 10,000-holder HMM sweep. Run expensive jobs sequentially.
 
+Additional reproducible studies:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python projects/pets4defi/econ08/empirical_v03/src/run_ofat.py --out /tmp/econ08-ofat1000
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python projects/pets4defi/econ08/empirical_v03/src/calibrated.py --calibration-file projects/pets4defi/econ08/empirical_v03/results/calibrated/calibration.json --out /tmp/econ08-calibrated --holders 1000
+```
+
+The second command uses two measured source profiles to construct explicitly
+synthetic surrogate issuers. It does not bypass the failed four-real-issuer gate.
+
 ```sh
 cd examples/pets4defi_access_v2
 npm ci --ignore-scripts --no-audit --no-fund
@@ -101,6 +114,7 @@ node scripts/empirical/validate_archives.mjs
 node scripts/empirical/evm_demo.mjs --holders=32
 node scripts/empirical/evm_demo.mjs --holders=128
 node scripts/empirical/preflight.mjs
+node scripts/empirical/verify_release.mjs
 ```
 
 Setup verifies the pinned public phase-1 transcript, but phase 2 is a local

@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "input": "Public transaction calldata, receipts, block headers and verification key only",
+  "runs": [
+    {
+      "holders": 32,
+      "transactions": 199,
+      "accesses": 97,
+      "groth16_proofs_verified": 65,
+      "classification_mismatches": 0
+    },
+    {
+      "holders": 128,
+      "transactions": 775,
+      "accesses": 385,
+      "groth16_proofs_verified": 257,
+      "classification_mismatches": 0
+    }
+  ]
+}

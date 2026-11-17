@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-11-17T21:22:39.709Z",
+  "broadcast": false,
+  "network_ready": false,
+  "signer_configured": false,
+  "private_key_handling": "Environment variable only; never included in report",
+  "public_testnet_complete": false,
+  "error": "request timeout"
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "stress_runs": 1600,
+  "ofat_runs": 300,
+  "calibrated_runs": 60,
+  "total_seed_runs": 1960,
+  "confidence_interval_method": "Student t on 20 independent seed means",
+  "data_gate": "Indexer-insufficient; no independent full chain coverage asserted"
+}
