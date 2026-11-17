@@ -11,6 +11,7 @@ import sys
 import time
 import urllib.request
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE.parent/"src"))
@@ -51,7 +52,7 @@ def boundary(stamp):
 
 def main():
     p=argparse.ArgumentParser();p.add_argument("--private-dir",type=Path,required=True);path=p.parse_args().private_dir
-    path.mkdir(exist_ok=True,parents=True)
+    path.mkdir(exist_ok=True,parents=True,mode=0o700)
     # Calibrate the fixed block-time formula from a successfully checked dated Base header.
     reference_number=51471727
     reference_ts,_=header(reference_number)
@@ -89,7 +90,10 @@ def main():
             raw_counts[event["kind"]]+=1
             ev.append([event["beneficiary"],row["transactionHash"],stamp])
         obj=dict(day=day,start_block=lo,end_block=hi,first_hash=lh,last_hash=rh,raw_counts=dict(raw_counts),events=ev)
-        temp=cache.with_suffix(".part");temp.write_bytes(gzip.compress(json.dumps(obj,separators=(",",":")).encode(),mtime=0));temp.replace(cache)
+        # NamedTemporaryFile is owner-readable/writable even under a permissive umask.
+        with NamedTemporaryFile(dir=path, delete=False) as temporary:
+            temporary.write(gzip.compress(json.dumps(obj,separators=(",",":")).encode(),mtime=0))
+        os.replace(temporary.name, cache)
         return obj
     def attempt(day):
         for k in range(2):
