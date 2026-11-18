@@ -1,0 +1,260 @@
+{
+  "chain": "base",
+  "endpoint": "https://base.easscan.org/graphql",
+  "start": "2026-05-21T00:00:00Z",
+  "end_exclusive": "2026-11-17T00:00:00Z",
+  "indexer_pagination_complete": true,
+  "chain_log_coverage_verified": false,
+  "interpretation": "Indexer candidate screen only; not a chain-completeness certificate",
+  "errors": [],
+  "latest_indexed_issuance_time": 1794954169,
+  "onchain_revocations_returned": 50115,
+  "attesters_returned": 30,
+  "candidates": [
+    {
+      "local_id": "attester_1",
+      "revocations": 49731,
+      "distinct_utc_days": 180,
+      "schemas": 3,
+      "attestations_before_end": 1232657,
+      "qualifies": true
+    },
+    {
+      "local_id": "attester_2",
+      "revocations": 126,
+      "distinct_utc_days": 31,
+      "schemas": 4,
+      "attestations_before_end": 3448,
+      "qualifies": true
+    },
+    {
+      "local_id": "attester_3",
+      "revocations": 109,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_4",
+      "revocations": 60,
+      "distinct_utc_days": 4,
+      "schemas": 56,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_5",
+      "revocations": 17,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_6",
+      "revocations": 16,
+      "distinct_utc_days": 11,
+      "schemas": 1,
+      "attestations_before_end": 17,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_7",
+      "revocations": 11,
+      "distinct_utc_days": 6,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_8",
+      "revocations": 8,
+      "distinct_utc_days": 3,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_9",
+      "revocations": 7,
+      "distinct_utc_days": 2,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_10",
+      "revocations": 4,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_11",
+      "revocations": 3,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_12",
+      "revocations": 2,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_13",
+      "revocations": 2,
+      "distinct_utc_days": 2,
+      "schemas": 2,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_14",
+      "revocations": 2,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_15",
+      "revocations": 2,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_16",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_17",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_18",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_19",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_20",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_21",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_22",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_23",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_24",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_25",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_26",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_27",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_28",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_29",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    },
+    {
+      "local_id": "attester_30",
+      "revocations": 1,
+      "distinct_utc_days": 1,
+      "schemas": 1,
+      "attestations_before_end": null,
+      "qualifies": false
+    }
+  ],
+  "qualifying_attesters": 2,
+  "revocations_sha256": "ec7cd3330ea3663ca5331647e96541734e18ab87e19a56c8559b619cd7bfda05",
+  "aggregate_revocation_count": 50115,
+  "aggregate_matches_pagination": true,
+  "watermark_note": "Last indexed issuance is an activity date, not an index-completeness watermark."
+}

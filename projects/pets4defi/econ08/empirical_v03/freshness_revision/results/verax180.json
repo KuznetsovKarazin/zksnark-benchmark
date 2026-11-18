@@ -1,0 +1,17 @@
+{
+  "status": "unavailable",
+  "revocations": null,
+  "failed_attempts": [
+    {
+      "endpoint": "https://api.studio.thegraph.com/query/67521/verax-v2-linea/v0.0.1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "endpoint": "https://api.goldsky.com/api/public/project_clxx488osyuf501vygg71f86w/subgraphs/verax-v2-linea/0.0.1/gn",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
+  "start_utc": "2026-05-21",
+  "end_exclusive_utc": "2026-11-17",
+  "source": "Verax Linea v2 only"
+}
