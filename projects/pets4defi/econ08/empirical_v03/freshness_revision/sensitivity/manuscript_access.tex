@@ -50,8 +50,28 @@ $F$ (h) & Selective & Shared & Fixed batch & Different decisions & Different dec
 \end{tabular}
 \end{center}
 
-The last two columns apply to selective publication. In every cohort and at all three deadlines, each change was from a cache hit under the intermittent source to a full proof under the daily source. The pooled figure is thus the difference in the two full-proof totals divided by accesses. It provides no independent evidence of successful identification. For a shared epoch or a fixed batch both sources produce the same decision on every matched access. With equal source weights, chance accuracy for the common-epoch assignment is one half by symmetry. Only group sizes one and two are supported by these two measured schedules. The larger grouping study uses replicated templates and is a separate model experiment. At the one-hour freshness ceiling, holders assigned to the intermittent source incur 5.32 additional proofs on average in the full cohort and 1.86 in the capped empty-code cohort when both issuers share an epoch. The choice of cohort therefore changes the estimated magnitude of the external cost.
+The last two columns apply to selective publication. In every cohort and at all three deadlines, each change was from a cache hit under the intermittent source to a full proof under the daily source. The pooled figure is thus the difference in the two full-proof totals divided by accesses. It provides no independent evidence of successful identification. For a shared epoch or a fixed batch both sources produce the same decision on every matched access. With equal source weights, chance accuracy for the common-epoch assignment is one half by symmetry. Only group sizes one and two are supported by these two measured schedules. The larger grouping study uses replicated templates and is a separate model experiment. For the primary cohort, sharing an epoch added 1.86 proofs per intermittent-source holder in 58 days at the one-hour ceiling. The increment was zero for daily-source holders. Averaging the two sources equally gives 0.93 extra proofs per wallet. The corresponding intermittent-source increment in the full cohort was 5.32 proofs. The highest activity quartile incurred 21.52 extra proofs.
+
+\subsection{Whole-path observability at matched freshness}
+
+For each observed access path we compared the two sequences of hypothetical cache decisions. With perfect observations a path distinguishes the two schedules if the sequences differ at least once. Let $q$ be the proportion of such paths. With equally probable schedules, the expected probability of a correct compulsory choice is $q+(1-q)/2$. We next allowed each recorded cache/full-proof label to be reversed independently with probability 0.10. Errors affect observations only. Access times, both schedules and the initial cache state are given. The hidden source stays fixed. We integrated this two-state hidden Markov model over its emission probabilities using cohort counts of differing decisions. Equal likelihoods received half credit. No individual classifications were required. The following table gives the primary cohort of 9,832 empty-code addresses, each with at most ten accesses on every UTC day.
+
+\begin{center}
+\small
+\begin{tabular}{rrrrrr}
+\hline
+$F$ (h) & Selective & Shared & Distinct paths & Perfect labels & 10\% errors \\
+ & \multicolumn{2}{c}{proofs per wallet} & (\%) & \multicolumn{2}{c}{correct assignment (\%)} \\
+\hline
+1 & 3.73 & 4.66 & 56.55 & 78.28 & 74.01 \\
+6 & 3.56 & 4.32 & 49.88 & 74.94 & 71.11 \\
+24 & 3.39 & 3.95 & 42.77 & 71.38 & 68.05 \\
+\hline
+\end{tabular}
+\end{center}
+
+At one hour, 5,560 of 9,832 paths had at least one different decision. Among all 14,440 eligible paths the corresponding proportion was 62.63\%. For wallets with exactly three accesses the proportion was 35.81\%, rising to 97.29\% in the highest activity quartile. The shared and fixed-batch policies gave identical source-conditioned decisions throughout, yielding zero distinguishable paths and 50\% expected accuracy. These values describe the complete fixed sample and integrate the assumed noise analytically. Actual issuer affiliation was unobserved. Other public channels, missed accesses and temporally correlated errors lie outside this estimate.
 
 \subsection{Interpretation}
 
-Common-epoch spectral negative controls used 10,000 synthetic paths, five independent seeds per condition and either four or 64 arbitrary source labels. The adjusted Rand index ranged from -0.00018 to 0.00013 across ten runs. These controls quantify spurious clustering when issuer labels carry no information. Selective clustering at this scale has one published seed per size. Accuracy of an issuer classifier on replayed Aave paths remains unmeasured. No ground-truth issuer labels exist for these addresses. The Web PKI results remain a separate sensitivity using retained effective dates in signed CRL snapshots.
+Common-epoch spectral negative controls used 10,000 synthetic paths, five independent seeds per condition and either four or 64 arbitrary source labels. The adjusted Rand index ranged from -0.00018 to 0.00013 across ten runs. These controls quantify spurious clustering when issuer labels carry no information. Selective clustering at this scale has one published seed per size. The conditional two-schedule result above uses no ground-truth issuer labels. Multi-issuer accuracy on deployed accounts remains unmeasured. The Web PKI results remain a separate sensitivity using retained effective dates in signed CRL snapshots.

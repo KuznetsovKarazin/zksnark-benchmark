@@ -5,6 +5,8 @@ import json
 import math
 from pathlib import Path
 
+from channel_counts import success_probabilities
+
 DATA = Path(__file__).resolve().parents[1] / "results"
 
 
@@ -15,6 +17,58 @@ def rows(file):
 
 def same(a, b):
     assert math.isclose(float(a), float(b), rel_tol=1e-11, abs_tol=1e-11), (a, b)
+
+
+def check_whole_paths(stats, costs, partitions):
+    # Independent forward sum over synthetic emission-count probabilities.
+    error = 0.10
+    mass = [1.0]
+    correct = success_probabilities(120, error)
+    for k, expected in enumerate(correct):
+        direct = sum(mass[:(k + 1) // 2])
+        if k % 2 == 0:
+            direct += 0.5 * mass[k // 2]
+        same(expected, direct)
+        mass = [(1 - error) * a + error * b for a, b in zip(mass + [0.0], [0.0] + mass)]
+
+    table = rows("aave_path_frontier.csv")
+    policies = {"selective": "selective_equal_full", "common": "common_full", "fixed_batch": "fixed_batch_full"}
+    indexed = {(r["cohort"], int(r["F_hours"]), r["policy"]): r for r in table}
+    assert len(table) == len(indexed)
+    assert set(indexed) == {(name, h, policy) for name, h in costs for policy in policies}
+    bins = ["count_0", "count_1_2", "count_3_4", "count_5_6", "count_7_8", "count_9_plus"]
+    for (name, h, policy), r in indexed.items():
+        baseline = costs[name, h]
+        n, distinct = int(r["wallets"]), int(r["distinguishable_wallets"])
+        counts = [int(r[b]) for b in bins]
+        assert n == int(stats[name]["wallets"]) and sum(counts) == n and min(counts) >= 0
+        assert distinct == n - counts[0]
+        same(r["distinguishable_fraction"], distinct / n)
+        same(r["accuracy_noiseless"], (n + distinct) / (2 * n))
+        tail = float(r["expected_correct_10pct_in_9_plus"])
+        assert counts[-1] * correct[9] - 1e-10 <= tail <= counts[-1] + 1e-10
+        mass_head = sum(count * correct[k] for count, k in zip(counts[:-1], (0, 1, 3, 5, 7)))
+        same(r["accuracy_10pct"], (mass_head + tail) / n)
+        assert 0.5 <= float(r["accuracy_10pct"]) <= float(r["accuracy_noiseless"]) + 1e-12
+        same(r["full_proofs_per_wallet"], baseline[policies[policy]])
+        differences = int(r["different_decisions"])
+        if policy == "selective":
+            same(r["quiet_full_proofs_per_wallet"], int(baseline["intermittent_full_sum"]) / n)
+            assert differences == int(baseline["selective_pair_disagreements"])
+            assert distinct <= differences <= int(baseline["accesses"]) - n
+        else:
+            same(r["quiet_full_proofs_per_wallet"], r["full_proofs_per_wallet"])
+            assert differences == distinct == 0
+            same(r["accuracy_10pct"], 0.5)
+    for target, parts in partitions:
+        for h in (1, 6, 24):
+            parent = indexed[target, h, "selective"]
+            children = [indexed[name, h, "selective"] for name in parts if int(stats[name]["wallets"])]
+            for key in bins + ["different_decisions", "distinguishable_wallets"]:
+                assert int(parent[key]) == sum(int(r[key]) for r in children)
+            for key in ("accuracy_noiseless", "accuracy_10pct"):
+                same(float(parent[key]) * int(parent["wallets"]),
+                     sum(float(r[key]) * int(r["wallets"]) for r in children))
 
 
 def main():
@@ -82,8 +136,9 @@ def main():
         for prefix in ("", "empty_"):
             seq = [int(stats[f"{prefix}cap_{cap}"][field]) for cap in (10,25,50)]
             assert seq == sorted(seq)
+    check_whole_paths(stats, costs, partitions)
     if access_only:
-        print("PASS: code strata, activity quartiles, gap weights, cohort replay and published baseline.")
+        print("PASS: cohort partitions, costs, path counts and both error-channel controls.")
         return
     nulls = rows("null_controls_10000.csv")
     assert len(nulls)==10 and {(int(r["issuer_labels"]),int(r["seed"])) for r in nulls} == {
@@ -92,7 +147,7 @@ def main():
         assert int(r["clustering_n"]) == 10000 and int(r["calibration_n"]) == 1000
         assert float(r["maximum_posterior_minus_prior"]) < 1e-10
         assert all(-1 <= float(r[k]) <= 1 for k in ("null_ari","null_ami"))
-    print("PASS: code strata, activity quartiles, both gap weights, cohort replay, published baseline and ten large null runs.")
+    print("PASS: cohort partitions, costs, whole-path evidence, both error-channel controls and ten large null runs.")
 
 
 if __name__ == "__main__":

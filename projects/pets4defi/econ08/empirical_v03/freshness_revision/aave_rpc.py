@@ -51,7 +51,12 @@ def boundary(stamp):
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--private-dir",type=Path,required=True);path=p.parse_args().private_dir
+    p = argparse.ArgumentParser()
+    p.add_argument("--private-dir", type=Path, required=True)
+    p.add_argument("--frozen-span", action="store_true",
+                   help="Reacquire just the published contiguous span and check its existing manifest.")
+    args = p.parse_args()
+    path = args.private_dir
     path.mkdir(exist_ok=True,parents=True,mode=0o700)
     # Calibrate the fixed block-time formula from a successfully checked dated Base header.
     reference_number=51471727
@@ -103,6 +108,25 @@ def main():
                 if "403" in error or "401" in error:break
                 if k==0:time.sleep(1)
         return dict(day=day,error=error)
+    if args.frozen_span:
+        coverage = json.loads((HERE / "results/aave_interval_coverage.json").read_text())
+        start = dt.datetime.fromisoformat(coverage["aggregate_span_start"]).timestamp()
+        end = dt.datetime.fromisoformat(coverage["aggregate_span_end_exclusive"]).timestamp()
+        selected = [r for r in coverage["ranges"] if start <= EPOCH + r["day"] * 86400 < end]
+        if len(selected) * 86400 != end - start or int(rpc("eth_chainId", []), 16) != 8453:
+            raise ValueError("Incomplete frozen manifest or wrong chain")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=5) as workers:
+            for index, (prior, current) in enumerate(zip(selected, workers.map(attempt, [r["day"] for r in selected])), 1):
+                if "error" in current:
+                    raise RuntimeError(f"Frozen day {prior['day']}: {current['error']}")
+                if any(current[key] != prior[key] for key in
+                       ("day", "start_block", "end_block", "first_hash", "last_hash", "raw_counts")):
+                    raise ValueError(f"Frozen daily anchor/count mismatch on day {prior['day']}")
+                if len(current["events"]) != prior["event_count"]:
+                    raise ValueError(f"Frozen event count mismatch on day {prior['day']}")
+                if index % 10 == 0 or index == len(selected):
+                    print(f"Verified {index}/{len(selected)} frozen days", flush=True)
+        return
     manifest=[];events_by_wallet=collections.defaultdict(dict);errors=[];total=0
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as workers:
         for obj in workers.map(attempt,range(180)):

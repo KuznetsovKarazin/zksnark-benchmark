@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from access_paths import DAY, RESULTS, load_paths, timestamp
+from channel_counts import channel_summary, success_probabilities
 
 TTL = 30 * DAY
 ORIGIN = timestamp("2026-08-19")
@@ -65,7 +66,7 @@ def summaries(paths, code, lo, hi):
     for q in range(1, 5):
         masks[f"quartile_{q}"] = quartiles == q
         masks[f"empty_quartile_{q}"] = empty & (quartiles == q)
-    descriptive, costs = [], []
+    descriptive, costs, path_frontier = [], [], []
     for name, mask in masks.items():
         n = int(mask.sum())
         gap_count = int((sizes[mask] - 1).sum())
@@ -82,8 +83,9 @@ def summaries(paths, code, lo, hi):
         flags = [full_flags(times, starts, boundaries) for boundaries in schedules(lo, hi, period, rows)]
         active, intermittent, common, batch = [np.add.reduceat(a.astype(int), offsets) for a in flags]
         disagreements = np.add.reduceat((flags[0] != flags[1]).astype(int), offsets)
-        if np.any(disagreements > sizes):
+        if np.any(disagreements > sizes - 1):
             raise ValueError("Invalid paired response count")
+        success = success_probabilities(int(disagreements.max()))
         for name, mask in masks.items():
             n = int(mask.sum())
             if not n:
@@ -103,7 +105,20 @@ def summaries(paths, code, lo, hi):
                 selective_switch_wallet_weighted=float(np.mean(disagreements[mask] / sizes[mask])),
                 shared_switch_access_weighted=0, fixed_switch_access_weighted=0,
             ))
-    return descriptive, costs, cuts.tolist()
+            histogram = np.bincount(disagreements[mask]).tolist()
+            selective_channel = channel_summary(histogram, success)
+            # Both source assignments share the same epoch sequence for each control.
+            shared_channel = channel_summary([n], success)
+            for policy, average, quiet_cost, channel in (
+                    ("selective", selective, quiet_sum / n, selective_channel),
+                    ("common", common_sum / n, common_sum / n, shared_channel),
+                    ("fixed_batch", batch_sum / n, batch_sum / n, shared_channel)):
+                path_frontier.append(dict(
+                    cohort=name, F_hours=(period + LAG) // 3600, policy=policy, wallets=n,
+                    full_proofs_per_wallet=average, quiet_full_proofs_per_wallet=quiet_cost,
+                    **channel,
+                ))
+    return descriptive, costs, cuts.tolist(), path_frontier
 
 
 def write_csv(path, rows):
@@ -125,9 +140,10 @@ def main():
     kinds = stored["kinds"]
     if set(paths) != set(kinds) or not set(kinds.values()) <= {"empty", "other_code", "delegated", "unknown"}:
         raise ValueError("Every eligible address needs an explicit lookup status")
-    descriptive, costs, cuts = summaries(paths, kinds, lo, hi)
+    descriptive, costs, cuts, path_frontier = summaries(paths, kinds, lo, hi)
     write_csv(RESULTS / "aave_activity_cohorts.csv", descriptive)
     write_csv(RESULTS / "aave_cohort_frontier.csv", costs)
+    write_csv(RESULTS / "aave_path_frontier.csv", path_frontier)
     info = dict(window_start_utc="2026-09-08", end_exclusive_utc="2026-11-05",
                 observed_days=(hi-lo)//DAY, requested_days=180, eligible_wallets=len(paths),
                 min_transactions=3, reference_chain_id=8453, closing_block=stored["block_number"],

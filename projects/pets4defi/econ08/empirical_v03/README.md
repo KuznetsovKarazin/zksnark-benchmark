@@ -2,6 +2,8 @@
 
 The [matched-freshness revision](freshness_revision/README.md) supersedes the original cost figure. It includes the calibrated cache controls, grouping results, the independent issuer heartbeat prototype, and source coverage for the separate descriptive study.
 
+The [58-day whole-path frontier](freshness_revision/results/aave_path_frontier.csv) pairs cost with the probability of a correct two-source assignment under perfect labels and under 10% independent label errors. The [manuscript section](freshness_revision/sensitivity/manuscript_access.tex) and [primary-cohort figure](figures/aave_path_frontier.pdf) cover the replay on observed Aave access times.
+
 ## Protocol deviations
 
 The 180-day request yielded a 58-day Aave Base window, 8 September to 4 November 2026 inclusive. The planned Dune aggregate request returned HTTP 402. The exploratory RPC fallback used locally held, address-indexed access sequences. Its storage, selection, post hoc sensitivity and interpretation are documented in [the protocol deviations section](freshness_revision/README.md#protocol-deviations-and-cohort-sensitivity). The original 90-day EAS feasibility gate retains its published outcome.

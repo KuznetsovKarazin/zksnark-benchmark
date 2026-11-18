@@ -6,7 +6,7 @@ The [matched-freshness revision](freshness_revision/README.md) supersedes the or
 | Work package | Executed evidence | Status and limit |
 |---|---|---|
 | Real EAS schedules | Complete indexer pagination: Ethereum 5, Base 23,125, Optimism 6 revocations in the frozen 90-day window | INDEXER_INSUFFICIENT: two qualifying source addresses, four required. Operator independence and full chain coverage remain unverified. |
-| Real DeFi access paths | 58 contiguous Aave Base days, 8 September to 4 November 2026. Locally replayed 14,440 eligible active paths with two measured EAS schedules. | Exploratory RPC deviation from the Dune-only plan. Costs and aggregate cache-response sensitivity are available. Wallet-to-issuer identification accuracy is unmeasured. |
+| Real DeFi access paths | 58 contiguous Aave Base days, 8 September to 4 November 2026. Locally replayed 14,440 eligible active paths with two measured EAS schedules. | [Paired proofs, noiseless path counts and 10% error-channel accuracy](freshness_revision/results/aave_path_frontier.csv). Source assignments and cache decisions are counterfactual. Real affiliations are unobserved. This RPC analysis followed the documented Dune protocol deviation. |
 | Public-field extractor | 25 archived local runs; 15,346 transactions; 8,875 accesses; zero mismatches; seven negative checks | PASS for the archived cases |
 | New batched-registry local demo | 32 wallets: 199 transactions, 97 accesses, 17 checks; 128 wallets: 775 transactions, 385 accesses, 19 checks | PASS on local EVM; four-issuer circuit unchanged |
 | Independent proof verification | 322 Groth16 proofs independently verified from released public calldata; zero classification/gas mismatches | PASS; includes 32- and 128-wallet runs |
