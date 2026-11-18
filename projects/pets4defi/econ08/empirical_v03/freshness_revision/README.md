@@ -62,6 +62,8 @@ At F = 1 hour, the common-minus-selective increment per wallet was 2.66 for all 
 
 Switching between the two hypothetical EAS schedules under selective publication changed the cache decision on 21.18%, 11.45% and 6.80% of observed accesses at F = 1, 6 and 24 hours. Equal weighting of wallets gives 21.95%, 17.33% and 13.03%. Pooled and equal-wallet weighting differ most at the longer deadlines. In both shared policies the matched decisions agree by construction. These are aggregate response metrics. Longitudinal HMM identification on the Aave replay remains unmeasured. Only G = 1 and G = 2 are supported by the two measured schedules. See the [access-sensitivity figure](../figures/aave_access_sensitivity.pdf).
 
+In every published cohort and at each of the three deadlines, the intermittent-source full-proof decisions were a subset of the daily-source decisions, and the shared policy matched the daily-source total. At F = 1 hour all 76,810 disagreements point in the same direction. In this dataset the pooled disagreement fraction can therefore be recovered from the difference in full-proof counts divided by accesses. It supplies no independent validation of issuer-identification accuracy.
+
 ## Base mainnet price replay
 
 The release uses matched noon blocks from the original 90-day window, bracketing canonical headers and the historical Base GasPriceOracle getL1Fee call on a fixed unsigned EIP-1559 envelope. The historical base fee times local measured gas gives L2 execution at zero priority tip. The historical L1 quotation uses the same block. Nonce, gas cap, fee bytes, payload class and selected local transaction are explicit in fee_payloads.mjs and results/quote_templates.json. Freshness prices assume these call shapes and a fixed price scenario on each date. The replay does not reconstruct actual user invoices. For contract variants with different calldata and execution costs, retain the corresponding measured template or leave the fee unknown.
@@ -77,6 +79,8 @@ The local run checked nine conditions and verified an actual Groth16 membership 
 ## Observation controls and economic assignment
 
 Five independently generated common-epoch datasets for each of four and 64 arbitrary issuer labels were used as negative controls. Each clustering run has 1,000 synthetic rows. A separate 1,000-event logging calibration estimates noise and missingness without the test labels. The common-epoch HMM was checked on 32 held-out paths per seed with a nonuniform prior. Maximum posterior drift was below 4e-16. Null ARI lay close to zero. These checks quantify spurious structure under the defense. The earlier 10,000-holder selective study still has one seed per size; positive-case accuracy under estimated noise is unverified.
+
+The 18 November replication adds five independent seeds for each of four and 64 arbitrary labels at 10,000 synthetic paths per dataset. The ten common-epoch adjusted Rand indices range from -0.00018 to 0.00013. The maximum posterior drift on the synthetic negative control is 3.33e-16. The public [per-seed results](results/null_controls_10000.csv) retain every run. Positive-case selective clustering at this scale still has one published seed per size.
 
 Nataliya's current assignment is the literature/background and a symbolic heterogeneous-issuer externality note with the four established rules. The numerical WP6 price and allocation table follows the scientific scope and frontier freeze. Her standalone aggregate is results/base_daily_counts.csv.
 

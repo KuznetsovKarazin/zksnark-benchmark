@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v7.0.1
       - name: Recheck published seed means and trace/fee accounting
         run: python3 projects/pets4defi/econ08/empirical_v03/freshness_revision/check_release.py
-      - name: Validate the 58-day access sensitivity
-        run: python3 projects/pets4defi/econ08/empirical_v03/freshness_revision/sensitivity/check_tables.py --access-only
+      - name: Validate access sensitivity and 10,000-path controls
+        run: python3 projects/pets4defi/econ08/empirical_v03/freshness_revision/sensitivity/check_tables.py
       - name: Verify published file hashes
         working-directory: projects/pets4defi/econ08/empirical_v03/freshness_revision
         run: |

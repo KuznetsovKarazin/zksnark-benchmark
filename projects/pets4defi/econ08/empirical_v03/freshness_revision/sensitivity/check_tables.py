@@ -74,6 +74,8 @@ def main():
             same(cost["selective_switch_access_weighted"], disagreements/a)
             assert 0 <= float(cost["selective_switch_wallet_weighted"]) <= 1
             assert abs(active-quiet) <= disagreements <= a
+            # Empirical nesting and common/daily agreement reported for this frozen 58-day sample.
+            assert disagreements == active - quiet and shared == active
             assert all(n <= x <= a for x in (active,quiet,shared,batch))
             assert int(cost["shared_switch_access_weighted"]) == int(cost["fixed_switch_access_weighted"]) == 0
     for field in count_fields:

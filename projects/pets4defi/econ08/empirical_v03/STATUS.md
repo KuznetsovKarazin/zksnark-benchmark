@@ -14,7 +14,7 @@ The [matched-freshness revision](freshness_revision/README.md) supersedes the or
 | HMM robustness | 1,600 runs: 80 cases x 20 seeds x 128 holders | Complete; synthetic, daily-grid, known noise parameters |
 | One-factor sensitivity | 300 runs: 15 cases x 20 seeds x 1,000 holders | Complete; synthetic |
 | EAS-profile calibration | 60 runs: 4/16/64 synthetic issuers x 20 seeds x 1,000 holders | Complete; two fixed observed templates duplicated/shifted, synthetic accesses |
-| Spectral scale | 10,000 simulated holders, 4 and 64 labels. The selective positive case has one seed per size. The five-seed common-epoch control is a separate experiment. | Only the selective scale check has been used in the original positive-case report. |
+| Spectral scale | 10,000 simulated holders, 4 and 64 labels. Five separately generated common-epoch datasets per size. The selective positive case has one seed per size. | Ten negative controls completed. Null ARI -0.00018 to 0.00013. Positive-case stability remains untested. |
 | Freshness | Delay computed on 23,136 indexed revocations for a period grid | L=300 seconds is an assumption, not measured network latency |
 | Numerical audit | All 1,960 seed runs independently reaggregated; Student-t intervals checked | PASS |
 | Python checks | 15 tests, including exhaustive hidden-history likelihood and decoder/freshness cases | PASS |
