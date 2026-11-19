@@ -1,0 +1,10 @@
+{
+  "run_url": "https://github.com/KuznetsovKarazin/zksnark-benchmark/actions/runs/44178264468",
+  "run_id": 44178264468,
+  "job_id": 134375377376,
+  "commit": "e86cdc66f7c7ccefc61aa8415c90c33518d3ba62",
+  "workflow_conclusion": "success",
+  "data_gate_conclusion": "UNKNOWN",
+  "meaning": "Unit tests passed and availability audit executed; workflow success is not empirical-gate acceptance.",
+  "base_and_ethereum_revocation_sha256_match_local": true
+}

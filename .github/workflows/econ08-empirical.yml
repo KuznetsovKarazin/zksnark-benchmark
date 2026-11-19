@@ -1,0 +1,52 @@
+name: ECON-08 empirical extension checks
+on:
+  push:
+    branches: [feat/econ08-empirical-extension]
+    paths: ['.github/workflows/econ08-empirical.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks-and-availability:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Install pinned analysis dependencies
+        run: python -m pip install -r projects/pets4defi/econ08/empirical_v03/requirements.txt
+      - name: Verify exact observer, controls and data semantics
+        run: python -m unittest discover -s projects/pets4defi/econ08/empirical_v03/src -p 'test_*.py' -v
+      - name: Recompute published seed-level summaries
+        run: python projects/pets4defi/econ08/empirical_v03/src/audit_results.py
+      - name: Check public RPC availability (not historical coverage)
+        if: github.event_name == 'workflow_dispatch'
+        run: python projects/pets4defi/econ08/empirical_v03/src/network_smoke.py /tmp/econ08-network-smoke.json
+      - name: Collect EAS candidate-screen aggregates
+        if: github.event_name == 'workflow_dispatch'
+        run: python projects/pets4defi/econ08/empirical_v03/src/indexer_gate.py --private-out /tmp/econ08-private-indexer --summary /tmp/econ08-data-gate.json
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '24'
+      - name: Install locked verifier dependencies
+        working-directory: examples/pets4defi_access_v2
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Verify all released public-calldata proofs and classifications
+        working-directory: examples/pets4defi_access_v2
+        run: node scripts/empirical/verify_release.mjs /tmp/econ08-public-proof-audit.json
+      - name: Preserve aggregate checks only
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: econ08-empirical-availability
+          path: |
+            /tmp/econ08-network-smoke.json
+            /tmp/econ08-data-gate.json
+            /tmp/econ08-public-proof-audit.json
+          if-no-files-found: warn
+          retention-days: 14

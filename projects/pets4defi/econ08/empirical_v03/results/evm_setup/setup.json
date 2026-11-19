@@ -1,0 +1,16 @@
+{
+  "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+  "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+  "zkey_sha256": "35a1bed2997d21b4bafa7a156f92376a8ac3549bc4ec04c23e4bf779613d4caf",
+  "wasm_sha256": "f9379e40226ce39f341ef51441163214439bb7c129cdb1247f2cb6e4c7261f36",
+  "r1cs_sha256": "d0c374b11fcb0045f82f05422d733c44af54a06dff8fb0710f506100fe33e15d",
+  "verifier_sha256": "a7edc85d156031bead3c304342a37122e2bde6a2a233c22bd89404456d1dca3b",
+  "verification_key_sha256": "3457b228a0e4d7ee78ab1b273a87cc7cc9f5fcd15f77062ab31c494743be4b04",
+  "phase1_source": "https://circom.info/powersOfTau28_hez_final_14.ptau",
+  "phase1_blake2b512": "eeefbcf7c3803b523c94112023c7ff89558f9b8e0cf5d6cdcba3ade60f168af4a181c9c21774b94fbae6c90411995f7d854d02ebd93fb66043dbb06f17a831c1",
+  "phase1_sha256": "489be9e5ac65d524f7b1685baac8a183c6e77924fdb73d2b8105e335f277895d",
+  "local_demo_phase1": false,
+  "phase1_provenance": "Public Perpetual Powers of Tau transcript, hash pinned to iden3/snarkjs table",
+  "phase2_status": "Two contributions from this one local process; NOT independent participants and NOT production-safe",
+  "created_utc": "2026-11-17T20:54:41.036Z"
+}

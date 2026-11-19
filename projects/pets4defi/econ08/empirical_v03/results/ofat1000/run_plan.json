@@ -1,0 +1,141 @@
+{
+  "cases": [
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 4,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 8,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 32,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 64,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.05,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.2,
+      "missing": 0.1,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.3,
+      "heterogeneity": true
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": false
+    },
+    {
+      "issuers": 16,
+      "policy": "selective",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true,
+      "skewed_prior": true
+    },
+    {
+      "issuers": 16,
+      "policy": "common",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true,
+      "rho": 0.5,
+      "period": 7
+    },
+    {
+      "issuers": 16,
+      "policy": "cover",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true,
+      "rho": 0.5,
+      "period": 7
+    },
+    {
+      "issuers": 16,
+      "policy": "batch",
+      "label_error": 0.1,
+      "missing": 0.1,
+      "heterogeneity": true,
+      "rho": 0.5,
+      "period": 7
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "holders": 1000,
+  "days": 90,
+  "scope": "Synthetic daily model; one factor at a time"
+}

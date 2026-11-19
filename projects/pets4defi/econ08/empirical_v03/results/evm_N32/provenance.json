@@ -1,0 +1,7 @@
+{
+  "commit": "66a1ff654e2bab750f0a220880f0e9e967179bdb",
+  "git_blob": "157603849f1daf14dff0342b3a4819e516d6a3ea",
+  "sha256": "32fc4f7858b5db11248990a47a3d62f9f97635af89b570f8019410a348ffbdf2",
+  "path": "examples/pets4defi_access_v2/scripts/empirical/evm_demo.mjs",
+  "note": "Final harness only adds progress/checkpoint I/O after these runs; executed snapshots are retained here."
+}

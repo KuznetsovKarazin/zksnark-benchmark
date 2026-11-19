@@ -1,0 +1,6 @@
+__pycache__/
+results/stress/runs.jsonl
+results/stress/identification_curves.json
+results/evm_*/extracted.json
+results/evm_*/public_records.partial.json.gz
+results/evm_*/progress.json

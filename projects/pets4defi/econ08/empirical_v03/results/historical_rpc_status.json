@@ -1,0 +1,685 @@
+[
+  {
+    "source": "eas_ethereum",
+    "chain_id": 1,
+    "rpc": "https://ethereum-rpc.publicnode.com",
+    "start": "2026-08-19T00:00:00Z",
+    "end_exclusive": "2026-11-17T00:00:00Z",
+    "first_block": 25785425,
+    "stop_block_exclusive": 26431040,
+    "complete": false,
+    "raw_log_count": 0,
+    "errors": [
+      {
+        "first": 25785425,
+        "last": 25790424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25790425,
+        "last": 25795424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25795425,
+        "last": 25800424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25800425,
+        "last": 25805424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25805425,
+        "last": 25810424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25810425,
+        "last": 25815424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25815425,
+        "last": 25820424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25820425,
+        "last": 25825424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25825425,
+        "last": 25830424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25830425,
+        "last": 25835424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25835425,
+        "last": 25840424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25840425,
+        "last": 25845424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25845425,
+        "last": 25850424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25850425,
+        "last": 25855424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25855425,
+        "last": 25860424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25860425,
+        "last": 25865424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25865425,
+        "last": 25870424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25870425,
+        "last": 25875424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25875425,
+        "last": 25880424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25880425,
+        "last": 25885424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25885425,
+        "last": 25890424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25890425,
+        "last": 25895424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25895425,
+        "last": 25900424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25900425,
+        "last": 25905424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25905425,
+        "last": 25910424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25910425,
+        "last": 25915424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25915425,
+        "last": 25920424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25920425,
+        "last": 25925424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25925425,
+        "last": 25930424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25930425,
+        "last": 25935424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25935425,
+        "last": 25940424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25940425,
+        "last": 25945424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25945425,
+        "last": 25950424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25950425,
+        "last": 25955424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25955425,
+        "last": 25960424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25960425,
+        "last": 25965424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25965425,
+        "last": 25970424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25970425,
+        "last": 25975424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25975425,
+        "last": 25980424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25980425,
+        "last": 25985424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25985425,
+        "last": 25990424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25990425,
+        "last": 25995424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 25995425,
+        "last": 26000424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26000425,
+        "last": 26005424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26005425,
+        "last": 26010424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26010425,
+        "last": 26015424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26015425,
+        "last": 26020424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26020425,
+        "last": 26025424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26025425,
+        "last": 26030424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26030425,
+        "last": 26035424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26035425,
+        "last": 26040424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26040425,
+        "last": 26045424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26045425,
+        "last": 26050424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26050425,
+        "last": 26055424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26055425,
+        "last": 26060424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26060425,
+        "last": 26065424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26065425,
+        "last": 26070424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26070425,
+        "last": 26075424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26075425,
+        "last": 26080424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26080425,
+        "last": 26085424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26085425,
+        "last": 26090424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26090425,
+        "last": 26095424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26095425,
+        "last": 26100424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26100425,
+        "last": 26105424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26105425,
+        "last": 26110424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26110425,
+        "last": 26115424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26115425,
+        "last": 26120424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26120425,
+        "last": 26125424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26125425,
+        "last": 26130424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26130425,
+        "last": 26135424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26135425,
+        "last": 26140424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26140425,
+        "last": 26145424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26145425,
+        "last": 26150424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26150425,
+        "last": 26155424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26155425,
+        "last": 26160424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26160425,
+        "last": 26165424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26165425,
+        "last": 26170424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26170425,
+        "last": 26175424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26175425,
+        "last": 26180424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26180425,
+        "last": 26185424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26185425,
+        "last": 26190424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26190425,
+        "last": 26195424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26195425,
+        "last": 26200424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26200425,
+        "last": 26205424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26205425,
+        "last": 26210424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26210425,
+        "last": 26215424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26215425,
+        "last": 26220424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26220425,
+        "last": 26225424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26225425,
+        "last": 26230424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26230425,
+        "last": 26235424,
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "first": 26235425,
+        "last": 26240424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26240425,
+        "last": 26245424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26245425,
+        "last": 26250424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26250425,
+        "last": 26255424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26255425,
+        "last": 26260424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26260425,
+        "last": 26265424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26265425,
+        "last": 26270424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26270425,
+        "last": 26275424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26275425,
+        "last": 26280424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26280425,
+        "last": 26285424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26285425,
+        "last": 26290424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26290425,
+        "last": 26295424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26295425,
+        "last": 26300424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26300425,
+        "last": 26305424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26305425,
+        "last": 26310424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26310425,
+        "last": 26315424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26315425,
+        "last": 26320424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26320425,
+        "last": 26325424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26325425,
+        "last": 26330424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26330425,
+        "last": 26335424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26335425,
+        "last": 26340424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26340425,
+        "last": 26345424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26345425,
+        "last": 26350424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26350425,
+        "last": 26355424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26355425,
+        "last": 26360424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26360425,
+        "last": 26365424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26365425,
+        "last": 26370424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26370425,
+        "last": 26375424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26375425,
+        "last": 26380424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26380425,
+        "last": 26385424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26385425,
+        "last": 26390424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26390425,
+        "last": 26395424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26395425,
+        "last": 26400424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26400425,
+        "last": 26405424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26405425,
+        "last": 26410424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26410425,
+        "last": 26415424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26415425,
+        "last": 26420424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26420425,
+        "last": 26425424,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26425425,
+        "last": 26428232,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      },
+      {
+        "first": 26428233,
+        "last": 26431039,
+        "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+      }
+    ],
+    "unattempted_ranges": null
+  },
+  {
+    "source": "eas_optimism",
+    "chain_id": 10,
+    "rpc": "https://optimism-rpc.publicnode.com",
+    "start": "2026-08-19T00:00:00Z",
+    "end_exclusive": "2026-11-17T00:00:00Z",
+    "first_block": 155749412,
+    "stop_block_exclusive": 159637412,
+    "complete": false,
+    "raw_log_count": null,
+    "errors": [
+      {
+        "first": 155749412,
+        "last": 155789411,
+        "error": "HTTP Error 403: Forbidden"
+      }
+    ],
+    "unattempted_ranges": 97
+  }
+]

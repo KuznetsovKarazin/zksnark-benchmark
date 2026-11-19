@@ -1,0 +1,1225 @@
+{
+  "source": "Aave v3 Pool, Base mainnet",
+  "start_utc": "2026-05-21",
+  "end_exclusive_utc": "2026-11-17",
+  "covered_days": 58,
+  "days_requested": 180,
+  "coverage": "partial",
+  "timestamp_validation": "Bracketing range endpoints and one interior event block per nonempty UTC day; fixed two-second Base block cadence.",
+  "intervals_are_complete": false,
+  "errors": [
+    {
+      "day": 0,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 1,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 2,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 3,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 4,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 5,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 6,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 7,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 8,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 9,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 10,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 11,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 12,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 13,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 14,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 15,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 16,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 17,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 18,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 19,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 20,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 21,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 22,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 23,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 24,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 25,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 26,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 27,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 28,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 29,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 30,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 31,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 32,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 33,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 34,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 35,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 36,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 37,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 38,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 39,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 40,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 41,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 42,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 43,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 44,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 45,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 46,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 47,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 48,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 49,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 50,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 51,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 52,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 53,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 54,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 55,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 56,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 57,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 58,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 59,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 60,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 61,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 62,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 63,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 64,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 65,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 66,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 67,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 68,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 69,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 70,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 71,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 72,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 73,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 74,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 75,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 76,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 77,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 78,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 79,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 80,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 81,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 82,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 83,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 84,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 85,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 86,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 87,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 88,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 89,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 90,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 91,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 92,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 93,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 94,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 95,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 96,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 97,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 98,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 99,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 100,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 101,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 102,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 103,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 104,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 105,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 106,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 107,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 108,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 109,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "day": 168,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 169,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 170,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 171,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 172,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 173,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 174,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 175,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 176,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 177,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 178,
+      "error": "Daily block timestamps inconsistent"
+    },
+    {
+      "day": 179,
+      "error": "Daily block timestamps inconsistent"
+    }
+  ],
+  "ranges": [
+    {
+      "day": 110,
+      "start_block": 51018127,
+      "end_block": 51061326,
+      "first_hash": "0x8f290edcb479a2c4d2eb275fd4a9277b8c7931a5fe93682f5c8a2f0f7b5c6220",
+      "last_hash": "0x7ca5287755945fe9941072ee3ea449ba5ced2bded0e83436fdc9d09659056128",
+      "raw_counts": {
+        "supply": 2946,
+        "withdraw": 2472
+      },
+      "event_count": 5418
+    },
+    {
+      "day": 111,
+      "start_block": 51061327,
+      "end_block": 51104526,
+      "first_hash": "0xd2a274f584647c8ceb903d5e0a20d41e891bf6ce1f56f553e55e9aaa9ccdee72",
+      "last_hash": "0xe04e2e41b9d277c9df486c9fd3eec925267cbc003e92df2f3d62b7eb74886cb3",
+      "raw_counts": {
+        "supply": 3116,
+        "withdraw": 2749
+      },
+      "event_count": 5865
+    },
+    {
+      "day": 112,
+      "start_block": 51104527,
+      "end_block": 51147726,
+      "first_hash": "0x8d2e85e07a168812348e7e22a4f291e6ea46d597d7a0d4a91b65b65c6f1de973",
+      "last_hash": "0xb625273e190f8042c5e13c3719022a772fbb869837fcbbe083e4ce82249c9352",
+      "raw_counts": {
+        "supply": 3051,
+        "withdraw": 2621
+      },
+      "event_count": 5672
+    },
+    {
+      "day": 113,
+      "start_block": 51147727,
+      "end_block": 51190926,
+      "first_hash": "0xc8ecb2bb909e54fde8b65a76950f119596fe04f828517454980eb96144661bfb",
+      "last_hash": "0x7615b17c628375c13549409353085ac16406269c5c55559e36746edc90d6ad1c",
+      "raw_counts": {
+        "supply": 3610,
+        "withdraw": 3275
+      },
+      "event_count": 6885
+    },
+    {
+      "day": 114,
+      "start_block": 51190927,
+      "end_block": 51234126,
+      "first_hash": "0x18fb2836f7802458ab67e05637ce01c76a5e72bdb498c3c5ba87c3da062a909a",
+      "last_hash": "0xe64ae81d8babdfcd98fc5622a9f00f59599307e7fcde6b18f246db8e70a14041",
+      "raw_counts": {
+        "supply": 2520,
+        "withdraw": 2267
+      },
+      "event_count": 4787
+    },
+    {
+      "day": 115,
+      "start_block": 51234127,
+      "end_block": 51277326,
+      "first_hash": "0xa3a08063010e9ff45530e14dd9af6cc44ebba96d9922cefcada4fabed442489c",
+      "last_hash": "0x9e5b0c15c5de18eff8fd990568a7575809905b96cb5130cd44a838d01955b531",
+      "raw_counts": {
+        "supply": 2595,
+        "withdraw": 2333
+      },
+      "event_count": 4928
+    },
+    {
+      "day": 116,
+      "start_block": 51277327,
+      "end_block": 51320526,
+      "first_hash": "0x2cc192b1a4d9fa1557197a73b128945bdc15847a6307a5b2fc0e8ae79982a0c7",
+      "last_hash": "0x84d6b8c23ed6afcda9d32f4bab08e12dd23e291626607a43dfbbfd18943c1b0e",
+      "raw_counts": {
+        "supply": 3168,
+        "withdraw": 2829
+      },
+      "event_count": 5997
+    },
+    {
+      "day": 117,
+      "start_block": 51320527,
+      "end_block": 51363726,
+      "first_hash": "0x9272731fee7a06ff0e64e028086db413bbef9fb7031328a8fb2abc1c899fa7cf",
+      "last_hash": "0xcf5b48b5782b45708bafc42141659e880f854c9fdde07a326d74c925d522d0f0",
+      "raw_counts": {
+        "supply": 3643,
+        "withdraw": 3258
+      },
+      "event_count": 6901
+    },
+    {
+      "day": 118,
+      "start_block": 51363727,
+      "end_block": 51406926,
+      "first_hash": "0xed5d13ab558628d1b8e921707417c6eeba2a6260629082990e2a372a8fcebb35",
+      "last_hash": "0xd983f84c2e55c29cb7657352c20d89c6aa5139abc41678fea93870a02649afc7",
+      "raw_counts": {
+        "supply": 3150,
+        "withdraw": 2787
+      },
+      "event_count": 5937
+    },
+    {
+      "day": 119,
+      "start_block": 51406927,
+      "end_block": 51450126,
+      "first_hash": "0x03f53349904e5e1f857d597d166e2f54384b9eaa7101433b763b07bbc9916d67",
+      "last_hash": "0xae74ac4084b5a42293ecc65abc02f0c9cf177cc62b6e1e59d467394e69ad094d",
+      "raw_counts": {
+        "supply": 4121,
+        "withdraw": 3536
+      },
+      "event_count": 7657
+    },
+    {
+      "day": 120,
+      "start_block": 51450127,
+      "end_block": 51493326,
+      "first_hash": "0xb64d371af0b10d5ebda5f451993c58384aaf5939310506009fccc7ea656094bf",
+      "last_hash": "0x2d98e6ce28f913427550d6014e22d2a032570a6852dd3a783435ae67b5733533",
+      "raw_counts": {
+        "supply": 4139,
+        "withdraw": 3721
+      },
+      "event_count": 7860
+    },
+    {
+      "day": 121,
+      "start_block": 51493327,
+      "end_block": 51536526,
+      "first_hash": "0xef984267fd3fd925d9047b53e57cce9fb44ce5eb4d8580ddda46423dcf561cd8",
+      "last_hash": "0x6670253c0b814c2e7442050f36bbd6b92ce51838aa14ba2fa2c73a39814e4d4e",
+      "raw_counts": {
+        "supply": 2767,
+        "withdraw": 2727
+      },
+      "event_count": 5494
+    },
+    {
+      "day": 122,
+      "start_block": 51536527,
+      "end_block": 51579726,
+      "first_hash": "0xb84b07f0748bbe22360101272e8ca4fbf1cc02b108ff31704baacf2d8a7cb44e",
+      "last_hash": "0x2a5392b73d7c19cd24209f901927796cff9dae5eac409b8219975d7c32e2570d",
+      "raw_counts": {
+        "supply": 3021,
+        "withdraw": 2595
+      },
+      "event_count": 5616
+    },
+    {
+      "day": 123,
+      "start_block": 51579727,
+      "end_block": 51622926,
+      "first_hash": "0x707fe30ea821476211bdb091e7e1ced521a9dd3144cbc2d87c4024e32f54ff62",
+      "last_hash": "0xd4fae527f32d39938965ca8043fb2c3cf87425225ccd5c37306a4ed864eb7d7e",
+      "raw_counts": {
+        "supply": 4780,
+        "withdraw": 4430
+      },
+      "event_count": 9210
+    },
+    {
+      "day": 124,
+      "start_block": 51622927,
+      "end_block": 51666126,
+      "first_hash": "0xd0b95d71f5dc983e4dce4c10646e728c1f0672916f37e38b915415617d807cd6",
+      "last_hash": "0x56433bfc60cfd03c54a5ac621c6bf4e0b7b1b400d418bfce5a3253ccb764b9df",
+      "raw_counts": {
+        "supply": 3783,
+        "withdraw": 3507
+      },
+      "event_count": 7290
+    },
+    {
+      "day": 125,
+      "start_block": 51666127,
+      "end_block": 51709326,
+      "first_hash": "0x3422cda6ab380abb294d24e1d81c60602b68e137f25960ff29f1f9e2d8ef4894",
+      "last_hash": "0xf08ce52a33a34529fdfe1baa9603e25333b7869c5374455b3f344e6f8351d569",
+      "raw_counts": {
+        "supply": 3797,
+        "withdraw": 3497
+      },
+      "event_count": 7294
+    },
+    {
+      "day": 126,
+      "start_block": 51709327,
+      "end_block": 51752526,
+      "first_hash": "0x5f0afab5c56c3adf05dda01bbadf274187a007b4f2aa43b6a0be1babfe786d8c",
+      "last_hash": "0xc04711bf1c5695a8dfe5d96c7818b2d050e7dae0baf47e5942a26d995dda9ca9",
+      "raw_counts": {
+        "supply": 3203,
+        "withdraw": 3089
+      },
+      "event_count": 6292
+    },
+    {
+      "day": 127,
+      "start_block": 51752527,
+      "end_block": 51795726,
+      "first_hash": "0xa0219f8476830bf88a28e6e41ffec134a4125e301efa132a3c655c1780c16aab",
+      "last_hash": "0x6c444995731479fe784d23d875f4b6689a04e8d17238b77d5a4d873fcbc20b83",
+      "raw_counts": {
+        "supply": 3242,
+        "withdraw": 2761
+      },
+      "event_count": 6003
+    },
+    {
+      "day": 128,
+      "start_block": 51795727,
+      "end_block": 51838926,
+      "first_hash": "0x521f6e82830f471d2df79b86c218727af2aafdbc8a8e757611d3f4e3be8344d8",
+      "last_hash": "0x293e7c61557a28355308daeca84fe7bb4ec7062dcd91d5b62a48a6756ba77ea9",
+      "raw_counts": {
+        "withdraw": 2486,
+        "supply": 2851
+      },
+      "event_count": 5337
+    },
+    {
+      "day": 129,
+      "start_block": 51838927,
+      "end_block": 51882126,
+      "first_hash": "0x71b54717f8004d1f6095cd313bc1d7f37f5ad9f257f0ee6348e5812a39708e8b",
+      "last_hash": "0x4d85055d590a84e222ebb4a1d55110d2989b5e4607933ce05e3ca729522503f0",
+      "raw_counts": {
+        "supply": 2529,
+        "withdraw": 2338
+      },
+      "event_count": 4867
+    },
+    {
+      "day": 130,
+      "start_block": 51882127,
+      "end_block": 51925326,
+      "first_hash": "0x5f3612ce8986fcc9294fbb812c0b05619f823a3ddfc03dc041ce6453d9d619f8",
+      "last_hash": "0x2b3320897a0259e7fe2c37e05c2cdbbbab4549646ab803b5fba3479d852b375e",
+      "raw_counts": {
+        "withdraw": 2937,
+        "supply": 3508
+      },
+      "event_count": 6445
+    },
+    {
+      "day": 131,
+      "start_block": 51925327,
+      "end_block": 51968526,
+      "first_hash": "0xc4520be07e739182e2e5da3bbf8f4cbd68d19ae4f8a7f07563bbc74efb9907b3",
+      "last_hash": "0x8ca5d87a84d05d95788a99b6f036fd27830b5edb7d24e69c70e406bc7a27fbf3",
+      "raw_counts": {
+        "supply": 4372,
+        "withdraw": 3661
+      },
+      "event_count": 8033
+    },
+    {
+      "day": 132,
+      "start_block": 51968527,
+      "end_block": 52011726,
+      "first_hash": "0x3d2b327653956079a81aec393231a9a696aac8006ca86d6e5b25ca4c973b8340",
+      "last_hash": "0xc6daf95895eb36f8855a8f2da96dde89f43090e9c2fcd8adf05eea87469ff598",
+      "raw_counts": {
+        "supply": 3564,
+        "withdraw": 3097
+      },
+      "event_count": 6661
+    },
+    {
+      "day": 133,
+      "start_block": 52011727,
+      "end_block": 52054926,
+      "first_hash": "0x49b2a60155e2a2ecfc96dcbe9f446c32696fa9b98b40a10141f584a5db53b742",
+      "last_hash": "0x238090e0b812d91728d2a5d174c7729390ff60f41ef763040cb27686d774ec9f",
+      "raw_counts": {
+        "supply": 4315,
+        "withdraw": 3285
+      },
+      "event_count": 7600
+    },
+    {
+      "day": 134,
+      "start_block": 52054927,
+      "end_block": 52098126,
+      "first_hash": "0xa4a130b8e22c3b6ebeb957bf13562e7ca70ca111dac15fca7061498ceb298e7a",
+      "last_hash": "0x543aed5c1546fc1083c1faf63b68899641a4a16b9afcf7ac3bf2ca19ff406a17",
+      "raw_counts": {
+        "supply": 4425,
+        "withdraw": 3647
+      },
+      "event_count": 8072
+    },
+    {
+      "day": 135,
+      "start_block": 52098127,
+      "end_block": 52141326,
+      "first_hash": "0xbf29550591dbd7d2641ba8bb1eb05278e35346e860f14edfd82d8b8ca6cfb3c5",
+      "last_hash": "0x3fad3034520151f4ddb5ba677c66cc88d2548b67fc171c072b65699b5767a85a",
+      "raw_counts": {
+        "withdraw": 2572,
+        "supply": 3017
+      },
+      "event_count": 5589
+    },
+    {
+      "day": 136,
+      "start_block": 52141327,
+      "end_block": 52184526,
+      "first_hash": "0x6bf058ab1ef548574b046b257bdae583f434c848bfd80a868b6814864ff0de7c",
+      "last_hash": "0xb0fc41b5de11d29018902ba5797bc1aa32ced7a52e9de20af31cda21539ed95f",
+      "raw_counts": {
+        "supply": 3542,
+        "withdraw": 3266
+      },
+      "event_count": 6808
+    },
+    {
+      "day": 137,
+      "start_block": 52184527,
+      "end_block": 52227726,
+      "first_hash": "0x8d8b250e1386d91c8b36b566b0024b68ea8991a7f06ed34099cd067fdc084fe8",
+      "last_hash": "0x32eee56765708e6837192e32c99a850226f66ab80bac1f1c572e4c65aa598446",
+      "raw_counts": {
+        "withdraw": 3660,
+        "supply": 4000
+      },
+      "event_count": 7660
+    },
+    {
+      "day": 138,
+      "start_block": 52227727,
+      "end_block": 52270926,
+      "first_hash": "0x8ea8702367cc9ba07a42d8f577a48dcda8734eb09f5788ce99ec50b4dd29be82",
+      "last_hash": "0xd1d6359f49e82a8a80a706f118e3a445344691c2852f66b73a92fce79f9c5412",
+      "raw_counts": {
+        "supply": 3555,
+        "withdraw": 3690
+      },
+      "event_count": 7245
+    },
+    {
+      "day": 139,
+      "start_block": 52270927,
+      "end_block": 52314126,
+      "first_hash": "0xdaa723bc778c2393fc12315dafbe06e667602f1e27037b8cb2a87c65dedeb284",
+      "last_hash": "0xc1d90352bf1989aa4ac042247fbfd6d80e1698807b506a180daf8bfd7415f92a",
+      "raw_counts": {
+        "supply": 4848,
+        "withdraw": 4335
+      },
+      "event_count": 9183
+    },
+    {
+      "day": 140,
+      "start_block": 52314127,
+      "end_block": 52357326,
+      "first_hash": "0xd0cdf3faba97e71a649a856ff705cc187f1950f5e819e3a6103da7efca2a2a19",
+      "last_hash": "0x483137f490c4ed8f67d2001afbb643b023bf1a06055b4fdc6470e783fbfe5a20",
+      "raw_counts": {
+        "supply": 6526,
+        "withdraw": 5616
+      },
+      "event_count": 12142
+    },
+    {
+      "day": 141,
+      "start_block": 52357327,
+      "end_block": 52400526,
+      "first_hash": "0xf37ac402925c78c0933e29d4df9aeb507aea4cbcd016f58911cd5d12d74f7143",
+      "last_hash": "0x5b4bb3888e0b80e12ac8b4b2f8b5e7b8ba61267e68a54dc87d174432db0564b8",
+      "raw_counts": {
+        "supply": 4384,
+        "withdraw": 4043
+      },
+      "event_count": 8427
+    },
+    {
+      "day": 142,
+      "start_block": 52400527,
+      "end_block": 52443726,
+      "first_hash": "0xd3c202f4ff03f47e551b0495d5cacbe348ca34766608523354b7fbcf7a03dfea",
+      "last_hash": "0x7afed75bd7684a2923531756952958ec58386847a8e591e15e741b672cd8684a",
+      "raw_counts": {
+        "supply": 3321,
+        "withdraw": 3123
+      },
+      "event_count": 6444
+    },
+    {
+      "day": 143,
+      "start_block": 52443727,
+      "end_block": 52486926,
+      "first_hash": "0xe0625135412ce68ccfdc7ca28a16740f1c539c669dfb1abf96ef6ef3e3174394",
+      "last_hash": "0xbef7764da82dc0286bb4f94ab1d6a238f34d2f4e7f4906274ae204368d49580c",
+      "raw_counts": {
+        "supply": 3250,
+        "withdraw": 3256
+      },
+      "event_count": 6506
+    },
+    {
+      "day": 144,
+      "start_block": 52486927,
+      "end_block": 52530126,
+      "first_hash": "0xb14a99b667534a55196337864d9f10db6ff508f781e13fee7aa0d6be26f80077",
+      "last_hash": "0x54524fbcc5a15503149f614588ed6a62ca1180ddcd5bfeea2483634bd1460a10",
+      "raw_counts": {
+        "supply": 4268,
+        "withdraw": 3843
+      },
+      "event_count": 8111
+    },
+    {
+      "day": 145,
+      "start_block": 52530127,
+      "end_block": 52573326,
+      "first_hash": "0x7a0168bddce66488129f111bf9d6db2ad92d6eacb468c4c2541b39ed78be0a6b",
+      "last_hash": "0x3821a7cb90bdc2715a326e808fe322079c2cdc6705c669f80c5a7e1164890a45",
+      "raw_counts": {
+        "supply": 4464,
+        "withdraw": 4118
+      },
+      "event_count": 8582
+    },
+    {
+      "day": 146,
+      "start_block": 52573327,
+      "end_block": 52616526,
+      "first_hash": "0xd5be6e3e81c390d55c1fd1b5a0f4938906618616ba2e2de5676dd2940b4c6e77",
+      "last_hash": "0xacac76c7fbdd578f5552b33da7127457297cdf078a3c68fd92126e961c4c3cbf",
+      "raw_counts": {
+        "withdraw": 4431,
+        "supply": 5007
+      },
+      "event_count": 9438
+    },
+    {
+      "day": 147,
+      "start_block": 52616527,
+      "end_block": 52659726,
+      "first_hash": "0x18bb2260a023e91a03aa53408bdca8514747eb305b32465a6c7c7cca3fcdcf2e",
+      "last_hash": "0x188603eb41e122fadb9923d5caf0b18f60aa8d732f38a55493097e66287c551a",
+      "raw_counts": {
+        "withdraw": 4943,
+        "supply": 5848
+      },
+      "event_count": 10791
+    },
+    {
+      "day": 148,
+      "start_block": 52659727,
+      "end_block": 52702926,
+      "first_hash": "0x57f84ff9c74b36f5eb354a5ae4d78db500b01a1951ba45c6b820651418519452",
+      "last_hash": "0xa8693e3675ff1cea84558c5123d61277ffbf5bf3fc961cf016841d5743cbbf75",
+      "raw_counts": {
+        "supply": 5170,
+        "withdraw": 4782
+      },
+      "event_count": 9952
+    },
+    {
+      "day": 149,
+      "start_block": 52702927,
+      "end_block": 52746126,
+      "first_hash": "0x11d8bbf4eebbe856b86528e495bf102f59f5ba1bc7d2296e823ab75970fda5da",
+      "last_hash": "0xd4690819e90fad19e8c329f71c58eb31ed0bf54b0faf57f0b9c5dbcc383ed415",
+      "raw_counts": {
+        "supply": 4220,
+        "withdraw": 3914
+      },
+      "event_count": 8134
+    },
+    {
+      "day": 150,
+      "start_block": 52746127,
+      "end_block": 52789326,
+      "first_hash": "0x4d6c311c2a1e4b565cd9668923b2fc7c2a2b71626c6ef9fc1c609f234a727845",
+      "last_hash": "0x6537487c7020fb0337c7226a5bebbc862223f99d27cf70c09360e4c2575de839",
+      "raw_counts": {
+        "supply": 4638,
+        "withdraw": 4205
+      },
+      "event_count": 8843
+    },
+    {
+      "day": 151,
+      "start_block": 52789327,
+      "end_block": 52832526,
+      "first_hash": "0x4f6cf1ccfaa9b8d273e5af7f9a42236a792cd1a4ede0e5902dec0005571aa6dd",
+      "last_hash": "0x58cedd1077b8c119a810138b67efd35cf71ca4ae89ac8858a98f7fac18ded8a8",
+      "raw_counts": {
+        "withdraw": 3690,
+        "supply": 4124
+      },
+      "event_count": 7814
+    },
+    {
+      "day": 152,
+      "start_block": 52832527,
+      "end_block": 52875726,
+      "first_hash": "0x4713bf3524c7240de0e91bded2667a43152bf8c54a072f6c8317bfcf54ef0ca0",
+      "last_hash": "0xa13c68dc9c4f32ca485f3b9ad37fbb683f639dba8694300e47c525bcf6c61d81",
+      "raw_counts": {
+        "supply": 4109,
+        "withdraw": 3912
+      },
+      "event_count": 8021
+    },
+    {
+      "day": 153,
+      "start_block": 52875727,
+      "end_block": 52918926,
+      "first_hash": "0xd291f8f476b9a6af116580a410b0ef5ec7ec3ae939bd57b5428b2a96448b404a",
+      "last_hash": "0xbfa89f75838705788e299c851c25c0b409582204819b786cfa2bad9ceb08334e",
+      "raw_counts": {
+        "supply": 4010,
+        "withdraw": 3731
+      },
+      "event_count": 7741
+    },
+    {
+      "day": 154,
+      "start_block": 52918927,
+      "end_block": 52962126,
+      "first_hash": "0xf1b71fdbbe515058c56d2234234f64a37944d809bdc3a6297bd98e2c24343c51",
+      "last_hash": "0x0808595d5bc7fb33f37e137f749dcb311a890e50eabadee9db68c91f66c9af51",
+      "raw_counts": {
+        "withdraw": 4556,
+        "supply": 5155
+      },
+      "event_count": 9711
+    },
+    {
+      "day": 155,
+      "start_block": 52962127,
+      "end_block": 53005326,
+      "first_hash": "0x4dbdd7122c3a80c3b805c835b82d0f2a3a93c9eb33ef78d8f78ac91fa246a8cf",
+      "last_hash": "0xd74101f46a38feb30007d4e80ca0e6db7ab3532815b682bfe31c5a38c799581f",
+      "raw_counts": {
+        "supply": 4409,
+        "withdraw": 4171
+      },
+      "event_count": 8580
+    },
+    {
+      "day": 156,
+      "start_block": 53005327,
+      "end_block": 53048526,
+      "first_hash": "0x86e463a7d9c4b4bb8e0224ccd23305e73c8b4b7e984ff7d4c3f559a64daffc71",
+      "last_hash": "0xf0ae820adf15fa24d39a26937065dbd54e07ba1842518088ae2a5de7e8f4dc1c",
+      "raw_counts": {
+        "withdraw": 4390,
+        "supply": 4981
+      },
+      "event_count": 9371
+    },
+    {
+      "day": 157,
+      "start_block": 53048527,
+      "end_block": 53091726,
+      "first_hash": "0x2f6824d723dbd9e91b02888098ee96c17894494cbe79905247ab557b274887b6",
+      "last_hash": "0x57712d4e2b035266419fe9935c6a0537c788ab843506dd7b768148301075d316",
+      "raw_counts": {
+        "supply": 4175,
+        "withdraw": 3705
+      },
+      "event_count": 7880
+    },
+    {
+      "day": 158,
+      "start_block": 53091727,
+      "end_block": 53134926,
+      "first_hash": "0x280d6c79833b6182ef3ca92f0e95050405f002abe07062f3939fb3c6276e19c3",
+      "last_hash": "0x9f8c8519907be40ae19539711bf116f1e84889ee9ee07cd4bf2a81485d1d322e",
+      "raw_counts": {
+        "supply": 5380,
+        "withdraw": 4361
+      },
+      "event_count": 9741
+    },
+    {
+      "day": 159,
+      "start_block": 53134927,
+      "end_block": 53178126,
+      "first_hash": "0x4847ce3c57931731fa8913447dc8cd2093e7b74128d45791cb3aa8b5620bfaad",
+      "last_hash": "0xfc26cf1af39662c4e9d40d4335fa78567901387a53c283525ea9b3e543646034",
+      "raw_counts": {
+        "supply": 5235,
+        "withdraw": 5057
+      },
+      "event_count": 10292
+    },
+    {
+      "day": 160,
+      "start_block": 53178127,
+      "end_block": 53221326,
+      "first_hash": "0x7bdf57f6491d2f4507d86462fe57d9527ac1f27f0f67d12fd68d4022f074edf1",
+      "last_hash": "0x2d289aee75e86624f441a5aee5c07389a3af9d72700101d1df189bb5b38bc2eb",
+      "raw_counts": {
+        "withdraw": 5937,
+        "supply": 5628
+      },
+      "event_count": 11565
+    },
+    {
+      "day": 161,
+      "start_block": 53221327,
+      "end_block": 53264526,
+      "first_hash": "0x3c2750fd6ccf0dd0d76aac46fae3340856ec86144394d466e6509c963963112f",
+      "last_hash": "0x8c2234698316d30ae9f67c1cf13479df1f85ad04f64af9a19ca694c3819f8691",
+      "raw_counts": {
+        "supply": 6000,
+        "withdraw": 6255
+      },
+      "event_count": 12255
+    },
+    {
+      "day": 162,
+      "start_block": 53264527,
+      "end_block": 53307726,
+      "first_hash": "0xe095db98621da7c2f2365f92b5747f0e098c077ecc722732326621adb58a1091",
+      "last_hash": "0x9220b4ede7bd57e0848c7a3e05dee5f3307a77c259532e291226f63e42e53033",
+      "raw_counts": {
+        "withdraw": 3969,
+        "supply": 2758
+      },
+      "event_count": 6727
+    },
+    {
+      "day": 163,
+      "start_block": 53307727,
+      "end_block": 53350926,
+      "first_hash": "0x168356515754666c0809a60c598fb0200b648d228a673517c786754e20a3de28",
+      "last_hash": "0x9397222fd778d5e05f91b9e93f850bbed4dd25ef41ad3be9a49f1bcabb0fefa1",
+      "raw_counts": {
+        "withdraw": 3498,
+        "supply": 4267
+      },
+      "event_count": 7765
+    },
+    {
+      "day": 164,
+      "start_block": 53350927,
+      "end_block": 53394126,
+      "first_hash": "0x9119bbd24eaa3780e6f809b50185d32018b66826000738a64d0d92391a07cf17",
+      "last_hash": "0x7098e7bc5ca3786d99e584ba0543a9c6ba284be81fd7f1e20f314ec4d70d9c88",
+      "raw_counts": {
+        "supply": 3300,
+        "withdraw": 3036
+      },
+      "event_count": 6336
+    },
+    {
+      "day": 165,
+      "start_block": 53394127,
+      "end_block": 53437326,
+      "first_hash": "0x8c42dc87ee27929da32074467d44f2aedec930c001a3c1552c6676e9b451fb82",
+      "last_hash": "0x8c924add89cd6e34df508e6364d65fb9ca05afc5d7fe3a7aa7567c225d2fe261",
+      "raw_counts": {
+        "withdraw": 2813,
+        "supply": 3355
+      },
+      "event_count": 6168
+    },
+    {
+      "day": 166,
+      "start_block": 53437327,
+      "end_block": 53480526,
+      "first_hash": "0x87fe2fa258b5456d652e5b9e722a6195a27068e6e6fa4dbdb7e998c8abdfc804",
+      "last_hash": "0x0055b184923c7a0f8f774b4b4a320689390f662b54f9ddf2038839c43512864a",
+      "raw_counts": {
+        "withdraw": 3526,
+        "supply": 3911
+      },
+      "event_count": 7437
+    },
+    {
+      "day": 167,
+      "start_block": 53480527,
+      "end_block": 53523726,
+      "first_hash": "0xd0b3ffbf89bd1d9a6db029e721b3425e6542ac3aead4b59d3d5b353ebd7fdc13",
+      "last_hash": "0xc2eb6f7b954c9e92462547120e33908af8783f99f23d9f4449e5193d5804a42f",
+      "raw_counts": {
+        "withdraw": 3696,
+        "supply": 3903
+      },
+      "event_count": 7599
+    }
+  ],
+  "aggregate_span_start": "2026-09-08T00:00:00+00:00",
+  "aggregate_span_end_exclusive": "2026-11-05T00:00:00+00:00",
+  "aggregate_span_days": 58,
+  "span_selection": "Longest contiguous covered interval, ties resolved toward earlier start",
+  "all_spans": [
+    [
+      110,
+      167
+    ]
+  ],
+  "event_count": 440979,
+  "distinct_wallets": 42739,
+  "unique_wallet_transactions": 400766,
+  "wallets_one": 18488,
+  "wallets_two": 9811,
+  "wallets_three_plus": 14440,
+  "gaps": 348216,
+  "gap_distribution": {
+    "6h_to_1d": 16972,
+    "1d_to_7d": 24365,
+    "under_1h": 266295,
+    "1h_to_6h": 21991,
+    "same_timestamp": 2282,
+    "7d_to_30d": 14744,
+    "30d_or_more": 1567
+  },
+  "same_utc_day_gaps": 294116
+}

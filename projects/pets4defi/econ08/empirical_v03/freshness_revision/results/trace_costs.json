@@ -1,0 +1,44 @@
+{
+  "window_start": "2026-09-08T00:00:00+00:00",
+  "end_exclusive": "2026-11-05T00:00:00+00:00",
+  "complete_days": 58,
+  "all_wallets_in_span": 42739,
+  "one_access": 18488,
+  "two_access": 9811,
+  "eligible_wallets": 14440,
+  "eligible_accesses": 362656,
+  "mean_accesses": 25.114681440443213,
+  "freshness_s": 86700,
+  "period_s": 86400,
+  "lag_s": 300,
+  "ttl_days": 30,
+  "cold_start": true,
+  "outcomes": [
+    {
+      "source_panel": "EAS_daily_counts",
+      "source_count": 2,
+      "selective_equal_source_full": 3.9186634349030474,
+      "selective_min": 3.0899584487534626,
+      "selective_max": 4.747368421052632,
+      "common_full": 4.747368421052632,
+      "batch_daily_full": 4.747368421052632,
+      "source_specific_eas": {
+        "daily": 4.747368421052632,
+        "intermittent": 3.0899584487534626
+      }
+    },
+    {
+      "source_panel": "Web_PKI_retained_stock_sensitivity",
+      "source_count": 39,
+      "selective_equal_source_full": 1.8765217700120747,
+      "selective_min": 1.3930747922437674,
+      "selective_max": 4.451592797783934,
+      "common_full": 4.555124653739612,
+      "batch_daily_full": 4.747368421052632,
+      "source_specific_eas": null
+    }
+  ],
+  "estimand": "Evaluate each eligible path under every source with equal source weights. No observed issuer membership. All policies use the same daily boundary and assumed lag.",
+  "selection": "Availability-selected contiguous Aave span intersected with original two-source EAS window. Require at least three transactions within that span.",
+  "web_pki": "Dated retained events in eligible signed snapshots. No complete historical issuance/revocation flows or CA-publication times asserted."
+}

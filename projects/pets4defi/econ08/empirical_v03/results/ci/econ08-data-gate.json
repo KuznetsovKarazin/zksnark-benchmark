@@ -1,0 +1,245 @@
+{
+  "date": "2026-11-17",
+  "gate": "UNKNOWN",
+  "chain_validated_gate": "UNKNOWN",
+  "qualifying_attesters_returned": 1,
+  "reports": [
+    {
+      "chain": "ethereum",
+      "endpoint": "https://easscan.org/graphql",
+      "start": "2026-08-19T00:00:00Z",
+      "end_exclusive": "2026-11-17T00:00:00Z",
+      "indexer_pagination_complete": true,
+      "chain_log_coverage_verified": false,
+      "interpretation": "Indexer candidate screen only; not a chain-completeness certificate",
+      "errors": [],
+      "latest_indexed_issuance_time": 1794919091,
+      "onchain_revocations_returned": 5,
+      "attesters_returned": 4,
+      "candidates": [
+        {
+          "local_id": "attester_1",
+          "revocations": 2,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_2",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_3",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_4",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        }
+      ],
+      "qualifying_attesters": 0,
+      "revocations_sha256": "d893627d671c565ded1c8fad7f85e071eae838dff4a7032a9be2146731009830",
+      "aggregate_revocation_count": 5,
+      "aggregate_matches_pagination": true
+    },
+    {
+      "chain": "base",
+      "endpoint": "https://base.easscan.org/graphql",
+      "start": "2026-08-19T00:00:00Z",
+      "end_exclusive": "2026-11-17T00:00:00Z",
+      "indexer_pagination_complete": true,
+      "chain_log_coverage_verified": false,
+      "interpretation": "Indexer candidate screen only; not a chain-completeness certificate",
+      "errors": [],
+      "latest_indexed_issuance_time": 1794949965,
+      "onchain_revocations_returned": 23125,
+      "attesters_returned": 18,
+      "candidates": [
+        {
+          "local_id": "attester_1",
+          "revocations": 22969,
+          "distinct_utc_days": 90,
+          "schemas": 3,
+          "attestations_before_end": null,
+          "qualifies": null,
+          "count_error": "HTTP Error 504: Gateway Time-out"
+        },
+        {
+          "local_id": "attester_2",
+          "revocations": 95,
+          "distinct_utc_days": 18,
+          "schemas": 4,
+          "attestations_before_end": 3448,
+          "qualifies": true
+        },
+        {
+          "local_id": "attester_3",
+          "revocations": 17,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_4",
+          "revocations": 16,
+          "distinct_utc_days": 11,
+          "schemas": 1,
+          "attestations_before_end": 17,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_5",
+          "revocations": 6,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_6",
+          "revocations": 5,
+          "distinct_utc_days": 3,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_7",
+          "revocations": 3,
+          "distinct_utc_days": 3,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_8",
+          "revocations": 3,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_9",
+          "revocations": 2,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_10",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_11",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_12",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_13",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_14",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_15",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_16",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_17",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        },
+        {
+          "local_id": "attester_18",
+          "revocations": 1,
+          "distinct_utc_days": 1,
+          "schemas": 1,
+          "attestations_before_end": null,
+          "qualifies": false
+        }
+      ],
+      "qualifying_attesters": 1,
+      "revocations_sha256": "185d4bc5118e8ddf305640cafb406927fd8442d46e8739f74b83eb158b9f4048",
+      "aggregate_revocation_count": 23125,
+      "aggregate_matches_pagination": true
+    },
+    {
+      "chain": "optimism",
+      "endpoint": "https://optimism.easscan.org/graphql",
+      "start": "2026-08-19T00:00:00Z",
+      "end_exclusive": "2026-11-17T00:00:00Z",
+      "indexer_pagination_complete": false,
+      "chain_log_coverage_verified": false,
+      "interpretation": "Indexer candidate screen only; not a chain-completeness certificate",
+      "errors": [
+        "HTTP Error 502: Bad Gateway"
+      ],
+      "onchain_revocations_returned": 0,
+      "attesters_returned": 0,
+      "candidates": [],
+      "qualifying_attesters": 0,
+      "revocations_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    }
+  ],
+  "notes": [
+    "Incomplete acquisition is not zero revocations.",
+    "Indexer counts require chain-log coverage validation.",
+    "No real EAS-to-DeFi holder mapping is inferred."
+  ]
+}

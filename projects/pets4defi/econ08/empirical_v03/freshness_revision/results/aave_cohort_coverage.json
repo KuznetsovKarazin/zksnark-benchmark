@@ -1,0 +1,37 @@
+{
+  "window_start_utc": "2026-09-08",
+  "end_exclusive_utc": "2026-11-05",
+  "observed_days": 58,
+  "requested_days": 180,
+  "eligible_wallets": 14440,
+  "min_transactions": 3,
+  "reference_chain_id": 8453,
+  "closing_block": 53523726,
+  "closing_block_hash": "0xc2eb6f7b954c9e92462547120e33908af8783f99f23d9f4449e5193d5804a42f",
+  "code_state": "eth_getCode at closing block",
+  "counts_by_code": {
+    "empty": 9998,
+    "delegated": 3060,
+    "other_code": 1382,
+    "unknown": 0
+  },
+  "cap_max_per_utc_day": [
+    10,
+    25,
+    50
+  ],
+  "activity_quartile_cutoffs": [
+    3,
+    4,
+    8
+  ],
+  "period_seconds": [
+    3300,
+    21300,
+    86100
+  ],
+  "lag_seconds": 300,
+  "ttl_days": 30,
+  "response_units": "same-access cache decision for two counterfactual issuer schedules",
+  "session_records_released": false
+}

@@ -1,0 +1,60 @@
+{
+  "mode": "LOCAL_EVM",
+  "chain_id": "31337",
+  "holders": 32,
+  "issuers": 4,
+  "period_seconds": 3600,
+  "lag_seconds": 300,
+  "addresses": {
+    "registry": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+    "gate": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "verifier": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "token": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+  },
+  "code_hashes": {
+    "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0": "0x517890de4da4f8255ddcbb628d370ff8f84e50c894e6ec7aaa519d64291f06ea",
+    "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9": "0x15ce3fa76affaeec8121006ad6cfa912b67e2ddb1c754136541e90520c90f872",
+    "0x5FbDB2315678afecb367f032d93F642f64180aa3": "0x6d8beb3c979db1d1189974d74fb77c29f81ea17f620080980b1968f274983693",
+    "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512": "0x912a64c1851c39420b64322aab47de7ed5058da2388e1f8d0f07280e91e3be89"
+  },
+  "source_sha256": {
+    "contracts/BatchedPolicyRegistry.sol": "7b9e8c06d50adb66368ed5b1eb48e3b6a78f37be28c441ad4ac03c6d4b0d070b",
+    "contracts/PolicyGate.sol": "bc83f93c1244fee605befe890cdf3125a0efdb3e4d4e7e9244d09c40c2f6eb60",
+    "contracts/MockToken.sol": "93317c1308cffe63e4133a17502a4933ccd14e207b2f96a28453b6f681a99c60",
+    "build/Verifier.sol": "a7edc85d156031bead3c304342a37122e2bde6a2a233c22bd89404456d1dca3b"
+  },
+  "setup": {
+    "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+    "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+    "zkey_sha256": "35a1bed2997d21b4bafa7a156f92376a8ac3549bc4ec04c23e4bf779613d4caf",
+    "wasm_sha256": "f9379e40226ce39f341ef51441163214439bb7c129cdb1247f2cb6e4c7261f36",
+    "r1cs_sha256": "d0c374b11fcb0045f82f05422d733c44af54a06dff8fb0710f506100fe33e15d",
+    "verifier_sha256": "a7edc85d156031bead3c304342a37122e2bde6a2a233c22bd89404456d1dca3b",
+    "verification_key_sha256": "3457b228a0e4d7ee78ab1b273a87cc7cc9f5fcd15f77062ab31c494743be4b04",
+    "phase1_source": "https://circom.info/powersOfTau28_hez_final_14.ptau",
+    "phase1_blake2b512": "eeefbcf7c3803b523c94112023c7ff89558f9b8e0cf5d6cdcba3ade60f168af4a181c9c21774b94fbae6c90411995f7d854d02ebd93fb66043dbb06f17a831c1",
+    "phase1_sha256": "489be9e5ac65d524f7b1685baac8a183c6e77924fdb73d2b8105e335f277895d",
+    "local_demo_phase1": false,
+    "phase1_provenance": "Public Perpetual Powers of Tau transcript, hash pinned to iden3/snarkjs table",
+    "phase2_status": "Two contributions from this one local process; NOT independent participants and NOT production-safe",
+    "created_utc": "2026-11-17T20:54:41.036Z"
+  },
+  "gas_currency": "local-EVM gas units",
+  "limitations": [
+    "Synthetic credentials and accesses",
+    "Trusted complete private issuer feed",
+    "Four issuer slots",
+    "Demonstration phase-2 setup; not production-safe"
+  ],
+  "extractor_config": {
+    "chainId": "31337",
+    "gates": [
+      "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9"
+    ],
+    "registries": [
+      "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+    ],
+    "chainType": "l1",
+    "operatorFeeModel": "unknown"
+  }
+}
