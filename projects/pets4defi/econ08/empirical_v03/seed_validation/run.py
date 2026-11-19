@@ -67,7 +67,7 @@ def one_run(case):
 def write_csv(path, rows):
     temp = path.with_suffix(".tmp")
     with temp.open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=rows[0])
+        writer = csv.DictWriter(stream, fieldnames=rows[0], lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     temp.replace(path)
