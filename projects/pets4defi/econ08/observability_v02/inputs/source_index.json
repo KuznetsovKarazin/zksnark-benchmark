@@ -1,0 +1,371 @@
+{
+  "repository": "KuznetsovKarazin/zksnark-benchmark",
+  "commit": "ca1fabbb1d2fb777adca87544e689a14f6b5fbdb",
+  "files": [
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_native_pilot/report.json",
+      "local": "native_report.json",
+      "sha": "bbaa51f1b1dfe697f2347dafec39ab29165f35f9"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N128_zk_B2_d0_HIGH_weekly/accesses.json",
+      "local": "N128_zk_B2_d0_HIGH_weekly_accesses.json",
+      "sha": "38f9c91bd149b51cccf5012883a98416db0b1f62"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N128_zk_B2_d0_HIGH_weekly/manifest.json",
+      "local": "N128_zk_B2_d0_HIGH_weekly_manifest.json",
+      "sha": "01ce02ba422c96777dd56abbe4caa3740688097f"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N128_zk_B2_d0_HIGH_weekly/report.json",
+      "local": "N128_zk_B2_d0_HIGH_weekly_report.json",
+      "sha": "915457e53ae8755cff4fd08442494d87d294c4dc"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N128_zk_B2_d0_LOW_weekly/accesses.json",
+      "local": "N128_zk_B2_d0_LOW_weekly_accesses.json",
+      "sha": "1df90881f073732c0dc5c056f673ae33694cbf6b"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N128_zk_B2_d0_LOW_weekly/manifest.json",
+      "local": "N128_zk_B2_d0_LOW_weekly_manifest.json",
+      "sha": "5f2a354b73221e1d49ccb382e360773ae2788074"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N128_zk_B2_d0_LOW_weekly/report.json",
+      "local": "N128_zk_B2_d0_LOW_weekly_report.json",
+      "sha": "7eb8becef16302e2ae51ba4fdf9ebfc4802f46bb"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_HIGH_control/accesses.json",
+      "local": "N16_signed_control_d0_HIGH_control_accesses.json",
+      "sha": "f98a3fd6dc1e7b160a587c784cedb4c562802319"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_HIGH_control/manifest.json",
+      "local": "N16_signed_control_d0_HIGH_control_manifest.json",
+      "sha": "891e2967b5852b8bcfd2d64e769592eff27f514f"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_HIGH_control/report.json",
+      "local": "N16_signed_control_d0_HIGH_control_report.json",
+      "sha": "879bdedc58de345e7bf6a4ef9cfcd0d8ed169c68"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_HIGH_weekly/accesses.json",
+      "local": "N16_signed_control_d0_HIGH_weekly_accesses.json",
+      "sha": "ec88172dde82c50c3d70ac174f90e99ce704516e"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_HIGH_weekly/manifest.json",
+      "local": "N16_signed_control_d0_HIGH_weekly_manifest.json",
+      "sha": "8b46b1cc12940c95ca705f8680131e5144741918"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_HIGH_weekly/report.json",
+      "local": "N16_signed_control_d0_HIGH_weekly_report.json",
+      "sha": "f1cfacc0c129e2c492e1610bc6227badbd488f4a"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_LOW_weekly/accesses.json",
+      "local": "N16_signed_control_d0_LOW_weekly_accesses.json",
+      "sha": "e36da7a1fbd771db4290c791b4d474bc1b40ed33"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_LOW_weekly/manifest.json",
+      "local": "N16_signed_control_d0_LOW_weekly_manifest.json",
+      "sha": "574cee0d99939afaf28fc5fc858f415468df1cfa"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d0_LOW_weekly/report.json",
+      "local": "N16_signed_control_d0_LOW_weekly_report.json",
+      "sha": "7e675625c6632af53e41dc373b71b5e1f8eb35d1"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d3600_HIGH_weekly/accesses.json",
+      "local": "N16_signed_control_d3600_HIGH_weekly_accesses.json",
+      "sha": "07cc6f80169238975e45fded2c645e7d7d12f2fc"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d3600_HIGH_weekly/manifest.json",
+      "local": "N16_signed_control_d3600_HIGH_weekly_manifest.json",
+      "sha": "37d5a60ab046f57355c41b221eadd4e56bf1a984"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d3600_HIGH_weekly/report.json",
+      "local": "N16_signed_control_d3600_HIGH_weekly_report.json",
+      "sha": "2f93ffc73e3f08d58bcda82eec1cb2fd902e61b7"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d86400_HIGH_weekly/accesses.json",
+      "local": "N16_signed_control_d86400_HIGH_weekly_accesses.json",
+      "sha": "88d5c26310b47a2d7051d0273241fe497fe48191"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d86400_HIGH_weekly/manifest.json",
+      "local": "N16_signed_control_d86400_HIGH_weekly_manifest.json",
+      "sha": "b5c79b29a8b7a3fd65cc08f8613678dd0f4e1472"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_signed_control_d86400_HIGH_weekly/report.json",
+      "local": "N16_signed_control_d86400_HIGH_weekly_report.json",
+      "sha": "bf82a79dc6a0ea018b593aff7a0d5cf638a85b8d"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_control/accesses.json",
+      "local": "N16_zk_B1_d0_HIGH_control_accesses.json",
+      "sha": "f1660d271414f0d27fa5f69e8d6194cec2e9a51d"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_control/manifest.json",
+      "local": "N16_zk_B1_d0_HIGH_control_manifest.json",
+      "sha": "98b06e76ac9b3ebac358ff29e16bb0e096ec5fee"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_control/report.json",
+      "local": "N16_zk_B1_d0_HIGH_control_report.json",
+      "sha": "2db003552ab034aa155b4fa8d6f15c8d5b62053a"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B1_d0_HIGH_weekly_accesses.json",
+      "sha": "8af3bee79e94c632e866781be44e6a0fa0ead15d"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B1_d0_HIGH_weekly_manifest.json",
+      "sha": "8305d3b544c005c40d3b02c4cf72b17141e9a31e"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d0_HIGH_weekly/report.json",
+      "local": "N16_zk_B1_d0_HIGH_weekly_report.json",
+      "sha": "c187dc80082825c39b727d8a38a516dac3c63daa"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d3600_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B1_d3600_HIGH_weekly_accesses.json",
+      "sha": "1091cf7989b8aaf124db286d1af9714bda460f14"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d3600_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B1_d3600_HIGH_weekly_manifest.json",
+      "sha": "cb1327a61b21babb0a120a9775e5b7572ff5b7ed"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d3600_HIGH_weekly/report.json",
+      "local": "N16_zk_B1_d3600_HIGH_weekly_report.json",
+      "sha": "84c0ba2c17376ac0cfe152d59776dd472775df4f"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d86400_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B1_d86400_HIGH_weekly_accesses.json",
+      "sha": "2f7c8f3e0a38ebb1f0b1f4a0ce1bc984c0ead612"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d86400_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B1_d86400_HIGH_weekly_manifest.json",
+      "sha": "e3bad9ce2331b869f6fe034d7f7406b69b5f27ef"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B1_d86400_HIGH_weekly/report.json",
+      "local": "N16_zk_B1_d86400_HIGH_weekly_report.json",
+      "sha": "7f8489fb9442bca731b0267b642183f0623312ee"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_control/accesses.json",
+      "local": "N16_zk_B2_d0_HIGH_control_accesses.json",
+      "sha": "6be6aa1812b46eed2ddbaa2d69ec185e03525106"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_control/manifest.json",
+      "local": "N16_zk_B2_d0_HIGH_control_manifest.json",
+      "sha": "02fb0f28a6a709a6f8d9aa1bb69e586184c5a589"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_control/report.json",
+      "local": "N16_zk_B2_d0_HIGH_control_report.json",
+      "sha": "121c81df6e22c7b7e0972ff734da71787a40f36a"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B2_d0_HIGH_weekly_accesses.json",
+      "sha": "261d4cf727ac8d555fc3f775129537b9dc3f4160"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B2_d0_HIGH_weekly_manifest.json",
+      "sha": "c65247d523f002d6e9f0bca09a345c89aa21b163"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_HIGH_weekly/report.json",
+      "local": "N16_zk_B2_d0_HIGH_weekly_report.json",
+      "sha": "e8216aa1acd325d19ec5a8113d167e99bf325c4c"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_LOW_weekly/accesses.json",
+      "local": "N16_zk_B2_d0_LOW_weekly_accesses.json",
+      "sha": "bbe41c304d1a8aa2063c8c1ca1faf0c6a476c326"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_LOW_weekly/manifest.json",
+      "local": "N16_zk_B2_d0_LOW_weekly_manifest.json",
+      "sha": "5acae41216d816618e7b3c99c3f2b61cf69d2300"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d0_LOW_weekly/report.json",
+      "local": "N16_zk_B2_d0_LOW_weekly_report.json",
+      "sha": "f2e596a204da58f56c207c1f55bdf785c4cd3588"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d3600_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B2_d3600_HIGH_weekly_accesses.json",
+      "sha": "0940531dd8a17af6b5094c7e5c567f94680ecaa8"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d3600_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B2_d3600_HIGH_weekly_manifest.json",
+      "sha": "553bfa1ada41e0bbca95f66308e3ec740909fd6e"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d3600_HIGH_weekly/report.json",
+      "local": "N16_zk_B2_d3600_HIGH_weekly_report.json",
+      "sha": "b9e449591de61b8fd45b4d216cd6e42475d6478d"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d86400_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B2_d86400_HIGH_weekly_accesses.json",
+      "sha": "2c95a68c9ac48514a7b55c0aa43344b2ba9528b7"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d86400_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B2_d86400_HIGH_weekly_manifest.json",
+      "sha": "a0016c010eb1c992ea085d803db705e37a401dbc"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B2_d86400_HIGH_weekly/report.json",
+      "local": "N16_zk_B2_d86400_HIGH_weekly_report.json",
+      "sha": "ec4693e3778c4439b85f301834145eb3c140aebf"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_control/accesses.json",
+      "local": "N16_zk_B4_d0_HIGH_control_accesses.json",
+      "sha": "df78d11ef09f7768216bfd101751c7ac5c384d82"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_control/manifest.json",
+      "local": "N16_zk_B4_d0_HIGH_control_manifest.json",
+      "sha": "1e7638de1bed2cef0de2c6b69cf4447addb6e95e"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_control/report.json",
+      "local": "N16_zk_B4_d0_HIGH_control_report.json",
+      "sha": "1a17d75a9dfa83274f34f6f1e2f081267e8d93dd"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B4_d0_HIGH_weekly_accesses.json",
+      "sha": "ccea292816aeece1a36483ec68498b6120bcb4b6"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B4_d0_HIGH_weekly_manifest.json",
+      "sha": "8abeda34e0e9ab2f1444ee2db1478dcb2ded968c"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d0_HIGH_weekly/report.json",
+      "local": "N16_zk_B4_d0_HIGH_weekly_report.json",
+      "sha": "3349070d1beb1566a006d0673fadb235d01bfcaf"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d3600_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B4_d3600_HIGH_weekly_accesses.json",
+      "sha": "4d15c24c31f1d0707480255d1c9c459cbb2479b3"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d3600_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B4_d3600_HIGH_weekly_manifest.json",
+      "sha": "e5a4d71ba5842b8a4078e757a061cb216ee6c215"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d3600_HIGH_weekly/report.json",
+      "local": "N16_zk_B4_d3600_HIGH_weekly_report.json",
+      "sha": "fa1daa62d6028b6c845bbf39414f240b7b42fa58"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d86400_HIGH_weekly/accesses.json",
+      "local": "N16_zk_B4_d86400_HIGH_weekly_accesses.json",
+      "sha": "c646ef415b959b4501949986a5823edb4323474a"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d86400_HIGH_weekly/manifest.json",
+      "local": "N16_zk_B4_d86400_HIGH_weekly_manifest.json",
+      "sha": "1ddfee38cf5031031fad881c56a237818e3d2e72"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N16_zk_B4_d86400_HIGH_weekly/report.json",
+      "local": "N16_zk_B4_d86400_HIGH_weekly_report.json",
+      "sha": "4ec27c3ce08bd70ce867c637749a66b6e83ede34"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N512_zk_B2_d0_HIGH_weekly/accesses.json",
+      "local": "N512_zk_B2_d0_HIGH_weekly_accesses.json",
+      "sha": "8df7d85dbc166ad0eb329c02ee0f77a77d37c61d"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N512_zk_B2_d0_HIGH_weekly/manifest.json",
+      "local": "N512_zk_B2_d0_HIGH_weekly_manifest.json",
+      "sha": "c983f4d3c1c72f9afa9547d90d30db8048fe55de"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N512_zk_B2_d0_HIGH_weekly/report.json",
+      "local": "N512_zk_B2_d0_HIGH_weekly_report.json",
+      "sha": "00d6b05aecf92116abf8a6d0d60463ffd36c60da"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N512_zk_B2_d0_LOW_weekly/accesses.json",
+      "local": "N512_zk_B2_d0_LOW_weekly_accesses.json",
+      "sha": "48acec262d0e2c19ef71658dc5a2c473c8e5d912"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N512_zk_B2_d0_LOW_weekly/manifest.json",
+      "local": "N512_zk_B2_d0_LOW_weekly_manifest.json",
+      "sha": "a1f6a0e175a200ad399d63c899e4b41c5ee021b1"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_cohort/runs/N512_zk_B2_d0_LOW_weekly/report.json",
+      "local": "N512_zk_B2_d0_LOW_weekly_report.json",
+      "sha": "c721b091ec8e4e317cbd68028268fd85a08a1d68"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_native_pilot/manifest.json",
+      "local": "econ08_native_pilot_manifest.json",
+      "sha": "2449fdc09bd8094bafc09bd59953a5e19a3457cf"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/scripts/econ08/config.mjs",
+      "local": "config.mjs",
+      "sha": "71ccd3f93ea709724fdb3c6223c633bbfcdb7cd3"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/scripts/econ08/harness.mjs",
+      "local": "harness.mjs",
+      "sha": "ac1f67dcfb394e139ec05152d0714ed536ed770e"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/scripts/econ08/run.mjs",
+      "local": "run.mjs",
+      "sha": "bae134bc8e8b9fd267b5249085d037b5696ea837"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/scripts/econ08/run_cohort.mjs",
+      "local": "run_cohort.mjs",
+      "sha": "899714e718a339bbdd7a6fd1eb4ebd99ffb9d909"
+    },
+    {
+      "path": "examples/pets4defi_access_v2/results/econ08_native_pilot/accesses.json",
+      "local": "native_accesses.json",
+      "sha": "05f162393cc670680fc78830b3d222abd78d5240"
+    }
+  ]
+}

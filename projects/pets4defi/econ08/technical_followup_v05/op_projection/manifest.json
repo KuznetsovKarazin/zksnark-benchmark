@@ -1,0 +1,11 @@
+{
+  "inputs": {
+    "projection.json": "347189855d98426614138fa02c0e0f48704ccd88e9b1087e859a4f52702fe49f",
+    "rpc_evidence.json": "bf04a23e460f8d4c72c515d8d30852bfd8d52bd3c4c2cb9b7e295ad3737ad333"
+  },
+  "scripts": {
+    "summarize_op.py": "74fa94781593f28b251bfbca48d09e3e063886dbdfc7879005d241decada373c",
+    "analyze.py": "73f786971e3d4595a3ca20b19802e10cb9cf54175feffa1e14cbc53af12458f2"
+  },
+  "source": "Pinned historical OP oracle; integer-wei accounting; EUR/ETH=2164.73"
+}

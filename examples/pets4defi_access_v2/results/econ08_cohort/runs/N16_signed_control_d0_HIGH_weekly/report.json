@@ -1,0 +1,328 @@
+{
+  "protocol": "ECON08_Technical_Protocol_v0_1",
+  "stage": "balanced_cohort",
+  "status": "PASS",
+  "git_head": "df4352cfc6cf11fd810ee1d7a868f6c6752bbbe1",
+  "created_utc": "2026-11-13T11:32:24.510Z",
+  "seed": "ECON08-cohort-v1",
+  "scenario": {
+    "name": "signed_control",
+    "family": "signed",
+    "groups": 1,
+    "id": "N16_signed_control_d0_HIGH_weekly",
+    "delta": 0,
+    "workload": "HIGH",
+    "updates": [
+      {
+        "at": 604800,
+        "issuer": 0,
+        "credential": 1
+      },
+      {
+        "at": 1209600,
+        "issuer": 1,
+        "credential": 1
+      },
+      {
+        "at": 1814400,
+        "issuer": 2,
+        "credential": 1
+      },
+      {
+        "at": 2419200,
+        "issuer": 3,
+        "credential": 1
+      },
+      {
+        "at": 3024000,
+        "issuer": 0,
+        "credential": 2
+      },
+      {
+        "at": 3628800,
+        "issuer": 1,
+        "credential": 2
+      },
+      {
+        "at": 4233600,
+        "issuer": 2,
+        "credential": 2
+      },
+      {
+        "at": 4838400,
+        "issuer": 3,
+        "credential": 2
+      },
+      {
+        "at": 5443200,
+        "issuer": 0,
+        "credential": 3
+      },
+      {
+        "at": 6048000,
+        "issuer": 1,
+        "credential": 3
+      },
+      {
+        "at": 6652800,
+        "issuer": 2,
+        "credential": 3
+      },
+      {
+        "at": 7257600,
+        "issuer": 3,
+        "credential": 3
+      }
+    ]
+  },
+  "design": {
+    "population": 16,
+    "per_issuer": 4,
+    "registry_capacity_per_issuer": 1024,
+    "observed_holders": 4,
+    "measured_credential_index": 0,
+    "ttl_seconds": 2592000,
+    "horizon_seconds": 7776000,
+    "root_presentation_grace_seconds": 0,
+    "access_offsets_seconds": [
+      0,
+      77760,
+      155520,
+      233280,
+      311040,
+      388800,
+      466560,
+      544320,
+      622080,
+      699840,
+      777600,
+      855360,
+      933120,
+      1010880,
+      1088640,
+      1166400,
+      1244160,
+      1321920,
+      1399680,
+      1477440,
+      1555200,
+      1632960,
+      1710720,
+      1788480,
+      1866240,
+      1944000,
+      2021760,
+      2099520,
+      2177280,
+      2255040,
+      2332800,
+      2410560,
+      2488320,
+      2566080,
+      2643840,
+      2721600,
+      2799360,
+      2877120,
+      2954880,
+      3032640,
+      3110400,
+      3188160,
+      3265920,
+      3343680,
+      3421440,
+      3499200,
+      3576960,
+      3654720,
+      3732480,
+      3810240,
+      3888000,
+      3965760,
+      4043520,
+      4121280,
+      4199040,
+      4276800,
+      4354560,
+      4432320,
+      4510080,
+      4587840,
+      4665600,
+      4743360,
+      4821120,
+      4898880,
+      4976640,
+      5054400,
+      5132160,
+      5209920,
+      5287680,
+      5365440,
+      5443200,
+      5520960,
+      5598720,
+      5676480,
+      5754240,
+      5832000,
+      5909760,
+      5987520,
+      6065280,
+      6143040,
+      6220800,
+      6298560,
+      6376320,
+      6454080,
+      6531840,
+      6609600,
+      6687360,
+      6765120,
+      6842880,
+      6920640,
+      6998400,
+      7076160,
+      7153920,
+      7231680,
+      7309440,
+      7387200,
+      7464960,
+      7542720,
+      7620480,
+      7698240
+    ]
+  },
+  "source_files_sha256": {
+    "package.json": "cdc8bc93666488c451e901127bad7a94a7da514490bb5ced0318e28fe2d6d6c5",
+    "package-lock.json": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+    "hardhat.config.js": "7500dd0b61688af22aef2e5ee651e2f9b3de5a0e4558c42951b24439a20dc192",
+    "circuits/access.circom": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+    "contracts/PolicyRegistry.sol": "596bcc917331c18e35b76c07e940e280aa9450c6ca1e83fa12ea53d7eed505e5",
+    "contracts/PolicyGate.sol": "bc83f93c1244fee605befe890cdf3125a0efdb3e4d4e7e9244d09c40c2f6eb60",
+    "contracts/MockToken.sol": "93317c1308cffe63e4133a17502a4933ccd14e207b2f96a28453b6f681a99c60",
+    "scripts/setup.mjs": "3cc6a4b23fc55c76c80d15e50f0b86766a020fcafd2791acb71adf941d2d59df",
+    "scripts/fixtures.mjs": "dfde1142257f6578e1d9760f3b5040357052194b3f66ea5686490711b1e242f0",
+    "scripts/econ08/config.mjs": "6dc5eb000a708cfff6868c7561536d8e83b2c6c82fd60cca4205d19ff2fd9a4b",
+    "scripts/econ08/test_config.mjs": "b16d39c409260ef9a547639b3627b0b3b4ccf39a3fb5dba3bc606925bd2b1d3a",
+    "scripts/econ08/harness.mjs": "56bd3bf21897f540e57e2cf18fc79e226729906d3b30d8bfff5174d6c1ba8074",
+    "scripts/econ08/run.mjs": "36cd566a4cd626940d24ec9baeb7c575884f6bddff680d1c4b718aa9e1ba4a80",
+    "scripts/econ08/correctness.mjs": "2edb094801025e307761121353397309c8b5c32e02e08504da4833415283cb52",
+    "scripts/econ08/timing.mjs": "4c0c57e8ac22673490919bad32f1b6634bcfe15a3c5a12e529fdc5ce4bc3e466",
+    "scripts/econ08/check.py": "2b92f80bec6bd71ba3163335deacc7de5b99346f66d41cbe2ed207572e481d95",
+    "scripts/econ08/verify_proofs.mjs": "890bfbbd174dd90e37be42e7178c4dc702388bb2c7e585a7be44d6b2f7dc00e3",
+    "scripts/econ08/cohort.mjs": "df97fc9902153e01a75d093665dad066eacbd668a3beb2fab305c9bba5403af3",
+    "scripts/econ08/run_cohort.mjs": "4f14f33cb565a5bb168b4f8521d6cefa3c6561fb78d80694b86b1410a77c92b7"
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "solc": "0.8.37+commit.f401782d.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "hardfork": "osaka",
+    "chain_id": 31337
+  },
+  "setup": {
+    "circuit_sha256": "d4c64f58cb8dc74d10478c5fdd097344fb9f6d08643e47a9328f2da211188ba6",
+    "lock_sha256": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+    "zkey_sha256": "5ba44ba38b1e9574e8d2fd57d4bae41b831c82aba2de4f6ddd4cb9b762f3554f",
+    "wasm_sha256": "f9379e40226ce39f341ef51441163214439bb7c129cdb1247f2cb6e4c7261f36",
+    "r1cs_sha256": "d0c374b11fcb0045f82f05422d733c44af54a06dff8fb0710f506100fe33e15d",
+    "verifier_sha256": "7c560a4f3342aa2054847f19f240ea2059a5634dc3c4bab6a268e1e9043bc984",
+    "verification_key_sha256": "9f73f26c107f1f84f49d62486e6dfeb232e022fd7c386f1a814af9d1654fbf38",
+    "phase1_source": "https://circom.info/powersOfTau28_hez_final_14.ptau",
+    "phase1_blake2b512": "eeefbcf7c3803b523c94112023c7ff89558f9b8e0cf5d6cdcba3ade60f168af4a181c9c21774b94fbae6c90411995f7d854d02ebd93fb66043dbb06f17a831c1",
+    "phase1_sha256": "489be9e5ac65d524f7b1685baac8a183c6e77924fdb73d2b8105e335f277895d",
+    "local_demo_phase1": false,
+    "phase1_provenance": "Public Perpetual Powers of Tau transcript, hash pinned to iden3/snarkjs table",
+    "phase2_status": "Two contributions from this one local process; NOT independent participants and NOT production-safe",
+    "created_utc": "2026-11-13T10:50:47.273Z"
+  },
+  "context": {
+    "id": "N16_signed_control_d0_HIGH_weekly",
+    "purpose": "workload",
+    "family": "signed",
+    "groups": 1,
+    "delta": 0,
+    "base": 1792501200,
+    "wallet": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+    "chain_id": 31337,
+    "registries": [
+      "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+    ],
+    "gates": [
+      "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
+    ],
+    "token": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+    "verifier": null,
+    "holder_issuer": 0,
+    "holder_credential": 0,
+    "population": 16,
+    "holders": [
+      {
+        "issuer": 0,
+        "address": "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "group": 0
+      },
+      {
+        "issuer": 1,
+        "address": "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "group": 0
+      },
+      {
+        "issuer": 2,
+        "address": "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "group": 0
+      },
+      {
+        "issuer": 3,
+        "address": "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f",
+        "group": 0
+      }
+    ]
+  },
+  "checks": [],
+  "holders": [
+    {
+      "issuer": 0,
+      "accesses": 100,
+      "authorizations": 3,
+      "gas": 8227671
+    },
+    {
+      "issuer": 1,
+      "accesses": 100,
+      "authorizations": 3,
+      "gas": 8232659
+    },
+    {
+      "issuer": 2,
+      "accesses": 100,
+      "authorizations": 3,
+      "gas": 8232671
+    },
+    {
+      "issuer": 3,
+      "accesses": 100,
+      "authorizations": 3,
+      "gas": 8232731
+    }
+  ],
+  "gas": {
+    "holder_cohort": 32925732,
+    "operator_setup": 5984123,
+    "initial_publication": 1460416,
+    "status_publication": 5883642,
+    "excluded_fixture": 601533
+  }
+}

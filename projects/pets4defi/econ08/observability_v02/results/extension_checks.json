@@ -1,0 +1,24 @@
+{
+  "optimality_small_schedules": 576,
+  "coin_bayes_feasible_transcripts": 84,
+  "coin_bayes_mass_check": "PASS",
+  "dynamic_price_counterexample": {
+    "access_times": [
+      0,
+      1,
+      2
+    ],
+    "publication_time": 0.5,
+    "grace": 1.5,
+    "prices_at_1_and_2": [
+      1,
+      100
+    ],
+    "greedy_after_launch_cost": 35642510,
+    "proactive_after_launch_cost": 7116749
+  },
+  "finite_pure_epsilon_for_informative_event_rho_below_one": false,
+  "theorem_scope": "fixed attempts; mandatory invalidation; full/hit observable; zero-error safety; fixed costs",
+  "independent_novelty_validation": false,
+  "status": "PASS"
+}

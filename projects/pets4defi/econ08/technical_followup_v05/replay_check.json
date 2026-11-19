@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "scenarios": 54,
+  "accesses": 8832,
+  "fields": [
+    "event",
+    "reason",
+    "at",
+    "cache_until"
+  ],
+  "mismatches": 0,
+  "scope": "Independent Python specification replay; not a second researcher or new EVM execution."
+}

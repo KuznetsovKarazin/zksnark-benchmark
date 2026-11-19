@@ -1,0 +1,9 @@
+scenario,mechanism,pattern,phase_s,TTL_d,delta_d,updates,refill,stage,first,renewals,holder_C,pool_K,SELF_sum_K,pool_T,pool_G,pool_E,pool_peak_start,pooling_reduction
+zk_B2_synchronized_p0_ttl30_d0,zk_B2,synchronized,0,30,0,none,daily,full_lifecycle,4,8,31121348,2313116,2313116,31121348,33434464,2313116,0,0
+zk_B2_synchronized_p0_ttl30_d0,zk_B2,synchronized,0,30,0,none,daily,continuing_after_1d,4,8,28808232,1422996,1422996,28808232,30231228,1422996,2592000,0
+zk_B2_synchronized_p0_ttl30_d0,zk_B2,synchronized,0,30,0,weekly,daily,full_lifecycle,4,24,35731572,2313116,2313116,35731572,38044688,2313116,0,0
+zk_B2_synchronized_p0_ttl30_d0,zk_B2,synchronized,0,30,0,weekly,daily,continuing_after_1d,4,24,33418456,1117158,1558216,33418456,34535614,1117158,5443200,441058
+zk_B2_staggered_p0_ttl30_d0,zk_B2,staggered,0,30,0,none,daily,full_lifecycle,4,8,31121348,2110286,2110286,31121348,33231634,2110286,0,0
+zk_B2_staggered_p0_ttl30_d0,zk_B2,staggered,0,30,0,none,daily,continuing_after_1d,4,8,29011062,1490606,1558216,29011062,30501668,1490606,5270400,67610
+zk_B2_staggered_p0_ttl30_d0,zk_B2,staggered,0,30,0,weekly,daily,full_lifecycle,4,24,35731572,2110286,2110286,35731572,37841858,2110286,0,0
+zk_B2_staggered_p0_ttl30_d0,zk_B2,staggered,0,30,0,weekly,daily,continuing_after_1d,4,24,33621286,914328,1558216,33621286,34535614,914328,604800,643888

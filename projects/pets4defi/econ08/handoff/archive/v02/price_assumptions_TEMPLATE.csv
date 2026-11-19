@@ -1,0 +1,10 @@
+input_id,category,description,low,reference,high,currency,unit,source_type,source_url,source_locator,price_date,access_date,scope_or_tier,tax_treatment,status,open_input
+q0,network_price,Historical gas-price reference,,0.130658648,,,gwei/gas,historical_reference,https://docs.google.com/document/d/1hNPRNmUMegg88hn6mpCLO6pxj67zb48C7-m8wdO5FcE/edit,ECON-07 accepted synthesis section 2.1,,,Historical ECON-07 reference; not a current quote,,reference_only,Confirm original observation date from accepted source
+e0,exchange_rate,Historical EUR/ETH reference,,2164.73,,EUR,EUR/ETH,historical_reference,https://docs.google.com/document/d/1hNPRNmUMegg88hn6mpCLO6pxj67zb48C7-m8wdO5FcE/edit,ECON-07 accepted synthesis section 2.1,,,Historical ECON-07 reference; not a current quote,,reference_only,Confirm original observation date from accepted source
+kyc_price,procurement_price,KYC verification,,,,,,unknown,,,,,,,missing,Provider price; service scope; currency/unit; volume; date; tax
+issuance_price,procurement_price,Credential issuance,,,,,,unknown,,,,,,,missing,Separate issuance from KYC unless source explicitly bundles them
+offchain_operations,procurement_price,Hosting and witness delivery,,,,,,unknown,,,,,,,missing,Split services into separate rows with quantity and unit
+holder_budget,budget_constraint,Holder budget cap,,,,EUR,EUR/active_wallet/90_days,scenario,,,,,,,missing,State assumption; supplier prices do not establish willingness to pay
+l2_execution,network_price,Named L2 execution fee inputs,,,,,,unknown,,,,,,,missing,Oleksandr supplies network/version/transaction inputs
+l2_data,network_price,Named L2 L1-data fee inputs,,,,,,unknown,,,,,,,missing,Use documented fee formula and actual transaction data
+l2_operator,network_price,Named L2 applicable operator fee inputs,,,,,,unknown,,,,,,,missing,Confirm applicability and formula; do not assume zero

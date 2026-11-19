@@ -1,0 +1,12 @@
+{
+  "base": "ETH",
+  "quote": "EUR",
+  "value": "2164.73",
+  "retrieved_at_utc": "2026-10-20T19:56:58Z",
+  "source_date": "2026-10-20",
+  "source_url": "https://www.coingecko.com/en/coins/ethereum/eur",
+  "status": "observed_web_quote",
+  "observation": "ETH/EUR conversion and daily history row displayed EUR 2164.73 for October 20 2026.",
+  "quote_timestamp_utc": null,
+  "scope": "Observed dated web quote; retrieval time is not the market tick timestamp or a daily close. Conversion scenario, not a realized bill."
+}

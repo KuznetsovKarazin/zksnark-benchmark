@@ -1,0 +1,112 @@
+{
+  "schema": "ECON08_UNCHECKED_V05",
+  "status": "PASS",
+  "created_utc": "2026-11-15T07:45:13.631Z",
+  "source_commit": "7e800578527fc6b064278ebd0c2dec73a995e7a9",
+  "source_hashes": {
+    "contracts/MockToken.sol": "93317c1308cffe63e4133a17502a4933ccd14e207b2f96a28453b6f681a99c60",
+    "contracts/UncheckedDeposit.sol": "17499ad04a74f7b9f290991163b122d03f1daacfdc2fa1533c8fd28282f02c6c",
+    "package-lock.json": "81726c28590f4bfd03fb9bba8bba8cc7140e9c77eacbee83e90ab68ba2cd9165",
+    "hardhat.config.js": "7500dd0b61688af22aef2e5ee651e2f9b3de5a0e4558c42951b24439a20dc192",
+    "scripts/econ08/unchecked_calibration.mjs": "6c6b3b99dbd0727e2fddee54254637cfd646df9dab312b713916213aff694b52"
+  },
+  "environment": {
+    "node": "v24.22.1",
+    "solc": "0.8.37+commit.f401782d.Emscripten.clang",
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "evmVersion": "cancun",
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode.object"
+          ]
+        }
+      }
+    },
+    "hardfork": "osaka",
+    "chain_id": 31337
+  },
+  "design": {
+    "A": 4,
+    "accesses_per_holder": 100,
+    "horizon": 7776000,
+    "amount": "100000000000000000000",
+    "bootstrap_per_gate": "1",
+    "groups": [
+      1,
+      2,
+      4
+    ],
+    "eligibility": "absent",
+    "approval": "max allowance; observed actual gas",
+    "limitations": [
+      "Matched deposit state/workload, not same deployment address or calldata as the eligibility gates.",
+      "No new ZK, paymaster, population-scaling or A32 measurement.",
+      "Shared costs are not allocated to K05/K06."
+    ]
+  },
+  "runs": [
+    {
+      "B": 1,
+      "base": 1792501200,
+      "holders": [
+        "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      ],
+      "summary": {
+        "approval_gas": 185852,
+        "access_gas": 22040752,
+        "common_K05_gas": 22226604,
+        "access_count": 400,
+        "shared_unchecked_deployment_gas": 269074,
+        "negative_nonce_checks": 4
+      },
+      "transaction_count": 410
+    },
+    {
+      "B": 2,
+      "base": 1792501200,
+      "holders": [
+        "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      ],
+      "summary": {
+        "approval_gas": 185852,
+        "access_gas": 22040752,
+        "common_K05_gas": 22226604,
+        "access_count": 400,
+        "shared_unchecked_deployment_gas": 538148,
+        "negative_nonce_checks": 4
+      },
+      "transaction_count": 412
+    },
+    {
+      "B": 4,
+      "base": 1792501200,
+      "holders": [
+        "0x9965507D1a55bcC2695C58ba16FB37d819B0A4dc",
+        "0x976EA74026E726554dB657fA54763abd0C3a0aa9",
+        "0x14dC79964da2C08b23698B3D3cc7Ca32193d9955",
+        "0x23618e81E3f5cdF7f54C3d65f7FBc0aBf5B21E8f"
+      ],
+      "summary": {
+        "approval_gas": 185840,
+        "access_gas": 22040752,
+        "common_K05_gas": 22226592,
+        "access_count": 400,
+        "shared_unchecked_deployment_gas": 1076296,
+        "negative_nonce_checks": 4
+      },
+      "transaction_count": 416
+    }
+  ]
+}

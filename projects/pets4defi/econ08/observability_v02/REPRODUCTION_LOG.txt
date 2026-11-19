@@ -1,0 +1,120 @@
+Package SHA256 checks PASS: 134
+test_anonymous_attacker_rejects_holder_truth (test_extensions.ExtensionTests.test_anonymous_attacker_rejects_holder_truth) ... ok
+test_anonymous_attacker_rejects_issuer_labels (test_extensions.ExtensionTests.test_anonymous_attacker_rejects_issuer_labels) ... ok
+test_ari_ignores_cluster_names (test_extensions.ExtensionTests.test_ari_ignores_cluster_names) ... ok
+test_auc_ties_are_uninformative (test_extensions.ExtensionTests.test_auc_ties_are_uninformative) ... ok
+test_coin_grace_publication_absorbed (test_extensions.ExtensionTests.test_coin_grace_publication_absorbed) ... ok
+test_coin_nonuniform_posterior (test_extensions.ExtensionTests.test_coin_nonuniform_posterior) ... ok
+test_coin_skip_is_never_retried (test_extensions.ExtensionTests.test_coin_skip_is_never_retried) ... ok
+test_hit_conditions_old_coin_to_zero (test_extensions.ExtensionTests.test_hit_conditions_old_coin_to_zero) ... ok
+test_missing_opportunity_is_not_a_hit (test_extensions.ExtensionTests.test_missing_opportunity_is_not_a_hit) ... ok
+test_multiple_foreign_events_one_refresh (test_extensions.ExtensionTests.test_multiple_foreign_events_one_refresh) ... ok
+test_new_foreign_coin_after_skipped_one (test_extensions.ExtensionTests.test_new_foreign_coin_after_skipped_one) ... ok
+test_perfect_clusters_and_anchor (test_extensions.ExtensionTests.test_perfect_clusters_and_anchor) ... ok
+test_tiny_hit_likelihood_not_lost (test_extensions.ExtensionTests.test_tiny_hit_likelihood_not_lost) ... ok
+test_ttl_expiry_is_not_issuer_response (test_extensions.ExtensionTests.test_ttl_expiry_is_not_issuer_response) ... ok
+test_common_has_no_availability_identity_channel (test_model.ModelTests.test_common_has_no_availability_identity_channel) ... ok
+test_delta_boundary (test_model.ModelTests.test_delta_boundary) ... ok
+test_every_access_reveals_no_issuer (test_model.ModelTests.test_every_access_reveals_no_issuer) ... ok
+test_guard_all_history_support (test_model.ModelTests.test_guard_all_history_support) ... ok
+test_guard_cannot_split_four_with_k_three (test_model.ModelTests.test_guard_cannot_split_four_with_k_three) ... ok
+test_guard_protects_rejecting_branch (test_model.ModelTests.test_guard_protects_rejecting_branch) ... ok
+test_heartbeat_expiry_boundary (test_model.ModelTests.test_heartbeat_expiry_boundary) ... ok
+test_negative_observation_excludes_issuer (test_model.ModelTests.test_negative_observation_excludes_issuer) ... ok
+test_new_update_does_not_postpone_earliest_deadline (test_model.ModelTests.test_new_update_does_not_postpone_earliest_deadline) ... ok
+test_no_outage_is_full_availability (test_model.ModelTests.test_no_outage_is_full_availability) ... ok
+test_one_targeted_update_posterior (test_model.ModelTests.test_one_targeted_update_posterior) ... ok
+test_prior_is_retained_without_information (test_model.ModelTests.test_prior_is_retained_without_information) ... ok
+test_private_fields_rejected (test_model.ModelTests.test_private_fields_rejected) ... ok
+test_publication_before_same_time_authorization (test_model.ModelTests.test_publication_before_same_time_authorization) ... ok
+test_renewal_during_grace_supersedes_old_update (test_model.ModelTests.test_renewal_during_grace_supersedes_old_update) ... ok
+test_single_visible_rejection_can_identify (test_model.ModelTests.test_single_visible_rejection_can_identify) ... ok
+test_three_fresh_sets_singleton (test_model.ModelTests.test_three_fresh_sets_singleton) ... ok
+test_ttl_boundary (test_model.ModelTests.test_ttl_boundary) ... ok
+test_uniform_cover_equals_common (test_model.ModelTests.test_uniform_cover_equals_common) ... ok
+test_unknown_label_permutation_control (test_model.ModelTests.test_unknown_label_permutation_control) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.062s
+
+OK
+Source replay PASS {'source_files_verified': 73, 'source_scenarios': 54, 'source_decisions': 8832, 'source_mismatches': 0, 'public_target_histories': 120, 'unique_workloads': 12}
+Exact checks PASS
+Archived workload counterfactuals complete
+Synthetic timing complete
+Availability experiments complete
+Conditional proof checks and exact coin filter PASS
+Weekly exact frontier PASS
+Anonymous clustering complete
+Economic quantities and budget balance PASS
+{
+  "source_files_verified": 73,
+  "source_scenarios": 54,
+  "source_decisions": 8832,
+  "source_mismatches": 0,
+  "public_target_histories": 120,
+  "unique_workloads": 12,
+  "safe_accept_set_enumerations": 15472,
+  "exact_bayes_transcripts": 172,
+  "anonymous_label_control_posterior": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "simultaneous_updates_control": "PASS",
+  "always_expired_ttl_control": "PASS",
+  "all_checks": "PASS",
+  "timing_workload_runs": 10848,
+  "timing_workload_decisions": 637320,
+  "synthetic_timing_runs": 61200,
+  "synthetic_timing_decisions": 10404000,
+  "outage_runs": 4320,
+  "outage_decisions": 2332800,
+  "optimality_small_schedules": 576,
+  "coin_bayes_feasible_transcripts": 84,
+  "coin_bayes_mass_check": "PASS",
+  "dynamic_price_counterexample": {
+    "access_times": [
+      0,
+      1,
+      2
+    ],
+    "publication_time": 0.5,
+    "grace": 1.5,
+    "prices_at_1_and_2": [
+      1,
+      100
+    ],
+    "greedy_after_launch_cost": 35642510,
+    "proactive_after_launch_cost": 7116749
+  },
+  "finite_pure_epsilon_for_informative_event_rho_below_one": false,
+  "theorem_scope": "fixed attempts; mandatory invalidation; full/hit observable; zero-error safety; fixed costs",
+  "independent_novelty_validation": false,
+  "status": "PASS",
+  "weekly_exact_rho_points": 21,
+  "weekly_transcripts_per_point": 4096,
+  "clustering_runs": 1800,
+  "clustering_decisions": 11872000,
+  "economic_cases": 3,
+  "economic_coalitions": 96,
+  "compensation_rows": 72,
+  "paired_cost_events": 6800,
+  "numeric_status": "PASS",
+  "new_evm_measurements": 0,
+  "privacy_novelty_gate": "NOT_ESTABLISHED",
+  "plan_sha256": "2e6208125d243bd911224d6936d5539348d9c736082008dd7ab30f334e8639a5",
+  "gas_coefficients": {
+    "first": 464200,
+    "hit": 67610,
+    "reauthorize": 355749
+  },
+  "version": "0.2",
+  "new_contract": false,
+  "anonymous_clustering_is_EF_attack": false
+}
+Byte-exact numerical reproduction PASS: 26 files
+Handoff PASS: 72 actor rows, 9 balanced comparisons, 3 price scenarios
+Byte-exact economic handoff PASS: 2 files
+No EVM measurement or novelty validation is implied by PASS.

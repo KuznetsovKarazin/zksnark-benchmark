@@ -1,0 +1,67 @@
+{
+  "source_files_verified": 73,
+  "source_scenarios": 54,
+  "source_decisions": 8832,
+  "source_mismatches": 0,
+  "public_target_histories": 120,
+  "unique_workloads": 12,
+  "safe_accept_set_enumerations": 15472,
+  "exact_bayes_transcripts": 172,
+  "anonymous_label_control_posterior": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "simultaneous_updates_control": "PASS",
+  "always_expired_ttl_control": "PASS",
+  "all_checks": "PASS",
+  "timing_workload_runs": 10848,
+  "timing_workload_decisions": 637320,
+  "synthetic_timing_runs": 61200,
+  "synthetic_timing_decisions": 10404000,
+  "outage_runs": 4320,
+  "outage_decisions": 2332800,
+  "optimality_small_schedules": 576,
+  "coin_bayes_feasible_transcripts": 84,
+  "coin_bayes_mass_check": "PASS",
+  "dynamic_price_counterexample": {
+    "access_times": [
+      0,
+      1,
+      2
+    ],
+    "publication_time": 0.5,
+    "grace": 1.5,
+    "prices_at_1_and_2": [
+      1,
+      100
+    ],
+    "greedy_after_launch_cost": 35642510,
+    "proactive_after_launch_cost": 7116749
+  },
+  "finite_pure_epsilon_for_informative_event_rho_below_one": false,
+  "theorem_scope": "fixed attempts; mandatory invalidation; full/hit observable; zero-error safety; fixed costs",
+  "independent_novelty_validation": false,
+  "status": "PASS",
+  "weekly_exact_rho_points": 21,
+  "weekly_transcripts_per_point": 4096,
+  "clustering_runs": 1800,
+  "clustering_decisions": 11872000,
+  "economic_cases": 3,
+  "economic_coalitions": 96,
+  "compensation_rows": 72,
+  "paired_cost_events": 6800,
+  "numeric_status": "PASS",
+  "new_evm_measurements": 0,
+  "privacy_novelty_gate": "NOT_ESTABLISHED",
+  "plan_sha256": "2e6208125d243bd911224d6936d5539348d9c736082008dd7ab30f334e8639a5",
+  "gas_coefficients": {
+    "first": 464200,
+    "hit": 67610,
+    "reauthorize": 355749
+  },
+  "version": "0.2",
+  "new_contract": false,
+  "anonymous_clustering_is_EF_attack": false
+}

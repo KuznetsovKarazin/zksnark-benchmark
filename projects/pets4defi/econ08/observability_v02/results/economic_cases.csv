@@ -1,0 +1,13 @@
+case,policy,active_holders,accesses_per_holder,authorizations_total,holder_access_gas_proxy,premium_gas_vs_selective,publication_count,evidence
+weekly_A4,selective,4,100,16,32088028,0,12,deterministic model
+weekly_A4,common,4,100,52,42461032,10373004,12,deterministic model
+weekly_A4,coin_0.75,4,100,43.0,39867781.0,7779753.0,12,exact expectation
+weekly_A4,coin_0.95,4,100,50.199999999999996,41942381.8,9854353.799999997,12,exact expectation
+weekly_A32,selective,32,100,128,256704224,0,12,deterministic model
+weekly_A32,common,32,100,416,339688256,82984032,12,deterministic model
+weekly_A32,coin_0.75,32,100,344.0,318942248.0,62238024.0,12,exact expectation
+weekly_A32,coin_0.95,32,100,401.59999999999997,335539054.4,78834830.39999998,12,exact expectation
+asymmetric_A32,selective,32,100,235,287535097,0,24,deterministic model
+asymmetric_A32,common,32,100,638,403655114,116120017,24,deterministic model
+asymmetric_A32,coin_0.75,32,100,544.3500000000001,376670896.6499999,89135799.64999992,24,20-seed mean
+asymmetric_A32,coin_0.95,32,100,619.4,398295728.6000001,110760631.60000008,24,20-seed mean

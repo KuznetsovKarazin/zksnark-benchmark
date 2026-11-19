@@ -1,0 +1,23 @@
+measurement,item,unit,n,p50,p95,min,max
+timing,build,ms,30,0.111012,0.164457,0.065900,0.182826
+timing,sign,ms,30,0.263768,0.336297,0.200082,0.338771
+timing,verify_signature,ms,30,0.661147,1.563427,0.443008,3.133716
+timing,expand,ms,30,0.044617,0.120722,0.020130,0.146842
+timing,cold_verifier_lookup,ms,30,0.626470,0.782740,0.464901,1.033909
+timing,cached_lookup_batch,ms,30,0.237207,0.586854,0.196216,0.743901
+size,0 revoked uncompressed_bytes,bytes,3,16384,16384,16384,16384
+size,0 revoked gzip_bytes,bytes,3,51,51,51,51
+size,0 revoked encoded_chars,characters,3,69,69,69,69
+size,0 revoked signed_json_bytes,bytes,3,924,924,923,924
+size,1 revoked uncompressed_bytes,bytes,3,16384,16384,16384,16384
+size,1 revoked gzip_bytes,bytes,3,51,51,51,51
+size,1 revoked encoded_chars,characters,3,69,69,69,69
+size,1 revoked signed_json_bytes,bytes,3,924,924,924,924
+size,12 revoked uncompressed_bytes,bytes,3,16384,16384,16384,16384
+size,12 revoked gzip_bytes,bytes,3,83,83,83,83
+size,12 revoked encoded_chars,characters,3,112,112,112,112
+size,12 revoked signed_json_bytes,bytes,3,967,967,966,967
+size,512 revoked uncompressed_bytes,bytes,3,16384,16384,16384,16384
+size,512 revoked gzip_bytes,bytes,3,130,130,130,130
+size,512 revoked encoded_chars,characters,3,175,175,175,175
+size,512 revoked signed_json_bytes,bytes,3,1030,1030,1030,1030

@@ -1,0 +1,18 @@
+{
+  "version": "0.2",
+  "date": "2026-11-16",
+  "source_repository": "https://github.com/KuznetsovKarazin/zksnark-benchmark",
+  "source_branch": "econ08-native-pilot",
+  "source_snapshot": "ca1fabbb1d2fb777adca87544e689a14f6b5fbdb",
+  "plan_sha256": "2e6208125d243bd911224d6936d5539348d9c736082008dd7ab30f334e8639a5",
+  "plan_status": "declared after reviewer feedback; not preregistered",
+  "numeric_runtime": "3.12.14",
+  "numeric_dependencies": "Python standard library only",
+  "new_evm_measurements": 0,
+  "new_contract": false,
+  "validation": "internal exact checks, unit tests and deterministic reproduction; no independent external replication",
+  "scientific_novelty": "not established; independent review needed",
+  "figure_document_byte_identity": "not promised across library/font/rendering versions",
+  "prices": "historical October 2026 reference snapshots; no live quotes",
+  "scope": "observable cached accesses, fixed issuer, mandatory invalidation, fixed cost coefficients; see MODEL.md and proofs/CONDITIONAL_RESULTS.md"
+}

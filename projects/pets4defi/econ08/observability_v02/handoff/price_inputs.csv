@@ -1,0 +1,4 @@
+scenario,gas_price_gwei,eth_price_eur,euro_per_gas,status,sources
+historical_reference,0.130658648,2164.73,2.8284069508504e-07,historical October 2026 reference; not a current quote,Repository examples/pets4defi_access_v2/results/fee_snapshot.json and projects/pets4defi/data/fx_quote.json; see PRICE_SOURCES.md
+hypothetical_x10,1.30658648,2164.73,2.8284069508504002e-06,sensitivity only; common multiplier across actors and rules,Repository examples/pets4defi_access_v2/results/fee_snapshot.json and projects/pets4defi/data/fx_quote.json; see PRICE_SOURCES.md
+hypothetical_x100,13.065864799999998,2164.73,2.8284069508504e-05,sensitivity only; common multiplier across actors and rules,Repository examples/pets4defi_access_v2/results/fee_snapshot.json and projects/pets4defi/data/fx_quote.json; see PRICE_SOURCES.md

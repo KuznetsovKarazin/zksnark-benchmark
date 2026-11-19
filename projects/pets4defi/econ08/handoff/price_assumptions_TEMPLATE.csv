@@ -1,0 +1,11 @@
+input_id,description,low,reference,high,currency_and_unit,evidence_type,source_and_date,service_scope_and_tax,open_question
+q0,Historical gas price,,0.130658648,,gwei/gas,historical_reference,https://docs.google.com/document/d/1hNPRNmUMegg88hn6mpCLO6pxj67zb48C7-m8wdO5FcE/edit section 2.1,SELF and PM proxy; not current quote,Confirm original observation date
+e0,Historical EUR per ETH,,2164.73,,EUR/ETH,historical_reference,https://docs.google.com/document/d/1hNPRNmUMegg88hn6mpCLO6pxj67zb48C7-m8wdO5FcE/edit section 2.1,SELF and PM proxy; not current quote,Confirm original observation date
+kyc_price,KYC verification,,,,,unknown,,Same service boundary under SELF and PM,Provider service/tier/date/currency/unit/tax
+issuance_price,Credential issuance,,,,,unknown,,Same service boundary under SELF and PM,Separate from KYC unless bundled in source
+offchain_operations,Hosting or witness delivery,,,,,unknown,,One service per row,Leave unmeasured costs unknown
+pm_overhead,Extra account-abstraction and paymaster work,,,,,unknown,,PM implementation overhead; excluded from direct-gas proxy,Oleksandr supplies quantities; not measured or zero
+refill_cost,Top-up transaction or financing cost,,,,,scenario,,Ideal free instantaneous top-up is baseline; transfers are not resource costs,Source extra cost separately if sensitivity adds it
+l2_execution,L2 execution fee inputs,,,,,unknown,,Oleksandr supplies,Network/version and transaction inputs
+l2_data,L2 L1 data fee inputs,,,,,unknown,,Oleksandr supplies,Full fee formula and calldata assumptions
+l2_operator,Applicable L2 operator fee,,,,,unknown,,Oleksandr supplies,Confirm applicability; do not presume zero

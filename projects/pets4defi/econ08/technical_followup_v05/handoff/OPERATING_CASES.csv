@@ -1,0 +1,7 @@
+B,updates,holders,startup_expense_gas,service_expense_gas,service_pool_K_gas,service_SELF_sum_K_gas,pool_K_eur_q0,SELF_sum_K_eur_q0,scope
+1,weekly,4,2313044,40300576,1693460,1693460,0.47897940349871183840,0.47897940349871183840,day1 onward; original daily clock; startup separately funded; no AA overhead
+1,control,4,2313116,28785760,1411784,1411796,0.39930996786993811136,0.39931336195827913184,day1 onward; original daily clock; startup separately funded; no AA overhead
+2,weekly,4,2313104,33407556,1117194,1558300,0.31598792750483617776,0.44075065515101783200,day1 onward; original daily clock; startup separately funded; no AA overhead
+2,control,4,2313152,28785880,1411844,1411856,0.39932693831164321376,0.39933033239998423424,day1 onward; original daily clock; startup separately funded; no AA overhead
+4,weekly,4,2313152,29960896,829043,1490666,0.23448709837538681672,0.42162100757963623664,day1 onward; original daily clock; startup separately funded; no AA overhead
+4,control,4,2313128,28785892,1411832,1411868,0.39932354422330219328,0.39933372648832525472,day1 onward; original daily clock; startup separately funded; no AA overhead
