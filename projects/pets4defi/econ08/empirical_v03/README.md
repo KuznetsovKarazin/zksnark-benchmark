@@ -1,5 +1,7 @@
 # ECON-08 empirical extension v0.3
 
+The November 19 JISA validation supplements the archived single-seed scale demonstration. [Independent repetitions](seed_validation/README.md) report ten new seeds per size for the estimated-noise HMM and 10,000-holder clustering, at four and 64 synthetic issuers. The original shared-epoch controls and known-rate matrix remain separately identified. [Manuscript figures](article_figures/README.md) explains how to regenerate the four displayed figures and five numerical tables from the released aggregates.
+
 The [matched-freshness revision](freshness_revision/README.md) supersedes the original cost figure. It includes the calibrated cache controls, grouping results, the independent issuer heartbeat prototype, and source coverage for the separate descriptive study.
 
 The [58-day whole-path frontier](freshness_revision/results/aave_path_frontier.csv) pairs cost with the probability of a correct two-source assignment under perfect labels and under 10% independent label errors. The [manuscript section](freshness_revision/sensitivity/manuscript_access.tex) and [primary-cohort figure](figures/aave_path_frontier.pdf) cover the replay on observed Aave access times.
